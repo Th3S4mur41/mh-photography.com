@@ -27,5 +27,9 @@ typings/
 # Optional eslint cache
 .eslintcache
 
+# WebStorm
+.idea/
+!.idea/codeStyles/
+
 # Compiled output
-dist
+dist/
