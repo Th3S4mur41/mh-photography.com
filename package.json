@@ -1,0 +1,35 @@
+{
+  "name": "mh-hotography.com",
+  "version": "1.0.0",
+  "description": "MH Photography",
+  "browserslist": [
+    "ie 11",
+    "last 3 Edge versions",
+    "last 3 Chrome versions",
+    "last 3 Firefox versions",
+    "last 2 Safari versions",
+    "Firefox ESR"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "autoprefixer": "~7.1.2",
+    "eslint": "~4.3.0",
+    "grunt": "~1.0.1",
+    "grunt-cli": "~1.2.0",
+    "grunt-contrib-clean": "~1.1.0",
+    "grunt-contrib-concat": "~1.0.1",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-htmlmin": "~2.4.0",
+    "grunt-contrib-uglify-es": "~3.3.0",
+    "grunt-contrib-watch": "~1.0.0",
+    "grunt-htmlclean": "~2.7.11",
+    "grunt-postcss": "~0.8.0",
+    "grunt-sass": "^2.1.0",
+    "grunt-stylelint": "~0.8.0",
+    "gruntify-eslint": "~4.0.0",
+    "jit-grunt": "~0.10.0",
+    "stylelint": "~8.0.0",
+    "webpack": "~3.0.0"
+  },
+  "scripts": {}
+}

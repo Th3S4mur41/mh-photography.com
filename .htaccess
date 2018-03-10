@@ -1,0 +1,40 @@
+
+<IfModule mod_mime.c>
+	AddType image/svg+xml svg svgz
+</IfModule>
+
+<IfModule mod_deflate.c>
+        AddOutputFilterByType DEFLATE text/css text/x-component application/x-javascript application/javascript text/javascript text/x-js text/html text/richtext image/svg+xml text/plain text/xsd text/xsl text/xml image/bmp application/java application/msword application/vnd.ms-fontobject application/x-msdownload image/x-icon image/webp application/json application/vnd.ms-access application/vnd.ms-project application/x-font-otf application/vnd.ms-opentype application/vnd.oasis.opendocument.database application/vnd.oasis.opendocument.chart application/vnd.oasis.opendocument.formula application/vnd.oasis.opendocument.graphics application/vnd.oasis.opendocument.presentation application/vnd.oasis.opendocument.spreadsheet application/vnd.oasis.opendocument.text audio/ogg application/pdf application/vnd.ms-powerpoint image/svg+xml application/x-shockwave-flash image/tiff application/x-font-ttf application/vnd.ms-opentype audio/wav application/vnd.ms-write application/font-woff application/font-woff2 application/vnd.ms-excel
+    <IfModule mod_mime.c>
+        # DEFLATE by extension
+        AddOutputFilter DEFLATE js css htm html xml
+    </IfModule>
+</IfModule>
+
+<FilesMatch "\.(css|htc|less|js|js2|js3|js4|CSS|HTC|LESS|JS|JS2|JS3|JS4)$">
+    FileETag MTime Size
+    <IfModule mod_headers.c>
+        Header set Pragma "public"
+        Header append Cache-Control "public"
+         Header unset Set-Cookie
+    </IfModule>
+</FilesMatch>
+
+<IfModule mod_rewrite.c>
+	#Always use HTTPS and prefix with WWW
+	RewriteEngine On 
+	RewriteCond %{HTTP_HOST} ^mh-photography\.com [OR]
+	RewriteCond %{HTTP_HOST} ^www.mh-photography\.com
+	RewriteCond %{SERVER_PORT} 80 
+	RewriteRule ^(.*)$ https://www.mh-photography.com/$1 [R=301,L]
+</IfModule>
+
+#CACHING
+# One week for image files
+<filesMatch ".(jpg|jpeg|png|gif|ico)$">
+Header set Cache-Control "max-age=604800, public"
+</filesMatch>
+# One day for css and js
+<filesMatch ".(css|js|svg|html)$">
+Header set Cache-Control "max-age=86400, public"
+</filesMatch>
