@@ -26,17 +26,22 @@ h2 {
 	text-transform: uppercase;
 }
 
-nav > a,
-nav > a:hover,
-nav > a:visited {
-	color: #2e2d33;
-}
 
 nav > a {
 	text-decoration: none;
 	font-size: 14px;
 	letter-spacing: 0.35em;
 	text-transform: uppercase;
+}
+
+nav > a,
+nav > a:hover,
+nav > a:visited {
+	color: #2e2d33;
+}
+
+nav > a:hover {
+	font-weight: 600;
 }
 
 .vcard > * {
@@ -62,13 +67,28 @@ nav > a {
 	width: 256px;
 	margin: 2px;
 	transition: all 0.2s ease-in-out;
+	cursor: pointer;
 }
+
+.thumbnail > picture:not(.show) {
+	opacity: 0.75;
+}
+
+.thumbnail > picture:hover {
+	opacity: 1;
+}
+
+.thumbnail picture,
+.thumbnail source,
+.thumbnail img {
+	width: inherit;
+}
+
 @media screen and (max-width: 800px) {
 	.thumbnail {
 		width: 128px;
 	}
 }
-
 
 /** ********************************************************************************************************************
  * Accessibility
@@ -99,6 +119,7 @@ header#header {
 	display: flex;
 	flex-flow: column nowrap;
 	align-items: stretch;
+	z-index: 1; // Stay on top of thumbnails
 
 	/* Sticky header */
 	top: 0;
@@ -142,6 +163,13 @@ header#header.shrink {
 #header.shrink > nav {
 	background-color: transparent;
 }
+
+@media (max-width: 680px) {
+	#header.shrink > nav > a {
+		display: none; // hide menu for now, will be replaced by responsive one
+	}
+}
+
 
 #header > nav > a {
 	flex: 0 0 auto;
@@ -206,6 +234,13 @@ section#about > header {
 	background-size: cover;
 }
 
+@media (scripting: none) {
+	// Hide portfolio when images cannot be added by javascript
+	section#portfolio {
+		display: none;
+	}
+}
+
 section#portfolio > header {
 	/*background: url('../resources/images/about.jpg');*/
 	background: linear-gradient(
@@ -221,7 +256,7 @@ section#portfolio > header {
 
 	/* Create the parallax scrolling effect */
 	background-attachment: fixed;
-	background-position: center;
+	background-position: left center;
 	background-repeat: no-repeat;
 	background-size: cover;
 }
@@ -295,4 +330,53 @@ footer > .socialmedia {
 .socialmedia img {
 	height: 30px;
 	width: 30px;
+}
+
+picture.show {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100vh;
+	width: 100vw;
+	//background: rgba(0, 0, 0, 0.9);
+	//background: linear-gradient(0deg, rgba(255,255,255,.2),rgba(255,255,255,.2));
+	//filter: blur(10px);
+	z-index: 999;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	@media (orientation: portrait) {
+		//transition: width 1s ease-in-out;
+
+		source,
+		img {
+			width: 100vw;
+			height: auto;
+		}
+	}
+
+	@media (orientation: landscape) {
+		//transition: height 1s ease-in-out;
+
+		source,
+		img {
+			width: auto;
+			height: 100vh;
+		}
+	}
+}
+
+picture.show::before {
+	content: ' ';
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100vh;
+	width: 100vw;
+	//background: rgba(0, 0, 0, 0.75);
+	background: rgba(255, 255, 0255, 0.75);
+	backdrop-filter: blur(20px);
+	z-index: -1;
 }

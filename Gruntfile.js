@@ -21,33 +21,6 @@ module.exports = function (grunt) {
 				]
 			}
 		},
-		// concat: {
-		// 	debug: {
-		// 		options: {
-		// 			separator: ' ',
-		// 			sourceMap: true
-		// 		},
-		// 		files: {
-		// 			'dist/scripts.js': [
-		// 				'scripts/*.js',
-		// 				'!scripts/*.min.js'
-		// 			]
-		// 		},
-		// 		nonull: true
-		// 	},
-		// 	release: {
-		// 		options: {
-		// 			separator: ' ',
-		// 			sourceMap: false
-		// 		},
-		// 		files: {
-		// 			'dist/scripts.js': [
-		// 				'scripts/*.min.js'
-		// 			]
-		// 		},
-		// 		nonull: true
-		// 	},
-		// },
 		copy: {
 			debug: {
 				files: [
@@ -59,6 +32,13 @@ module.exports = function (grunt) {
 						],
 						dest  : 'dist/',
 						filter: 'isFile'
+					},
+					{
+						expand : false,
+						flatten: true,
+						src    : 'src/robots-debug.txt',
+						dest   : 'dist/robots.txt',
+						filter : 'isFile'
 					},
 					{
 						expand : true,
@@ -149,26 +129,26 @@ module.exports = function (grunt) {
 		// 		src: ['src/main/webapp/**/*.json']
 		// 	}
 		// },
-		// postcss: {
-		// 	options: {
-		// 		// map: true,
-		// 		processors: [
-		// 			require('autoprefixer')({
-		// 				flexbox: 'no-2009',
-		// 				grid   : false
-		// 			})
-		// 		]
-		// 	},
-		// 	lib: {
-		// 		src: 'src/main/webapp/css/lib.css'
-		// 	},
-		// 	debug: {
-		// 		src: 'src/main/webapp/css/style.css'
-		// 	},
-		// 	release: {
-		// 		src: 'src/main/webapp/css/style.css'
-		// 	}
-		// },
+		postcss: {
+			options: {
+				// map: true,
+				processors: [
+					require('autoprefixer')({
+						flexbox: 'no-2009',
+						grid   : false
+					})
+				]
+			},
+			debug: {
+				options: {
+					map: true
+				},
+				src: 'dist/styles.css'
+			},
+			release: {
+				src: 'dist/styles.css'
+			}
+		},
 		// replace: {
 		// 	less: {
 		// 		// workaround for compression bug that replaces 0% through 0
@@ -289,7 +269,7 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks('grunt-contrib-uglify-es');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	// grunt.loadNpmTasks('grunt-jsonlint');
-	// grunt.loadNpmTasks('grunt-postcss');
+	grunt.loadNpmTasks('grunt-postcss');
 	// grunt.loadNpmTasks('grunt-replace');
 	grunt.loadNpmTasks('grunt-stylelint');
 	grunt.loadNpmTasks('grunt-sass');
@@ -307,6 +287,7 @@ module.exports = function (grunt) {
 		'htmlmin:debug',
 		'uglify:debug',
 		'sass:debug',
+		'postcss:debug',
 		'copy:debug'
 	]);
 
@@ -318,6 +299,7 @@ module.exports = function (grunt) {
 		'htmlmin:release',
 		'uglify:release',
 		'sass:release',
+		'postcss:release',
 		'copy:release'
 	]);
 };
