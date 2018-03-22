@@ -3,6 +3,16 @@
 
 module.exports = function (grunt) {
 
+	// *****************************************************************************************************************
+	// Grunt options
+	// *****************************************************************************************************************
+
+	const build = grunt.option('build') || 'dev';
+
+	// *****************************************************************************************************************
+	// Grunt config
+	// *****************************************************************************************************************
+
 	grunt.initConfig({
 		pkg  : grunt.file.readJSON('package.json'),
 		clean: {
@@ -150,7 +160,7 @@ module.exports = function (grunt) {
 			}
 		},
 		// replace: {
-		// 	less: {
+		// 	version: {
 		// 		// workaround for compression bug that replaces 0% through 0
 		// 		// leads to broken UI when using flex: x x 0%;
 		// 		options: {
@@ -164,7 +174,7 @@ module.exports = function (grunt) {
 		// 		files: [
 		// 			{
 		// 				src: [
-		// 					'src/main/webapp/css/style.min.css'
+		// 					'src/scripts/app.ts'
 		// 				],
 		// 				dest: 'src/main/webapp/css/style.min.css'
 		// 			}
@@ -208,9 +218,28 @@ module.exports = function (grunt) {
 				]
 			}
 		},
+		ts: {
+			options: {
+			},
+			debug: {
+				options: {
+					sourcemap: true
+				},
+				tsconfig: 'tsconfig/json'
+			},
+			release: {
+				options: {
+					// task options
+				},
+				tsconfig: 'tsconfig/json'
+			}
+		},
 		uglify: {
 			options: {
-				banner  : '/** * Copyright (c) 2018 Mouch.net */',
+				banner: '/** \n' +
+					'* <%= pkg.name %> - v<%= pkg.version %>-' + build + '\n' +
+					'* Copyright © <%= grunt.template.today("yyyy") %> Mouch.net\n' +
+					'*/',
 				compress: true,
 				mangle  : false
 				// wrap    : true
@@ -258,7 +287,6 @@ module.exports = function (grunt) {
 		}
 	});
 
-
 	// *****************************************************************************************************************
 	// Load NPM Plugins
 	// *****************************************************************************************************************
@@ -273,6 +301,7 @@ module.exports = function (grunt) {
 	// grunt.loadNpmTasks('grunt-replace');
 	grunt.loadNpmTasks('grunt-stylelint');
 	grunt.loadNpmTasks('grunt-sass');
+	grunt.loadNpmTasks('grunt-ts');
 	grunt.loadNpmTasks('gruntify-eslint');
 
 	// *****************************************************************************************************************
