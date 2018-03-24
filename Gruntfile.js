@@ -159,28 +159,28 @@ module.exports = function (grunt) {
 				src: 'dist/styles.css'
 			}
 		},
-		// replace: {
-		// 	version: {
-		// 		// workaround for compression bug that replaces 0% through 0
-		// 		// leads to broken UI when using flex: x x 0%;
-		// 		options: {
-		// 			patterns: [
-		// 				{
-		// 					match      : /flex:(\d)\s(\d)\s0([;,}])/g,
-		// 					replacement: 'flex:$1 $2 0%$3'
-		// 				}
-		// 			]
-		// 		},
-		// 		files: [
-		// 			{
-		// 				src: [
-		// 					'src/scripts/app.ts'
-		// 				],
-		// 				dest: 'src/main/webapp/css/style.min.css'
-		// 			}
-		// 		]
-		// 	}
-		// },
+		replace: {
+			cache: {
+				// workaround for compression bug that replaces 0% through 0
+				// leads to broken UI when using flex: x x 0%;
+				options: {
+					patterns: [
+						{
+							match      : /max-age=(\d)+/g,
+							replacement: 'max-age=3600'
+						}
+					]
+				},
+				files: [
+					{
+						src: [
+							'.htaccess'
+						],
+						dest: 'dist/.htaccess'
+					}
+				]
+			}
+		},
 		sass: {
 			options: {
 				outputStyle: 'compressed'
@@ -298,7 +298,7 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	// grunt.loadNpmTasks('grunt-jsonlint');
 	grunt.loadNpmTasks('grunt-postcss');
-	// grunt.loadNpmTasks('grunt-replace');
+	grunt.loadNpmTasks('grunt-replace');
 	grunt.loadNpmTasks('grunt-stylelint');
 	grunt.loadNpmTasks('grunt-sass');
 	grunt.loadNpmTasks('grunt-ts');
@@ -317,7 +317,8 @@ module.exports = function (grunt) {
 		'uglify:debug',
 		'sass:debug',
 		'postcss:debug',
-		'copy:debug'
+		'copy:debug',
+		'replace:cache'
 	]);
 
 	/**
