@@ -28,6 +28,10 @@ header#header {
 		> a {
 			flex: 0 0 auto;
 			margin: 5px 20px;
+
+			@media (max-width: 680px) {
+				margin: 5px 10px;
+			}
 		}
 	}
 }

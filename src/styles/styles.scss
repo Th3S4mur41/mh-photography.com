@@ -29,6 +29,10 @@ h2 {
 	font-weight: 400;
 	letter-spacing: 0.5em;
 	text-transform: uppercase;
+
+	@media (max-width: 400px) {
+		font-size: 36px;
+	}
 }
 
 nav > a {
@@ -85,7 +89,7 @@ body {
 	display: flex;
 	flex-flow: column nowrap;
 	align-items: stretch;
-	min-width: 380px;
+	min-width: 320px;
 }
 
 section > header {
@@ -110,6 +114,6 @@ section > header {
 }
 
 footer#footer {
-	min-width: 100%;
+	min-width: 100vw;
 	flex: 0 0 auto;
 }
