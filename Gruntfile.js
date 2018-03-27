@@ -55,7 +55,7 @@ module.exports = function (grunt) {
 						flatten: false,
 						cwd    : 'src/',
 						src    : [
-							'assets/icons/*.svg',
+							'assets/icons/*',
 							'assets/images/**/*.jpg',
 							'assets/images/**/*.png'
 						],
@@ -82,7 +82,7 @@ module.exports = function (grunt) {
 						flatten: false,
 						cwd		  : 'src/',
 						src    : [
-							'assets/icons/*.svg',
+							'assets/icons/*',
 							'assets/images/**/*.jpg',
 							'assets/images/**/*.png'
 						],
@@ -223,49 +223,49 @@ module.exports = function (grunt) {
 			},
 			debug: {
 				options: {
-					sourcemap: true
+					sourceMap: true
 				},
-				tsconfig: 'tsconfig/json'
+				tsconfig: 'tsconfig.json'
 			},
 			release: {
 				options: {
 					// task options
 				},
-				tsconfig: 'tsconfig/json'
+				tsconfig: 'tsconfig.json'
 			}
 		},
-		uglify: {
-			options: {
-				banner: '/** \n' +
-					'* <%= pkg.name %> - v<%= pkg.version %>-' + build + '\n' +
-					'* Copyright © <%= grunt.template.today("yyyy") %> Mouch.net\n' +
-					'*/',
-				compress: true,
-				mangle  : false
-				// wrap    : true
-			},
-			debug: {
-				options: {
-					sourceMap: true
-					// sourceMapIncludeSources : true,
-					// sourceMapIn : 'scripts/scripts.js.map'
-				},
-				files: {
-					'dist/scripts.js': [
-						'src/scripts/**/*.js',
-						'!src/scripts/**/*.min.js'
-					]
-				}
-			},
-			release: {
-				files: {
-					'dist/scripts.js': [
-						'src/scripts/**/*.js',
-						'!src/scripts/**/*.min.js'
-					]
-				}
-			}
-		},
+		// uglify: {
+		// 	options: {
+		// 		banner: '/** \n' +
+		// 			'* <%= pkg.name %> - v<%= pkg.version %>-' + build + '\n' +
+		// 			'* Copyright © <%= grunt.template.today("yyyy") %> Mouch.net\n' +
+		// 			'*/',
+		// 		compress: true,
+		// 		mangle  : false
+		// 		// wrap    : true
+		// 	},
+		// 	debug: {
+		// 		options: {
+		// 			sourceMap: true
+		// 			// sourceMapIncludeSources : true,
+		// 			// sourceMapIn : 'scripts/scripts.js.map'
+		// 		},
+		// 		files: {
+		// 			'dist/scripts.js': [
+		// 				'src/scripts/**/*.js',
+		// 				'!src/scripts/**/*.min.js'
+		// 			]
+		// 		}
+		// 	},
+		// 	release: {
+		// 		files: {
+		// 			'dist/scripts.js': [
+		// 				'src/scripts/**/*.js',
+		// 				'!src/scripts/**/*.min.js'
+		// 			]
+		// 		}
+		// 	}
+		// },
 		watch: {
 			options: {
 				spawn        : true,
@@ -274,11 +274,15 @@ module.exports = function (grunt) {
 			},
 			styles: {
 				files: ['src/styles/**/*'],
-				tasks: ['sass:debug']
+				tasks: ['sass:debug, postcss:debug']
 			},
-			scripts: {
-				files: ['src/scripts/**/*.js'],
-				tasks: ['uglify:debug']
+			// scripts: {
+			// 	files: ['src/scripts/**/*.js'],
+			// 	tasks: ['uglify:debug']
+			// },
+			typescript: {
+				files: ['src/scripts/**/*.ts'],
+				tasks: ['ts:debug']
 			},
 			html: {
 				files: ['src/**/*.html'],
@@ -314,7 +318,8 @@ module.exports = function (grunt) {
 	grunt.registerTask('debug', [
 		'clean',
 		'htmlmin:debug',
-		'uglify:debug',
+		// 'uglify:debug',
+		'ts:debug',
 		'sass:debug',
 		'postcss:debug',
 		'copy:debug',
@@ -327,7 +332,8 @@ module.exports = function (grunt) {
 	grunt.registerTask('release', [
 		'clean',
 		'htmlmin:release',
-		'uglify:release',
+		// 'uglify:release',
+		'ts:release',
 		'sass:release',
 		'postcss:release',
 		'copy:release'
