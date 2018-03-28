@@ -141,11 +141,10 @@ module.exports = function (grunt) {
 		// },
 		postcss: {
 			options: {
-				// map: true,
 				processors: [
 					require('autoprefixer')({
 						flexbox: 'no-2009',
-						grid   : false
+						grid   : true
 					})
 				]
 			},
@@ -274,7 +273,7 @@ module.exports = function (grunt) {
 			},
 			styles: {
 				files: ['src/styles/**/*'],
-				tasks: ['sass:debug, postcss:debug']
+				tasks: ['sass:debug', 'postcss:debug']
 			},
 			// scripts: {
 			// 	files: ['src/scripts/**/*.js'],
@@ -287,6 +286,13 @@ module.exports = function (grunt) {
 			html: {
 				files: ['src/**/*.html'],
 				tasks: ['htmlmin:debug']
+			},
+			assets: {
+				files: [
+					'src/assets/icons/**/*',
+					'src/assets/images/**/*'
+				],
+				tasks: ['copy:debug']
 			}
 		}
 	});
