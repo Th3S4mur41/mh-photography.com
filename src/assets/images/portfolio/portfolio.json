@@ -1,0 +1,44 @@
+{
+	"portfolio": [
+		{
+			"id": "1",
+//			"pictures": [
+//				{
+//					"srcset": "asset/images/portfolio/1.jpg",
+//					"sizes": "jpg",
+//					"type": "image/jpg"
+//				},
+//				{
+//					"srcset": "asset/images/portfolio/1.jpg",
+//					"sizes": "jpg",
+//					"type": "image/webp"
+//				}
+//			],
+			"img": "asset/images/portfolio/1.jpg",
+			"thumbnail": "asset/images/portfolio/thumbs/1.jpg",
+			"h-pos": "center",
+			"v-pos": "center"
+		},
+		{
+			"id": "2",
+			"img": "asset/images/portfolio/2.jpg",
+			"thumbnail": "asset/images/portfolio/thumbs/2.jpg",
+			"h-pos": "center",
+			"v-pos": "center"
+		},
+		{
+			"id": "3",
+			"img": "asset/images/portfolio/3.jpg",
+			"thumbnail": "asset/images/portfolio/thumbs/3.jpg",
+			"h-pos": "center",
+			"v-pos": "center"
+		},
+		{
+			"id": "2",
+			"img": "asset/images/portfolio/3.jpg",
+			"thumbnail": "asset/images/portfolio/thumbs/3.jpg",
+			"h-pos": "center",
+			"v-pos": "center"
+		}
+	]
+}

@@ -2,6 +2,12 @@
  * Variables
  */
 
+$grid: 8px;
+$responsive: 80*$grid; //640px
+
+/**
+ * Colors
+ */
 $background-color: white;
 $primary-color: rgb(46, 45, 51); //#2e2d33;
 $dark-overlay-color: rgba(46, 45, 51, 0.5);

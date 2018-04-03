@@ -4,18 +4,36 @@
 module.exports = function (grunt) {
 
 	// *****************************************************************************************************************
-	// Grunt options
+	// Variables
 	// *****************************************************************************************************************
 
-	const build = grunt.option('build') || 'dev';
+	// const build = grunt.option('build') || 'dev-' + Date.now();
+
+	// *****************************************************************************************************************
+	// Load NPM Plugins
+	// *****************************************************************************************************************
+	grunt.loadNpmTasks('grunt-contrib-clean');
+	grunt.loadNpmTasks('grunt-contrib-copy');
+	// grunt.loadNpmTasks('grunt-contrib-concat');
+	grunt.loadNpmTasks('grunt-contrib-htmlmin');
+	grunt.loadNpmTasks('grunt-contrib-uglify-es');
+	grunt.loadNpmTasks('grunt-contrib-watch');
+	// grunt.loadNpmTasks('grunt-jsonlint');
+	grunt.loadNpmTasks('grunt-postcss');
+	grunt.loadNpmTasks('grunt-replace');
+	grunt.loadNpmTasks('grunt-stylelint');
+	grunt.loadNpmTasks('grunt-sass');
+	grunt.loadNpmTasks('grunt-ts');
+	grunt.loadNpmTasks('gruntify-eslint');
 
 	// *****************************************************************************************************************
 	// Grunt config
 	// *****************************************************************************************************************
 
 	grunt.initConfig({
-		pkg  : grunt.file.readJSON('package.json'),
-		clean: {
+		pkg        : grunt.file.readJSON('package.json'),
+		buildnumber: grunt.option('build') || 'dev-' + Date.now(),
+		clean      : {
 			options: {
 				force: true
 			},
@@ -159,9 +177,29 @@ module.exports = function (grunt) {
 			}
 		},
 		replace: {
+			build: {
+				options: {
+					patterns: [
+						{
+							match      : /{{BUILD}}/g,
+							replacement: '<%= buildnumber %>'
+						}
+					]
+				},
+				files: [
+					{
+						expand : true,
+						flatten: false,
+						src    : [
+							'dist/**/*.css',
+							'dist/**/*.html',
+							'dist/**/*.js'
+						],
+						dest: '.'
+					}
+				]
+			},
 			cache: {
-				// workaround for compression bug that replaces 0% through 0
-				// leads to broken UI when using flex: x x 0%;
 				options: {
 					patterns: [
 						{
@@ -176,6 +214,24 @@ module.exports = function (grunt) {
 							'.htaccess'
 						],
 						dest: 'dist/.htaccess'
+					}
+				]
+			},
+			version: {
+				options: {
+					patterns: [
+						{
+							match      : /\{{BUILD}}/g,
+							replacement: '<%= pkg.version %>'
+						}
+					]
+				},
+				files: [
+					{
+						// src: [
+						// 	'.htaccess'
+						// ],
+						// dest: 'dist/.htaccess'
 					}
 				]
 			}
@@ -298,23 +354,6 @@ module.exports = function (grunt) {
 	});
 
 	// *****************************************************************************************************************
-	// Load NPM Plugins
-	// *****************************************************************************************************************
-	grunt.loadNpmTasks('grunt-contrib-clean');
-	grunt.loadNpmTasks('grunt-contrib-copy');
-	// grunt.loadNpmTasks('grunt-contrib-concat');
-	grunt.loadNpmTasks('grunt-contrib-htmlmin');
-	grunt.loadNpmTasks('grunt-contrib-uglify-es');
-	grunt.loadNpmTasks('grunt-contrib-watch');
-	// grunt.loadNpmTasks('grunt-jsonlint');
-	grunt.loadNpmTasks('grunt-postcss');
-	grunt.loadNpmTasks('grunt-replace');
-	grunt.loadNpmTasks('grunt-stylelint');
-	grunt.loadNpmTasks('grunt-sass');
-	grunt.loadNpmTasks('grunt-ts');
-	grunt.loadNpmTasks('gruntify-eslint');
-
-	// *****************************************************************************************************************
 	// Public tasks
 	// *****************************************************************************************************************
 
@@ -329,6 +368,7 @@ module.exports = function (grunt) {
 		'sass:debug',
 		'postcss:debug',
 		'copy:debug',
+		'replace:build',
 		'replace:cache'
 	]);
 
@@ -342,6 +382,7 @@ module.exports = function (grunt) {
 		'ts:release',
 		'sass:release',
 		'postcss:release',
-		'copy:release'
+		'copy:release',
+		'replace:build'
 	]);
 };

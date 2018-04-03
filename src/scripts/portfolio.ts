@@ -9,12 +9,7 @@ class Portfolio {
 	imagePath: string;
 
 	constructor() {
-		// var json = Utilities.JSONLoader.loadFromFile("../docs/location_map.json");
-		this.imagePath = 'assets/images/portfolio/';
-		this.pictures = [];
-		for (let i = 1; i <= 63; i++) {
-			this.pictures.push(i + '.jpg');
-		}
+		this.getPictures();
 		this.showThumbnail();
 	}
 
@@ -48,6 +43,28 @@ class Portfolio {
 		const picture = src.firstElementChild;
 
 		picture.classList.remove('show');
+	}
+
+	getPictures() {
+		this.imagePath = 'assets/images/portfolio/';
+		this.pictures = [];
+		for (let i = 1; i <= 63; i++) {
+			this.pictures.push(i + '.jpg');
+		}
+
+		// output: JSON;
+		// temp: any =
+		//
+		// // portfolio = [];
+		// for (let i = 1; i <= 63; i++) {
+		// 	let picture = {
+		// 		"img": "asset/images/portfolio/1.jpg"
+		// 	};
+		// 	portfolio.push(picture);
+		// 	// this.pictures.push(i + '.jpg');
+		// }
+		// load from server
+		// var json = Utilities.JSONLoader.loadFromFile("../docs/location_map.json");
 	}
 
 	showThumbnail() {

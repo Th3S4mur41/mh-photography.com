@@ -17,7 +17,7 @@ header#header {
 	//transition: all 0.2s ease-in-out;
 
 	> nav {
-		min-height: 32px;
+		min-height: 4*$grid;
 		flex: 0 2 auto;
 		display: grid;
 		grid-template-columns: 1fr repeat(3, auto) 1fr;
@@ -30,7 +30,7 @@ header#header {
 
 		> a {
 			display: block; // Necessary for -ms-grid support
-			padding: 8px 20px;
+			padding: $grid 3*$grid;
 
 			&:active:not(.nav-header) {
 				background-color: $dark-overlay-color-2;
@@ -38,9 +38,9 @@ header#header {
 			&.nav-header {
 				//min-width: 100%;
 				margin: 0;
-				background: url($image-logo) no-repeat center 2px;
-				padding-top: 80px;
-				background-size: auto 76px;
+				background: url($image-logo) no-repeat center 8px;
+				padding-top: 12*$grid;
+				background-size: auto 10*$grid;
 				transition: all 0.2s ease-in-out;
 				justify-self: stretch;
 				//flex: 1 0 100%;
@@ -68,8 +68,8 @@ header#header {
 				display: none;
 			}
 
-			@media (max-width: 680px) {
-				margin: 5px 10px;
+			@media (max-width: $responsive) {
+				padding: $grid/2 $grid;
 			}
 		}
 	}
@@ -90,7 +90,7 @@ header#header.shrink {
 	//padding-top: 0;
 
 	> nav {
-		@media (max-width: 600px) {
+		@media (max-width: $responsive) {
 			> a {
 				&.nav-menu {
 					display: block;
@@ -129,10 +129,10 @@ header#header.shrink {
 
 		> a {
 			&.nav-header {
-				min-width: 130px;
-				padding-top: 22px; // 22 + 8 = 30
-				background-position: 5px center;
-				background-size: auto 30px;
+				//min-width: 130px;
+				padding-top: 3*$grid; // 22 + 8 = 30
+				background-position: $grid center;
+				background-size: auto 3*$grid;
 				//justify-self: flex-start;
 				//flex: 1 0 auto;
 				grid-column: 1 / span 1;
