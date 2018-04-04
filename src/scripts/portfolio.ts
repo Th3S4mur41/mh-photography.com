@@ -7,10 +7,31 @@ class Portfolio {
 	cdn: string[];
 	pictures: Array<string>;
 	imagePath: string;
+	portfolioRequest: XMLHttpRequest;
 
 	constructor() {
-		this.getPictures();
-		this.showThumbnail();
+		this.protocol = window.location.protocol;
+		this.cdn = [];
+		this.cdn.push('cdn1.mh-photography.com');
+		this.cdn.push('cdn2.mh-photography.com');
+		this.cdn.push('cdn3.mh-photography.com');
+		this.cdn.push('cdn4.mh-photography.com');
+
+		this.portfolioRequest = new XMLHttpRequest();
+		this.portfolioRequest.onload = () => {
+			if (this.portfolioRequest.readyState === 4 && this.portfolioRequest.status === 200)  {
+				const json = JSON.parse(this.portfolioRequest.responseText);
+				this.pictures = json.portfolio;
+
+				this.showThumbnail();
+			}
+		};
+		this.portfolioRequest.open(
+			'get',
+			window.location.hostname === 'localhost' ? 'portfolio.json' : 'portfolio.php',
+			true
+		);
+		this.portfolioRequest.send();
 	}
 
 	static showPicture(src: Element) {
@@ -45,28 +66,6 @@ class Portfolio {
 		picture.classList.remove('show');
 	}
 
-	getPictures() {
-		this.imagePath = 'assets/images/portfolio/';
-		this.pictures = [];
-		for (let i = 1; i <= 63; i++) {
-			this.pictures.push(i + '.jpg');
-		}
-
-		// output: JSON;
-		// temp: any =
-		//
-		// // portfolio = [];
-		// for (let i = 1; i <= 63; i++) {
-		// 	let picture = {
-		// 		"img": "asset/images/portfolio/1.jpg"
-		// 	};
-		// 	portfolio.push(picture);
-		// 	// this.pictures.push(i + '.jpg');
-		// }
-		// load from server
-		// var json = Utilities.JSONLoader.loadFromFile("../docs/location_map.json");
-	}
-
 	showThumbnail() {
 		const grid = document.getElementById('grid');
 
@@ -75,9 +74,9 @@ class Portfolio {
 			const link = document.createElement('a');
 
 			link.className = 'thumbnail';
-			link.href = this.imagePath + item;
-			link.style.backgroundImage = 'url("' + this.imagePath + 'thumbs/' + item + '")';
-			link.dataset.picture = item;
+			link.href = item['file'];
+			link.style.backgroundImage = 'url("' + item['file'].replace('portfolio/', 'portfolio/thumbs/') + '")';
+			link.dataset.picture = item['name'];
 
 			link.addEventListener('click', this.togglePicture);
 

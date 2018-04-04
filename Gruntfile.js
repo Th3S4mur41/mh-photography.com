@@ -62,6 +62,24 @@ module.exports = function (grunt) {
 						filter: 'isFile'
 					},
 					{
+						expand : true,
+						flatten: true,
+						src    : [
+							'src/portfolio.json'
+						],
+						dest  : 'dist/',
+						filter: 'isFile'
+					},
+					{
+						expand : true,
+						flatten: true,
+						src    : [
+							'src/*.php'
+						],
+						dest  : 'dist/',
+						filter: 'isFile'
+					},
+					{
 						expand : false,
 						flatten: true,
 						src    : 'src/robots-debug.txt',
@@ -91,6 +109,15 @@ module.exports = function (grunt) {
 							'src/favicon.ico',
 							'src/robots.txt',
 							'src/sitemap.xml'
+						],
+						dest  : 'dist/',
+						filter: 'isFile'
+					},
+					{
+						expand : true,
+						flatten: true,
+						src    : [
+							'src/*.php'
 						],
 						dest  : 'dist/',
 						filter: 'isFile'
