@@ -1,18 +1,176 @@
 
-AddDefaultCharset utf-8
-AddCharset utf-8 .html .css .js
+# ----------------------------------------------------------------------
+# Define additional mime types
+# ----------------------------------------------------------------------
 
 <IfModule mod_mime.c>
 	AddType image/svg+xml svg svgz
 	AddType image/x-icon ico
 </IfModule>
 
+# ----------------------------------------------------------------------
+# Default Charset
+# ----------------------------------------------------------------------
+
+AddDefaultCharset utf-8
+AddCharset utf-8 .html .css .js
+
+# ----------------------------------------------------------------------
+# Compression and Caching
+# ----------------------------------------------------------------------
+
+<IfModule mod_expires.c>
+    ExpiresActive on
+    ExpiresDefault                                      "access plus 1 month"
+
+  # CSS
+    ExpiresByType text/css                              "access plus 1 year"
+
+  # Data interchange
+    ExpiresByType application/atom+xml                  "access plus 1 hour"
+    ExpiresByType application/rdf+xml                   "access plus 1 hour"
+    ExpiresByType application/rss+xml                   "access plus 1 hour"
+    ExpiresByType application/json                      "access plus 0 seconds"
+    ExpiresByType application/ld+json                   "access plus 0 seconds"
+    ExpiresByType application/schema+json               "access plus 0 seconds"
+    ExpiresByType application/vnd.geo+json              "access plus 0 seconds"
+    ExpiresByType application/xml                       "access plus 0 seconds"
+    ExpiresByType text/xml                              "access plus 0 seconds"
+
+  # Favicon (cannot be renamed!) and cursor images
+    ExpiresByType image/vnd.microsoft.icon              "access plus 1 month"
+    ExpiresByType image/x-icon                          "access plus 1 month"
+
+  # HTML
+    ExpiresByType text/html                             "access plus 3600 seconds"
+
+  # JavaScript
+    ExpiresByType application/javascript                "access plus 1 year"
+    ExpiresByType application/x-javascript              "access plus 1 year"
+    ExpiresByType text/javascript                       "access plus 1 year"
+
+  # Manifest files
+    ExpiresByType application/manifest+json             "access plus 1 week"
+    ExpiresByType application/x-web-app-manifest+json   "access plus 0 seconds"
+    ExpiresByType text/cache-manifest                   "access plus 0 seconds"
+
+  # Media files
+    ExpiresByType audio/ogg                             "access plus 1 month"
+    ExpiresByType image/bmp                             "access plus 1 month"
+    ExpiresByType image/gif                             "access plus 1 month"
+    ExpiresByType image/jpeg                            "access plus 1 month"
+    ExpiresByType image/png                             "access plus 1 month"
+    ExpiresByType image/svg+xml                         "access plus 1 month"
+    ExpiresByType image/webp                            "access plus 1 month"
+    ExpiresByType image/heif                            "access plus 1 month"
+    ExpiresByType image/heic                            "access plus 1 month"
+    ExpiresByType image/heif-sequence                   "access plus 1 month"
+    ExpiresByType image/heic-sequence                   "access plus 1 month"
+    ExpiresByType video/mp4                             "access plus 1 month"
+    ExpiresByType video/ogg                             "access plus 1 month"
+    ExpiresByType video/webm                            "access plus 1 month"
+
+  # Web fonts
+    # Embedded OpenType (EOT)
+    ExpiresByType application/vnd.ms-fontobject         "access plus 1 month"
+    ExpiresByType font/eot                              "access plus 1 month"
+
+	# OpenType
+    ExpiresByType font/opentype                         "access plus 1 month"
+
+	# TrueType
+    ExpiresByType application/x-font-ttf                "access plus 1 month"
+
+	# Web Open Font Format (WOFF) 1.0
+    ExpiresByType application/font-woff                 "access plus 1 month"
+    ExpiresByType application/x-font-woff               "access plus 1 month"
+    ExpiresByType font/woff                             "access plus 1 month"
+
+	# Web Open Font Format (WOFF) 2.0
+    ExpiresByType application/font-woff2                "access plus 1 month"
+
+  # Other
+    ExpiresByType text/x-cross-domain-policy            "access plus 1 week"
+</IfModule>
+
 <IfModule mod_deflate.c>
-        AddOutputFilterByType DEFLATE text/css text/x-component application/x-javascript application/javascript text/javascript text/x-js text/html text/richtext image/svg+xml text/plain text/xsd text/xsl text/xml image/bmp application/java application/msword application/vnd.ms-fontobject application/x-msdownload image/x-icon image/webp application/json application/vnd.ms-access application/vnd.ms-project application/x-font-otf application/vnd.ms-opentype application/vnd.oasis.opendocument.database application/vnd.oasis.opendocument.chart application/vnd.oasis.opendocument.formula application/vnd.oasis.opendocument.graphics application/vnd.oasis.opendocument.presentation application/vnd.oasis.opendocument.spreadsheet application/vnd.oasis.opendocument.text audio/ogg application/pdf application/vnd.ms-powerpoint image/svg+xml application/x-shockwave-flash image/tiff application/x-font-ttf application/vnd.ms-opentype audio/wav application/vnd.ms-write application/font-woff application/font-woff2 application/vnd.ms-excel
-    <IfModule mod_mime.c>
-        # DEFLATE by extension
-        AddOutputFilter DEFLATE js css htm html xml
-    </IfModule>
+		AddOutputFilterByType DEFLATE text/plain
+		AddOutputFilterByType DEFLATE text/html
+		AddOutputFilterByType DEFLATE text/xml
+		AddOutputFilterByType DEFLATE text/css
+		AddOutputFilterByType DEFLATE text/vtt
+		AddOutputFilterByType DEFLATE text/x-component
+		AddOutputFilterByType DEFLATE application/xml
+		AddOutputFilterByType DEFLATE application/xhtml+xml
+		AddOutputFilterByType DEFLATE application/rss+xml
+		AddOutputFilterByType DEFLATE application/js
+		AddOutputFilterByType DEFLATE application/javascript
+		AddOutputFilterByType DEFLATE application/x-javascript
+		AddOutputFilterByType DEFLATE application/x-httpd-php
+		AddOutputFilterByType DEFLATE application/x-httpd-fastphp
+		AddOutputFilterByType DEFLATE application/atom+xml
+		AddOutputFilterByType DEFLATE application/json
+		AddOutputFilterByType DEFLATE application/ld+json
+		AddOutputFilterByType DEFLATE application/vnd.ms-fontobject
+		AddOutputFilterByType DEFLATE application/x-font-ttf
+		AddOutputFilterByType DEFLATE application/x-web-app-manifest+json
+		AddOutputFilterByType DEFLATE font/opentype
+		AddOutputFilterByType DEFLATE image/svg+xml
+		AddOutputFilterByType DEFLATE image/x-icon
+
+	# Exception: Images
+		SetEnvIfNoCase REQUEST_URI \.(?:gif|jpg|jpeg|png|svg)$ no-gzip dont-vary
+
+	# Drop problematic browsers
+		BrowserMatch ^Mozilla/4 gzip-only-text/html
+		BrowserMatch ^Mozilla/4\.0[678] no-gzip
+		BrowserMatch \bMSI[E] !no-gzip !gzip-only-text/html
+
+	# Make sure proxies don't deliver the wrong content
+		Header append Vary User-Agent env=!dont-vary
+</IfModule>
+
+<IfModule mod_brotli.c>
+		AddOutputFilterByType BROTLI_COMPRESS text/plain
+		AddOutputFilterByType BROTLI_COMPRESS text/html
+		AddOutputFilterByType BROTLI_COMPRESS text/xml
+		AddOutputFilterByType BROTLI_COMPRESS text/css
+		AddOutputFilterByType BROTLI_COMPRESS text/vtt
+		AddOutputFilterByType BROTLI_COMPRESS text/x-component
+		AddOutputFilterByType BROTLI_COMPRESS application/xml
+		AddOutputFilterByType BROTLI_COMPRESS application/xhtml+xml
+		AddOutputFilterByType BROTLI_COMPRESS application/rss+xml
+		AddOutputFilterByType BROTLI_COMPRESS application/js
+		AddOutputFilterByType BROTLI_COMPRESS application/javascript
+		AddOutputFilterByType BROTLI_COMPRESS application/x-javascript
+		AddOutputFilterByType BROTLI_COMPRESS application/x-httpd-php
+		AddOutputFilterByType BROTLI_COMPRESS application/x-httpd-fastphp
+		AddOutputFilterByType BROTLI_COMPRESS application/atom+xml
+		AddOutputFilterByType BROTLI_COMPRESS application/json
+		AddOutputFilterByType BROTLI_COMPRESS application/ld+json
+		AddOutputFilterByType BROTLI_COMPRESS application/vnd.ms-fontobject
+		AddOutputFilterByType BROTLI_COMPRESS application/x-font-ttf
+		AddOutputFilterByType BROTLI_COMPRESS application/x-web-app-manifest+json
+		AddOutputFilterByType BROTLI_COMPRESS font/opentype
+		AddOutputFilterByType BROTLI_COMPRESS image/svg+xml
+		AddOutputFilterByType BROTLI_COMPRESS image/x-icon
+
+	# Exception: Images
+		SetEnvIfNoCase REQUEST_URI \.(?:gif|jpg|jpeg|png|svg)$ no-gzip dont-vary
+
+	# Make sure proxies don't deliver the wrong content
+ 		Header append Vary User-Agent env=!dont-vary
+</IfModule>
+
+<IfModule mod_headers.c>
+  <FilesMatch "\.(js|css|xml|gz)$">
+    Header append Vary Accept-Encoding
+  </FilesMatch>
+</IfModule>
+
+# Set Keep Alive Header
+<IfModule mod_headers.c>
+    Header set Connection keep-alive
 </IfModule>
 
 <FilesMatch "\.(css|htc|less|js|js2|js3|js4|CSS|HTC|LESS|JS|JS2|JS3|JS4)$">
@@ -24,6 +182,30 @@ AddCharset utf-8 .html .css .js
     </IfModule>
 </FilesMatch>
 
+# ----------------------------------------------------------------------
+# Prevent access to restricted files and folders
+# ----------------------------------------------------------------------
+
+<FilesMatch "(\.htaccess)">
+  Order deny,allow
+  Deny from all
+</FilesMatch>
+
+# ----------------------------------------------------------------------
+#   Prohibit Hotlinking (usage of images on other sites)
+# ----------------------------------------------------------------------
+
+<IfModule mod_rewrite.c>
+	RewriteEngine on
+	RewriteCond %{HTTP_REFERER} !^$
+	RewriteCond %{HTTP_REFERER} !^https://(www\.)?mh-photography\.com(/.*)?$ [NC]
+	RewriteRule \.(jpg|jpeg|gif||png|webp|heif|heip)$ - [F]
+</ifModule>
+
+# ----------------------------------------------------------------------
+# Application relevant rewrite rules
+# ----------------------------------------------------------------------
+
 <IfModule mod_rewrite.c>
 	#Always use HTTPS and prefix with WWW
 	RewriteEngine On
@@ -32,13 +214,3 @@ AddCharset utf-8 .html .css .js
 	RewriteCond %{SERVER_PORT} 80
 	RewriteRule ^(.*)$ https://www.mh-photography.com/$1 [R=301,L]
 </IfModule>
-
-#CACHING
-# One week for image files
-<filesMatch ".(jpg|jpeg|png|gif|ico)$">
-Header set Cache-Control "max-age=604800, public"
-</filesMatch>
-# One day for css and js
-<filesMatch ".(css|js|svg|html)$">
-Header set Cache-Control "max-age=86400, public"
-</filesMatch>

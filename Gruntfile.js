@@ -228,24 +228,6 @@ module.exports = function (grunt) {
 					}
 				]
 			},
-			cache: {
-				options: {
-					patterns: [
-						{
-							match      : /max-age=(\d)+/g,
-							replacement: 'max-age=3600'
-						}
-					]
-				},
-				files: [
-					{
-						src: [
-							'.htaccess'
-						],
-						dest: 'dist/.htaccess'
-					}
-				]
-			},
 			version: {
 				options: {
 					patterns: [
@@ -397,8 +379,7 @@ module.exports = function (grunt) {
 		'sass:debug',
 		'postcss:debug',
 		'copy:debug',
-		'replace:build',
-		'replace:cache'
+		'replace:build'
 	]);
 
 	/**
