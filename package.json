@@ -10,32 +10,31 @@
     "last 2 Safari versions",
     "Firefox ESR"
   ],
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
-    "@sonarwhal/configuration-web-recommended": "^4.0.0",
+    "@sonarwhal/configuration-web-recommended": "^6.0.0",
     "autoprefixer": "~8.1.0",
     "eslint": "^4.19.0",
-		"eslint-config-prettier": "^2.9.0",
+    "eslint-config-prettier": "^2.9.0",
     "grunt": "~1.0.1",
     "grunt-cli": "~1.2.0",
     "grunt-contrib-clean": "~1.1.0",
     "grunt-contrib-copy": "~1.0.0",
     "grunt-contrib-htmlmin": "~2.4.0",
     "grunt-contrib-uglify-es": "~3.3.0",
-    "grunt-contrib-watch": "~1.0.0",
-    "grunt-htmlclean": "~2.7.11",
+    "grunt-contrib-watch": "^1.1.0",
+    "grunt-htmlclean": "^2.7.18",
     "grunt-postcss": "~0.9.0",
     "grunt-replace": "~1.0.1",
     "grunt-sass": "~2.1.0",
     "grunt-stylelint": "^0.9.0",
     "grunt-ts": "~6.0.0-beta.19",
     "gruntify-eslint": "^4.0.0",
-    "prettier": "^1.11.1",
-    "sonarwhal": "^1.3.1",
-    "stylelint": "^9.1.3",
-    "tslint": "^5.9.1",
-    "typescript": "~2.7.2"
+    "prettier": "^1.12.1",
+    "sonarwhal": "^1.9.0",
+    "stylelint": "^9.2.1",
+    "tslint": "^5.10.0",
+    "typescript": "^2.8.3"
   },
   "scripts": {}
 }
