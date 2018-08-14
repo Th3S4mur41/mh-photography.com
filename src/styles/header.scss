@@ -31,7 +31,11 @@ header#header {
 		> a {
 			display: block; // Necessary for -ms-grid support
 			padding: $grid 3*$grid;
+			border-bottom: 2px solid transparent;
 
+			&:hover:not(.nav-header) {
+				border-bottom: 2px solid $primary-color;
+			}
 			&:active:not(.nav-header) {
 				background-color: $dark-overlay-color-2;
 			}

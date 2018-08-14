@@ -15,6 +15,8 @@ $dark-overlay-color-2: rgba(46, 45, 51, 0.1);
 $light-overlay-color: rgba(255, 255, 255, 0.3);
 $light-overlay-color-2: rgba(255, 255, 255, 0.8);
 $light-overlay-color-3: rgba(255, 255, 255, 0.95);
+$acrylic-light-color: rgba(255, 255, 255, 0.3);
+$acrylic-dark-color: rgba(0, 0, 0, 0.3);
 
 /**
  * Assets
@@ -25,3 +27,18 @@ $image-logo: 'assets/images/logo.png';
 $image-about: 'assets/images/about.jpg';
 $image-contact: 'assets/images/contact.jpg';
 $image-portfolio: 'assets/images/portfolio.jpg';
+
+/**
+ * Mixins
+ */
+
+// Fluent acrylic effect: see https://medium.com/microsoft-design/diy-a-web-version-the-fluent-design-systems-acrylic-material-fe2eac2a40bb
+@supports (backdrop-filter: blur(30px)) or (-webkit-backdrop-filter: blur(30px)) {
+	.acrylic {
+		backdrop-filter: blur(30px) saturate(125%);
+		background: $acrylic-light-color;
+	}
+	.darkmode .acrylic {
+		background: $acrylic-dark-color;
+	}
+}

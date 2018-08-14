@@ -55,6 +55,8 @@ section#portfolio {
 	background-position: center;
 	background-size: cover;
 	position: relative;
+	// define this as placeholder until thumbnail loads
+	box-shadow: 0 0 -1px -2px $dark-overlay-color;
 
 	&::before {
 		position: absolute;
@@ -66,7 +68,7 @@ section#portfolio {
 		content: ' ';
 	}
 	&:hover {
-		transform: translate(1px, -1px);
+		//transform: translate(1px, -1px);
 		box-shadow: 0 1px 2px $dark-overlay-color;
 	}
 	&:hover::before {
@@ -113,8 +115,8 @@ section#portfolio {
 
 @supports (backdrop-filter: blur(20px)) {
 	.thumbnail > picture {
-		background: $light-overlay-color;
 		backdrop-filter: blur(20px);
+		background: $light-overlay-color;
 	}
 }
 
@@ -122,4 +124,8 @@ section#portfolio {
 .thumbnail source,
 .thumbnail img {
 	width: inherit;
+}
+
+.thumbnail source {
+	border: $grid solid $background-color;
 }
