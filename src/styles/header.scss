@@ -99,6 +99,23 @@ header#header.shrink {
 				&.nav-menu {
 					display: block;
 				}
+				&.nav-header {
+					//min-width: 130px;
+					padding-top: 3*$grid; // 22 + 8 = 30
+					background-position: $grid center;
+					background-size: auto 3*$grid;
+					//justify-self: flex-start;
+					//flex: 1 0 auto;
+					grid-column: 1 / span 1;
+					//grid-row: 2;
+				}
+				&.nav-about,
+				&.nav-portfolio,
+				&.nav-contact,
+				&.nav-menu {
+					grid-row: 1;
+					justify-self: end;
+				}
 			}
 			&.open {
 				> a {
@@ -131,25 +148,7 @@ header#header.shrink {
 			}
 		}
 
-		> a {
-			&.nav-header {
-				//min-width: 130px;
-				padding-top: 3*$grid; // 22 + 8 = 30
-				background-position: $grid center;
-				background-size: auto 3*$grid;
-				//justify-self: flex-start;
-				//flex: 1 0 auto;
-				grid-column: 1 / span 1;
-				//grid-row: 2;
-			}
-			&.nav-about,
-			&.nav-portfolio,
-			&.nav-contact,
-			&.nav-menu {
-				grid-row: 1;
-				justify-self: end;
-			}
-		}
+
 	}
 }
 
