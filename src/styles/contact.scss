@@ -1,0 +1,42 @@
+@import "variables";
+
+/** ********************************************************************************************************************
+ * Globals
+ */
+
+.vcard {
+	> * {
+		display: block;
+	}
+	> .fn {
+		font-weight: 600;
+	}
+	> .adr > * {
+		display: inline;
+	}
+	> a,
+	> a:hover,
+	> a:active {
+		color: #2e2d33;
+	}
+}
+
+/** ********************************************************************************************************************
+ * Layout
+ */
+
+section#contact {
+	> header {
+		background-image:
+			linear-gradient(
+				$dark-overlay-color,
+				$dark-overlay-color
+			),
+			url($image-contact);
+		background-position: center top;
+	}
+	> .vcard {
+		text-align: center;
+		margin: 1em 15vw;
+	}
+}

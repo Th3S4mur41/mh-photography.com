@@ -1,0 +1,125 @@
+@import "variables";
+
+/** ********************************************************************************************************************
+ * Globals
+ */
+
+/** ********************************************************************************************************************
+ * Layout
+ */
+
+section#portfolio {
+	@media (scripting: none) {
+		// Hide section when scripts are not available to load content
+		display: none;
+	}
+
+	> header {
+		background-image:
+			linear-gradient(
+				$dark-overlay-color,
+				$dark-overlay-color
+			),
+			url($image-portfolio);
+		background-position: left top;
+	}
+	> .grid {
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: center;
+		align-items: center;
+
+		> .thumbnail {
+			//flex: 1 1 auto;
+		}
+	}
+}
+
+/** ********************************************************************************************************************
+ * Misc
+ */
+
+.thumbnail {
+	min-width: 100px;
+	max-width: 256px;
+	min-height: 100px;
+	max-height: 256px;
+	height: 30vw;
+	width: 30vw;
+	margin: 2px;
+	transition: all 0.2s ease-in-out;
+	cursor: pointer;
+	// TODO: Replace inline background image through attr when supported
+	//background: attr(data-thumbnail url);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	position: relative;
+
+	&::before {
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		background: $light-overlay-color;
+		content: ' ';
+	}
+	&:hover {
+		transform: translate(1px, -1px);
+		box-shadow: 0 1px 2px $dark-overlay-color;
+	}
+	&:hover::before {
+		background: none;
+	}
+	> picture {
+		position: fixed;
+		background: $light-overlay-color-2;
+		z-index: 999;
+		text-align: center;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		&:not(.show) {
+			display: none;
+		}
+		&.show {
+			top: 0;
+			left: 0;
+			height: 100vh;
+			width: 100vw;
+
+			@media (orientation: portrait) {
+				//transition: width 1s ease-in-out;
+				source,
+				img {
+					width: 100vw;
+					height: auto;
+				}
+			}
+
+			@media (orientation: landscape) {
+				//transition: height 1s ease-in-out;
+				source,
+				img {
+					width: auto;
+					height: 100vh;
+				}
+			}
+		}
+	}
+}
+
+@supports (backdrop-filter: blur(20px)) {
+	.thumbnail > picture {
+		background: $light-overlay-color;
+		backdrop-filter: blur(20px);
+	}
+}
+
+.thumbnail picture,
+.thumbnail source,
+.thumbnail img {
+	width: inherit;
+}

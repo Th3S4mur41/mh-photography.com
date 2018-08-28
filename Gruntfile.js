@@ -3,9 +3,37 @@
 
 module.exports = function (grunt) {
 
+	// *****************************************************************************************************************
+	// Variables
+	// *****************************************************************************************************************
+
+	// const build = grunt.option('build') || 'dev-' + Date.now();
+
+	// *****************************************************************************************************************
+	// Load NPM Plugins
+	// *****************************************************************************************************************
+	grunt.loadNpmTasks('grunt-contrib-clean');
+	grunt.loadNpmTasks('grunt-contrib-copy');
+	// grunt.loadNpmTasks('grunt-contrib-concat');
+	grunt.loadNpmTasks('grunt-contrib-htmlmin');
+	// grunt.loadNpmTasks('grunt-contrib-uglify-es');
+	grunt.loadNpmTasks('grunt-contrib-watch');
+	// grunt.loadNpmTasks('grunt-jsonlint');
+	grunt.loadNpmTasks('grunt-postcss');
+	grunt.loadNpmTasks('grunt-replace');
+	grunt.loadNpmTasks('grunt-stylelint');
+	grunt.loadNpmTasks('grunt-sass');
+	grunt.loadNpmTasks('grunt-ts');
+	grunt.loadNpmTasks('gruntify-eslint');
+
+	// *****************************************************************************************************************
+	// Grunt config
+	// *****************************************************************************************************************
+
 	grunt.initConfig({
-		pkg  : grunt.file.readJSON('package.json'),
-		clean: {
+		pkg        : grunt.file.readJSON('package.json'),
+		buildnumber: grunt.option('build') || 'dev-' + Date.now(),
+		clean      : {
 			options: {
 				force: true
 			},
@@ -21,33 +49,6 @@ module.exports = function (grunt) {
 				]
 			}
 		},
-		// concat: {
-		// 	debug: {
-		// 		options: {
-		// 			separator: ' ',
-		// 			sourceMap: true
-		// 		},
-		// 		files: {
-		// 			'dist/scripts.js': [
-		// 				'scripts/*.js',
-		// 				'!scripts/*.min.js'
-		// 			]
-		// 		},
-		// 		nonull: true
-		// 	},
-		// 	release: {
-		// 		options: {
-		// 			separator: ' ',
-		// 			sourceMap: false
-		// 		},
-		// 		files: {
-		// 			'dist/scripts.js': [
-		// 				'scripts/*.min.js'
-		// 			]
-		// 		},
-		// 		nonull: true
-		// 	},
-		// },
 		copy: {
 			debug: {
 				files: [
@@ -62,10 +63,35 @@ module.exports = function (grunt) {
 					},
 					{
 						expand : true,
+						flatten: true,
+						src    : [
+							'src/portfolio.json'
+						],
+						dest  : 'dist/',
+						filter: 'isFile'
+					},
+					{
+						expand : true,
+						flatten: true,
+						src    : [
+							'src/*.php'
+						],
+						dest  : 'dist/',
+						filter: 'isFile'
+					},
+					{
+						expand : false,
+						flatten: true,
+						src    : 'src/robots-debug.txt',
+						dest   : 'dist/robots.txt',
+						filter : 'isFile'
+					},
+					{
+						expand : true,
 						flatten: false,
 						cwd    : 'src/',
 						src    : [
-							'assets/icons/*.svg',
+							'assets/icons/*',
 							'assets/images/**/*.jpg',
 							'assets/images/**/*.png'
 						],
@@ -77,7 +103,7 @@ module.exports = function (grunt) {
 			release: {
 				files: [
 					{
-						expand : false,
+						expand : true,
 						flatten: true,
 						src    : [
 							'src/favicon.ico',
@@ -89,12 +115,23 @@ module.exports = function (grunt) {
 					},
 					{
 						expand : true,
+						flatten: true,
+						src    : [
+							'src/*.php'
+						],
+						dest  : 'dist/',
+						filter: 'isFile'
+					},
+					{
+						expand : true,
 						flatten: false,
 						cwd		  : 'src/',
 						src    : [
-							'assets/icons/*.svg',
+							'assets/icons/*',
 							'assets/images/**/*.jpg',
-							'assets/images/**/*.png'
+							'assets/images/**/*.png',
+							'!assets/images/diashow/**/*',
+							'!assets/images/portfolio/**/*'
 						],
 						dest  : 'dist/',
 						filter: 'isFile'
@@ -149,48 +186,67 @@ module.exports = function (grunt) {
 		// 		src: ['src/main/webapp/**/*.json']
 		// 	}
 		// },
-		// postcss: {
-		// 	options: {
-		// 		// map: true,
-		// 		processors: [
-		// 			require('autoprefixer')({
-		// 				flexbox: 'no-2009',
-		// 				grid   : false
-		// 			})
-		// 		]
-		// 	},
-		// 	lib: {
-		// 		src: 'src/main/webapp/css/lib.css'
-		// 	},
-		// 	debug: {
-		// 		src: 'src/main/webapp/css/style.css'
-		// 	},
-		// 	release: {
-		// 		src: 'src/main/webapp/css/style.css'
-		// 	}
-		// },
-		// replace: {
-		// 	less: {
-		// 		// workaround for compression bug that replaces 0% through 0
-		// 		// leads to broken UI when using flex: x x 0%;
-		// 		options: {
-		// 			patterns: [
-		// 				{
-		// 					match      : /flex:(\d)\s(\d)\s0([;,}])/g,
-		// 					replacement: 'flex:$1 $2 0%$3'
-		// 				}
-		// 			]
-		// 		},
-		// 		files: [
-		// 			{
-		// 				src: [
-		// 					'src/main/webapp/css/style.min.css'
-		// 				],
-		// 				dest: 'src/main/webapp/css/style.min.css'
-		// 			}
-		// 		]
-		// 	}
-		// },
+		postcss: {
+			options: {
+				processors: [
+					require('autoprefixer')({
+						flexbox: 'no-2009',
+						grid   : true
+					})
+				]
+			},
+			debug: {
+				options: {
+					map: true
+				},
+				src: 'dist/styles.css'
+			},
+			release: {
+				src: 'dist/styles.css'
+			}
+		},
+		replace: {
+			build: {
+				options: {
+					patterns: [
+						{
+							match      : /{{BUILD}}/g,
+							replacement: '<%= buildnumber %>'
+						}
+					]
+				},
+				files: [
+					{
+						expand : true,
+						flatten: false,
+						src    : [
+							'dist/**/*.css',
+							'dist/**/*.html',
+							'dist/**/*.js'
+						],
+						dest: '.'
+					}
+				]
+			},
+			version: {
+				options: {
+					patterns: [
+						{
+							match      : /\{{BUILD}}/g,
+							replacement: '<%= pkg.version %>'
+						}
+					]
+				},
+				files: [
+					{
+						// src: [
+						// 	'.htaccess'
+						// ],
+						// dest: 'dist/.htaccess'
+					}
+				]
+			}
+		},
 		sass: {
 			options: {
 				outputStyle: 'compressed'
@@ -228,35 +284,54 @@ module.exports = function (grunt) {
 				]
 			}
 		},
-		uglify: {
+		ts: {
 			options: {
-				banner  : '/** * Copyright (c) 2018 Mouch.net */',
-				compress: true,
-				mangle  : false
-				// wrap    : true
 			},
 			debug: {
 				options: {
 					sourceMap: true
-					// sourceMapIncludeSources : true,
-					// sourceMapIn : 'scripts/scripts.js.map'
 				},
-				files: {
-					'dist/scripts.js': [
-						'src/scripts/**/*.js',
-						'!src/scripts/**/*.min.js'
-					]
-				}
+				tsconfig: 'tsconfig.json'
 			},
 			release: {
-				files: {
-					'dist/scripts.js': [
-						'src/scripts/**/*.js',
-						'!src/scripts/**/*.min.js'
-					]
-				}
+				options: {
+					sourceMap: false
+				},
+				tsconfig: 'tsconfig.json'
 			}
 		},
+		// uglify: {
+		// 	options: {
+		// 		banner: '/** \n' +
+		// 			'* <%= pkg.name %> - v<%= pkg.version %>-' + build + '\n' +
+		// 			'* Copyright © <%= grunt.template.today("yyyy") %> Mouch.net\n' +
+		// 			'*/',
+		// 		compress: true,
+		// 		mangle  : false
+		// 		// wrap    : true
+		// 	},
+		// 	debug: {
+		// 		options: {
+		// 			sourceMap: true
+		// 			// sourceMapIncludeSources : true,
+		// 			// sourceMapIn : 'scripts/scripts.js.map'
+		// 		},
+		// 		files: {
+		// 			'dist/scripts.js': [
+		// 				'src/scripts/**/*.js',
+		// 				'!src/scripts/**/*.min.js'
+		// 			]
+		// 		}
+		// 	},
+		// 	release: {
+		// 		files: {
+		// 			'dist/scripts.js': [
+		// 				'src/scripts/**/*.js',
+		// 				'!src/scripts/**/*.min.js'
+		// 			]
+		// 		}
+		// 	}
+		// },
 		watch: {
 			options: {
 				spawn        : true,
@@ -265,35 +340,29 @@ module.exports = function (grunt) {
 			},
 			styles: {
 				files: ['src/styles/**/*'],
-				tasks: ['sass:debug']
+				tasks: ['sass:debug', 'postcss:debug']
 			},
-			scripts: {
-				files: ['src/scripts/**/*.js'],
-				tasks: ['uglify:debug']
+			// scripts: {
+			// 	files: ['src/scripts/**/*.js'],
+			// 	tasks: ['uglify:debug']
+			// },
+			typescript: {
+				files: ['src/scripts/**/*.ts'],
+				tasks: ['ts:debug']
 			},
 			html: {
 				files: ['src/**/*.html'],
 				tasks: ['htmlmin:debug']
+			},
+			assets: {
+				files: [
+					'src/assets/icons/**/*',
+					'src/assets/images/**/*'
+				],
+				tasks: ['copy:debug']
 			}
 		}
 	});
-
-
-	// *****************************************************************************************************************
-	// Load NPM Plugins
-	// *****************************************************************************************************************
-	grunt.loadNpmTasks('grunt-contrib-clean');
-	grunt.loadNpmTasks('grunt-contrib-copy');
-	// grunt.loadNpmTasks('grunt-contrib-concat');
-	grunt.loadNpmTasks('grunt-contrib-htmlmin');
-	grunt.loadNpmTasks('grunt-contrib-uglify-es');
-	grunt.loadNpmTasks('grunt-contrib-watch');
-	// grunt.loadNpmTasks('grunt-jsonlint');
-	// grunt.loadNpmTasks('grunt-postcss');
-	// grunt.loadNpmTasks('grunt-replace');
-	grunt.loadNpmTasks('grunt-stylelint');
-	grunt.loadNpmTasks('grunt-sass');
-	grunt.loadNpmTasks('gruntify-eslint');
 
 	// *****************************************************************************************************************
 	// Public tasks
@@ -305,9 +374,12 @@ module.exports = function (grunt) {
 	grunt.registerTask('debug', [
 		'clean',
 		'htmlmin:debug',
-		'uglify:debug',
+		// 'uglify:debug',
+		'ts:debug',
 		'sass:debug',
-		'copy:debug'
+		'postcss:debug',
+		'copy:debug',
+		'replace:build'
 	]);
 
 	/**
@@ -316,8 +388,11 @@ module.exports = function (grunt) {
 	grunt.registerTask('release', [
 		'clean',
 		'htmlmin:release',
-		'uglify:release',
+		// 'uglify:release',
+		'ts:release',
 		'sass:release',
-		'copy:release'
+		'postcss:release',
+		'copy:release',
+		'replace:build'
 	]);
 };

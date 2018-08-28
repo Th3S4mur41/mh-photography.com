@@ -1,7 +1,13 @@
-/** ********************************************************************************************************************
+/**
  * © 2018 Manuel Hamel Photography
  */
-@import url(https://fonts.googleapis.com/css?family=Titillium+Web:400,300italic,200);
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web:400,300italic,200');
+@import "variables";
+@import "about";
+@import "contact";
+@import "header";
+@import "portfolio";
+@import "icons";
 
 /** ********************************************************************************************************************
  * Globals
@@ -13,8 +19,8 @@ body {
 	font-family: 'Titillium Web', sans-serif;
 	font-size: 18px;
 	font-weight: 400;
-	color: #2e2d33;
-	background-color: white;
+	color: $primary-color;
+	background-color: $background-color;
 	min-height: 100vh;
 	scroll-behavior: smooth;
 }
@@ -24,6 +30,21 @@ h2 {
 	font-weight: 400;
 	letter-spacing: 0.5em;
 	text-transform: uppercase;
+
+	@media (max-width: 400px) {
+		font-size: 36px;
+	}
+}
+
+nav > a {
+	text-decoration: none;
+	font-size: 14px;
+	letter-spacing: 0.35em;
+	text-transform: uppercase;
+
+	&:hover {
+		font-weight: 600;
+	}
 }
 
 nav > a,
@@ -32,43 +53,18 @@ nav > a:visited {
 	color: #2e2d33;
 }
 
-nav > a {
-	text-decoration: none;
-	font-size: 14px;
-	letter-spacing: 0.35em;
-	text-transform: uppercase;
-}
+.socialmedia {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+	align-items: center;
 
-.vcard > * {
-	display: block;
-}
-
-.vcard > .fn {
-	font-weight: 600;
-}
-
-.vcard > .adr > * {
-	display: inline;
-}
-
-.vcard > a,
-.vcard > a:hover,
-.vcard > a:active {
-	color: #2e2d33;
-}
-
-.thumbnail {
-	min-width: 128px;
-	width: 256px;
-	margin: 2px;
-	transition: all 0.2s ease-in-out;
-}
-@media screen and (max-width: 800px) {
-	.thumbnail {
-		width: 128px;
+	> a {
+		flex: 0 0 auto;
+		margin: 10px;
+		font-size: 32px;
 	}
 }
-
 
 /** ********************************************************************************************************************
  * Accessibility
@@ -83,216 +79,38 @@ nav > a {
 }
 
 /** ********************************************************************************************************************
- * Styles
+ * Layout
  */
 
 body {
 	display: flex;
 	flex-flow: column nowrap;
 	align-items: stretch;
-	min-width: 380px;
+	min-width: 320px;
 }
 
-header#header {
-	min-width: 100%;
-	flex: 0 0 auto;
+section > header {
+	height: 100vh;
 	display: flex;
 	flex-flow: column nowrap;
-	align-items: stretch;
-
-	/* Sticky header */
-	top: 0;
-	position: fixed;
-
-	/*Logo*/
-	/*background: url('assets/images/logo.jpg') no-repeat,*/
-	/*url('assets/images/diashow/1.jpg') no-repeat;*/
-	background: white url('assets/images/logo.png') no-repeat;
-	padding-top: 80px;
-	background-position: center 2px;
-	background-size: auto 76px;
-	transition: all 0.2s ease-in-out;
-}
-
-header#header.shrink {
-	/*background: white url('assets/images/logo.png') no-repeat;*/
-	padding-top: 0;
-	background-position: 5px center;
-	background-size: auto 30px;
-}
-
-/*#header > #slideshow-h {*/
-/*position: absolute;*/
-/*top: 0;*/
-/*height: 100vh;*/
-/*z-index: -1;*/
-/*}*/
-
-#header > nav {
-	min-height: 32px;
-	flex: 0 2 auto;
-	display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
-	justify-content: center;
-	align-items: center;
-	background-color: white;
-}
-
-#header.shrink > nav {
-	background-color: transparent;
-}
-
-#header > nav > a {
-	flex: 0 0 auto;
-	margin: 5px 20px;
-}
-
-section#slideshow {
-	flex: 1 1 auto;
-}
-
-.cycle-slideshow {
-	position: relative;
-	overflow: hidden;
-}
-
-.cycle-slideshow > .cycle-prev,
-.cycle-slideshow > .cycle-next {
-	font-size: 56px;
-	color: white;
-	text-shadow: 0 0 5px #2e2d33;
-	display: block;
-	position: absolute;
-	top: 40%;
-	z-index: 100;
-	cursor: pointer;
-	opacity: 0.1;
-}
-
-.cycle-slideshow:hover > .cycle-prev,
-.cycle-slideshow:hover > .cycle-next {
-	opacity: 1;
-}
-
-.cycle-slideshow > .cycle-prev {
-	left: 0.5%;
-}
-
-.cycle-slideshow > .cycle-next {
-	right: 0.5%
-}
-
-.cycle-slideshow > img {
-}
-
-section#about > header {
-	/*background: url('../resources/images/about.jpg');*/
-	background: linear-gradient(
-			rgba(46, 45, 51, 0.5),
-			rgba(46, 45, 51, 0.5)),
-	url('assets/images/about.jpg');
-	height: 100vh;
-	display: flex;
-	flex-direction: column;
-	flex-wrap: nowrap;
 	justify-content: center;
 	align-items: stretch;
 
 	/* Create the parallax scrolling effect */
+	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-position: center;
-	background-repeat: no-repeat;
 	background-size: cover;
-}
 
-section#portfolio > header {
-	/*background: url('../resources/images/about.jpg');*/
-	background: linear-gradient(
-			rgba(46, 45, 51, 0.5),
-			rgba(46, 45, 51, 0.5)),
-	url('assets/images/portfolio.jpg');
-	height: 100vh;
-	display: flex;
-	flex-direction: column;
-	flex-wrap: nowrap;
-	justify-content: center;
-	align-items: stretch;
-
-	/* Create the parallax scrolling effect */
-	background-attachment: fixed;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-}
-
-section#portfolio > .grid {
-	display: flex;
-	flex-flow: row wrap;
-	justify-content: center;
-	align-items: center;
-}
-
-section#portfolio > .grid > .thumbnail {
-	/*flex: 1 1 auto;*/
-}
-
-section#contact > header {
-	/*background: url('../resources/images/contact.jpg');*/
-	background: linear-gradient(
-			rgba(46, 45, 51, 0.5),
-			rgba(46, 45, 51, 0.5)),
-	url('assets/images/contact.jpg');
-	height: 100vh;
-	display: flex;
-	flex-direction: column;
-	flex-wrap: nowrap;
-	justify-content: center;
-	align-items: stretch;
-
-	/* Create the parallax scrolling effect */
-	background-attachment: fixed;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-}
-
-section > header > h2 {
-	margin: 0;
-	text-align: center;
-	color: white;
-	text-shadow: 1px 1px 5px #2e2d33;
-}
-
-section#about > p {
-	text-align: justify;
-	margin: 1em 15vw;
-}
-
-section#contact > .vcard {
-	text-align: center;
-	margin: 1em 15vw;
+	> h2 {
+		margin: 0;
+		text-align: center;
+		color: $background-color;
+		text-shadow: 1px 1px 5px $primary-color;
+	}
 }
 
 footer#footer {
 	min-width: 100%;
 	flex: 0 0 auto;
-}
-
-footer > .socialmedia {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
-	justify-content: center;
-	align-items: center;
-}
-
-.socialmedia > a {
-	flex: 0 0 auto;
-	margin: 10px;
-}
-
-.socialmedia img {
-	height: 30px;
-	width: 30px;
 }

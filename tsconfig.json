@@ -1,0 +1,24 @@
+{
+	"compilerOptions": {
+		"emitDecoratorMetadata": true,
+		"experimentalDecorators": false,
+		"inlineSources": true,
+		"lib": ["es2015", "dom"],
+		"module": "system",
+		"noImplicitAny": true,
+		"outFile": "dist/scripts.js",
+		"preserveConstEnums": true,
+		"removeComments": true,
+		"sourceMap": true,
+		"suppressImplicitAnyIndexErrors": true,
+		"target": "es5"
+	},
+	"include": [
+		"src/scripts/**/*.ts",
+		"src/scripts/**/*.d.ts"
+	],
+	"exclude": [
+		"node_modules",
+		"**/*.spec.ts"
+	]
+}
