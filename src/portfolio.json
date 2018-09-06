@@ -487,15 +487,6 @@
 			"height": 1285
 		},
 		{
-			"name": "thumbs",
-			"extension": null,
-			"mime": null,
-			"file": "assets/images/portfolio/thumbs",
-			"size": false,
-			"width": null,
-			"height": null
-		},
-		{
 			"name": "58",
 			"extension": "jpg",
 			"mime": "image/jpeg",
