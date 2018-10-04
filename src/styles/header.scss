@@ -81,8 +81,8 @@ header#header {
 
 @supports (backdrop-filter: blur(20px)) {
 	header#header > nav {
-		background: $light-overlay-color-2;
-		backdrop-filter: blur(20px);
+		background: $acrylic-light-color;
+		backdrop-filter: $acrylic-filter;
 	}
 }
 
@@ -94,27 +94,29 @@ header#header.shrink {
 	//padding-top: 0;
 
 	> nav {
+		> a {
+			&.nav-header {
+				//min-width: 130px;
+				padding-top: 3*$grid; // 22 + 8 = 30
+				background-position: $grid center;
+				background-size: auto 3*$grid;
+				//justify-self: flex-start;
+				//flex: 1 0 auto;
+				grid-column: 1 / span 1;
+				//grid-row: 2;
+			}
+			&.nav-about,
+			&.nav-portfolio,
+			&.nav-contact,
+			&.nav-menu {
+				grid-row: 1;
+				justify-self: end;
+			}
+		}
 		@media (max-width: $responsive) {
 			> a {
 				&.nav-menu {
 					display: block;
-				}
-				&.nav-header {
-					//min-width: 130px;
-					padding-top: 3*$grid; // 22 + 8 = 30
-					background-position: $grid center;
-					background-size: auto 3*$grid;
-					//justify-self: flex-start;
-					//flex: 1 0 auto;
-					grid-column: 1 / span 1;
-					//grid-row: 2;
-				}
-				&.nav-about,
-				&.nav-portfolio,
-				&.nav-contact,
-				&.nav-menu {
-					grid-row: 1;
-					justify-self: end;
 				}
 			}
 			&.open {
@@ -147,8 +149,6 @@ header#header.shrink {
 				justify-content: flex-end;
 			}
 		}
-
-
 	}
 }
 

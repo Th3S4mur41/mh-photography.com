@@ -17,7 +17,7 @@ html,
 body {
 	margin: 0;
 	font-family: 'Titillium Web', sans-serif;
-	font-size: 18px;
+	font-size: 20px;
 	font-weight: 400;
 	color: $primary-color;
 	background-color: $background-color;
@@ -51,6 +51,7 @@ nav > a,
 nav > a:hover,
 nav > a:visited {
 	color: #2e2d33;
+	text-shadow: 1px 1px 4px $background-color;
 }
 
 .socialmedia {
@@ -87,6 +88,20 @@ body {
 	flex-flow: column nowrap;
 	align-items: stretch;
 	min-width: 320px;
+  // TODO: Add scroll snap point to headers and content pages
+	//scroll-snap-type: proximity;
+	///* older spec implementation */
+	//scroll-snap-destination: 0% 100%;
+	//scroll-snap-points-x: repeat(100%);
+}
+
+body > section {
+	//scroll-snap-align: start;
+	// TODO: center the content on the page, following solution adds space before header
+	//min-height: 200vh; // 100vh for the header and 100vh for the content
+	//display: flex;
+	//flex-direction: column;
+	//justify-content: space-around;
 }
 
 section > header {

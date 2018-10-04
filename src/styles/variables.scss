@@ -17,6 +17,10 @@ $light-overlay-color-2: rgba(255, 255, 255, 0.8);
 $light-overlay-color-3: rgba(255, 255, 255, 0.95);
 $acrylic-light-color: rgba(255, 255, 255, 0.3);
 $acrylic-dark-color: rgba(0, 0, 0, 0.3);
+$dark-shadow-color: rgba(0, 0, 0, 0.5);
+$dark-shadow-hover-color: rgba(0, 0, 0, 0.8);
+
+$acrylic-filter: blur(20px) saturate(125%);
 
 /**
  * Assets
