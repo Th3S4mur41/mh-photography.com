@@ -10,8 +10,10 @@ if(is_dir($dir)){
     if($dh = opendir($dir)){
         while(($file = readdir($dh)) != false){
 
-            if($file == "." or $file == ".." or is_dir($file)){
-                //...
+            if(is_dir($path . $file)) {
+                // do nothing
+            } else if ($file == "." or $file == "..") {
+            		// do nothing
             } else {
             		$image_path = $path . $file;
                 $image_path_parts = pathinfo($file);
@@ -23,7 +25,7 @@ if(is_dir($dir)){
 								'extension' => $image_path_parts['extension'],
 								'mime' => $image_info['mime'],
                 'file' => $image_path,
-								'size' => filesize($file),
+								'size' => filesize($path . $file),
 								'width' => $image_info[0],
 								'height' => $image_info[1]
 								);
