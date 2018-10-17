@@ -36,7 +36,7 @@ class Portfolio {
 
 	static showPicture(src: Element) {
 		let picture: Element;
-		if (src.childElementCount === 0) {
+		if (src.childElementCount === 1) {
 			const source = document.createElement('source');
 			const img = document.createElement('img');
 			picture = document.createElement('picture');
@@ -57,13 +57,29 @@ class Portfolio {
 			picture = src.firstElementChild;
 		}
 		// Display picture
-		picture.classList.add('show');
+		src.classList.add('show');
 	}
 
 	static hidePicture(src: Element) {
 		const picture = src.firstElementChild;
 
-		picture.classList.remove('show');
+		src.classList.remove('show');
+	}
+
+	static togglePicture() {
+		let src = event.srcElement;
+
+		// Don't navigate to picture URL
+		event.preventDefault();
+
+		while (src.tagName.toLowerCase() !== 'a') {
+			src = src.parentElement;
+		}
+		if (src.classList.contains('show')) {
+			Portfolio.hidePicture(src);
+		} else {
+			Portfolio.showPicture(src);
+		}
 	}
 
 	showThumbnail() {
@@ -72,32 +88,19 @@ class Portfolio {
 		grid.innerHTML = '';
 		this.pictures.forEach((item) => {
 			const link = document.createElement('a');
+			const thumbnail = document.createElement('img');
 
 			link.className = 'thumbnail';
 			link.href = item['file'];
-			link.style.backgroundImage = 'url("' + item['file'].replace('portfolio/', 'portfolio/thumbs/') + '")';
+			// link.style.backgroundImage = 'url("' + item['file'].replace('portfolio/', 'portfolio/thumbs/') + '")';
 			link.dataset.picture = item['name'];
+			link.addEventListener('click', Portfolio.togglePicture);
 
-			link.addEventListener('click', this.togglePicture);
+			thumbnail.src = 'picture.php?path=' + item['file'] + '&width=256';
 
+			link.appendChild(thumbnail);
 			grid.appendChild(link);
 		});
-	}
-
-	togglePicture() {
-		let src = event.srcElement;
-
-		// Don't navigate to picture URL
-		event.preventDefault();
-
-		if (src.tagName.toLowerCase() === 'a') {
-			Portfolio.showPicture(src);
-		} else {
-			while (src.tagName.toLowerCase() !== 'a') {
-				src = src.parentElement;
-			}
-			Portfolio.hidePicture(src);
-		}
 	}
 }
 

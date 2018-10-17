@@ -47,8 +47,8 @@ section#portfolio {
 	height: 30vw;
 	width: 30vw;
 	margin: 20px;
-	transition: all 0.2s ease-in-out;
 	cursor: pointer;
+	overflow: hidden;
 	// TODO: Replace inline background image through attr when supported
 	//background: attr(data-thumbnail url);
 	background-repeat: no-repeat;
@@ -57,7 +57,7 @@ section#portfolio {
 	position: relative;
 	// define this as placeholder until thumbnail loads
 	//box-shadow: 0 0 -1px -2px $dark-overlay-color;
-	box-shadow: 0 0 20px $dark-shadow-hover-color;
+	box-shadow: 0 0 20px $dark-shadow-color;
 
 	&::before {
 		position: absolute;
@@ -69,47 +69,55 @@ section#portfolio {
 		content: ' ';
 	}
 	&:hover {
-		//transform: translate(1px, -1px);
 		box-shadow: 0 0 30px $dark-shadow-hover-color;
-		//transform: scale(1.1);
+
+		> img {
+			transform: scale(1.075) translate(-50%);
+		}
+	}
+	&:not(:hover) {
+		> img {
+			transform: scale(1.1) translate(-50%);
+		}
 	}
 	&:hover::before {
 		background: none;
 	}
+
 	> picture {
 		position: fixed;
 		background: $light-overlay-color-2;
 		z-index: 999;
 		text-align: center;
-		display: flex;
 		justify-content: center;
 		align-items: center;
 
-		&:not(.show) {
+		//&:not(.show) {
 			display: none;
-		}
-		&.show {
-			top: 0;
-			left: 0;
-			height: 100vh;
-			width: 100vw;
+		//}
+	}
+	&.show > picture {
+		top: 0;
+		left: 0;
+		height: 100vh;
+		width: 100vw;
+		display: flex;
 
-			@media (orientation: portrait) {
-				//transition: width 1s ease-in-out;
-				source,
-				img {
-					width: 100vw;
-					height: auto;
-				}
+		@media (orientation: portrait) {
+			//transition: width 1s ease-in-out;
+			source,
+			img {
+				width: 100vw;
+				height: auto;
 			}
+		}
 
-			@media (orientation: landscape) {
-				//transition: height 1s ease-in-out;
-				source,
-				img {
-					width: auto;
-					height: 100vh;
-				}
+		@media (orientation: landscape) {
+			//transition: height 1s ease-in-out;
+			source,
+			img {
+				width: auto;
+				height: 100vh;
 			}
 		}
 	}
@@ -125,9 +133,20 @@ section#portfolio {
 .thumbnail picture,
 .thumbnail source,
 .thumbnail img {
-	width: inherit;
 }
 
 .thumbnail img {
 	//border: $grid solid $background-color;
+	transition: transform 0.2s ease-out;
+}
+
+.thumbnail > img {
+	transition: transform 0.2s ease-out;
+	position: absolute;
+	//top: 50%; // center image vertically in combination with transform: translate(-50%,-50%);
+	left: 50%; // center image horizontally in combination with transform: translate(-50%);
+	min-width: 256px;
+	min-height: 256px;
+	width: auto;
+	height: auto;
 }
