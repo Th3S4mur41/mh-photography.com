@@ -46,3 +46,11 @@ $image-portfolio: 'assets/images/portfolio.jpg';
 		background: $acrylic-dark-color;
 	}
 }
+
+@media (prefers-color-scheme: light) {
+ // light mode
+}
+
+@media (prefers-color-scheme: dark) {
+ // dark mode
+}
