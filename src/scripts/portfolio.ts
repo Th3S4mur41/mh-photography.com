@@ -52,6 +52,13 @@ class Portfolio {
 			// Update listener
 			// src.removeEventListener('click', this.showPicture);
 			// picture.addEventListener('click', this.hidePicture);
+
+			// Register event to trigger when high quality image is loaded
+			if (img.complete) {
+				Portfolio.imageLoaded();
+			} else {
+				img.addEventListener('load', Portfolio.imageLoaded);
+			}
 			src.appendChild(picture);
 		}	else {
 			picture = src.firstElementChild;
@@ -82,6 +89,10 @@ class Portfolio {
 		}
 	}
 
+	static imageLoaded() {
+		// TODO: replace placeholder with high quality picture
+	}
+
 	showThumbnail() {
 		const grid = document.getElementById('grid');
 
@@ -97,6 +108,7 @@ class Portfolio {
 			link.addEventListener('click', Portfolio.togglePicture);
 
 			thumbnail.src = 'picture.php?path=' + item['file'] + '&width=256';
+			thumbnail.classList.add('placeholder');
 
 			link.appendChild(thumbnail);
 			grid.appendChild(link);

@@ -150,3 +150,66 @@ section#portfolio {
 	width: auto;
 	height: auto;
 }
+
+.thumbnail > .placeholder {
+	//transition: max-height 0.5s ease-out;
+	//height: 100vh;
+	//max-height: 256px;
+}
+
+.thumbnail:not(.show) > .placeholder {
+	animation: tv_off 2s ease;
+}
+
+.thumbnail.show > .placeholder {
+	//transition: max-height 0.5s ease-out;
+	animation: tv_on 2s ease;
+	position: fixed;
+	top: 0;
+	max-height: 100vh;
+	z-index: 1000;
+}
+
+.thumbnail picture {
+	display: none!important;
+}
+
+@keyframes tv_on {
+	10% {
+		transform: scale(0.2, 0.002) translate(-50%);
+		opacity: 0;
+	}
+	50% {
+		transform: scale(1, 0.002) translate(-50%);
+		opacity: 1;
+	}
+	100% {
+		transform: scale(1, 1) translate(-50%);
+	}
+}
+
+@keyframes tv_off {
+	10% {
+		transform: scale(1, 0.002) translate(-50%);
+		position: fixed;
+		top: 0;
+		max-height: 100vh;
+		z-index: 1000;
+	}
+	50% {
+		transform: scale(0.2, 0.002) translate(-50%);
+		opacity: 1;
+		position: fixed;
+		top: 0;
+		max-height: 100vh;
+		z-index: 1000;
+	}
+	100% {
+		transform: scale(0.2, 0.002) translate(-50%);
+		opacity: 0;
+		position: fixed;
+		top: 0;
+		max-height: 100vh;
+		z-index: 1000;
+	}
+}

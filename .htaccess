@@ -230,3 +230,10 @@ AddCharset utf-8 .html .css .js
 	RewriteCond %{HTTP_HOST} ^mh-photography\.
 	RewriteRule ^(.*)$ https://www.mh-photography.com/$1 [R=301,L]
 </IfModule>
+
+<IfModule mod_rewrite.c>
+	#Always prefix with WWW and end with .com
+	RewriteEngine On
+	RewriteCond %{THE_REQUEST} ^/(assets/.*\.(jpg|jpeg|png|webp|heif)).*$
+	RewriteRule ^(.*)$ /picture.php?path=%1 [QSA]
+</IfModule>
