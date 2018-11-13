@@ -2,15 +2,15 @@
   "name": "mh-photography.com",
   "version": "1.0.1",
   "description": "MH Photography",
-	"browserslist": [
-		"> 1%",
-		"ie 11",
-		"last 3 Edge versions",
-		"last 3 Chrome versions",
-		"last 3 Firefox versions",
-		"last 2 Safari versions",
-		"Firefox ESR"
-	],
+  "browserslist": [
+    "> 1%",
+    "ie 11",
+    "last 3 Edge versions",
+    "last 3 Chrome versions",
+    "last 3 Firefox versions",
+    "last 2 Safari versions",
+    "Firefox ESR"
+  ],
   "dependencies": {},
   "devDependencies": {
     "autoprefixer": "^9.3.1",
@@ -30,7 +30,7 @@
     "grunt-stylelint": "^0.10.1",
     "grunt-ts": "^6.0.0-beta.21",
     "gruntify-eslint": "^4.0.0",
-		"hint": "^4.0.Z",
+    "hint": "^4.0.2",
     "prettier": "^1.15.2",
     "stylelint": "^9.8.0",
     "tslint": "^5.10.0",
