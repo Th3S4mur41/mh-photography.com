@@ -8,7 +8,7 @@
  * Layout
  */
 
-section#about {
+article#about {
 	> header {
 		background-image:
 			linear-gradient(
@@ -17,10 +17,5 @@ section#about {
 			),
 			url($image-about);
 		background-position: center top;
-	}
-	> p {
-		text-align: justify;
-		margin: 1em auto;
-		max-width: 35em;
 	}
 }

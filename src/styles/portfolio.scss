@@ -8,7 +8,7 @@
  * Layout
  */
 
-section#portfolio {
+article#portfolio {
 	@media (scripting: none) {
 		// Hide section when scripts are not available to load content
 		display: none;
@@ -83,7 +83,6 @@ section#portfolio {
 	&:hover::before {
 		background: none;
 	}
-
 	> picture {
 		position: fixed;
 		background: $light-overlay-color-2;
@@ -93,7 +92,7 @@ section#portfolio {
 		align-items: center;
 
 		//&:not(.show) {
-			display: none;
+		display: none;
 		//}
 	}
 	&.show > picture {
@@ -130,10 +129,10 @@ section#portfolio {
 	}
 }
 
-.thumbnail picture,
-.thumbnail source,
-.thumbnail img {
-}
+//.thumbnail picture,
+//.thumbnail source,
+//.thumbnail img {
+//}
 
 .thumbnail img {
 	//border: $grid solid $background-color;
@@ -171,7 +170,7 @@ section#portfolio {
 }
 
 .thumbnail picture {
-	display: none!important;
+	display: none !important;
 }
 
 @keyframes tv_on {
