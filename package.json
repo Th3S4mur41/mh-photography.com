@@ -31,6 +31,7 @@
     "grunt-ts": "^6.0.0-beta.21",
     "gruntify-eslint": "^4.0.0",
     "hint": "^4.0.2",
+    "node-sass": "^4.10.0",
     "prettier": "^1.15.2",
     "stylelint": "^9.8.0",
     "tslint": "^5.10.0",
