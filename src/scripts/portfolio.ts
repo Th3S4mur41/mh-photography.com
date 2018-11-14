@@ -34,10 +34,11 @@ class Portfolio {
 		this.portfolioRequest.send();
 	}
 
-	static  addSourceSet(picture: Element, url: String, size = 0): Element {
+	static  addSourceSet(picture: Element, url: String, size = 0, maxWidth = false): Element {
 		const webp = document.createElement('source');
 		const jpeg = document.createElement('source');
-		const media = (size > 0 ? '(min-width: ' + size + 'px)' : '(min-width: 1921px)');
+		// const media = (maxWidth ? '(max-width: ' + size + 'px)' : '(min-width: 1921px)');
+		const media = `${(maxWidth ? 'max-width' : 'min-width')} ${size}px`;
 
 		webp.media = media;
 		webp.type = 'image/webp';
@@ -53,19 +54,18 @@ class Portfolio {
 	}
 
 	static showPicture(src: Element) {
+		const sizes = [640, 768, 1024, 1366, 1600, 1920];
 		let picture: Element;
 		if (src.childElementCount === 1) {
 			const source = document.createElement('source');
 			const img = document.createElement('img');
 			picture = document.createElement('picture');
 
-			picture = this.addSourceSet(picture, src.getAttribute('href'), 640);
-			picture = this.addSourceSet(picture, src.getAttribute('href'), 768);
-			picture = this.addSourceSet(picture, src.getAttribute('href'), 1024);
-			picture = this.addSourceSet(picture, src.getAttribute('href'), 1366);
-			picture = this.addSourceSet(picture, src.getAttribute('href'), 1600);
-			picture = this.addSourceSet(picture, src.getAttribute('href'), 1920);
-			picture = this.addSourceSet(picture, src.getAttribute('href'), 0);
+			picture = this.addSourceSet(picture, src.getAttribute('href'), sizes[0], true);
+			sizes.forEach((size) => {
+				picture = this.addSourceSet(picture, src.getAttribute('href'), size);
+			});
+			picture = this.addSourceSet(picture, src.getAttribute('href'), sizes[sizes.length - 1], true);
 
 			img.alt = '';
 			picture.id = src.getAttribute('data-picture');

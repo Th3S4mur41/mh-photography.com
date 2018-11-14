@@ -102,22 +102,12 @@ article#portfolio {
 		width: 100vw;
 		display: flex;
 
-		@media (orientation: portrait) {
-			//transition: width 1s ease-in-out;
-			source,
-			img {
-				width: 100vw;
-				height: auto;
-			}
-		}
-
-		@media (orientation: landscape) {
-			//transition: height 1s ease-in-out;
-			source,
-			img {
-				width: auto;
-				height: 100vh;
-			}
+		source,
+		img {
+			width: auto;
+			height: auto;
+			max-width: 100vw;
+			max-height: 100vh;
 		}
 	}
 }
@@ -136,7 +126,7 @@ article#portfolio {
 
 .thumbnail img {
 	//border: $grid solid $background-color;
-	transition: transform 0.2s ease-out;
+	//transition: transform 0.2s ease-out;
 }
 
 .thumbnail > img {
@@ -157,20 +147,20 @@ article#portfolio {
 }
 
 .thumbnail:not(.show) > .placeholder {
-	animation: tv_off 2s ease;
+	//animation: tv_off 2s ease;
 }
 
 .thumbnail.show > .placeholder {
 	//transition: max-height 0.5s ease-out;
-	animation: tv_on 2s ease;
-	position: fixed;
-	top: 0;
-	max-height: 100vh;
-	z-index: 1000;
+	//animation: tv_on 2s ease;
+	//position: fixed;
+	//top: 0;
+	//max-height: 100vh;
+	//z-index: 1000;
 }
 
 .thumbnail picture {
-	display: none !important;
+	//display: none !important;
 }
 
 @keyframes tv_on {
