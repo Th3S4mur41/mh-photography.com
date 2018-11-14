@@ -102,9 +102,14 @@ body > article {
 	//display: flex;
 	//flex-direction: column;
 	//justify-content: space-around;
+	display: grid;
+	grid-template-columns: minmax(1rem, auto) 1fr minmax(1rem, auto);
+	grid-template-rows: repeat(2, auto);
 }
 
 article > header {
+	grid-column: 1 / span 3;
+	grid-row: 1;
 	height: 100vh;
 	display: flex;
 	flex-flow: column nowrap;
@@ -126,6 +131,9 @@ article > header {
 }
 
 article > section {
+	grid-column: 1 / span 3;
+	grid-row: 2;
+
 	& > p {
 		text-align: justify;
 		margin: 1em auto;
@@ -136,4 +144,5 @@ article > section {
 footer#footer {
 	min-width: 100%;
 	flex: 0 0 auto;
+	margin-bottom: 2rem;
 }

@@ -40,13 +40,13 @@ article#portfolio {
  */
 
 .thumbnail {
-	min-width: 100px;
+	min-width: 72px;
 	max-width: 256px;
-	min-height: 100px;
+	min-height: 72px;
 	max-height: 256px;
-	height: 30vw;
-	width: 30vw;
-	margin: 20px;
+	height: calc(30vw - 2rem);
+	width: calc(30vw - 2rem);
+	margin: 1rem;
 	cursor: pointer;
 	overflow: hidden;
 	// TODO: Replace inline background image through attr when supported
@@ -57,7 +57,7 @@ article#portfolio {
 	position: relative;
 	// define this as placeholder until thumbnail loads
 	//box-shadow: 0 0 -1px -2px $dark-overlay-color;
-	box-shadow: 0 0 20px $dark-shadow-color;
+	box-shadow: 0 0 1rem $dark-shadow-color;
 
 	&::before {
 		position: absolute;
