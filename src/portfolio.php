@@ -8,11 +8,11 @@ $list = array(); //main array
 
 if(is_dir($dir)){
     if($dh = opendir($dir)){
-        while(($file = readdir($dh)) != false){
+        while($file = readdir($dh)){
 
             if(is_dir($path . $file)) {
                 // do nothing
-            } else if ($file == "." or $file == "..") {
+            } else if ($file == "." || $file == "..") {
             		// do nothing
             } else {
             		$image_path = $path . $file;
