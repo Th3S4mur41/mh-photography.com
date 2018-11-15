@@ -63,6 +63,15 @@ module.exports = function (grunt) {
 						expand : true,
 						flatten: true,
 						src    : [
+							'src/manifest.json'
+						],
+						dest  : 'dist/',
+						filter: 'isFile'
+					},
+					{
+						expand : true,
+						flatten: true,
+						src    : [
 							'src/portfolio.json'
 						],
 						dest  : 'dist/',
@@ -106,7 +115,8 @@ module.exports = function (grunt) {
 						src    : [
 							'src/favicon.ico',
 							'src/robots.txt',
-							'src/sitemap.xml'
+							'src/sitemap.xml',
+							'src/manifest.json'
 						],
 						dest  : 'dist/',
 						filter: 'isFile'
