@@ -128,6 +128,7 @@ class Portfolio {
 			link.href = item['file'];
 			// link.style.backgroundImage = 'url("' + item['file'].replace('portfolio/', 'portfolio/thumbs/') + '")';
 			link.dataset.picture = item['name'];
+			thumbnail.alt = item['name'];
 			link.addEventListener('click', Portfolio.togglePicture);
 
 			thumbnail.src = 'picture.php?path=' + item['file'] + '&width=256';
