@@ -38,7 +38,7 @@ class Portfolio {
 		const webp = document.createElement('source');
 		const jpeg = document.createElement('source');
 		// const media = (maxWidth ? '(max-width: ' + size + 'px)' : '(min-width: 1921px)');
-		const media = `${(maxWidth ? 'max-width' : 'min-width')} ${size}px`;
+		const media = `(${(maxWidth ? 'max-width' : 'min-width')}: ${size}px)`;
 
 		webp.media = media;
 		webp.type = 'image/webp';
