@@ -69,6 +69,7 @@ class Portfolio {
 
 			img.alt = '';
 			picture.id = src.getAttribute('data-picture');
+			picture.classList.add('picture');
 			img.src = src.getAttribute('href');
 			picture.appendChild(img);
 
@@ -122,6 +123,8 @@ class Portfolio {
 		grid.innerHTML = '';
 		this.pictures.forEach((item) => {
 			const link = document.createElement('a');
+			const picture = document.createElement('picture');
+			const webp = document.createElement('source');
 			const thumbnail = document.createElement('img');
 
 			link.className = 'thumbnail';
@@ -131,10 +134,14 @@ class Portfolio {
 			thumbnail.alt = item['name'];
 			link.addEventListener('click', Portfolio.togglePicture);
 
+			webp.type = 'image/webp';
+			webp.srcset = 'picture.php?path=' + item['file'] + '&width=256' + '&format=webp';
 			thumbnail.src = 'picture.php?path=' + item['file'] + '&width=256';
 			thumbnail.classList.add('placeholder');
 
-			link.appendChild(thumbnail);
+			picture.appendChild(webp);
+			picture.appendChild(thumbnail);
+			link.appendChild(picture);
 			grid.appendChild(link);
 		});
 	}

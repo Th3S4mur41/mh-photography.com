@@ -72,14 +72,14 @@ article#portfolio {
 	&:focus {
 		box-shadow: 0 0 30px $dark-shadow-hover-color;
 
-		> img {
+		& img.placeholder {
 			//transform: scale(1.075) translate(-50%);
 			transform: scale(1.075);
 		}
 	}
 	&:not(:hover),
 	&:not(:focus) {
-		> img {
+		& img.placeholder {
 			//transform: scale(1.1) translate(-50%);
 			transform: scale(1.1);
 		}
@@ -87,7 +87,7 @@ article#portfolio {
 	&:hover::before {
 		background: none;
 	}
-	> picture {
+	& .picture {
 		position: fixed;
 		background: $light-overlay-color-2;
 		z-index: 999;
@@ -99,7 +99,7 @@ article#portfolio {
 		display: none;
 		//}
 	}
-	&.show > picture {
+	&.show .picture {
 		top: 0;
 		left: 0;
 		height: 100vh;
@@ -117,7 +117,7 @@ article#portfolio {
 }
 
 @supports (backdrop-filter: blur(20px)) {
-	.thumbnail > picture {
+	.thumbnail .picture {
 		background: $acrylic-light-color;
 		backdrop-filter: $acrylic-filter;
 	}
@@ -133,7 +133,7 @@ article#portfolio {
 	//transition: transform 0.2s ease-out;
 }
 
-.thumbnail > img {
+.thumbnail img.placeholder {
 	transition: transform 0.2s ease-out;
 	//position: absolute;
 	//top: 50%; // center image vertically in combination with transform: translate(-50%,-50%);
@@ -162,7 +162,7 @@ article#portfolio {
 	//z-index: 1000;
 }
 
-.thumbnail picture {
+.thumbnail .picture {
 	//display: none !important;
 }
 
