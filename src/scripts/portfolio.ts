@@ -42,7 +42,7 @@ class Portfolio {
 
 		webp.media = media;
 		webp.type = 'image/webp';
-		webp.srcset = url + (size > 0 ? '?width=' + size : '') + '&format=webp';
+		webp.srcset = 'picture.php?path=' + url + (size > 0 ? '&width=' + size : '') + '&format=webp';
 		picture.appendChild(webp);
 
 		jpeg.media = media;
