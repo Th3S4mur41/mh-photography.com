@@ -282,6 +282,7 @@ module.exports = function (grunt) {
 				configFile            : '.stylelintrc',
 				formatter             : 'string',
 				ignoreDisables        : false,
+				outputFile 						: 'reports/stylelint-report.json',
 				reportNeedlessDisables: false,
 				syntax                : 'less'
 			},

@@ -33,4 +33,5 @@ typings/
 
 # Compiled output
 dist/
+reports/
 .tscache/
