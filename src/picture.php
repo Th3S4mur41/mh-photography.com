@@ -59,7 +59,7 @@ function checkDestinationImage ($src) {
 	$exists = false;
 	$filename = str_replace("/", "-", $src["path"]);
 	$filename = str_replace(".", "_", $filename);
-	
+
 	switch(strtolower(urldecode($_GET['format']))) {
 		case 'webp';
 			$format = "webp";
@@ -71,7 +71,7 @@ function checkDestinationImage ($src) {
 			$format = "jpg";
 			break;
 	}
-	
+
 	$width = intval(urldecode($_GET["width"]));
 	$height = intval(urldecode($_GET["height"]));
 
@@ -100,7 +100,7 @@ function checkDestinationImage ($src) {
 	$path = $GLOBALS["image_cache"] . $filename . "_" . intval($width) . "x" . intval($height) . "." . $format;
 	// check if cache directory exists
 	if (!is_dir($GLOBALS["image_cache"])) {
-		mkdir($GLOBALS["image_cache"]);         
+		mkdir($GLOBALS["image_cache"]);
 	}
 	if (file_exists($path)) {
 		// disable for debug

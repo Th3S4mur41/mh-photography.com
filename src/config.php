@@ -1,12 +1,41 @@
 <?php
 header('Content-Type: application/json');
 
-$path	= "assets/images/portfolio/";
-$dir  = "./" . $path;
+$config = new stdClass();
+// TODO: Change from portfolio to gallery
+$gallery_path	= "assets/images/portfolio/";
+$gallery_cache = "assets/cache/";
 
-$list = array(); //main array
+/**
+ * @return an array of supported image formats
+ */
+function getSupportedImageFormats () {
+	$formats = array();
+	// Create a blank image
+	$image = imagecreatetruecolor(1, 1);
 
-if(is_dir($dir)){
+	if (imagejpeg($image, $gallery_cache . 'test_image.jpg')) {
+		array_push($formats, "jpeg");
+	}
+	if (imagewebp($image, $gallery_cache . 'test_image.webp')) {
+		array_push($formats, "webp");
+	}
+
+  // Free up memory
+  imagedestroy($image);
+
+  return $formats;
+}
+
+/**
+ * @param {string} - path to the image gallery
+ * @return {array)} - Array of the images
+ */
+function getImageGallery ($path) {
+	$dir  = "./" . $path;
+	$list = array(); //main array
+
+	if(is_dir($dir)){
     if($dh = opendir($dir)){
         while($file = readdir($dh)){
 
@@ -33,10 +62,15 @@ if(is_dir($dir)){
 						}
 				}
 		}
-
-		$return_array = array('portfolio'=> $list);
-
-		echo json_encode($return_array, JSON_UNESCAPED_SLASHES);
+		return $list;
+	}
 }
 
+@$config->gallery_path = $gallery_path;
+@$config->gallery_cache = $gallery_cache;
+@$config->image_formats = getSupportedImageFormats();
+@$config->image_gallery = getImageGallery($gallery_path);
+
+echo json_encode($config, JSON_UNESCAPED_SLASHES);
+exit;
 ?>

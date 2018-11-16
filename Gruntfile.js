@@ -72,7 +72,7 @@ module.exports = function (grunt) {
 						expand : true,
 						flatten: true,
 						src    : [
-							'src/portfolio.json'
+							'src/configconfig.json'
 						],
 						dest  : 'dist/',
 						filter: 'isFile'

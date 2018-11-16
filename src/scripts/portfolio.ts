@@ -7,7 +7,7 @@ class Portfolio {
 	cdn: string[];
 	pictures: Array<string>;
 	imagePath: string;
-	portfolioRequest: XMLHttpRequest;
+	configRequest: XMLHttpRequest;
 
 	constructor() {
 		this.protocol = window.location.protocol;
@@ -17,21 +17,22 @@ class Portfolio {
 		this.cdn.push('cdn3.mh-photography.com');
 		this.cdn.push('cdn4.mh-photography.com');
 
-		this.portfolioRequest = new XMLHttpRequest();
-		this.portfolioRequest.onload = () => {
-			if (this.portfolioRequest.readyState === 4 && this.portfolioRequest.status === 200)  {
-				const json = JSON.parse(this.portfolioRequest.responseText);
-				this.pictures = json.portfolio;
+		this.configRequest = new XMLHttpRequest();
+		this.configRequest.onload = () => {
+			if (this.configRequest.readyState === 4 && this.configRequest.status === 200)  {
+				const json = JSON.parse(this.configRequest.responseText);
+				this.pictures = json.image_gallery;
 
 				this.showThumbnail();
 			}
 		};
-		this.portfolioRequest.open(
+		this.configRequest.open(
 			'get',
-			window.location.hostname === 'localhost' ? 'portfolio.json' : 'portfolio.php',
+			 'config.php',
+			// window.location.hostname === 'localhost' ? 'config.json' : 'config.php',
 			true
 		);
-		this.portfolioRequest.send();
+		this.configRequest.send();
 	}
 
 	static  addSourceSet(picture: Element, url: String, size = 0, maxWidth = false): Element {

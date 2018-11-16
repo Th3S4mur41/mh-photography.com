@@ -1,5 +1,8 @@
 {
-	"portfolio": [
+	"image_formats": [
+		"jpeg"
+	],
+	"image_gallery": [
 		{
 			"name": "36",
 			"extension": "jpg",
