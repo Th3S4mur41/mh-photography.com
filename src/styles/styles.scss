@@ -23,6 +23,14 @@ body {
 	background-color: $background-color;
 	min-height: 100vh;
 	scroll-behavior: smooth;
+
+	& * {
+		outline-color: $theme-color;
+	}
+	& a:focus {
+		outline-style: solid;
+		outline-width: 1px;
+	}
 }
 
 h2 {
@@ -65,10 +73,6 @@ nav > a:visited {
 		margin: 10px;
 		font-size: 32px;
 	}
-}
-
-* {
-	outline-color: $theme-color;
 }
 
 /** ********************************************************************************************************************
