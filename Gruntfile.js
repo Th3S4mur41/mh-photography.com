@@ -7,7 +7,7 @@ module.exports = function (grunt) {
 	// Variables
 	// *****************************************************************************************************************
 	const sass = require('node-sass');
-	// const build = grunt.option('build') || 'dev-' + Date.now();
+	//TODO: const build = grunt.option('build') || 'dev-' + Date.now();
 
 	// *****************************************************************************************************************
 	// Load NPM Plugins
@@ -16,7 +16,6 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks('grunt-contrib-copy');
 	grunt.loadNpmTasks('grunt-contrib-htmlmin');
 	grunt.loadNpmTasks('grunt-contrib-watch');
-	// grunt.loadNpmTasks('grunt-jsonlint');
 	grunt.loadNpmTasks('grunt-postcss');
 	grunt.loadNpmTasks('grunt-replace');
 	grunt.loadNpmTasks('grunt-stylelint');

@@ -10,6 +10,7 @@ $gallery_cache = "assets/cache/";
  * @return an array of supported image formats
  */
 function getSupportedImageFormats () {
+	global $gallery_cache;
 	$formats = array();
 	// Create a blank image
 	$image = imagecreatetruecolor(1, 1);
