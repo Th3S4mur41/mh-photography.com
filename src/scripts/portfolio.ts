@@ -5,6 +5,7 @@ class Portfolio {
 	protocol: string;
 	domain: string;
 	cdn: string[];
+	formats: string[];
 	pictures: Array<string>;
 	imagePath: string;
 	configRequest: XMLHttpRequest;
@@ -21,6 +22,7 @@ class Portfolio {
 		this.configRequest.onload = () => {
 			if (this.configRequest.readyState === 4 && this.configRequest.status === 200)  {
 				const json = JSON.parse(this.configRequest.responseText);
+				this.formats = json.image_formats;
 				this.pictures = json.image_gallery;
 
 				this.showThumbnail();
@@ -35,26 +37,62 @@ class Portfolio {
 		this.configRequest.send();
 	}
 
-	static  addSourceSet(picture: Element, url: String, size = 0, maxWidth = false): Element {
+	static imageLoaded() {
+		// TODO: replace placeholder with high quality picture
+	}
+
+	showThumbnail() {
+		const grid = document.getElementById('grid');
+
+		grid.innerHTML = '';
+		this.pictures.forEach((item) => {
+			const link = document.createElement('a');
+			const picture = document.createElement('picture');
+			const webp = document.createElement('source');
+			const thumbnail = document.createElement('img');
+
+			link.className = 'thumbnail';
+			link.href = item['file'];
+			// link.style.backgroundImage = 'url("' + item['file'].replace('portfolio/', 'portfolio/thumbs/') + '")';
+			link.dataset.picture = item['name'];
+			thumbnail.alt = item['name'];
+			link.addEventListener('click', this.togglePicture);
+
+			webp.type = 'image/webp';
+			webp.srcset = 'picture.php?path=' + item['file'] + '&width=256' + '&format=webp';
+			thumbnail.src = 'picture.php?path=' + item['file'] + '&width=256';
+			thumbnail.classList.add('placeholder');
+
+			picture.appendChild(webp);
+			picture.appendChild(thumbnail);
+			link.appendChild(picture);
+			grid.appendChild(link);
+		});
+	}
+
+	addSourceSet(picture: Element, url: String, size = 0, maxWidth = false): Element {
 		const webp = document.createElement('source');
 		const jpeg = document.createElement('source');
 		// const media = (maxWidth ? '(max-width: ' + size + 'px)' : '(min-width: 1921px)');
 		const media = `(${(maxWidth ? 'max-width' : 'min-width')}: ${size}px)`;
 
-		webp.media = media;
-		webp.type = 'image/webp';
-		webp.srcset = 'picture.php?path=' + url + (size > 0 ? '&width=' + size : '') + '&format=webp';
-		picture.appendChild(webp);
-
-		jpeg.media = media;
-		jpeg.type = 'image/jpeg';
-		jpeg.srcset = url + (size > 0 ? '?width=' + size : '');
-		picture.appendChild(jpeg);
+		if (portfolio.formats.indexOf('webp') > -1) {
+			webp.media = media;
+			webp.type = 'image/webp';
+			webp.srcset = 'picture.php?path=' + url + (size > 0 ? '&width=' + size : '') + '&format=webp';
+			picture.appendChild(webp);
+		}
+		if (portfolio.formats.indexOf('jpeg') > -1) {
+			jpeg.media = media;
+			jpeg.type = 'image/jpeg';
+			jpeg.srcset = url + (size > 0 ? '?width=' + size : '');
+			picture.appendChild(jpeg);
+		}
 
 		return picture;
 	}
 
-	static showPicture(src: Element) {
+	showPicture(src: Element) {
 		const sizes = [640, 768, 1024, 1366, 1600, 1920];
 		let picture: Element;
 		if (src.childElementCount === 1) {
@@ -92,13 +130,13 @@ class Portfolio {
 		src.classList.add('show');
 	}
 
-	static hidePicture(src: Element) {
+	hidePicture(src: Element) {
 		const picture = src.firstElementChild;
 
 		src.classList.remove('show');
 	}
 
-	static togglePicture() {
+	togglePicture() {
 		let src = event.srcElement;
 
 		// Don't navigate to picture URL
@@ -108,43 +146,10 @@ class Portfolio {
 			src = src.parentElement;
 		}
 		if (src.classList.contains('show')) {
-			Portfolio.hidePicture(src);
+			portfolio.hidePicture(src);
 		} else {
-			Portfolio.showPicture(src);
+			portfolio.showPicture(src);
 		}
-	}
-
-	static imageLoaded() {
-		// TODO: replace placeholder with high quality picture
-	}
-
-	showThumbnail() {
-		const grid = document.getElementById('grid');
-
-		grid.innerHTML = '';
-		this.pictures.forEach((item) => {
-			const link = document.createElement('a');
-			const picture = document.createElement('picture');
-			const webp = document.createElement('source');
-			const thumbnail = document.createElement('img');
-
-			link.className = 'thumbnail';
-			link.href = item['file'];
-			// link.style.backgroundImage = 'url("' + item['file'].replace('portfolio/', 'portfolio/thumbs/') + '")';
-			link.dataset.picture = item['name'];
-			thumbnail.alt = item['name'];
-			link.addEventListener('click', Portfolio.togglePicture);
-
-			webp.type = 'image/webp';
-			webp.srcset = 'picture.php?path=' + item['file'] + '&width=256' + '&format=webp';
-			thumbnail.src = 'picture.php?path=' + item['file'] + '&width=256';
-			thumbnail.classList.add('placeholder');
-
-			picture.appendChild(webp);
-			picture.appendChild(thumbnail);
-			link.appendChild(picture);
-			grid.appendChild(link);
-		});
 	}
 }
 

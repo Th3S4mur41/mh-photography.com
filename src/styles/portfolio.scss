@@ -73,14 +73,11 @@ article#portfolio {
 		box-shadow: 0 0 30px $dark-shadow-hover-color;
 
 		& img.placeholder {
-			//transform: scale(1.075) translate(-50%);
 			transform: scale(1.075);
 		}
 	}
-	&:not(:hover),
-	&:not(:focus) {
+	&:not(:hover):not(:focus) {
 		& img.placeholder {
-			//transform: scale(1.1) translate(-50%);
 			transform: scale(1.1);
 		}
 	}
@@ -106,12 +103,17 @@ article#portfolio {
 		width: 100vw;
 		display: flex;
 
-		source,
 		img {
 			width: auto;
 			height: auto;
 			max-width: 100vw;
 			max-height: 100vh;
+
+			@supports (object-fit: contain) {
+				width: 100%;
+				height: 100%;
+				object-fit: contain;
+			}
 		}
 	}
 }
@@ -123,11 +125,6 @@ article#portfolio {
 	}
 }
 
-//.thumbnail picture,
-//.thumbnail source,
-//.thumbnail img {
-//}
-
 .thumbnail img {
 	//border: $grid solid $background-color;
 	//transition: transform 0.2s ease-out;
@@ -135,9 +132,6 @@ article#portfolio {
 
 .thumbnail img.placeholder {
 	transition: transform 0.2s ease-out;
-	//position: absolute;
-	//top: 50%; // center image vertically in combination with transform: translate(-50%,-50%);
-	//left: 50%; // center image horizontally in combination with transform: translate(-50%);
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
