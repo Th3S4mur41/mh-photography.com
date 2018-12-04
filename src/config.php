@@ -15,11 +15,19 @@ function getSupportedImageFormats () {
 	// Create a blank image
 	$image = imagecreatetruecolor(1, 1);
 
-	if (imagejpeg($image, $gallery_cache . 'test_image.jpg')) {
-		array_push($formats, "jpeg");
+	try {
+		if (imagejpeg($image, $gallery_cache . 'test_image.jpg')) {
+			array_push($formats, "jpeg");
+		}
+	} catch (Exception $e) {
+		// ignore
 	}
-	if (imagewebp($image, $gallery_cache . 'test_image.webp')) {
-		array_push($formats, "webp");
+	try {
+		if (imagewebp($image, $gallery_cache . 'test_image.webp')) {
+			array_push($formats, "webp");
+		}
+	} catch (Exception $e) {
+		// ignore
 	}
 
   // Free up memory
