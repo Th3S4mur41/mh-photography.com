@@ -1,5 +1,5 @@
 <?php
-$config = json_decode(include 'config.php');
+// $config = json_decode(include 'config.php');
 $image_cache = "assets/cache/";
 $supported_ext = array("jpg", "jpeg", "png", "webp");
 

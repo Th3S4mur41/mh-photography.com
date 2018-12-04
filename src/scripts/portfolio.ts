@@ -47,9 +47,10 @@ class Portfolio {
 		grid.innerHTML = '';
 		this.pictures.forEach((item) => {
 			const link = document.createElement('a');
-			const picture = document.createElement('picture');
 			const webp = document.createElement('source');
 			const thumbnail = document.createElement('img');
+			let picture: Element;
+			picture = document.createElement('picture');
 
 			link.className = 'thumbnail';
 			link.href = item['file'];
@@ -58,12 +59,13 @@ class Portfolio {
 			thumbnail.alt = item['name'];
 			link.addEventListener('click', this.togglePicture);
 
-			webp.type = 'image/webp';
-			webp.srcset = 'picture.php?path=' + item['file'] + '&width=256' + '&format=webp';
-			thumbnail.src = 'picture.php?path=' + item['file'] + '&width=256';
+			picture = this.addSourceSet(picture, item['file'], 256);
+			// webp.type = 'image/webp';
+			// webp.srcset = 'image.php?path=' + item['file'] + '&width=256' + '&format=webp';
+			thumbnail.src = 'image.php?path=' + item['file'] + '&width=256';
 			thumbnail.classList.add('placeholder');
 
-			picture.appendChild(webp);
+			// picture.appendChild(webp);
 			picture.appendChild(thumbnail);
 			link.appendChild(picture);
 			grid.appendChild(link);
@@ -79,7 +81,7 @@ class Portfolio {
 		if (portfolio.formats.indexOf('webp') > -1) {
 			webp.media = media;
 			webp.type = 'image/webp';
-			webp.srcset = 'picture.php?path=' + url + (size > 0 ? '&width=' + size : '') + '&format=webp';
+			webp.srcset = 'image.php?path=' + url + (size > 0 ? '&width=' + size : '') + '&format=webp';
 			picture.appendChild(webp);
 		}
 		if (portfolio.formats.indexOf('jpeg') > -1) {

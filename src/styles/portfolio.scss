@@ -57,7 +57,7 @@ article#portfolio {
 	position: relative;
 	// define this as placeholder until thumbnail loads
 	//box-shadow: 0 0 -1px -2px $dark-overlay-color;
-	box-shadow: 0 0 1rem $dark-shadow-color;
+	box-shadow: 0 0.2rem 1rem $dark-shadow-color;
 
 	&::before {
 		position: absolute;
