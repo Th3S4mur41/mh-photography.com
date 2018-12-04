@@ -29,7 +29,7 @@ body {
 	}
 	& a:focus {
 		outline-style: solid;
-		outline-width: 0px;
+		outline-width: 0;
 	}
 }
 
@@ -131,7 +131,7 @@ article > header {
 	background-size: cover;
 
 	// mobile devices don't support background-attachment: fixed properly
-	@media  not all and (any-hover:none) {
+	@media not all and (any-hover: none) {
 		background-attachment: scroll;
 	}
 
