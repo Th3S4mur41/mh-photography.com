@@ -10,12 +10,7 @@
 
 article#about {
 	> header {
-		background-image:
-			linear-gradient(
-				$dark-overlay-color,
-				$dark-overlay-color
-			),
-			url($image-about);
+		@include responsiveBackground(linear-gradient($dark-overlay-color, $dark-overlay-color), $image-about);
 		background-position: center top;
 	}
 	> section {

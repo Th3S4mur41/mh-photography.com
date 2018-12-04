@@ -15,12 +15,7 @@ article#portfolio {
 	}
 
 	> header {
-		background-image:
-			linear-gradient(
-				$dark-overlay-color,
-				$dark-overlay-color
-			),
-			url($image-portfolio);
+		@include responsiveBackground(linear-gradient($dark-overlay-color, $dark-overlay-color), $image-portfolio);
 		background-position: left top;
 	}
 	> .grid {
