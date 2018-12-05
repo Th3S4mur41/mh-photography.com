@@ -23,6 +23,7 @@ typings/
 
 # Typescript temporary files
 src/scripts/.baseDir.ts
+*.tmp.txt
 
 # Optional npm cache directory
 .npm

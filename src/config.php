@@ -12,26 +12,13 @@ $gallery_cache = "assets/cache/";
 function getSupportedImageFormats () {
 	global $gallery_cache;
 	$formats = array();
-	// Create a blank image
-	$image = imagecreatetruecolor(1, 1);
 
-	try {
-		if (imagejpeg($image, $gallery_cache . 'test_image.jpg')) {
-			array_push($formats, "jpeg");
-		}
-	} catch (Exception $e) {
-		// ignore
+	if (function_exists('imagejpeg') && is_callable('imagejpeg')) {
+		array_push($formats, "jpeg");
 	}
-	try {
-		if (imagewebp($image, $gallery_cache . 'test_image.webp')) {
-			array_push($formats, "webp");
-		}
-	} catch (Exception $e) {
-		// ignore
+	if (function_exists('imagewebp') && is_callable('imagewebp')) {
+		array_push($formats, "webp");
 	}
-
-  // Free up memory
-  imagedestroy($image);
 
   return $formats;
 }
