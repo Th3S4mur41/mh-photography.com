@@ -5,9 +5,10 @@ class Portfolio {
 	protocol: string;
 	domain: string;
 	cdn: string[];
+	formats: string[];
 	pictures: Array<string>;
 	imagePath: string;
-	portfolioRequest: XMLHttpRequest;
+	configRequest: XMLHttpRequest;
 
 	constructor() {
 		this.protocol = window.location.protocol;
@@ -17,53 +18,27 @@ class Portfolio {
 		this.cdn.push('cdn3.mh-photography.com');
 		this.cdn.push('cdn4.mh-photography.com');
 
-		this.portfolioRequest = new XMLHttpRequest();
-		this.portfolioRequest.onload = () => {
-			if (this.portfolioRequest.readyState === 4 && this.portfolioRequest.status === 200)  {
-				const json = JSON.parse(this.portfolioRequest.responseText);
-				this.pictures = json.portfolio;
+		this.configRequest = new XMLHttpRequest();
+		this.configRequest.onload = () => {
+			if (this.configRequest.readyState === 4 && this.configRequest.status === 200)  {
+				const json = JSON.parse(this.configRequest.responseText);
+				this.formats = json.image_formats;
+				this.pictures = json.image_gallery;
 
 				this.showThumbnail();
 			}
 		};
-		this.portfolioRequest.open(
+		this.configRequest.open(
 			'get',
-			window.location.hostname === 'localhost' ? 'portfolio.json' : 'portfolio.php',
+			 'config.php',
+			// window.location.hostname === 'localhost' ? 'config.json' : 'config.php',
 			true
 		);
-		this.portfolioRequest.send();
+		this.configRequest.send();
 	}
 
-	static showPicture(src: Element) {
-		let picture: Element;
-		if (src.childElementCount === 0) {
-			const source = document.createElement('source');
-			const img = document.createElement('img');
-			picture = document.createElement('picture');
-
-			// Add picture
-			source.media = '(min-width: 650px)';
-			img.alt = '';
-			picture.id = src.getAttribute('data-picture');
-			source.srcset = src.getAttribute('href');
-			img.src = src.getAttribute('href');
-			picture.appendChild(source);
-			picture.appendChild(img);
-			// Update listener
-			// src.removeEventListener('click', this.showPicture);
-			// picture.addEventListener('click', this.hidePicture);
-			src.appendChild(picture);
-		}	else {
-			picture = src.firstElementChild;
-		}
-		// Display picture
-		picture.classList.add('show');
-	}
-
-	static hidePicture(src: Element) {
-		const picture = src.firstElementChild;
-
-		picture.classList.remove('show');
+	static imageLoaded() {
+		// TODO: replace placeholder with high quality picture
 	}
 
 	showThumbnail() {
@@ -72,16 +47,95 @@ class Portfolio {
 		grid.innerHTML = '';
 		this.pictures.forEach((item) => {
 			const link = document.createElement('a');
+			const webp = document.createElement('source');
+			const thumbnail = document.createElement('img');
+			let picture: Element;
+			picture = document.createElement('picture');
 
 			link.className = 'thumbnail';
 			link.href = item['file'];
-			link.style.backgroundImage = 'url("' + item['file'].replace('portfolio/', 'portfolio/thumbs/') + '")';
+			// link.style.backgroundImage = 'url("' + item['file'].replace('portfolio/', 'portfolio/thumbs/') + '")';
 			link.dataset.picture = item['name'];
-
+			thumbnail.alt = item['name'];
 			link.addEventListener('click', this.togglePicture);
 
+			picture = this.addSourceSet(picture, item['file'], 256);
+			// webp.type = 'image/webp';
+			// webp.srcset = 'image.php?path=' + item['file'] + '&width=256' + '&format=webp';
+			thumbnail.src = 'image.php?path=' + item['file'] + '&width=256';
+			thumbnail.classList.add('placeholder');
+
+			// picture.appendChild(webp);
+			picture.appendChild(thumbnail);
+			link.appendChild(picture);
 			grid.appendChild(link);
 		});
+	}
+
+	addSourceSet(picture: Element, url: String, size = 0, maxWidth = false): Element {
+		const webp = document.createElement('source');
+		const jpeg = document.createElement('source');
+		// const media = (maxWidth ? '(max-width: ' + size + 'px)' : '(min-width: 1921px)');
+		const media = `(${(maxWidth ? 'max-width' : 'min-width')}: ${size}px)`;
+
+		if (portfolio.formats.indexOf('webp') > -1) {
+			webp.media = media;
+			webp.type = 'image/webp';
+			webp.srcset = 'image.php?path=' + url + (size > 0 ? '&width=' + size : '') + '&format=webp';
+			picture.appendChild(webp);
+		}
+		if (portfolio.formats.indexOf('jpeg') > -1) {
+			jpeg.media = media;
+			jpeg.type = 'image/jpeg';
+			jpeg.srcset = url + (size > 0 ? '?width=' + size : '');
+			picture.appendChild(jpeg);
+		}
+
+		return picture;
+	}
+
+	showPicture(src: Element) {
+		const sizes = [640, 768, 1024, 1366, 1600, 1920];
+		let picture: Element;
+		if (src.childElementCount === 1) {
+			const source = document.createElement('source');
+			const img = document.createElement('img');
+			picture = document.createElement('picture');
+
+			picture = this.addSourceSet(picture, src.getAttribute('href'), sizes[0], true);
+			sizes.forEach((size) => {
+				picture = this.addSourceSet(picture, src.getAttribute('href'), size);
+			});
+			picture = this.addSourceSet(picture, src.getAttribute('href'), sizes[sizes.length - 1], true);
+
+			img.alt = '';
+			picture.id = src.getAttribute('data-picture');
+			picture.classList.add('picture');
+			img.src = src.getAttribute('href');
+			picture.appendChild(img);
+
+			// Update listener
+			// src.removeEventListener('click', this.showPicture);
+			// picture.addEventListener('click', this.hidePicture);
+
+			// Register event to trigger when high quality image is loaded
+			if (img.complete) {
+				Portfolio.imageLoaded();
+			} else {
+				img.addEventListener('load', Portfolio.imageLoaded);
+			}
+			src.appendChild(picture);
+		}	else {
+			picture = src.firstElementChild;
+		}
+		// Display picture
+		src.classList.add('show');
+	}
+
+	hidePicture(src: Element) {
+		const picture = src.firstElementChild;
+
+		src.classList.remove('show');
 	}
 
 	togglePicture() {
@@ -90,13 +144,13 @@ class Portfolio {
 		// Don't navigate to picture URL
 		event.preventDefault();
 
-		if (src.tagName.toLowerCase() === 'a') {
-			Portfolio.showPicture(src);
+		while (src.tagName.toLowerCase() !== 'a') {
+			src = src.parentElement;
+		}
+		if (src.classList.contains('show')) {
+			portfolio.hidePicture(src);
 		} else {
-			while (src.tagName.toLowerCase() !== 'a') {
-				src = src.parentElement;
-			}
-			Portfolio.hidePicture(src);
+			portfolio.showPicture(src);
 		}
 	}
 }

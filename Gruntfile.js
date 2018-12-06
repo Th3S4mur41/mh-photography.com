@@ -6,19 +6,16 @@ module.exports = function (grunt) {
 	// *****************************************************************************************************************
 	// Variables
 	// *****************************************************************************************************************
-
-	// const build = grunt.option('build') || 'dev-' + Date.now();
+	const sass = require('node-sass');
+	//TODO: const build = grunt.option('build') || 'dev-' + Date.now();
 
 	// *****************************************************************************************************************
 	// Load NPM Plugins
 	// *****************************************************************************************************************
 	grunt.loadNpmTasks('grunt-contrib-clean');
 	grunt.loadNpmTasks('grunt-contrib-copy');
-	// grunt.loadNpmTasks('grunt-contrib-concat');
 	grunt.loadNpmTasks('grunt-contrib-htmlmin');
-	// grunt.loadNpmTasks('grunt-contrib-uglify-es');
 	grunt.loadNpmTasks('grunt-contrib-watch');
-	// grunt.loadNpmTasks('grunt-jsonlint');
 	grunt.loadNpmTasks('grunt-postcss');
 	grunt.loadNpmTasks('grunt-replace');
 	grunt.loadNpmTasks('grunt-stylelint');
@@ -65,7 +62,16 @@ module.exports = function (grunt) {
 						expand : true,
 						flatten: true,
 						src    : [
-							'src/portfolio.json'
+							'src/manifest.json'
+						],
+						dest  : 'dist/',
+						filter: 'isFile'
+					},
+					{
+						expand : true,
+						flatten: true,
+						src    : [
+							'src/configconfig.json'
 						],
 						dest  : 'dist/',
 						filter: 'isFile'
@@ -108,7 +114,8 @@ module.exports = function (grunt) {
 						src    : [
 							'src/favicon.ico',
 							'src/robots.txt',
-							'src/sitemap.xml'
+							'src/sitemap.xml',
+							'src/manifest.json'
 						],
 						dest  : 'dist/',
 						filter: 'isFile'
@@ -249,6 +256,7 @@ module.exports = function (grunt) {
 		},
 		sass: {
 			options: {
+				implementation: sass,
 				outputStyle: 'compressed'
 			},
 			debug: {
@@ -273,6 +281,7 @@ module.exports = function (grunt) {
 				configFile            : '.stylelintrc',
 				formatter             : 'string',
 				ignoreDisables        : false,
+				outputFile 						: 'reports/stylelint-report.json',
 				reportNeedlessDisables: false,
 				syntax                : 'less'
 			},

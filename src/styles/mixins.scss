@@ -1,0 +1,43 @@
+
+@mixin responsiveBackground ($gradients, $image) {
+	background-image:
+		$gradients,
+		url($image);
+
+	// Sizes: 640, 768, 1024, 1366, 1600, 1920
+	@media (max-width: 640px) {
+		background-image:
+			$gradients,
+			url('image.php?path=' + $image + '&width=640');
+	}
+
+	@media (max-width: 768px) {
+		background-image:
+			$gradients,
+			url('image.php?path=' + $image + '&width=768');
+	}
+
+	@media (max-width: 1024px) {
+		background-image:
+			$gradients,
+			url('image.php?path=' + $image + '&width=1024');
+	}
+
+	@media (max-width: 1366px) {
+		background-image:
+			$gradients,
+			url('image.php?path=' + $image + '&width=1366');
+	}
+
+	@media (max-width: 1600px) {
+		background-image:
+			$gradients,
+			url('image.php?path=' + $image + '&width=1600');
+	}
+
+	@media (max-width: 1920px) {
+		background-image:
+			$gradients,
+			url('image.php?path=' + $image + '&width=1920');
+	}
+}

@@ -10,18 +10,48 @@ $responsive: 80*$grid; //640px
  */
 $background-color: white;
 $primary-color: rgb(46, 45, 51); //#2e2d33;
+$theme-color: yellowgreen;
 $dark-overlay-color: rgba(46, 45, 51, 0.5);
 $dark-overlay-color-2: rgba(46, 45, 51, 0.1);
 $light-overlay-color: rgba(255, 255, 255, 0.3);
 $light-overlay-color-2: rgba(255, 255, 255, 0.8);
 $light-overlay-color-3: rgba(255, 255, 255, 0.95);
+$acrylic-light-color: rgba(255, 255, 255, 0.3);
+$acrylic-dark-color: rgba(0, 0, 0, 0.3);
+$dark-shadow-color: rgba(0, 0, 0, 0.5);
+$dark-shadow-hover-color: rgba(0, 0, 0, 0.8);
+
+$acrylic-filter: blur(20px) saturate(125%);
 
 /**
  * Assets
  */
 
 //$images-path: 'assets/images/';
-$image-logo: 'assets/images/logo.png';
-$image-about: 'assets/images/about.jpg';
+$image-logo: 'assets/icons/logo_large.svg';
+$image-about: 'assets/images/partners.jpg';
 $image-contact: 'assets/images/contact.jpg';
-$image-portfolio: 'assets/images/portfolio.jpg';
+$image-portfolio: 'assets/images/gallery.jpg';
+
+/**
+ * Mixins
+ */
+
+// Fluent acrylic effect: see https://medium.com/microsoft-design/diy-a-web-version-the-fluent-design-systems-acrylic-material-fe2eac2a40bb
+@supports (backdrop-filter: blur(30px)) or (-webkit-backdrop-filter: blur(30px)) {
+	.acrylic {
+		backdrop-filter: blur(30px) saturate(125%);
+		background: $acrylic-light-color;
+	}
+	.darkmode .acrylic {
+		background: $acrylic-dark-color;
+	}
+}
+
+@media (prefers-color-scheme: light) {
+ // light mode
+}
+
+@media (prefers-color-scheme: dark) {
+ // dark mode
+}

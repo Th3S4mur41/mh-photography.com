@@ -1,5 +1,8 @@
 {
-	"portfolio": [
+	"image_formats": [
+		"jpeg"
+	],
+	"image_gallery": [
 		{
 			"name": "36",
 			"extension": "jpg",
@@ -485,15 +488,6 @@
 			"size": false,
 			"width": 2048,
 			"height": 1285
-		},
-		{
-			"name": "thumbs",
-			"extension": null,
-			"mime": null,
-			"file": "assets/images/portfolio/thumbs",
-			"size": false,
-			"width": null,
-			"height": null
 		},
 		{
 			"name": "58",

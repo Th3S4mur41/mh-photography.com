@@ -1,4 +1,5 @@
 @import "variables";
+@import "mixins";
 
 /** ********************************************************************************************************************
  * Globals
@@ -25,18 +26,14 @@
  * Layout
  */
 
-section#contact {
+article#contact {
 	> header {
-		background-image:
-			linear-gradient(
-				$dark-overlay-color,
-				$dark-overlay-color
-			),
-			url($image-contact);
+		@include responsiveBackground(linear-gradient($dark-overlay-color, $dark-overlay-color), $image-contact);
 		background-position: center top;
 	}
 	> .vcard {
 		text-align: center;
-		margin: 1em 15vw;
+		margin: 2rem auto;
+		line-height: 1.5;
 	}
 }

@@ -3,6 +3,9 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="HandheldFriendly" content="false"/>
+	<link rel="manifest" href="manifest.json">
 
 	<title>Manuel Hamel Photography</title>
 	<!--Open Graph-->
@@ -29,18 +32,16 @@
 	<meta name="msapplication-tooltip" content="Manuel Hamel Photography"/>
 	<meta name="msapplication-starturl" content="/"/>
 	<meta name="msapplication-navbutton-color" content="white"/>
-	<meta name="msapplication-TileColor" content="#2E2D33"/>
+	<meta name="msapplication-TileColor" content="white"/>
 	<meta name="msapplication-window" content="width=1024;height=768"/>
 	<meta name="theme-color" content="white"/>
 
 	<link rel="shortcut icon" href="favicon.ico">
 	<link rel="icon" type="image/ico" href="favicon.ico"/>
-	<link rel="apple-touch-icon image_src" href="assets/icons/favicon.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="assets/icons/logo_small180.png">
 
 	<meta name="format-detection" content="telephone=no"/>
-	<!-- feature phones -->
-	<meta name="HandheldFriendly" content="false"/>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+
 
 	<meta name="author" content="Manuel Hamel">
 	<meta name="keywords"
@@ -73,15 +74,16 @@
 		<!--<img class="image01" src="assets/images/diashow/1.jpg" alt=""/>-->
 	<!--</div>-->
 	<nav id="header-navigation">
-		<a class="nav-header" href="#header"></a>
+		<a class="nav-header" href="#header" aria-label="Top"></a>
 		<a class="nav-about" href="#about">About</a>
 		<a class="nav-portfolio" href="#portfolio">Portfolio</a>
 		<a class="nav-contact" href="#contact">Contact</a>
 		<a class="nav-menu" href="">&#9776;</a>
 	</nav>
 </header>
-<section id="about">
+<article id="about">
 	<header><h2>About</h2></header>
+	<section>
 	<p>
 		My name is Manuel Hamel, I’m from a small region of Belgium that is only a few minutes away from Germany and the
 		Netherlands. Growing up in this international environment has pushed me to always give my best to address people in
@@ -122,14 +124,15 @@
 	<p>
 		Enjoy my work…
 	</p>
-</section>
-<section id="portfolio">
+	</section>
+</article>
+<article id="portfolio">
 	<header><h2>Portfolio</h2></header>
-	<div id="grid" class="grid">&nbsp;</div>
-</section>
-<section id="contact">
+	<section id="grid" class="grid">&nbsp;</section>
+</article>
+<article id="contact">
 	<header><h2>Contact me</h2></header>
-	<div class="vcard">
+	<section class="vcard">
 		<div class="fn">
 			Manuel Hamel
 		</div>
@@ -148,8 +151,8 @@
 		<a class="url" href="https://www.mh-photography.com">
 			www.mh-photography.com
 		</a>
-	</div>
-</section>
+	</section>
+</article>
 <footer id="footer">
 	<footer>
 		<section class="socialmedia">

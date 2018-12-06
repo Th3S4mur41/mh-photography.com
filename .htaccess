@@ -178,9 +178,17 @@ AddCharset utf-8 .html .css .js
     <IfModule mod_headers.c>
         Header set Pragma "public"
         Header append Cache-Control "public"
-         Header unset Set-Cookie
+        Header unset Set-Cookie
     </IfModule>
 </FilesMatch>
+
+# ----------------------------------------------------------------------
+# Force use of HTTPS connection
+# ----------------------------------------------------------------------
+
+<IfModule mod_headers.c>
+    Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+</IfModule>
 
 # ----------------------------------------------------------------------
 # Prevent access to restricted files and folders
@@ -190,6 +198,16 @@ AddCharset utf-8 .html .css .js
   Order deny,allow
   Deny from all
 </FilesMatch>
+
+# ----------------------------------------------------------------------
+#   Force HTTPS
+# ----------------------------------------------------------------------
+
+<IfModule mod_rewrite.c>
+	RewriteEngine On
+	RewriteCond %{HTTPS} off
+  RewriteRule (.*) https://%{HTTP_HOST}/$1 [NC,R=301,L]
+</IfModule>
 
 # ----------------------------------------------------------------------
 #   Prohibit Hotlinking (usage of images on other sites)
@@ -207,10 +225,15 @@ AddCharset utf-8 .html .css .js
 # ----------------------------------------------------------------------
 
 <IfModule mod_rewrite.c>
-	#Always use HTTPS and prefix with WWW
+	#Always prefix with WWW and end with .com
 	RewriteEngine On
-	RewriteCond %{HTTP_HOST} ^mh-photography\.com [OR]
-	RewriteCond %{HTTP_HOST} ^www.mh-photography\.com
-	RewriteCond %{SERVER_PORT} 80
+	RewriteCond %{HTTP_HOST} ^mh-photography\.
 	RewriteRule ^(.*)$ https://www.mh-photography.com/$1 [R=301,L]
+</IfModule>
+
+<IfModule mod_rewrite.c>
+	#Always prefix with WWW and end with .com
+	RewriteEngine On
+	RewriteCond %{THE_REQUEST} ^/(assets/.*\.(jpg|jpeg|png|webp|heif)).*$
+	RewriteRule ^(.*)$ /picture.php?path=%1 [QSA]
 </IfModule>

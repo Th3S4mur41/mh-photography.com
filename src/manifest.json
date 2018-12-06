@@ -1,0 +1,20 @@
+{
+	"short_name": "MH Photo",
+	"name": "Manuel Hamel Photography",
+	"icons": [
+		{
+			"src": "assets/icons/logo_small192.png",
+			"type": "image/png",
+			"sizes": "192x192"
+		},
+		{
+			"src": "assets/icons/logo_small512.png",
+			"type": "image/png",
+			"sizes": "512x512"
+		}
+	],
+	"start_url": "/",
+	"background_color": "white",
+	"display": "browser",
+	"theme_color": "white"
+}

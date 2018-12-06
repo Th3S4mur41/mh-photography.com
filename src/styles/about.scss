@@ -8,19 +8,12 @@
  * Layout
  */
 
-section#about {
+article#about {
 	> header {
-		background-image:
-			linear-gradient(
-				$dark-overlay-color,
-				$dark-overlay-color
-			),
-			url($image-about);
+		@include responsiveBackground(linear-gradient($dark-overlay-color, $dark-overlay-color), $image-about);
 		background-position: center top;
 	}
-	> p {
-		text-align: justify;
-		margin: 1em 10vw;
-		max-width: 1024px;
+	> section {
+		grid-column: 2;
 	}
 }
