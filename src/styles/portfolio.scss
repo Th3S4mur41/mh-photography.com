@@ -127,9 +127,24 @@ article#portfolio {
 
 .thumbnail img.placeholder {
 	transition: transform 0.2s ease-out;
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
+
+	&.landscape {
+		width: auto;
+		height: 100%;
+	}
+	&.portrait {
+		width: 100%;
+		height: auto;
+	}
+
+	@supports (object-fit: cover) {
+		&.landscape,
+		&.portrait {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
 }
 
 .thumbnail > .placeholder {

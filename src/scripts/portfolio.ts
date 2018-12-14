@@ -72,7 +72,6 @@ class Portfolio {
 		grid.innerHTML = '';
 		this.pictures.forEach((item) => {
 			const link = document.createElement('a');
-			const webp = document.createElement('source');
 			const thumbnail = document.createElement('img');
 			let picture: Element;
 			picture = document.createElement('picture');
@@ -94,6 +93,8 @@ class Portfolio {
 
 			thumbnail.src = 'image.php?path=' + item['file'] + '&width=256';
 			thumbnail.classList.add('placeholder');
+			// TODO: add landscape or portrait for IE (no object-fit)
+			thumbnail.classList.add((item ['width'] > item['height']) ? 'landscape' : 'portrait');
 
 			// picture.appendChild(webp);
 			picture.appendChild(thumbnail);
