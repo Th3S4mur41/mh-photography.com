@@ -41,11 +41,11 @@ class Portfolio {
 		// TODO: replace placeholder with high quality picture
 	}
 
-	addSourceSet(picture: Element, url: String, size = 0, maxWidth = false): Element {
+	addSourceSet(picture: Element, url: String, size: Number, maxWidth = 0): Element {
 		const webp = document.createElement('source');
 		const jpeg = document.createElement('source');
 		// const media = (maxWidth ? '(max-width: ' + size + 'px)' : '(min-width: 1921px)');
-		const media = `(${(maxWidth ? 'max-width' : 'min-width')}: ${size}px)`;
+		const media = `(${'max-width'}: ${(maxWidth === 0 ? size : maxWidth)}px)`;
 
 		if (portfolio.formats.indexOf('webp') > -1) {
 			webp.media = media;
@@ -64,7 +64,8 @@ class Portfolio {
 	}
 
 	showThumbnail() {
-		const sizes = [72, 100, 150, 200, 256];
+		const sizes = [72, 100, 140, 170, 200, 256];
+		const width = [360, 450, 600, 700, 800, 1920];
 		// myDictionary: { [index: string]: any; } = {};
 		// const sizes = [{360:72},{450:100}, {600:140}, {700: 170}, {800: 200}, 256];
 		const grid = document.getElementById('grid');
@@ -87,9 +88,13 @@ class Portfolio {
 			// 	// Use `key` and `value`
 			// }
 
-			sizes.forEach((size) => {
-				picture = this.addSourceSet(picture, item['file'], size);
-			});
+			for (let i = 0; i < sizes.length; i++) {
+				picture = this.addSourceSet(picture, item['file'], sizes[i], width[i]);
+			}
+
+			// sizes.forEach((size) => {
+			// 	picture = this.addSourceSet(picture, item['file'], size);
+			// });
 
 			thumbnail.src = 'image.php?path=' + item['file'] + '&width=256';
 			thumbnail.classList.add('placeholder');
@@ -112,11 +117,11 @@ class Portfolio {
 			const img = document.createElement('img');
 			picture = document.createElement('picture');
 
-			picture = this.addSourceSet(picture, src.getAttribute('href'), sizes[0], true);
+			// picture = this.addSourceSet(picture, src.getAttribute('href'), sizes[0], true);
 			sizes.forEach((size) => {
 				picture = this.addSourceSet(picture, src.getAttribute('href'), size);
 			});
-			picture = this.addSourceSet(picture, src.getAttribute('href'), sizes[sizes.length - 1], true);
+			// picture = this.addSourceSet(picture, src.getAttribute('href'), sizes[sizes.length - 1], true);
 
 			img.alt = '';
 			picture.id = src.getAttribute('data-picture');
