@@ -41,37 +41,6 @@ class Portfolio {
 		// TODO: replace placeholder with high quality picture
 	}
 
-	showThumbnail() {
-		const grid = document.getElementById('grid');
-
-		grid.innerHTML = '';
-		this.pictures.forEach((item) => {
-			const link = document.createElement('a');
-			const webp = document.createElement('source');
-			const thumbnail = document.createElement('img');
-			let picture: Element;
-			picture = document.createElement('picture');
-
-			link.className = 'thumbnail';
-			link.href = item['file'];
-			// link.style.backgroundImage = 'url("' + item['file'].replace('portfolio/', 'portfolio/thumbs/') + '")';
-			link.dataset.picture = item['name'];
-			thumbnail.alt = item['name'];
-			link.addEventListener('click', this.togglePicture);
-
-			picture = this.addSourceSet(picture, item['file'], 256);
-			// webp.type = 'image/webp';
-			// webp.srcset = 'image.php?path=' + item['file'] + '&width=256' + '&format=webp';
-			thumbnail.src = 'image.php?path=' + item['file'] + '&width=256';
-			thumbnail.classList.add('placeholder');
-
-			// picture.appendChild(webp);
-			picture.appendChild(thumbnail);
-			link.appendChild(picture);
-			grid.appendChild(link);
-		});
-	}
-
 	addSourceSet(picture: Element, url: String, size = 0, maxWidth = false): Element {
 		const webp = document.createElement('source');
 		const jpeg = document.createElement('source');
@@ -94,8 +63,48 @@ class Portfolio {
 		return picture;
 	}
 
+	showThumbnail() {
+		const sizes = [72, 100, 150, 200, 256];
+		// myDictionary: { [index: string]: any; } = {};
+		// const sizes = [{360:72},{450:100}, {600:140}, {700: 170}, {800: 200}, 256];
+		const grid = document.getElementById('grid');
+
+		grid.innerHTML = '';
+		this.pictures.forEach((item) => {
+			const link = document.createElement('a');
+			const webp = document.createElement('source');
+			const thumbnail = document.createElement('img');
+			let picture: Element;
+			picture = document.createElement('picture');
+
+			link.className = 'thumbnail';
+			link.href = item['file'];
+			link.dataset.picture = item['name'];
+			thumbnail.alt = item['name'];
+			link.addEventListener('click', this.togglePicture);
+
+			// for (let key in myDictionary) {
+			// 	let value = myDictionary[key];
+			// 	// Use `key` and `value`
+			// }
+
+			sizes.forEach((size) => {
+				picture = this.addSourceSet(picture, item['file'], size);
+			});
+
+			thumbnail.src = 'image.php?path=' + item['file'] + '&width=256';
+			thumbnail.classList.add('placeholder');
+
+			// picture.appendChild(webp);
+			picture.appendChild(thumbnail);
+			link.appendChild(picture);
+			grid.appendChild(link);
+		});
+	}
+
 	showPicture(src: Element) {
 		const sizes = [640, 768, 1024, 1366, 1600, 1920];
+		// const sizes = [640, 768, 1024, 1366, 1600, 1920];
 		let picture: Element;
 		if (src.childElementCount === 1) {
 			const source = document.createElement('source');
