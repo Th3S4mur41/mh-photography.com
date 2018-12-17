@@ -16,7 +16,7 @@ article#portfolio {
 
 	> header {
 		@include responsiveBackground(linear-gradient($dark-overlay-color, $dark-overlay-color), $image-portfolio);
-		background-position: left top;
+		background-position: 40% top;
 	}
 	> .grid {
 		display: flex;
