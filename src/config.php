@@ -58,6 +58,11 @@ function getImageGallery ($path) {
 						}
 				}
 		}
+		// sort list by name
+		usort($list, function($a, $b) {
+			return $a['name'] <=> $b['name'];
+	});
+
 		return $list;
 	}
 }
