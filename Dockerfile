@@ -15,7 +15,7 @@ RUN apt-get update && apt-get install -y \
 #COPY config/php.ini /usr/local/etc/php/
 
 # Copy the build directory contents into the container at /var/www/html/ (apache default root)
-COPY dist/ /var/www/html/
+#COPY dist/ /var/www/html/
 
 # Make port 80 available to the world outside this container
 EXPOSE 80
