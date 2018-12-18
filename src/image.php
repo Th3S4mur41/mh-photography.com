@@ -165,8 +165,10 @@ function saveImageToCache($image, $dest) {
 
 function getPicture($dest) {
 	// send the right headers
+	// TODO: need to replace jpg through jpeg for correct mime type
 	header("Content-Type: image/" . $dest["format"]);
 	header("Content-Length: " . filesize($dest["path"]));
+	header_remove("X-Powered-By"); // for security reason
 	$fp = fopen($dest["path"], 'rb');
 	// dump the picture and stop the script
 	fpassthru($fp);
