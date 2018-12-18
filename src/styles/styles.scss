@@ -112,7 +112,7 @@ body > article {
 	//flex-direction: column;
 	//justify-content: space-around;
 	display: grid;
-	grid-template-columns: minmax(1rem, auto) 1fr minmax(1rem, auto);
+	grid-template-columns: 1rem 1fr 1rem;
 	grid-template-rows: repeat(2, auto);
 }
 

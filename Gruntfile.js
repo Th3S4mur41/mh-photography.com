@@ -7,7 +7,7 @@ module.exports = function (grunt) {
 	// Variables
 	// *****************************************************************************************************************
 	const sass = require('node-sass');
-	//TODO: const build = grunt.option('build') || 'dev-' + Date.now();
+	// TODO: const build = grunt.option('build') || 'dev-' + Date.now();
 
 	// *****************************************************************************************************************
 	// Load NPM Plugins
@@ -257,7 +257,7 @@ module.exports = function (grunt) {
 		sass: {
 			options: {
 				implementation: sass,
-				outputStyle: 'compressed'
+				outputStyle   : 'compressed'
 			},
 			debug: {
 				options: {
@@ -376,6 +376,14 @@ module.exports = function (grunt) {
 	// *****************************************************************************************************************
 	// Public tasks
 	// *****************************************************************************************************************
+
+	/**
+	 * Check code for quality issues
+	 */
+	grunt.registerTask('check-code', [
+		'tslint',
+		'stylelint'
+	]);
 
 	/**
 	 * Debug Build
