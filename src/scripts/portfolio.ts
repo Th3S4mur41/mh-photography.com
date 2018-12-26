@@ -46,17 +46,19 @@ class Portfolio {
 		const jpeg = document.createElement('source');
 		// const media = (maxWidth ? '(max-width: ' + size + 'px)' : '(min-width: 1921px)');
 		const media = `(${'max-width'}: ${(maxWidth === 0 ? size : maxWidth)}px)`;
+		const host = window.location.hostname.search('mh-photography.com') >= 0 ?
+			window.location.protocol + '//cdn1.mh-photography.com/' : '';
 
 		if (portfolio.formats.indexOf('webp') > -1) {
 			webp.media = media;
 			webp.type = 'image/webp';
-			webp.srcset = 'image.php?path=' + url + (size > 0 ? '&width=' + size : '') + '&format=webp';
+			webp.srcset = host + 'image.php?path=' + url + (size > 0 ? '&width=' + size : '') + '&format=webp';
 			picture.appendChild(webp);
 		}
 		if (portfolio.formats.indexOf('jpeg') > -1) {
 			jpeg.media = media;
 			jpeg.type = 'image/jpeg';
-			jpeg.srcset = url + (size > 0 ? '?width=' + size : '');
+			jpeg.srcset = host + 'image.php?path=' + url + (size > 0 ? '?width=' + size : '');
 			picture.appendChild(jpeg);
 		}
 
