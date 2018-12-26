@@ -62,7 +62,7 @@ module.exports = function (grunt) {
 						expand : true,
 						flatten: true,
 						src    : [
-							'src/manifest.webmanifestwebmanifest'
+							'src/manifest.webmanifest'
 						],
 						dest  : 'dist/',
 						filter: 'isFile'
