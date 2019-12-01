@@ -30,7 +30,7 @@ class Portfolio {
 		};
 		this.configRequest.open(
 			'get',
-			 'config.php',
+			'config.php',
 			// window.location.hostname === 'localhost' ? 'config.json' : 'config.php',
 			true
 		);
@@ -55,20 +55,18 @@ class Portfolio {
 		const webp = document.createElement('source');
 		const jpeg = document.createElement('source');
 		// const media = (maxWidth ? '(max-width: ' + size + 'px)' : '(min-width: 1921px)');
-		const media = `(${'max-width'}: ${(maxWidth === 0 ? size : maxWidth)}px)`;
-		const host = window.location.hostname.search('mh-photography.com') >= 0 ?
-			window.location.protocol + '//cdn1.mh-photography.com/' : '';
+		const media = `(${(maxWidth ? 'max-width' : 'min-width')}: ${size}px)`;
 
 		if (portfolio.formats.indexOf('webp') > -1) {
 			webp.media = media;
 			webp.type = 'image/webp';
-			webp.srcset = host + 'image.php?path=' + url + (size > 0 ? '&width=' + size : '') + '&format=webp';
+			webp.srcset = 'image.php?path=' + url + (size > 0 ? '&width=' + size : '') + '&format=webp';
 			picture.appendChild(webp);
 		}
 		if (portfolio.formats.indexOf('jpeg') > -1) {
 			jpeg.media = media;
 			jpeg.type = 'image/jpeg';
-			jpeg.srcset = host + 'image.php?path=' + url + (size > 0 ? '?width=' + size : '');
+			jpeg.srcset = url + (size > 0 ? '?width=' + size : '');
 			picture.appendChild(jpeg);
 		}
 
@@ -79,8 +77,7 @@ class Portfolio {
 	 * showThumbnail
 	 */
 	showThumbnail() {
-		const sizes = [72, 100, 140, 170, 200, 256];
-		const width = [360, 450, 600, 700, 800, 1920];
+		const sizes = [72, 100, 150, 200, 256];
 		// myDictionary: { [index: string]: any; } = {};
 		// const sizes = [{360:72},{450:100}, {600:140}, {700: 170}, {800: 200}, 256];
 		const grid = document.getElementById('grid');
@@ -88,6 +85,7 @@ class Portfolio {
 		grid.innerHTML = '';
 		this.pictures.forEach((item) => {
 			const link = document.createElement('a');
+			const webp = document.createElement('source');
 			const thumbnail = document.createElement('img');
 			let picture: Element;
 			picture = document.createElement('picture');
@@ -103,18 +101,12 @@ class Portfolio {
 			// 	// Use `key` and `value`
 			// }
 
-			for (let i = 0; i < sizes.length; i++) {
-				picture = this.addSourceSet(picture, item['file'], sizes[i], width[i]);
-			}
-
-			// sizes.forEach((size) => {
-			// 	picture = this.addSourceSet(picture, item['file'], size);
-			// });
+			sizes.forEach((size) => {
+				picture = this.addSourceSet(picture, item['file'], size);
+			});
 
 			thumbnail.src = 'image.php?path=' + item['file'] + '&width=256';
 			thumbnail.classList.add('placeholder');
-			// TODO: add landscape or portrait for IE (no object-fit)
-			thumbnail.classList.add((item ['width'] > item['height']) ? 'landscape' : 'portrait');
 
 			// picture.appendChild(webp);
 			picture.appendChild(thumbnail);
