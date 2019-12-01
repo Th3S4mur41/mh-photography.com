@@ -37,10 +37,20 @@ class Portfolio {
 		this.configRequest.send();
 	}
 
+	/**
+	 * static imageLoaded
+	 */
 	static imageLoaded() {
 		// TODO: replace placeholder with high quality picture
 	}
 
+	/**
+	 * addSourceSet
+	 * @param picture
+	 * @param url
+	 * @param size
+	 * @param maxWidth
+	 */
 	addSourceSet(picture: Element, url: String, size: Number, maxWidth = 0): Element {
 		const webp = document.createElement('source');
 		const jpeg = document.createElement('source');
@@ -65,6 +75,9 @@ class Portfolio {
 		return picture;
 	}
 
+	/**
+	 * showThumbnail
+	 */
 	showThumbnail() {
 		const sizes = [72, 100, 140, 170, 200, 256];
 		const width = [360, 450, 600, 700, 800, 1920];
@@ -110,6 +123,10 @@ class Portfolio {
 		});
 	}
 
+	/**
+	 * showPicture
+	 * @param src
+	 */
 	showPicture(src: Element) {
 		const sizes = [640, 768, 1024, 1366, 1600, 1920];
 		// const sizes = [640, 768, 1024, 1366, 1600, 1920];
@@ -149,20 +166,27 @@ class Portfolio {
 		src.classList.add('show');
 	}
 
+	/**
+	 * hidPicture
+	 * @param src
+	 */
 	hidePicture(src: Element) {
 		const picture = src.firstElementChild;
 
 		src.classList.remove('show');
 	}
 
+	/**
+	 * togglePicture
+	 */
 	togglePicture() {
-		let src = event.srcElement;
+		let src = event.srcElement as HTMLElement;
 
 		// Don't navigate to picture URL
 		event.preventDefault();
 
 		while (src.tagName.toLowerCase() !== 'a') {
-			src = src.parentElement;
+			src = src.parentElement as HTMLElement;
 		}
 		if (src.classList.contains('show')) {
 			portfolio.hidePicture(src);
