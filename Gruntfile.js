@@ -62,7 +62,7 @@ module.exports = function (grunt) {
 						expand : true,
 						flatten: true,
 						src    : [
-							'src/manifest.json'
+							'src/manifest.webmanifest'
 						],
 						dest  : 'dist/',
 						filter: 'isFile'
@@ -115,7 +115,7 @@ module.exports = function (grunt) {
 							'src/favicon.ico',
 							'src/robots.txt',
 							'src/sitemap.xml',
-							'src/manifest.json'
+							'src/manifest.webmanifest'
 						],
 						dest  : 'dist/',
 						filter: 'isFile'
@@ -281,7 +281,7 @@ module.exports = function (grunt) {
 				configFile            : '.stylelintrc',
 				formatter             : 'string',
 				ignoreDisables        : false,
-				outputFile 						: 'reports/stylelint-report.json',
+				outputFile       					: 'reports/stylelint-report.json',
 				reportNeedlessDisables: false,
 				syntax                : 'less'
 			},

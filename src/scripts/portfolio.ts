@@ -37,32 +37,47 @@ class Portfolio {
 		this.configRequest.send();
 	}
 
+	/**
+	 * static imageLoaded
+	 */
 	static imageLoaded() {
 		// TODO: replace placeholder with high quality picture
 	}
 
+	/**
+	 * addSourceSet
+	 * @param picture
+	 * @param url
+	 * @param size
+	 * @param maxWidth
+	 */
 	addSourceSet(picture: Element, url: String, size: Number, maxWidth = 0): Element {
 		const webp = document.createElement('source');
 		const jpeg = document.createElement('source');
 		// const media = (maxWidth ? '(max-width: ' + size + 'px)' : '(min-width: 1921px)');
 		const media = `(${'max-width'}: ${(maxWidth === 0 ? size : maxWidth)}px)`;
+		const host = window.location.hostname.search('mh-photography.com') >= 0 ?
+			window.location.protocol + '//cdn1.mh-photography.com/' : '';
 
 		if (portfolio.formats.indexOf('webp') > -1) {
 			webp.media = media;
 			webp.type = 'image/webp';
-			webp.srcset = 'image.php?path=' + url + (size > 0 ? '&width=' + size : '') + '&format=webp';
+			webp.srcset = host + 'image.php?path=' + url + (size > 0 ? '&width=' + size : '') + '&format=webp';
 			picture.appendChild(webp);
 		}
 		if (portfolio.formats.indexOf('jpeg') > -1) {
 			jpeg.media = media;
 			jpeg.type = 'image/jpeg';
-			jpeg.srcset = url + (size > 0 ? '?width=' + size : '');
+			jpeg.srcset = host + 'image.php?path=' + url + (size > 0 ? '?width=' + size : '');
 			picture.appendChild(jpeg);
 		}
 
 		return picture;
 	}
 
+	/**
+	 * showThumbnail
+	 */
 	showThumbnail() {
 		const sizes = [72, 100, 140, 170, 200, 256];
 		const width = [360, 450, 600, 700, 800, 1920];
@@ -108,6 +123,10 @@ class Portfolio {
 		});
 	}
 
+	/**
+	 * showPicture
+	 * @param src
+	 */
 	showPicture(src: Element) {
 		const sizes = [640, 768, 1024, 1366, 1600, 1920];
 		// const sizes = [640, 768, 1024, 1366, 1600, 1920];
@@ -147,20 +166,27 @@ class Portfolio {
 		src.classList.add('show');
 	}
 
+	/**
+	 * hidPicture
+	 * @param src
+	 */
 	hidePicture(src: Element) {
 		const picture = src.firstElementChild;
 
 		src.classList.remove('show');
 	}
 
+	/**
+	 * togglePicture
+	 */
 	togglePicture() {
-		let src = event.srcElement;
+		let src = event.srcElement as HTMLElement;
 
 		// Don't navigate to picture URL
 		event.preventDefault();
 
 		while (src.tagName.toLowerCase() !== 'a') {
-			src = src.parentElement;
+			src = src.parentElement as HTMLElement;
 		}
 		if (src.classList.contains('show')) {
 			portfolio.hidePicture(src);

@@ -6,6 +6,7 @@
 <IfModule mod_mime.c>
 	AddType image/svg+xml svg svgz
 	AddType image/x-icon ico
+	AddType application/manifest+json webmanifest
 </IfModule>
 
 # ----------------------------------------------------------------------
