@@ -52,17 +52,17 @@ class Portfolio {
 	 * @param maxWidth
 	 */
 	addSourceSet(picture: Element, url: String, size: Number, maxWidth = 0): Element {
-		const webp = document.createElement('source');
+// 		const webp = document.createElement('source');
 		const jpeg = document.createElement('source');
 		// const media = (maxWidth ? '(max-width: ' + size + 'px)' : '(min-width: 1921px)');
 		const media = `(${(maxWidth ? 'max-width' : 'min-width')}: ${size}px)`;
 
-		if (portfolio.formats.indexOf('webp') > -1) {
-			webp.media = media;
-			webp.type = 'image/webp';
-			webp.srcset = 'image.php?path=' + url + (size > 0 ? '&width=' + size : '') + '&format=webp';
-			picture.appendChild(webp);
-		}
+// 		if (portfolio.formats.indexOf('webp') > -1) {
+// 			webp.media = media;
+// 			webp.type = 'image/webp';
+// 			webp.srcset = 'image.php?path=' + url + (size > 0 ? '&width=' + size : '') + '&format=webp';
+// 			picture.appendChild(webp);
+// 		}
 		if (portfolio.formats.indexOf('jpeg') > -1) {
 			jpeg.media = media;
 			jpeg.type = 'image/jpeg';
