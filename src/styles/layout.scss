@@ -1,0 +1,12 @@
+.vertical-paging {
+	width: 100vw;
+	height: 100vh;
+	scroll-snap-type: y mandatory;
+	overflow-y: auto;
+
+	> article {
+		width: 100vw;
+		height: 100vh;
+		scroll-snap-align: start;
+	}
+}

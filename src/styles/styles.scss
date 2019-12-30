@@ -2,77 +2,52 @@
  * © 2018 Manuel Hamel Photography
  */
 @import url('https://fonts.googleapis.com/css?family=Titillium+Web:400,300italic,200');
-@import "variables";
-@import "mixins";
-@import "about";
-@import "contact";
-@import "header";
-@import "portfolio";
-@import "icons";
+@import 'colors';
+@import 'layout';
 
 /** ********************************************************************************************************************
  * Globals
  */
 
+:root {
+	font-size: 10px;
+	box-sizing: border-box;
+}
+
 html,
 body {
 	margin: 0;
 	font-family: 'Titillium Web', sans-serif;
-	font-size: 20px;
+	font-size: 2rem;
 	font-weight: 400;
-	color: $primary-color;
-	background-color: $background-color;
+	color: var(--primary-color);
+	background-color: var(--bg-color);
 	min-height: 100vh;
-	scroll-behavior: smooth;
 
 	& * {
-		outline-color: $theme-color;
-	}
-	& a:focus {
+		outline-color: var(--theme-color);
 		outline-style: solid;
-		outline-width: 0;
 	}
 }
 
 h2 {
-	font-size: 40px;
+	font-size: 4rem;
 	font-weight: 400;
 	letter-spacing: 0.5em;
 	text-transform: uppercase;
 
 	@media (max-width: 400px) {
-		font-size: 36px;
+		font-size: 3.6rem;
 	}
 }
 
-nav > a {
-	text-decoration: none;
-	font-size: 14px;
-	letter-spacing: 0.35em;
-	text-transform: uppercase;
+a {
+	color: var(--theme-color);
 
-	&:hover {
-		font-weight: 600;
-	}
-}
-
-nav > a,
-nav > a:hover,
-nav > a:visited {
-	color: #2e2d33;
-	text-shadow: 1px 1px 4px $background-color;
-}
-
-.socialmedia {
-	display: flex;
-	flex-flow: row nowrap;
-	justify-content: center;
-	align-items: center;
-
-	> a {
-		flex: 0 0 auto;
-		margin: 10px;
-		font-size: 32px;
+	&:hover,
+	&:focus,
+	&:visited {
+		color: var(--theme-color);
 	}
 }
 
@@ -89,75 +64,35 @@ nav > a:visited {
 }
 
 /** ********************************************************************************************************************
- * Layout
+ * Style
  */
-
-body {
-	display: flex;
-	flex-flow: column nowrap;
-	align-items: stretch;
-	min-width: 320px;
-	//TODO: Add scroll snap point to headers and content pages
-	//scroll-snap-type: proximity;
-	///* older spec implementation */
-	//scroll-snap-destination: 0% 100%;
-	//scroll-snap-points-x: repeat(100%);
+.acrylic {
+	// Fluent acrylic effect: see https://medium.com/microsoft-design/diy-a-web-version-the-fluent-design-systems-acrylic-material-fe2eac2a40bb
+	backdrop-filter: blur(30px) saturate(125%);
+	background: var(--acrylic-color);
 }
 
-body > article {
-	//scroll-snap-align: start;
-	// TODO: center the content on the page, following solution adds space before header
-	//min-height: 200vh; // 100vh for the header and 100vh for the content
-	//display: flex;
-	//flex-direction: column;
-	//justify-content: space-around;
-	display: grid;
-	grid-template-columns: 1rem 1fr 1rem;
-	grid-template-rows: repeat(2, auto);
-}
+.vertical-paging {
+	scroll-behavior: smooth;
+	// Scrollbar style
+	scrollbar-color: var(--secondary-color) var(--acrylic-color);
+	scrollbar-width: thin;
 
-article > header {
-	grid-column: 1 / span 3;
-	grid-row: 1;
-	height: 100vh;
-	display: flex;
-	flex-flow: column nowrap;
-	justify-content: center;
-	align-items: stretch;
-
-	/* Create the parallax scrolling effect */
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	background-position: center;
-	background-size: cover;
-
-	// mobile devices don't support background-attachment: fixed properly
-	@media not all and (any-hover: none) {
-		background-attachment: scroll;
+	&::-webkit-scrollbar {
+		width: 0.6rem;
 	}
-
-	> h2 {
-		margin: 0;
-		text-align: center;
-		color: $background-color;
-		text-shadow: 1px 1px 5px $primary-color;
+	&::-webkit-scrollbar:hover {
+		width: 1rem;
 	}
-}
-
-article > section {
-	grid-column: 1 / span 3;
-	grid-row: 2;
-
-	& > p {
-		text-align: justify;
-		line-height: 1.5;
-		margin: 1em auto;
-		max-width: 35em;
+	&::-webkit-scrollbar-track {
+		background: var(--acrylic-color);
 	}
-}
-
-footer#footer {
-	min-width: 100%;
-	flex: 0 0 auto;
-	margin-bottom: 2rem;
+	&::-webkit-scrollbar-thumb {
+		background: var(--secondary-color);
+		border-radius: 0.3rem;
+	}
+	&::-webkit-scrollbar-thumb:hover {
+		background: var(--primary-color);
+		border-radius: 0.5rem;
+	}
 }
