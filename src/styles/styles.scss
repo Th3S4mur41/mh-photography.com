@@ -12,6 +12,21 @@
 :root {
 	font-size: 10px;
 	box-sizing: border-box;
+
+	// Initial scrollbar design to avoid jumpy rendering
+	scrollbar-color: var(--secondary-color) var(--acrylic-color);
+	scrollbar-width: thin;
+
+	&::-webkit-scrollbar {
+		width: 0.6rem;
+	}
+	&::-webkit-scrollbar-track {
+		background: var(--acrylic-color);
+	}
+	&::-webkit-scrollbar-thumb {
+		background: var(--secondary-color);
+		border-radius: 0.3rem;
+	}
 }
 
 html,
@@ -23,6 +38,7 @@ body {
 	color: var(--primary-color);
 	background-color: var(--bg-color);
 	min-height: 100vh;
+	overflow-x: hidden;
 
 	& * {
 		outline-color: var(--theme-color);
