@@ -18,7 +18,7 @@ html,
 body {
 	margin: 0;
 	font-family: 'Titillium Web', sans-serif;
-	font-size: 2rem;
+	font-size: 1.6rem;
 	font-weight: 400;
 	color: var(--primary-color);
 	background-color: var(--bg-color);
@@ -87,4 +87,11 @@ a {
 		background: var(--primary-color);
 		border-radius: 0.5rem;
 	}
+}
+
+.background-image {
+	background: var(--bg-image) no-repeat center;
+	background-color: var(--blend-color);
+	background-size: cover;
+	background-blend-mode: overlay;
 }
