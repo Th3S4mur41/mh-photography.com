@@ -99,7 +99,8 @@ module.exports = function (grunt) {
 						src    : [
 							'assets/icons/*',
 							'assets/images/**/*.jpg',
-							'assets/images/**/*.png'
+							'assets/images/**/*.png',
+							'assets/videos/**/*'
 						],
 						dest  : 'dist/',
 						filter: 'isFile'
@@ -291,22 +292,6 @@ module.exports = function (grunt) {
 					'src/styles/**/*.sass',
 					'src/styles/**/*.css'
 				]
-			}
-		},
-		ts: {
-			options: {
-			},
-			debug: {
-				options: {
-					sourceMap: true
-				},
-				tsconfig: 'tsconfig.json'
-			},
-			release: {
-				options: {
-					sourceMap: false
-				},
-				tsconfig: 'tsconfig.json'
 			}
 		},
 		// uglify: {

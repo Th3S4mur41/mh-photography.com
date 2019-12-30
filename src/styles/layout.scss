@@ -40,7 +40,8 @@
 .about {
 	display: grid;
 	grid-template-columns: 5vw 1fr 5vw;
-	grid-template-rows: 2vh 1fr 2vh;
+	grid-template-rows: 5vh 1fr 5vh;
+	scroll-margin-block-end: 5vh;
 	align-items: center;
 
 	> .text {
@@ -56,5 +57,17 @@
 		> p + p {
 			margin-top: 1em;
 		}
+	}
+}
+
+.video {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 1fr;
+	align-items: center;
+
+	> video {
+		width: 100%;
+		height: auto;
 	}
 }
