@@ -79,7 +79,6 @@
 	> .category {
 		overflow: hidden;
 		cursor: pointer;
-		color: var(--primary-color); // overwrite default link color
 
 		&:hover,
 		&:focus {
@@ -98,8 +97,9 @@
 			padding-bottom: 0.5rem;
 			padding-left: 0.5rem;
 			width: 100%;
-			height: 50%;
+			height: 50vh;
 			transition: all 0.5s ease;
+			color: var(--primary-color); // overwrite default link color
 		}
 		> .cat-1 {
 			--bg-image: url('assets/images/pictures/Artistic%20Nudes.jpg');
