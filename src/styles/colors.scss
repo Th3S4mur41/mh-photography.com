@@ -1,10 +1,11 @@
 :root {
 	--bg-color: hsla(0, 0%, 100%, 1);
-	--primary-color: hsl(250, 6%, 19%);
+	--primary-color: hsl(0, 0%, 0%);
 	--secondary-color: hsla(250, 6%, 30%, 0.8);
 	--theme-color: hsl(183, 81%, 44%);
 	--acrylic-color: hsla(0, 0%, 100%, 0.3);
-	--blend-color: hsla(0, 0%, 100%, 0.6);
+	--blend-color: hsla(0, 0%, 100%, 0.75);
+	--text-shadow-color: hsla(0, 0%, 20%, 0.3);
 
 	@media (prefers-color-scheme: dark) {
 		--bg-color: hsl(0, 0%, 0%);
