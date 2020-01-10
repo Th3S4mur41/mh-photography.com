@@ -147,6 +147,15 @@
 		max-width: 140px;
 		height: auto;
 	}
+
+	@media (max-width: 650px) {
+		grid-template-columns: 5vw auto 1fr auto 5vw;
+
+		> .zaask {
+			grid-column: 3;
+			grid-row: 3;
+		}
+	}
 }
 
 .social {
