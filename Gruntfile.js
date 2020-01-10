@@ -1,8 +1,7 @@
 /* eslint-env node, grunt */
 'use strict';
 
-module.exports = function (grunt) {
-
+module.exports = function(grunt) {
 	// *****************************************************************************************************************
 	// Variables
 	// *****************************************************************************************************************
@@ -18,9 +17,9 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-postcss');
 	grunt.loadNpmTasks('grunt-replace');
+	grunt.loadNpmTasks('grunt-responsive-images');
 	grunt.loadNpmTasks('grunt-stylelint');
 	grunt.loadNpmTasks('grunt-sass');
-	grunt.loadNpmTasks('grunt-ts');
 	grunt.loadNpmTasks('gruntify-eslint');
 
 	// *****************************************************************************************************************
@@ -28,9 +27,9 @@ module.exports = function (grunt) {
 	// *****************************************************************************************************************
 
 	grunt.initConfig({
-		pkg        : grunt.file.readJSON('package.json'),
+		pkg: grunt.file.readJSON('package.json'),
 		buildnumber: grunt.option('build') || 'dev-' + Date.now(),
-		clean      : {
+		clean: {
 			options: {
 				force: true
 			},
@@ -38,10 +37,8 @@ module.exports = function (grunt) {
 				files: [
 					{
 						expand: true,
-						cwd   : 'dist',
-						src   : [
-							'**'
-						]
+						cwd: 'dist',
+						src: ['**']
 					}
 				]
 			}
@@ -50,59 +47,46 @@ module.exports = function (grunt) {
 			debug: {
 				files: [
 					{
-						expand : true,
+						expand: true,
 						flatten: true,
-						src    : [
-							'src/favicon.ico'
-						],
-						dest  : 'dist/',
+						src: ['src/favicon.ico'],
+						dest: 'dist/',
 						filter: 'isFile'
 					},
 					{
-						expand : true,
+						expand: true,
 						flatten: true,
-						src    : [
-							'src/manifest.webmanifest'
-						],
-						dest  : 'dist/',
+						src: ['src/manifest.webmanifest'],
+						dest: 'dist/',
 						filter: 'isFile'
 					},
 					{
-						expand : true,
+						expand: true,
 						flatten: true,
-						src    : [
-							'src/configconfig.json'
-						],
-						dest  : 'dist/',
+						src: ['src/configconfig.json'],
+						dest: 'dist/',
 						filter: 'isFile'
 					},
 					{
-						expand : true,
+						expand: true,
 						flatten: true,
-						src    : [
-							'src/*.php'
-						],
-						dest  : 'dist/',
+						src: ['src/*.php'],
+						dest: 'dist/',
 						filter: 'isFile'
 					},
 					{
-						expand : false,
+						expand: false,
 						flatten: true,
-						src    : 'src/robots-debug.txt',
-						dest   : 'dist/robots.txt',
-						filter : 'isFile'
+						src: 'src/robots-debug.txt',
+						dest: 'dist/robots.txt',
+						filter: 'isFile'
 					},
 					{
-						expand : true,
+						expand: true,
 						flatten: false,
-						cwd    : 'src/',
-						src    : [
-							'assets/icons/*',
-							'assets/images/**/*.jpg',
-							'assets/images/**/*.png',
-							'assets/videos/**/*'
-						],
-						dest  : 'dist/',
+						cwd: 'src/',
+						src: ['assets/icons/*', 'assets/images/**/*.jpg', 'assets/images/**/*.png', 'assets/videos/**/*'],
+						dest: 'dist/',
 						filter: 'isFile'
 					}
 				]
@@ -110,38 +94,31 @@ module.exports = function (grunt) {
 			release: {
 				files: [
 					{
-						expand : true,
+						expand: true,
 						flatten: true,
-						src    : [
-							'src/favicon.ico',
-							'src/robots.txt',
-							'src/sitemap.xml',
-							'src/manifest.webmanifest'
-						],
-						dest  : 'dist/',
+						src: ['src/favicon.ico', 'src/robots.txt', 'src/sitemap.xml', 'src/manifest.webmanifest'],
+						dest: 'dist/',
 						filter: 'isFile'
 					},
 					{
-						expand : true,
+						expand: true,
 						flatten: true,
-						src    : [
-							'src/*.php'
-						],
-						dest  : 'dist/',
+						src: ['src/*.php'],
+						dest: 'dist/',
 						filter: 'isFile'
 					},
 					{
-						expand : true,
+						expand: true,
 						flatten: false,
-						cwd		  : 'src/',
-						src    : [
+						cwd: 'src/',
+						src: [
 							'assets/icons/*',
 							'assets/images/**/*.jpg',
 							'assets/images/**/*.png',
 							'!assets/images/diashow/**/*',
 							'!assets/images/portfolio/**/*'
 						],
-						dest  : 'dist/',
+						dest: 'dist/',
 						filter: 'isFile'
 					}
 				]
@@ -151,26 +128,23 @@ module.exports = function (grunt) {
 			options: {
 				allowInlineConfig: true,
 				// configFile: '.eslintrc',
-				maxWarnings      : -1,
-				useEslintrc      : true
+				maxWarnings: -1,
+				useEslintrc: true
 			},
 			all: {
-				src: [
-					'src/scripts/**/*.js',
-					'!src/scipts/**/*.min.js'
-				]
+				src: ['src/scripts/**/*.js', '!src/scipts/**/*.min.js']
 			}
 		},
 		htmlmin: {
 			options: {
 				collapseBooleanAttributes: true,
-				collapseWhitespace       : true,
+				collapseWhitespace: true,
 				// removeAttributeQuotes:          true,
 				// removeEmptyAttributes:          true,
 				removeRedundantAttributes: true,
 				// removeScriptTypeAttributes:     true,
 				// removeStyleLinkTypeAttributes:  true,
-				html5                    : true
+				html5: true
 			},
 			debug: {
 				files: {
@@ -186,20 +160,12 @@ module.exports = function (grunt) {
 				}
 			}
 		},
-		// jsonlint: {
-		// 	options: {
-		// 		formatter: 'prose'
-		// 	},
-		// 	all: {
-		// 		src: ['src/main/webapp/**/*.json']
-		// 	}
-		// },
 		postcss: {
 			options: {
 				processors: [
 					require('autoprefixer')({
 						flexbox: 'no-2009',
-						grid   : true
+						grid: true
 					})
 				]
 			},
@@ -218,20 +184,16 @@ module.exports = function (grunt) {
 				options: {
 					patterns: [
 						{
-							match      : /{{BUILD}}/g,
+							match: /{{BUILD}}/g,
 							replacement: '<%= buildnumber %>'
 						}
 					]
 				},
 				files: [
 					{
-						expand : true,
+						expand: true,
 						flatten: false,
-						src    : [
-							'dist/**/*.css',
-							'dist/**/*.html',
-							'dist/**/*.js'
-						],
+						src: ['dist/**/*.css', 'dist/**/*.html', 'dist/**/*.js'],
 						dest: '.'
 					}
 				]
@@ -240,7 +202,7 @@ module.exports = function (grunt) {
 				options: {
 					patterns: [
 						{
-							match      : /\{{BUILD}}/g,
+							match: /\{{BUILD}}/g,
 							replacement: '<%= pkg.version %>'
 						}
 					]
@@ -255,10 +217,65 @@ module.exports = function (grunt) {
 				]
 			}
 		},
+		responsive_images: {
+			background: {
+				options: {
+					// concurrency: 2,
+					quality: 80,
+					rename: false,
+					sizes: [
+						{
+							suffix: '-w320',
+							width: 320
+						},
+						{
+							suffix: '-w640',
+							width: 640
+						},
+						{
+							suffix: '-w768',
+							width: 768
+						},
+						{
+							suffix: '-w1024',
+							width: 1024
+						},
+						{
+							suffix: '-w1366',
+							width: 1366
+						},
+						{
+							suffix: '-w1600',
+							width: 1600
+						},
+						{
+							suffix: '-w1920',
+							width: 1920
+						},
+						{
+							suffix: '-w2560',
+							width: 2560
+						},
+						{
+							suffix: '',
+							width: 3840
+						}
+					]
+				},
+				files: [
+					{
+						expand: true,
+						src: ['assets/images/layout/**.jpg', 'assets/images/pictures/*.jpg'],
+						cwd: 'src/',
+						dest: 'dist/'
+					}
+				]
+			}
+		},
 		sass: {
 			options: {
 				implementation: sass,
-				outputStyle   : 'compressed'
+				outputStyle: 'compressed'
 			},
 			debug: {
 				options: {
@@ -279,19 +296,15 @@ module.exports = function (grunt) {
 		},
 		stylelint: {
 			options: {
-				configFile            : '.stylelintrc',
-				formatter             : 'string',
-				ignoreDisables        : false,
-				outputFile       					: 'reports/stylelint-report.json',
+				configFile: '.stylelintrc',
+				formatter: 'string',
+				ignoreDisables: false,
+				outputFile: 'reports/stylelint-report.json',
 				reportNeedlessDisables: false,
-				syntax                : 'less'
+				syntax: 'less'
 			},
 			all: {
-				src: [
-					'src/styles/**/*.scss',
-					'src/styles/**/*.sass',
-					'src/styles/**/*.css'
-				]
+				src: ['src/styles/**/*.scss', 'src/styles/**/*.sass', 'src/styles/**/*.css']
 			}
 		},
 		// uglify: {
@@ -328,8 +341,8 @@ module.exports = function (grunt) {
 		// },
 		watch: {
 			options: {
-				spawn        : true,
-				interrupt    : true,
+				spawn: true,
+				interrupt: true,
 				debounceDelay: 1000
 			},
 			styles: {
@@ -349,10 +362,7 @@ module.exports = function (grunt) {
 				tasks: ['htmlmin:debug']
 			},
 			assets: {
-				files: [
-					'src/assets/icons/**/*',
-					'src/assets/images/**/*'
-				],
+				files: ['src/assets/icons/**/*', 'src/assets/images/**/*'],
 				tasks: ['copy:debug']
 			}
 		}
@@ -365,10 +375,7 @@ module.exports = function (grunt) {
 	/**
 	 * Check code for quality issues
 	 */
-	grunt.registerTask('check-code', [
-		'tslint',
-		'stylelint'
-	]);
+	grunt.registerTask('check-code', ['tslint', 'stylelint']);
 
 	/**
 	 * Debug Build
@@ -381,6 +388,7 @@ module.exports = function (grunt) {
 		'sass:debug',
 		'postcss:debug',
 		'copy:debug',
+		'responsive_images',
 		'replace:build'
 	]);
 
@@ -395,6 +403,7 @@ module.exports = function (grunt) {
 		'sass:release',
 		'postcss:release',
 		'copy:release',
+		'responsive_images',
 		'replace:build'
 	]);
 };

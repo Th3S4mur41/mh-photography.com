@@ -151,6 +151,9 @@
 	@media (max-width: 650px) {
 		grid-template-columns: 5vw auto 1fr auto 5vw;
 
+		> .vcard {
+			text-align: center;
+		}
 		> .zaask {
 			grid-column: 3;
 			grid-row: 3;
