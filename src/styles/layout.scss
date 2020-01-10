@@ -12,7 +12,7 @@
 }
 
 .intro {
-	--bg-image: url('assets/images/layout/intro.jpg');
+	--bg-image: var(--intro-bg);
 	display: grid;
 	grid-template-columns: 5vw 1fr 1fr 1fr 5vw;
 	grid-template-rows: 1fr repeat(3, auto) 2vh;
@@ -102,28 +102,28 @@
 			color: var(--primary-color); // overwrite default link color
 		}
 		> .cat-1 {
-			--bg-image: url('assets/images/pictures/Artistic%20Nudes.jpg');
+			--bg-image: var(--cat-1-bg);
 		}
 		> .cat-2 {
-			--bg-image: url('assets/images/pictures/Black & White.jpg');
+			--bg-image: var(--cat-2-bg);
 		}
 		> .cat-3 {
-			--bg-image: url('assets/images/pictures/Families & Kids.jpg');
+			--bg-image: var(--cat-3-bg);
 		}
 		> .cat-4 {
-			--bg-image: url('assets/images/pictures/Lifestyle.jpg');
+			--bg-image: var(--cat-4-bg);
 		}
 		> .cat-5 {
-			--bg-image: url('assets/images/pictures/Travel%20the%20World.jpg');
+			--bg-image: var(--cat-5-bg);
 		}
 		> .cat-6 {
-			--bg-image: url('assets/images/pictures/Weddings.jpg');
+			--bg-image: var(--cat-6-bg);
 		}
 	}
 }
 
 .contact {
-	--bg-image: url('assets/images/layout/contact.jpg');
+	--bg-image: var(--contact-bg);
 	display: grid;
 	grid-template-columns: 5vw 15rem 1fr 15rem 5vw;
 	grid-template-rows: 1fr auto auto 2vh;
@@ -154,6 +154,7 @@
 		> .zaask {
 			grid-column: 3;
 			grid-row: 3;
+			margin-top: 1rem;
 		}
 	}
 }
