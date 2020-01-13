@@ -221,7 +221,7 @@ module.exports = function(grunt) {
 			background: {
 				options: {
 					// concurrency: 2,
-					quality: 80,
+					quality: 90,
 					rename: false,
 					sizes: [
 						{
