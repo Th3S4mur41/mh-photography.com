@@ -375,7 +375,7 @@ module.exports = function(grunt) {
 	/**
 	 * Check code for quality issues
 	 */
-	grunt.registerTask('check-code', ['tslint', 'stylelint']);
+	grunt.registerTask('check-code', ['eslint', 'stylelint']);
 
 	/**
 	 * Debug Build
