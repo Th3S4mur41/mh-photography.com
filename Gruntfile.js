@@ -6,7 +6,6 @@ module.exports = function(grunt) {
 	// Variables
 	// *****************************************************************************************************************
 	const sass = require('node-sass');
-	// TODO: const build = grunt.option('build') || 'dev-' + Date.now();
 
 	// *****************************************************************************************************************
 	// Load NPM Plugins
@@ -21,6 +20,7 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-responsive-images');
 	grunt.loadNpmTasks('grunt-stylelint');
 	grunt.loadNpmTasks('grunt-sass');
+	grunt.loadNpmTasks('grunt-terser');
 	grunt.loadNpmTasks('gruntify-eslint');
 
 	// *****************************************************************************************************************
@@ -371,38 +371,30 @@ module.exports = function(grunt) {
 				src: ['src/styles/**/*.scss', 'src/styles/**/*.sass', 'src/styles/**/*.css']
 			}
 		},
-		// uglify: {
-		// 	options: {
-		// 		banner: '/** \n' +
-		// 			'* <%= pkg.name %> - v<%= pkg.version %>-' + build + '\n' +
-		// 			'* Copyright © <%= grunt.template.today("yyyy") %> Mouch.net\n' +
-		// 			'*/',
-		// 		compress: true,
-		// 		mangle  : false
-		// 		// wrap    : true
-		// 	},
-		// 	debug: {
-		// 		options: {
-		// 			sourceMap: true
-		// 			// sourceMapIncludeSources : true,
-		// 			// sourceMapIn : 'scripts/scripts.js.map'
-		// 		},
-		// 		files: {
-		// 			'dist/scripts.js': [
-		// 				'src/scripts/**/*.js',
-		// 				'!src/scripts/**/*.min.js'
-		// 			]
-		// 		}
-		// 	},
-		// 	release: {
-		// 		files: {
-		// 			'dist/scripts.js': [
-		// 				'src/scripts/**/*.js',
-		// 				'!src/scripts/**/*.min.js'
-		// 			]
-		// 		}
-		// 	}
-		// },
+		terser: {
+			options: {
+				compress: true,
+				mangle: false
+				// wrap    : true
+			},
+			debug: {
+				options: {
+					sourceMap: true
+					// sourceMapIncludeSources : true,
+					// sourceMapIn : 'scripts/scripts.js.map'
+				},
+				files: {
+					'dist/app.js': ['src/scripts/**/*.js', '!src/scripts/worker.js', '!src/scripts/**/*.min.js'],
+					'dist/worker.js': 'src/scripts/worker.js'
+				}
+			},
+			release: {
+				files: {
+					'dist/app.js': ['src/scripts/**/*.js', '!src/scripts/worker.js', '!src/scripts/**/*.min.js'],
+					'dist/worker.js': 'src/scripts/worker.js'
+				}
+			}
+		},
 		watch: {
 			options: {
 				spawn: true,
@@ -446,7 +438,7 @@ module.exports = function(grunt) {
 	 */
 	grunt.registerTask('debug-quick', [
 		'htmlmin:debug',
-		// 'uglify:debug',
+		'terser:debug',
 		// 'ts:debug',
 		'sass:debug',
 		'postcss:debug',
@@ -460,7 +452,7 @@ module.exports = function(grunt) {
 	grunt.registerTask('debug', [
 		'clean',
 		'htmlmin:debug',
-		// 'uglify:debug',
+		'terser:debug',
 		// 'ts:debug',
 		'sass:debug',
 		'postcss:debug',
@@ -475,7 +467,7 @@ module.exports = function(grunt) {
 	grunt.registerTask('release', [
 		'clean',
 		'htmlmin:release',
-		// 'uglify:release',
+		'terser:release',
 		// 'ts:release',
 		'sass:release',
 		'postcss:release',

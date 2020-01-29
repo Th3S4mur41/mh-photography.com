@@ -11,15 +11,10 @@
 			"src": "assets/icons/logo_small512.png",
 			"type": "image/png",
 			"sizes": "512x512"
-		},
-		{
-			"src": "assets/icons/logo_large.svg",
-			"type": "image/svg+xml",
-			"sizes": "512x512"
 		}
 	],
 	"start_url": "/",
 	"background_color": "white",
-	"display": "browser",
+	"display": "minimal-ui",
 	"theme_color": "white"
 }
