@@ -380,6 +380,19 @@ module.exports = function(grunt) {
 	/**
 	 * Debug Build
 	 */
+	grunt.registerTask('debug-quick', [
+		'htmlmin:debug',
+		// 'uglify:debug',
+		// 'ts:debug',
+		'sass:debug',
+		'postcss:debug',
+		'copy:debug',
+		'replace:build'
+	]);
+
+	/**
+	 * Debug Build
+	 */
 	grunt.registerTask('debug', [
 		'clean',
 		'htmlmin:debug',
