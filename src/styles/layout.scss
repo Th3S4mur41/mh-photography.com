@@ -1,12 +1,12 @@
 .vertical-paging {
 	width: 100vw;
-	height: 100vh;
+	min-height: 100%;
 	scroll-snap-type: y proximity;
 	overflow-y: auto;
 
 	> article {
 		width: 100%;
-		min-height: 100%;
+		min-height: 100vh;
 		scroll-snap-align: start;
 		outline: none;
 	}
@@ -84,7 +84,7 @@
 	display: grid;
 	grid-template-columns: repeat(3, minmax(10rem, 1fr));
 
-	> .category {
+	> .category > a {
 		overflow: hidden;
 		outline: none;
 		cursor: pointer;
@@ -110,24 +110,24 @@
 			transition: all 0.5s ease;
 			color: var(--primary-color); // overwrite default link color
 		}
-		> .cat-1 {
-			--bg-image: var(--cat-1-bg);
-		}
-		> .cat-2 {
-			--bg-image: var(--cat-2-bg);
-		}
-		> .cat-3 {
-			--bg-image: var(--cat-3-bg);
-		}
-		> .cat-4 {
-			--bg-image: var(--cat-4-bg);
-		}
-		> .cat-5 {
-			--bg-image: var(--cat-5-bg);
-		}
-		> .cat-6 {
-			--bg-image: var(--cat-6-bg);
-		}
+	}
+	#category-1 {
+		--bg-image: var(--cat-1-bg);
+	}
+	#category-2 {
+		--bg-image: var(--cat-2-bg);
+	}
+	#category-3 {
+		--bg-image: var(--cat-3-bg);
+	}
+	#category-4 {
+		--bg-image: var(--cat-4-bg);
+	}
+	#category-5 {
+		--bg-image: var(--cat-5-bg);
+	}
+	#category-6 {
+		--bg-image: var(--cat-6-bg);
 	}
 }
 
