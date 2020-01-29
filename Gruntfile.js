@@ -86,7 +86,7 @@ module.exports = function(grunt) {
 						expand: true,
 						flatten: false,
 						cwd: 'src/',
-						src: ['assets/icons/*', 'assets/images/**/*.jpg', 'assets/images/**/*.png', 'assets/videos/**/*'],
+						src: ['assets/icons/*', 'assets/videos/**/*'],
 						dest: 'dist/',
 						filter: 'isFile'
 					}
@@ -114,8 +114,7 @@ module.exports = function(grunt) {
 						cwd: 'src/',
 						src: [
 							'assets/icons/*',
-							'assets/images/**/*.jpg',
-							'assets/images/**/*.png',
+							'assets/videos/**/*',
 							'!assets/images/diashow/**/*',
 							'!assets/images/portfolio/**/*'
 						],
@@ -228,9 +227,11 @@ module.exports = function(grunt) {
 			}
 		},
 		responsive_images: {
+			options: {
+				concurrency: 4
+			},
 			background: {
 				options: {
-					// concurrency: 2,
 					quality: 90,
 					rename: false,
 					sizes: [
