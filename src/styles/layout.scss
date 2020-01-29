@@ -85,6 +85,7 @@
 	grid-template-columns: repeat(3, minmax(10rem, 1fr));
 
 	> .category > a {
+		display: block;
 		overflow: hidden;
 		outline: none;
 		cursor: pointer;
