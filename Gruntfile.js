@@ -15,6 +15,7 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-copy');
 	grunt.loadNpmTasks('grunt-contrib-htmlmin');
 	grunt.loadNpmTasks('grunt-contrib-watch');
+	grunt.loadNpmTasks('grunt-image-size-export');
 	grunt.loadNpmTasks('grunt-postcss');
 	grunt.loadNpmTasks('grunt-replace');
 	grunt.loadNpmTasks('grunt-responsive-images');
@@ -160,6 +161,15 @@ module.exports = function(grunt) {
 				}
 			}
 		},
+		imageSizeExport: {
+			pictures: {
+				options: {
+					path: 'src/assets/images/pictures/*/*.jpg',
+					categorizeBy: 'folders',
+					output: 'dist/assets/images/pictures/pictures.json'
+				}
+			}
+		},
 		postcss: {
 			options: {
 				processors: [
@@ -266,6 +276,59 @@ module.exports = function(grunt) {
 					{
 						expand: true,
 						src: ['assets/images/layout/**.jpg', 'assets/images/pictures/*.jpg'],
+						cwd: 'src/',
+						dest: 'dist/'
+					}
+				]
+			},
+			pictures: {
+				options: {
+					// concurrency: 2,
+					quality: 90,
+					rename: false,
+					sizes: [
+						{
+							suffix: '-w320',
+							width: 320
+						},
+						{
+							suffix: '-w640',
+							width: 640
+						},
+						{
+							suffix: '-w768',
+							width: 768
+						},
+						{
+							suffix: '-w1024',
+							width: 1024
+						},
+						{
+							suffix: '-w1366',
+							width: 1366
+						},
+						{
+							suffix: '-w1600',
+							width: 1600
+						},
+						{
+							suffix: '-w1920',
+							width: 1920
+						},
+						{
+							suffix: '-w2560',
+							width: 2560
+						},
+						{
+							suffix: '',
+							width: 3840
+						}
+					]
+				},
+				files: [
+					{
+						expand: true,
+						src: ['assets/images/pictures/*/*.jpg'],
 						cwd: 'src/',
 						dest: 'dist/'
 					}
