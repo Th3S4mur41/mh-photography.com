@@ -27,6 +27,11 @@
 		background: var(--secondary-color);
 		border-radius: 0.3rem;
 	}
+
+	// Hide outline from browser that don't support focus
+	:focus:not(:focus-visible) {
+		outline: none;
+	}
 }
 
 html,
