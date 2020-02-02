@@ -7,9 +7,9 @@ body {
 	display: flex;
 	flex-direction: column;
 	width: 100vw;
-	max-height: 100vh;
+	//max-height: 100vh;
 	scroll-snap-type: y proximity;
-	overflow-y: auto;
+	//overflow-y: auto;
 
 	article,
 	footer {
@@ -229,6 +229,8 @@ body {
 	}
 
 	@media (orientation: portrait) {
+		grid-gap: 2rem 0;
+
 		> .logo {
 			grid-row: 2;
 			grid-column: 3;
