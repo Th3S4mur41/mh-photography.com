@@ -5,53 +5,56 @@
 
 (function() {
 	'use strict';
-	// let worker,
-	// albums = [];
+	const categories = ['category-1', 'category-2', 'category-3', 'category-4', 'category-5', 'category-6'];
+
+	/**
+	 * Register all events for the app
+	 * @returns {void}
+	 */
+	function registerEvents() {
+		categories.forEach(function(category) {
+			const cat = document.getElementById(category);
+			const link = cat.children[0];
+
+			if (link) {
+				link.addEventListener('click', onCategoryClicked);
+			}
+		});
+	}
 
 	/**
 	 * Init method
 	 * @returns {void}
 	 */
 	function init() {
-		// if (window.Worker) {
-		// 	// Web worker supported!
-		// 	if (typeof worker == 'undefined') {
-		// 		worker = new Worker('worker.js');
-		// 	}
-		//
-		// 	worker.onmessage = function(event) {
-		// 		albums = event.data;
-		// 	};
-		// } else {
-		// 	// No Web Worker support..
-		// }
+		registerEvents();
 	}
 
 	/**
-	 *  Destroy method
-	 *  @returns {void}
+	 * onCategoryClicked
+	 * @returns {void}
 	 */
-	// function destroy () {
-	// 	worker.terminate();
-	// 	worker = undefined;
-	// }
+	function onCategoryClicked() {
+		const carousel = this.nextSibling;
+
+		carousel.addEventListener('click', onCarouselClicked);
+		carousel.classList.remove('hidden');
+	}
 
 	/**
-	 * Opens a photo album
-	 * @param {string} album Id
-	 * @returns {*} HTML Element
+	 * onCarouselClicked
+	 * @returns {void}
 	 */
-	// function openAlbum(album) {
-	// 	// const albumTemplate = albums[album];
-	// 	//
-	// 	// return albumTemplate;
-	// }
+	function onCarouselClicked() {
+		this.classList.add('hidden');
+		this.removeListener('click');
+	}
 
 	// Execute
 	init();
 
 	// Public methods
 	return {
-		// onCategoryClicked: openAlbum
+		onCategoryClicked: onCategoryClicked
 	};
 })();

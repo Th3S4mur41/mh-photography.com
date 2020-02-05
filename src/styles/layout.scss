@@ -245,14 +245,15 @@ body {
 }
 
 .carousel {
-	display: none;
+	display: flex;
 	position: fixed;
 	top: 0;
 	left: 0;
 	right: 0;
 	bottom: 0;
 	flex-direction: row;
-	overflow-x: scroll;
+	align-items: center;
+	overflow-x: auto;
 	overflow-y: hidden;
 	scroll-snap-type: x mandatory;
 
@@ -260,7 +261,17 @@ body {
 		width: 80vw;
 		height: auto;
 		max-height: 95vh;
-		margin: auto;
+		padding: 0 5vw;
 		scroll-snap-align: center;
+
+		&:first-child {
+			padding-left: 15vw;
+		}
+		&:last-child {
+			padding-right: 15vw;
+		}
+	}
+	&.hidden {
+		display: none;
 	}
 }

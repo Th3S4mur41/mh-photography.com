@@ -100,6 +100,14 @@ module.exports = function(grunt) {
 						src: ['assets/icons/*', 'assets/videos/**/*'],
 						dest: 'dist/',
 						filter: 'isFile'
+					},
+					{
+						expand: true,
+						flatten: false,
+						cwd: 'src/',
+						src: ['scripts/*'],
+						dest: 'dist/src/',
+						filter: 'isFile'
 					}
 				]
 			},
@@ -338,7 +346,7 @@ module.exports = function(grunt) {
 			},
 			background: {
 				options: {
-					quality: 85,
+					quality: 80,
 					rename: false,
 					sizes: [
 						{
@@ -390,8 +398,7 @@ module.exports = function(grunt) {
 			},
 			pictures: {
 				options: {
-					// concurrency: 2,
-					quality: 85,
+					quality: 80,
 					rename: false,
 					sizes: [
 						{
@@ -480,13 +487,16 @@ module.exports = function(grunt) {
 		terser: {
 			options: {
 				compress: true,
-				mangle: false
+				mangle: true
 				// wrap    : true
 			},
 			debug: {
 				options: {
-					sourceMap: true
-					// sourceMapIncludeSources : true,
+					sourceMap: {
+						root: '.',
+						url: 'app.js.map'
+					}
+					// sourceMapIncludeSources: true
 					// sourceMapIn : 'scripts/scripts.js.map'
 				},
 				files: {
