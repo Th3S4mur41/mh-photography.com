@@ -243,3 +243,24 @@ body {
 		}
 	}
 }
+
+.carousel {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	flex-direction: row;
+	overflow-x: scroll;
+	overflow-y: hidden;
+	scroll-snap-type: x mandatory;
+
+	> img {
+		width: 80vw;
+		height: auto;
+		max-height: 95vh;
+		margin: auto;
+		scroll-snap-align: center;
+	}
+}

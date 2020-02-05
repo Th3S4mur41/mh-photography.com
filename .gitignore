@@ -36,6 +36,7 @@ src/scripts/.baseDir.ts
 !.idea/codeStyles/
 
 # Compiled output
+build/
 dist/
 reports/
 .tscache/

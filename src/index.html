@@ -97,27 +97,27 @@
 			<article tabindex="0" class="pictures">
 				<section id="category-1" class="category">
 					<a tabindex="0" onclick="onCategoryClicked()"><h3 class="background-image">Artistic Nudes</h3></a>
-					<div class="album"></div>
+					{{PICTURES-1}}
 				</section>
 				<section id="category-2" class="category">
 					<a tabindex="0" onclick="onCategoryClicked()"><h3 class="background-image">Portraits</h3></a>
-					<div class="album"></div>
+					{{PICTURES-2}}
 				</section>
 				<section id="category-3" class="category">
 					<a tabindex="0" onclick="onCategoryClicked()"><h3 class="background-image">Families & Kids</h3></a>
-					<div class="album"></div>
+					{{PICTURES-3}}
 				</section>
 				<section id="category-4" class="category">
 					<a tabindex="0" onclick="onCategoryClicked()"><h3 class="background-image">Lifestyle</h3></a>
-					<div class="album"></div>
+					{{PICTURES-4}}
 				</section>
 				<section id="category-5" class="category">
 					<a tabindex="0" onclick="onCategoryClicked()"><h3 class="background-image">Travel the World</h3></a>
-					<div class="album"></div>
+					{{PICTURES-5}}
 				</section>
 				<section id="category-6" class="category">
 					<a tabindex="0" onclick="onCategoryClicked()"><h3 class="background-image">Weddings</h3></a>
-					<div class="album"></div>
+					{{PICTURES-6}}
 				</section>
 			</article>
 			<article tabindex="0" class="video">
@@ -148,8 +148,15 @@
 					rel="external noopener noreferrer"
 					target="_blank"
 					href="https://www.zaask.es/usuario/manuel1464"
+					aria-label="Zaask Profesional"
 				>
-					<img src="https://www.zaask.es/widget?user=263694&amp;widget=pro-since" width="141" height="141" alt="" />
+					<img
+						loading="lazy"
+						src="https://www.zaask.es/widget?user=263694&amp;widget=pro-since"
+						width="141"
+						height="141"
+						alt=""
+					/>
 				</a>
 			</article>
 		</main>
@@ -159,7 +166,7 @@
 					<use xlink:href="assets/icons/logo_large.svg#logo-large"></use>
 				</svg>
 			</a>
-			<section class="copyright">© 2020 Manuel Hamel Photography</section>
+			<section class="copyright">© {{YEAR}} Manuel Hamel Photography</section>
 			<section class="social">
 				<a
 					target="_blank"
@@ -200,7 +207,7 @@
 
 		<script src="app.js?{{BUILD}}"></script>
 		<!-- Global site tag (gtag.js) - Google Analytics -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-257167-6"></script>
+		<script async rel="preconnect" src="https://www.googletagmanager.com/gtag/js?id=UA-257167-6"></script>
 		<script>
 			window.dataLayer = window.dataLayer || [];
 

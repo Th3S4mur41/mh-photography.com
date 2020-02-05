@@ -45,6 +45,17 @@ module.exports = function(grunt) {
 			}
 		},
 		copy: {
+			build: {
+				files: [
+					{
+						expand: true,
+						flatten: true,
+						src: ['src/index.html'],
+						dest: 'build/',
+						filter: 'isFile'
+					}
+				]
+			},
 			debug: {
 				files: [
 					{
@@ -148,7 +159,7 @@ module.exports = function(grunt) {
 			},
 			debug: {
 				files: {
-					'dist/index.html': 'src/index.html'
+					'dist/index.html': 'build/index.html'
 				}
 			},
 			release: {
@@ -156,16 +167,51 @@ module.exports = function(grunt) {
 					removeComments: true
 				},
 				files: {
-					'dist/index.html': 'src/index.html'
+					'dist/index.html': 'build/index.html'
 				}
 			}
 		},
 		imageSizeExport: {
-			pictures: {
+			'category-1': {
 				options: {
-					path: 'src/assets/images/pictures/*/*.jpg',
-					categorizeBy: 'folders',
-					output: 'dist/assets/images/pictures/pictures.json'
+					path: 'src/assets/images/pictures/category-1/*.jpg',
+					template: 'src/templates/pictures.hbs',
+					output: 'build/pictures-1.html'
+				}
+			},
+			'category-2': {
+				options: {
+					path: 'src/assets/images/pictures/category-2/*.jpg',
+					template: 'src/templates/pictures.hbs',
+					output: 'build/pictures-2.html'
+				}
+			},
+			'category-3': {
+				options: {
+					path: 'src/assets/images/pictures/category-3/*.jpg',
+					template: 'src/templates/pictures.hbs',
+					output: 'build/pictures-3.html'
+				}
+			},
+			'category-4': {
+				options: {
+					path: 'src/assets/images/pictures/category-4/*.jpg',
+					template: 'src/templates/pictures.hbs',
+					output: 'build/pictures-4.html'
+				}
+			},
+			'category-5': {
+				options: {
+					path: 'src/assets/images/pictures/category-5/*.jpg',
+					template: 'src/templates/pictures.hbs',
+					output: 'build/pictures-5.html'
+				}
+			},
+			'category-6': {
+				options: {
+					path: 'src/assets/images/pictures/category-6/*.jpg',
+					template: 'src/templates/pictures.hbs',
+					output: 'build/pictures-6.html'
 				}
 			}
 		},
@@ -195,6 +241,10 @@ module.exports = function(grunt) {
 						{
 							match: /{{BUILD}}/g,
 							replacement: '<%= buildnumber %>'
+						},
+						{
+							match: /{{YEAR}}/g,
+							replacement: new Date().getFullYear()
 						}
 					]
 				},
@@ -202,7 +252,63 @@ module.exports = function(grunt) {
 					{
 						expand: true,
 						flatten: false,
-						src: ['dist/**/*.css', 'dist/**/*.html', 'dist/**/*.js'],
+						src: ['build/**/*.html', 'dist/**/*.css', 'dist/**/*.js'],
+						dest: '.'
+					}
+				]
+			},
+			pictures: {
+				options: {
+					patterns: [
+						{
+							match: /{{PICTURES-1}}/g,
+							replacement: "<%= grunt.file.read('build/pictures-1.html') %>"
+						},
+						{
+							match: /{{PICTURES-2}}/g,
+							replacement: "<%= grunt.file.read('build/pictures-2.html') %>"
+						},
+						{
+							match: /{{PICTURES-3}}/g,
+							replacement: "<%= grunt.file.read('build/pictures-3.html') %>"
+						},
+						{
+							match: /{{PICTURES-4}}/g,
+							replacement: "<%= grunt.file.read('build/pictures-4.html') %>"
+						},
+						{
+							match: /{{PICTURES-5}}/g,
+							replacement: "<%= grunt.file.read('build/pictures-5.html') %>"
+						},
+						{
+							match: /{{PICTURES-6}}/g,
+							replacement: "<%= grunt.file.read('build/pictures-6.html') %>"
+						}
+					]
+				},
+				files: [
+					{
+						expand: true,
+						flatten: false,
+						src: ['build/**/*.html'],
+						dest: '.'
+					}
+				]
+			},
+			path: {
+				options: {
+					patterns: [
+						{
+							match: /src\/assets\//g,
+							replacement: 'assets/'
+						}
+					]
+				},
+				files: [
+					{
+						expand: true,
+						flatten: false,
+						src: ['build/**/*.html'],
 						dest: '.'
 					}
 				]
@@ -232,39 +338,39 @@ module.exports = function(grunt) {
 			},
 			background: {
 				options: {
-					quality: 90,
+					quality: 85,
 					rename: false,
 					sizes: [
 						{
-							suffix: '-w320',
+							suffix: '--w320',
 							width: 320
 						},
 						{
-							suffix: '-w640',
+							suffix: '--w640',
 							width: 640
 						},
 						{
-							suffix: '-w768',
+							suffix: '--w768',
 							width: 768
 						},
 						{
-							suffix: '-w1024',
+							suffix: '--w1024',
 							width: 1024
 						},
 						{
-							suffix: '-w1366',
+							suffix: '--w1366',
 							width: 1366
 						},
 						{
-							suffix: '-w1600',
+							suffix: '--w1600',
 							width: 1600
 						},
 						{
-							suffix: '-w1920',
+							suffix: '--w1920',
 							width: 1920
 						},
 						{
-							suffix: '-w2560',
+							suffix: '--w2560',
 							width: 2560
 						},
 						{
@@ -285,39 +391,39 @@ module.exports = function(grunt) {
 			pictures: {
 				options: {
 					// concurrency: 2,
-					quality: 90,
+					quality: 85,
 					rename: false,
 					sizes: [
 						{
-							suffix: '-w320',
+							suffix: '--w320',
 							width: 320
 						},
 						{
-							suffix: '-w640',
+							suffix: '--w640',
 							width: 640
 						},
 						{
-							suffix: '-w768',
+							suffix: '--w768',
 							width: 768
 						},
 						{
-							suffix: '-w1024',
+							suffix: '--w1024',
 							width: 1024
 						},
 						{
-							suffix: '-w1366',
+							suffix: '--w1366',
 							width: 1366
 						},
 						{
-							suffix: '-w1600',
+							suffix: '--w1600',
 							width: 1600
 						},
 						{
-							suffix: '-w1920',
+							suffix: '--w1920',
 							width: 1920
 						},
 						{
-							suffix: '-w2560',
+							suffix: '--w2560',
 							width: 2560
 						},
 						{
@@ -428,6 +534,25 @@ module.exports = function(grunt) {
 	// Public tasks
 	// *****************************************************************************************************************
 
+	// grunt.registerTask('pictures-template', '', function () {
+	// 	const categories = grunt.file.readJSON('build/pictures.json');
+	// 	let i = 0;
+	//
+	// 	categories.forEach(function (category) {
+	// 		let cat_name =  Object.keys(category)[i];
+	// 		let pictures = Object.values(category)[i];
+	// 		let html = '';
+	//
+	// 		pictures.forEach(function (picture) {
+	// 			html += '<img src="assets/images/pictures/' +
+	// 				picture.folder + '/' + picture.name + '"' +
+	// 				' width="' + picture.width + '" height="' + picture.height + '">';
+	// 		});
+	// 		categories_html[cat_name] = html;
+	// 		i++;
+	// 	});
+	// });
+
 	/**
 	 * Check code for quality issues
 	 */
@@ -437,13 +562,15 @@ module.exports = function(grunt) {
 	 * Debug Build
 	 */
 	grunt.registerTask('debug-quick', [
+		'copy:build',
+		'imageSizeExport',
+		'replace',
 		'htmlmin:debug',
 		'terser:debug',
 		// 'ts:debug',
 		'sass:debug',
 		'postcss:debug',
-		'copy:debug',
-		'replace:build'
+		'copy:debug'
 	]);
 
 	/**
@@ -451,14 +578,16 @@ module.exports = function(grunt) {
 	 */
 	grunt.registerTask('debug', [
 		'clean',
+		'copy:build',
+		'responsive_images',
+		'imageSizeExport',
+		'replace',
 		'htmlmin:debug',
 		'terser:debug',
 		// 'ts:debug',
 		'sass:debug',
 		'postcss:debug',
-		'copy:debug',
-		'responsive_images',
-		'replace:build'
+		'copy:debug'
 	]);
 
 	/**
@@ -466,13 +595,15 @@ module.exports = function(grunt) {
 	 */
 	grunt.registerTask('release', [
 		'clean',
+		'copy:build',
+		'responsive_images',
+		'imageSizeExport',
+		'replace',
 		'htmlmin:release',
 		'terser:release',
 		// 'ts:release',
 		'sass:release',
 		'postcss:release',
-		'copy:release',
-		'responsive_images',
-		'replace:build'
+		'copy:release'
 	]);
 };
