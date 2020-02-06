@@ -544,37 +544,19 @@ module.exports = function(grunt) {
 	// Public tasks
 	// *****************************************************************************************************************
 
-	// grunt.registerTask('pictures-template', '', function () {
-	// 	const categories = grunt.file.readJSON('build/pictures.json');
-	// 	let i = 0;
-	//
-	// 	categories.forEach(function (category) {
-	// 		let cat_name =  Object.keys(category)[i];
-	// 		let pictures = Object.values(category)[i];
-	// 		let html = '';
-	//
-	// 		pictures.forEach(function (picture) {
-	// 			html += '<img src="assets/images/pictures/' +
-	// 				picture.folder + '/' + picture.name + '"' +
-	// 				' width="' + picture.width + '" height="' + picture.height + '">';
-	// 		});
-	// 		categories_html[cat_name] = html;
-	// 		i++;
-	// 	});
-	// });
-
 	/**
 	 * Check code for quality issues
 	 */
 	grunt.registerTask('check-code', ['eslint', 'stylelint']);
 
 	/**
-	 * Debug Build
+	 * Debug Build without image processing
 	 */
 	grunt.registerTask('debug-quick', [
 		'copy:build',
 		'imageSizeExport',
 		'replace',
+		'responsive_images_extender',
 		'htmlmin:debug',
 		'terser:debug',
 		// 'ts:debug',
@@ -592,6 +574,7 @@ module.exports = function(grunt) {
 		'responsive_images',
 		'imageSizeExport',
 		'replace',
+		'responsive_images_extender',
 		'htmlmin:debug',
 		'terser:debug',
 		// 'ts:debug',
@@ -609,6 +592,7 @@ module.exports = function(grunt) {
 		'responsive_images',
 		'imageSizeExport',
 		'replace',
+		'responsive_images_extender',
 		'htmlmin:release',
 		'terser:release',
 		// 'ts:release',
