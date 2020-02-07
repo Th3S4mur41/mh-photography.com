@@ -342,7 +342,7 @@ module.exports = function(grunt) {
 		},
 		responsive_images: {
 			options: {
-				concurrency: 4
+				concurrency: 2
 			},
 			background: {
 				options: {

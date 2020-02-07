@@ -91,9 +91,13 @@ a {
  * Style
  */
 .acrylic {
-	// Fluent acrylic effect: see https://medium.com/microsoft-design/diy-a-web-version-the-fluent-design-systems-acrylic-material-fe2eac2a40bb
-	backdrop-filter: blur(30px) saturate(125%);
-	background: var(--acrylic-color);
+	background: var(--acrylic-fallback-color);
+
+	@supports (backdrop-filter: blur(30px) saturate(125%)) {
+		// Fluent acrylic effect: see https://medium.com/microsoft-design/diy-a-web-version-the-fluent-design-systems-acrylic-material-fe2eac2a40bb
+		backdrop-filter: blur(30px) saturate(125%);
+		background: var(--acrylic-color);
+	}
 }
 
 .scrollable {
