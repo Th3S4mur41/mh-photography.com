@@ -1,4 +1,4 @@
-:root {
+body.no-webp {
 	--intro-bg: url('assets/images/layout/intro.jpg');
 	--contact-bg: url('assets/images/layout/contact.jpg');
 	--cat-1-bg: url('assets/images/pictures/category-1.jpg');
@@ -160,5 +160,171 @@
 		--cat-4-bg: url('assets/images/pictures/category-4--w640.jpg');
 		--cat-5-bg: url('assets/images/pictures/category-5--w640.jpg');
 		--cat-6-bg: url('assets/images/pictures/category-6--w640.jpg');
+	}
+}
+
+// If browser supports webp format
+body.webp {
+	--intro-bg: url('assets/images/layout/intro.webp');
+	--contact-bg: url('assets/images/layout/contact.webp');
+	--cat-1-bg: url('assets/images/pictures/category-1.webp');
+	--cat-2-bg: url('assets/images/pictures/category-2.webp');
+	--cat-3-bg: url('assets/images/pictures/category-3.webp');
+	--cat-4-bg: url('assets/images/pictures/category-4.webp');
+	--cat-5-bg: url('assets/images/pictures/category-5.webp');
+	--cat-6-bg: url('assets/images/pictures/category-6.webp');
+
+	@media (max-width: 2560px) {
+		--intro-bg: url('assets/images/layout/intro--w2560.webp');
+		--contact-bg: url('assets/images/layout/contact--w2560.webp');
+		--cat-1-bg: url('assets/images/pictures/category-1--w2560.webp');
+		--cat-2-bg: url('assets/images/pictures/category-2--w2560.webp');
+		--cat-3-bg: url('assets/images/pictures/category-3--w2560.webp');
+		--cat-4-bg: url('assets/images/pictures/category-4--w2560.webp');
+		--cat-5-bg: url('assets/images/pictures/category-5--w2560.webp');
+		--cat-6-bg: url('assets/images/pictures/category-6--w2560.webp');
+	}
+
+	@media (min-resolution: 2dppx) and (max-width: 2560px) {
+		--intro-bg: url('assets/images/layout/intro.webp');
+		--contact-bg: url('assets/images/layout/contact.webp');
+		--cat-1-bg: url('assets/images/pictures/category-1.webp');
+		--cat-2-bg: url('assets/images/pictures/category-2.webp');
+		--cat-3-bg: url('assets/images/pictures/category-3.webp');
+		--cat-4-bg: url('assets/images/pictures/category-4.webp');
+		--cat-5-bg: url('assets/images/pictures/category-5.webp');
+		--cat-6-bg: url('assets/images/pictures/category-6.webp');
+	}
+
+	@media (max-width: 1920px) {
+		--intro-bg: url('assets/images/layout/intro--w1920.webp');
+		--contact-bg: url('assets/images/layout/contact--w1920.webp');
+		--cat-1-bg: url('assets/images/pictures/category-1--w1920.webp');
+		--cat-2-bg: url('assets/images/pictures/category-2--w1920.webp');
+		--cat-3-bg: url('assets/images/pictures/category-3--w1920.webp');
+		--cat-4-bg: url('assets/images/pictures/category-4--w1920.webp');
+		--cat-5-bg: url('assets/images/pictures/category-5--w1920.webp');
+		--cat-6-bg: url('assets/images/pictures/category-6--w1920.webp');
+	}
+
+	@media (min-resolution: 2dppx) and (max-width: 1920px) {
+		--intro-bg: url('assets/images/layout/intro.webp');
+		--contact-bg: url('assets/images/layout/contact.webp');
+		--cat-1-bg: url('assets/images/pictures/category-1.webp');
+		--cat-2-bg: url('assets/images/pictures/category-2.webp');
+		--cat-3-bg: url('assets/images/pictures/category-3.webp');
+		--cat-4-bg: url('assets/images/pictures/category-4.webp');
+		--cat-5-bg: url('assets/images/pictures/category-5.webp');
+		--cat-6-bg: url('assets/images/pictures/category-6.webp');
+	}
+
+	@media (max-width: 1600px) {
+		--intro-bg: url('assets/images/layout/intro--w1600.webp');
+		--contact-bg: url('assets/images/layout/contact--w1600.webp');
+		--cat-1-bg: url('assets/images/pictures/category-1--w1600.webp');
+		--cat-2-bg: url('assets/images/pictures/category-2--w1600.webp');
+		--cat-3-bg: url('assets/images/pictures/category-3--w1600.webp');
+		--cat-4-bg: url('assets/images/pictures/category-4--w1600.webp');
+		--cat-5-bg: url('assets/images/pictures/category-5--w1600.webp');
+		--cat-6-bg: url('assets/images/pictures/category-6--w1600.webp');
+	}
+
+	@media (min-resolution: 2dppx) and (max-width: 1600px) {
+		--intro-bg: url('assets/images/layout/intro.webp');
+		--contact-bg: url('assets/images/layout/contact.webp');
+		--cat-1-bg: url('assets/images/pictures/category-1.webp');
+		--cat-2-bg: url('assets/images/pictures/category-2.webp');
+		--cat-3-bg: url('assets/images/pictures/category-3.webp');
+		--cat-4-bg: url('assets/images/pictures/category-4.webp');
+		--cat-5-bg: url('assets/images/pictures/category-5.webp');
+		--cat-6-bg: url('assets/images/pictures/category-6.webp');
+	}
+
+	@media (max-width: 1366px) {
+		--intro-bg: url('assets/images/layout/intro--w1366.webp');
+		--contact-bg: url('assets/images/layout/contact--w1366.webp');
+		--cat-1-bg: url('assets/images/pictures/category-1--w1366.webp');
+		--cat-2-bg: url('assets/images/pictures/category-2--w1366.webp');
+		--cat-3-bg: url('assets/images/pictures/category-3--w1366.webp');
+		--cat-4-bg: url('assets/images/pictures/category-4--w1366.webp');
+		--cat-5-bg: url('assets/images/pictures/category-5--w1366.webp');
+		--cat-6-bg: url('assets/images/pictures/category-6--w1366.webp');
+	}
+
+	@media (min-resolution: 2dppx) and (max-width: 1366px) {
+		--intro-bg: url('assets/images/layout/intro--w2560.webp');
+		--contact-bg: url('assets/images/layout/contact--w2560.webp');
+		--cat-1-bg: url('assets/images/pictures/category-1--w2560.webp');
+		--cat-2-bg: url('assets/images/pictures/category-2--w2560.webp');
+		--cat-3-bg: url('assets/images/pictures/category-3--w2560.webp');
+		--cat-4-bg: url('assets/images/pictures/category-4--w2560.webp');
+		--cat-5-bg: url('assets/images/pictures/category-5--w2560.webp');
+		--cat-6-bg: url('assets/images/pictures/category-6--w2560.webp');
+	}
+
+	@media (max-width: 1024px) {
+		--intro-bg: url('assets/images/layout/intro--w1024.webp');
+		--contact-bg: url('assets/images/layout/contact--w1024.webp');
+		--cat-1-bg: url('assets/images/pictures/category-1--w1024.webp');
+		--cat-2-bg: url('assets/images/pictures/category-2--w1024.webp');
+		--cat-3-bg: url('assets/images/pictures/category-3--w1024.webp');
+		--cat-4-bg: url('assets/images/pictures/category-4--w1024.webp');
+		--cat-5-bg: url('assets/images/pictures/category-5--w1024.webp');
+		--cat-6-bg: url('assets/images/pictures/category-6--w1024.webp');
+	}
+
+	@media (min-resolution: 2dppx) and (max-width: 1024px) {
+		--intro-bg: url('assets/images/layout/intro--w2560.webp');
+		--contact-bg: url('assets/images/layout/contact--w2560.webp');
+		--cat-1-bg: url('assets/images/pictures/category-1--w2560.webp');
+		--cat-2-bg: url('assets/images/pictures/category-2--w2560.webp');
+		--cat-3-bg: url('assets/images/pictures/category-3--w2560.webp');
+		--cat-4-bg: url('assets/images/pictures/category-4--w2560.webp');
+		--cat-5-bg: url('assets/images/pictures/category-5--w2560.webp');
+		--cat-6-bg: url('assets/images/pictures/category-6--w2560.webp');
+	}
+
+	@media (max-width: 640px) {
+		--intro-bg: url('assets/images/layout/intro--w640.webp');
+		--contact-bg: url('assets/images/layout/contact--w640.webp');
+		--cat-1-bg: url('assets/images/pictures/category-1--w640.webp');
+		--cat-2-bg: url('assets/images/pictures/category-2--w640.webp');
+		--cat-3-bg: url('assets/images/pictures/category-3--w640.webp');
+		--cat-4-bg: url('assets/images/pictures/category-4--w640.webp');
+		--cat-5-bg: url('assets/images/pictures/category-5--w640.webp');
+		--cat-6-bg: url('assets/images/pictures/category-6--w640.webp');
+	}
+
+	@media (min-resolution: 2dppx) and (max-width: 640px) {
+		--intro-bg: url('assets/images/layout/intro--w1024.webp');
+		--contact-bg: url('assets/images/layout/contact--w1024.webp');
+		--cat-1-bg: url('assets/images/pictures/category-1--w1024.webp');
+		--cat-2-bg: url('assets/images/pictures/category-2--w1024.webp');
+		--cat-3-bg: url('assets/images/pictures/category-3--w1024.webp');
+		--cat-4-bg: url('assets/images/pictures/category-4--w1024.webp');
+		--cat-5-bg: url('assets/images/pictures/category-5--w1024.webp');
+		--cat-6-bg: url('assets/images/pictures/category-6--w1024.webp');
+	}
+
+	@media (max-width: 320px) {
+		--intro-bg: url('assets/images/layout/intro--w320.webp');
+		--contact-bg: url('assets/images/layout/contact--w320.webp');
+		--cat-1-bg: url('assets/images/pictures/category-1--w320.webp');
+		--cat-2-bg: url('assets/images/pictures/category-2--w320.webp');
+		--cat-3-bg: url('assets/images/pictures/category-3--w320.webp');
+		--cat-4-bg: url('assets/images/pictures/category-4--w320.webp');
+		--cat-5-bg: url('assets/images/pictures/category-5--w320.webp');
+		--cat-6-bg: url('assets/images/pictures/category-6--w320.webp');
+	}
+
+	@media (min-resolution: 2dppx) and (max-width: 320px) {
+		--intro-bg: url('assets/images/layout/intro--w640.webp');
+		--contact-bg: url('assets/images/layout/contact--w640.webp');
+		--cat-1-bg: url('assets/images/pictures/category-1--w640.webp');
+		--cat-2-bg: url('assets/images/pictures/category-2--w640.webp');
+		--cat-3-bg: url('assets/images/pictures/category-3--w640.webp');
+		--cat-4-bg: url('assets/images/pictures/category-4--w640.webp');
+		--cat-5-bg: url('assets/images/pictures/category-5--w640.webp');
+		--cat-6-bg: url('assets/images/pictures/category-6--w640.webp');
 	}
 }

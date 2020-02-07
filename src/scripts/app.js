@@ -23,11 +23,28 @@
 	}
 
 	/**
+	 * Register all events for the app
+	 * @returns {boolean} Whether or not WebP format is supported
+	 */
+	function supportsWebP() {
+		const elem = document.createElement('canvas');
+
+		if (elem.getContext && elem.getContext('2d')) {
+			// was able or not to get WebP representation
+			return elem.toDataURL('image/webp').indexOf('data:image/webp') == 0;
+		}
+
+		return false; // very old browser like IE 8, canvas not supported
+	}
+
+	/**
 	 * Init method
 	 * @returns {void}
 	 */
 	function init() {
 		registerEvents();
+
+		document.body.classList.add(supportsWebP() ? 'webp' : 'no-webp');
 	}
 
 	/**

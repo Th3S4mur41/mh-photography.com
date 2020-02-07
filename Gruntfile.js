@@ -14,6 +14,7 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-copy');
 	grunt.loadNpmTasks('grunt-contrib-htmlmin');
 	grunt.loadNpmTasks('grunt-contrib-watch');
+	grunt.loadNpmTasks('grunt-cwebp');
 	grunt.loadNpmTasks('grunt-image-size-export');
 	grunt.loadNpmTasks('grunt-postcss');
 	grunt.loadNpmTasks('grunt-replace');
@@ -139,6 +140,23 @@ module.exports = function(grunt) {
 						],
 						dest: 'dist/',
 						filter: 'isFile'
+					}
+				]
+			}
+		},
+		cwebp: {
+			background: {
+				options: {
+					q: 80
+					// m: 6,
+					// lossless: false
+				},
+				files: [
+					{
+						expand: true,
+						src: ['assets/images/layout/**.jpg', 'assets/images/pictures/*.jpg'],
+						cwd: 'dist/',
+						dest: 'dist/'
 					}
 				]
 			}
@@ -549,6 +567,11 @@ module.exports = function(grunt) {
 	grunt.registerTask('check-code', ['eslint', 'stylelint']);
 
 	/**
+	 * Optimize assets
+	 */
+	grunt.registerTask('optimize-assets', ['responsive_images', 'cwebp']);
+
+	/**
 	 * Debug Build without image processing
 	 */
 	grunt.registerTask('debug-quick', [
@@ -557,7 +580,6 @@ module.exports = function(grunt) {
 		'replace',
 		'htmlmin:debug',
 		'terser:debug',
-		// 'ts:debug',
 		'sass:debug',
 		'postcss:debug',
 		'copy:debug'
@@ -569,12 +591,11 @@ module.exports = function(grunt) {
 	grunt.registerTask('debug', [
 		'clean',
 		'copy:build',
-		'responsive_images',
+		'optimize-assets',
 		'imageSizeExport',
 		'replace',
 		'htmlmin:debug',
 		'terser:debug',
-		// 'ts:debug',
 		'sass:debug',
 		'postcss:debug',
 		'copy:debug'
@@ -586,12 +607,11 @@ module.exports = function(grunt) {
 	grunt.registerTask('release', [
 		'clean',
 		'copy:build',
-		'responsive_images',
+		'optimize-assets',
 		'imageSizeExport',
 		'replace',
 		'htmlmin:release',
 		'terser:release',
-		// 'ts:release',
 		'sass:release',
 		'postcss:release',
 		'copy:release'
