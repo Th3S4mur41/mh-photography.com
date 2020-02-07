@@ -1,21 +1,21 @@
 :root {
-	--bg-color: hsla(0, 0%, 100%, 1);
-	--primary-color: hsl(0, 0%, 0%);
-	--secondary-color: hsla(250, 6%, 30%, 0.8);
-	--theme-color: hsl(174, 70%, 30%);
-	--acrylic-color: hsla(0, 0%, 100%, 0.3);
-	--acrylic-fallback-color: hsla(0, 0%, 100%, 0.8);
-	--blend-color: hsla(0, 0%, 100%, 0.75);
-	--text-shadow-color: hsla(0, 0%, 20%, 0.3);
+	--bg-color: hsl(0, 0%, 0%);
+	--primary-color: hsl(0, 0%, 97%);
+	--secondary-color: hsla(0, 0%, 75%, 0.8);
+	--theme-color: hsl(174, 100%, 50%);
+	--acrylic-color: hsla(0, 0%, 0%, 0.3);
+	--acrylic-fallback-color: hsla(0, 0%, 0%, 0.8);
+	--blend-color: hsla(0, 0%, 0%, 0.6);
 
-	@media (prefers-color-scheme: dark) {
-		--bg-color: hsl(0, 0%, 0%);
-		--primary-color: hsl(0, 0%, 97%);
-		--secondary-color: hsla(0, 0%, 75%, 0.8);
-		--theme-color: hsl(174, 100%, 50%);
-		--acrylic-color: hsla(0, 0%, 0%, 0.3);
-		--acrylic-fallback-color: hsla(0, 0%, 0%, 0.8);
-		--blend-color: hsla(0, 0%, 0%, 0.6);
+	@media (prefers-color-scheme: light) {
+		--bg-color: hsla(0, 0%, 100%, 1);
+		--primary-color: hsl(0, 0%, 0%);
+		--secondary-color: hsla(250, 6%, 30%, 0.8);
+		--theme-color: hsl(174, 70%, 30%);
+		--acrylic-color: hsla(0, 0%, 100%, 0.3);
+		--acrylic-fallback-color: hsla(0, 0%, 100%, 0.9);
+		--blend-color: hsla(0, 0%, 100%, 0.75);
+		--text-shadow-color: hsla(0, 0%, 20%, 0.3);
 	}
 }
 
