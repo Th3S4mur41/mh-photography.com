@@ -342,12 +342,13 @@ module.exports = function(grunt) {
 		},
 		responsive_images: {
 			options: {
-				concurrency: 2
+				concurrency: 2,
+				customIn: ['-interlace', 'line'], // produce progressive images
+				quality: 75,
+				rename: false
 			},
 			background: {
 				options: {
-					quality: 80,
-					rename: false,
 					sizes: [
 						{
 							suffix: '--w320',
@@ -398,8 +399,6 @@ module.exports = function(grunt) {
 			},
 			pictures: {
 				options: {
-					quality: 80,
-					rename: false,
 					sizes: [
 						{
 							suffix: '--w320',
