@@ -69,9 +69,16 @@ a {
 	text-shadow: none;
 
 	&:hover,
-	&:focus,
-	&:visited {
-		color: var(--theme-color);
+	&:focus {
+		color: var(--primary-color);
+	}
+	&.inverted-colors {
+		color: var(--primary-color);
+
+		&:hover,
+		&:focus {
+			color: var(--theme-color);
+		}
 	}
 }
 
