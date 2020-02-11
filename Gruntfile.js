@@ -19,8 +19,9 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-postcss');
 	grunt.loadNpmTasks('grunt-replace');
 	grunt.loadNpmTasks('grunt-responsive-images');
-	grunt.loadNpmTasks('grunt-stylelint');
 	grunt.loadNpmTasks('grunt-sass');
+	grunt.loadNpmTasks('grunt-stylelint');
+	grunt.loadNpmTasks('grunt-svgstore');
 	grunt.loadNpmTasks('grunt-terser');
 	grunt.loadNpmTasks('gruntify-eslint');
 
@@ -505,6 +506,28 @@ module.exports = function(grunt) {
 				src: ['src/styles/**/*.scss', 'src/styles/**/*.sass', 'src/styles/**/*.css']
 			}
 		},
+		svgstore: {
+			options: {
+				cleanup: false,
+				includeTitleElement: false,
+				svg: {
+					// viewBox: '0 0 500 500',
+					xmlns: 'http://www.w3.org/2000/svg',
+					'xmlns:svg': 'http://www.w3.org/2000/svg',
+					'xmlns:dc': 'http://purl.org/dc/elements/1.1/',
+					'xmlns:cc': 'http://creativecommons.org/ns#',
+					'xmlns:rdf': 'http://www.w3.org/1999/02/22-rdf-syntax-ns#',
+					'xmlns:xlink': 'http://www.w3.org/1999/xlink',
+					'xmlns:sodipodi': 'http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd',
+					'xmlns:inkscape': 'http://www.inkscape.org/namespaces/inkscape'
+				}
+			},
+			icons: {
+				files: {
+					'dist/assets/icons/icons.svg': ['src/assets/icons/**/*.svg']
+				}
+			}
+		},
 		terser: {
 			options: {
 				compress: true,
@@ -582,6 +605,7 @@ module.exports = function(grunt) {
 		'copy:build',
 		'imageSizeExport',
 		'replace',
+		'svgstore',
 		'htmlmin:debug',
 		'terser:debug',
 		'sass:debug',
@@ -598,6 +622,7 @@ module.exports = function(grunt) {
 		'optimize-assets',
 		'imageSizeExport',
 		'replace',
+		'svgstore',
 		'htmlmin:debug',
 		'terser:debug',
 		'sass:debug',
@@ -614,6 +639,7 @@ module.exports = function(grunt) {
 		'optimize-assets',
 		'imageSizeExport',
 		'replace',
+		'svgstore',
 		'htmlmin:release',
 		'terser:release',
 		'sass:release',
