@@ -147,14 +147,14 @@ module.exports = function(grunt) {
 		cwebp: {
 			background: {
 				options: {
-					q: 80
-					// m: 6,
+					q: 75,
+					m: 5
 					// lossless: false
 				},
 				files: [
 					{
 						expand: true,
-						src: ['assets/images/layout/**.jpg', 'assets/images/pictures/*.jpg'],
+						src: ['assets/images/layout/*.jpg', 'assets/images/pictures/**/*.jpg'],
 						cwd: 'dist/',
 						dest: 'dist/'
 					}
@@ -327,6 +327,10 @@ module.exports = function(grunt) {
 						{
 							match: /src\/assets\//g,
 							replacement: 'assets/'
+						},
+						{
+							match: /(.*)\.jpg--(.*)/g,
+							replacement: '$1--$2'
 						}
 					]
 				},
@@ -369,35 +373,35 @@ module.exports = function(grunt) {
 				options: {
 					sizes: [
 						{
-							suffix: '--w320',
+							suffix: '--320',
 							width: 320
 						},
 						{
-							suffix: '--w640',
+							suffix: '--640',
 							width: 640
 						},
 						{
-							suffix: '--w768',
+							suffix: '--768',
 							width: 768
 						},
 						{
-							suffix: '--w1024',
+							suffix: '--1024',
 							width: 1024
 						},
 						{
-							suffix: '--w1366',
+							suffix: '--1366',
 							width: 1366
 						},
 						{
-							suffix: '--w1600',
+							suffix: '--1600',
 							width: 1600
 						},
 						{
-							suffix: '--w1920',
+							suffix: '--1920',
 							width: 1920
 						},
 						{
-							suffix: '--w2560',
+							suffix: '--2560',
 							width: 2560
 						},
 						{
@@ -419,35 +423,35 @@ module.exports = function(grunt) {
 				options: {
 					sizes: [
 						{
-							suffix: '--w320',
+							suffix: '--320',
 							width: 320
 						},
 						{
-							suffix: '--w640',
+							suffix: '--640',
 							width: 640
 						},
 						{
-							suffix: '--w768',
+							suffix: '--768',
 							width: 768
 						},
 						{
-							suffix: '--w1024',
+							suffix: '--1024',
 							width: 1024
 						},
 						{
-							suffix: '--w1366',
+							suffix: '--1366',
 							width: 1366
 						},
 						{
-							suffix: '--w1600',
+							suffix: '--1600',
 							width: 1600
 						},
 						{
-							suffix: '--w1920',
+							suffix: '--1920',
 							width: 1920
 						},
 						{
-							suffix: '--w2560',
+							suffix: '--2560',
 							width: 2560
 						},
 						{

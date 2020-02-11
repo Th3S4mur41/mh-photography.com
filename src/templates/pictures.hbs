@@ -1,5 +1,21 @@
 <div class="carousel acrylic hidden">
 	{{#each images}}
+		<picture>
+			<source srcset="{{path}}--320.webp" type="image/webp" media="(max-width: 320px)">
+			<source srcset="{{path}}--320.jpg" type="image/jpeg" media="(max-width: 320px)">
+			<source srcset="{{path}}--640.webp" type="image/webp" media="(max-width: 640px)">
+			<source srcset="{{path}}--640.jpg" type="image/jpeg" media="(max-width: 640px)">
+			<source srcset="{{path}}--1024.webp" type="image/webp" media="(max-width: 1024px)">
+			<source srcset="{{path}}--1024.jpg" type="image/jpeg" media="(max-width: 1024px)">
+			<source srcset="{{path}}--1366.webp" type="image/webp" media="(max-width: 1366px)">
+			<source srcset="{{path}}--1366.jpg" type="image/jpeg" media="(max-width: 1366px)">
+			<source srcset="{{path}}--1600.webp" type="image/webp" media="(max-width: 1600px)">
+			<source srcset="{{path}}--1600.jpg" type="image/jpeg" media="(max-width: 1600px)">
+			<source srcset="{{path}}--1920.webp" type="image/webp" media="(max-width: 1920px)">
+			<source srcset="{{path}}--1920.jpg" type="image/jpeg" media="(max-width: 1920px)">
+			<source srcset="{{path}}--2560.webp" type="image/webp" media="(max-width: 2560px)">
+			<source srcset="{{path}}--2560.jpg" type="image/jpeg" media="(max-width: 2560px)">
 			<img loading="lazy" src='{{path}}' width='{{width}}' height='{{height}}' alt="{{name}}" />
+		</picture>
 	{{/each}}
 </div>
