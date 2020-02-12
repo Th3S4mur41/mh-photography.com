@@ -263,6 +263,7 @@ body {
 			height: auto;
 			max-height: 95vh;
 			padding: 0 5vw;
+			object-fit: contain;
 			scroll-snap-align: center;
 		}
 		&:first-child > img {
