@@ -37,6 +37,7 @@
 		"gruntify-eslint": "^5.0.0",
 		"hint": "^6.0.3",
 		"husky": "^4.2.1",
+		"imagemin-mozjpeg": "^8.0.0",
 		"lint-staged": "^10.0.4",
 		"node-sass": "^4.13.1",
 		"prettier": "^1.19.1",

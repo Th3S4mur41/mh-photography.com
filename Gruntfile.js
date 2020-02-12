@@ -1,4 +1,5 @@
 /* eslint-env node, grunt */
+
 'use strict';
 
 module.exports = function(grunt) {
@@ -6,6 +7,7 @@ module.exports = function(grunt) {
 	// Variables
 	// *****************************************************************************************************************
 	const sass = require('node-sass');
+	const mozjpeg = require('imagemin-mozjpeg');
 
 	// *****************************************************************************************************************
 	// Load NPM Plugins
@@ -13,6 +15,7 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-clean');
 	grunt.loadNpmTasks('grunt-contrib-copy');
 	grunt.loadNpmTasks('grunt-contrib-htmlmin');
+	grunt.loadNpmTasks('grunt-contrib-imagemin');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-cwebp');
 	grunt.loadNpmTasks('grunt-image-size-export');
@@ -36,11 +39,30 @@ module.exports = function(grunt) {
 			options: {
 				force: true
 			},
+			build: {
+				files: [
+					{
+						expand: true,
+						cwd: 'build',
+						src: ['**']
+					}
+				]
+			},
 			dist: {
 				files: [
 					{
 						expand: true,
 						cwd: 'dist',
+						src: ['**']
+					}
+				]
+			},
+			optimized_assets: {
+				/* eslint-disable-line camelcase */
+				files: [
+					{
+						expand: true,
+						cwd: 'optimized_assets',
 						src: ['**']
 					}
 				]
@@ -99,6 +121,14 @@ module.exports = function(grunt) {
 					{
 						expand: true,
 						flatten: false,
+						cwd: 'optimized_assets/',
+						src: ['**/*'],
+						dest: 'dist/',
+						filter: 'isFile'
+					},
+					{
+						expand: true,
+						flatten: false,
 						cwd: 'src/',
 						src: ['scripts/*'],
 						dest: 'dist/src/',
@@ -119,12 +149,15 @@ module.exports = function(grunt) {
 						expand: true,
 						flatten: false,
 						cwd: 'src/',
-						src: [
-							'assets/icons/*.png',
-							'assets/videos/**/*',
-							'!assets/images/diashow/**/*',
-							'!assets/images/portfolio/**/*'
-						],
+						src: ['assets/icons/*.png', 'assets/videos/**/*'],
+						dest: 'dist/',
+						filter: 'isFile'
+					},
+					{
+						expand: true,
+						flatten: false,
+						cwd: 'optimized_assets/',
+						src: ['**/*'],
 						dest: 'dist/',
 						filter: 'isFile'
 					}
@@ -132,18 +165,18 @@ module.exports = function(grunt) {
 			}
 		},
 		cwebp: {
-			background: {
+			optimize: {
 				options: {
-					q: 75,
+					q: 80,
 					m: 5
 					// lossless: false
 				},
 				files: [
 					{
 						expand: true,
-						src: ['assets/images/layout/*.jpg', 'assets/images/pictures/**/*.jpg'],
-						cwd: 'dist/',
-						dest: 'dist/'
+						src: ['**/*.jpg'],
+						cwd: 'build/',
+						dest: 'optimized_assets/'
 					}
 				]
 			}
@@ -156,7 +189,7 @@ module.exports = function(grunt) {
 				useEslintrc: true
 			},
 			all: {
-				src: ['src/scripts/**/*.js', '!src/scipts/**/*.min.js']
+				src: ['src/scripts/**/*.js', '!src/scripts/**/*.min.js']
 			}
 		},
 		htmlmin: {
@@ -182,6 +215,24 @@ module.exports = function(grunt) {
 				files: {
 					'dist/index.html': 'build/index.html'
 				}
+			}
+		},
+		imagemin: {
+			options: {
+				quality: 75,
+				optimizationLevel: 4, // default 3
+				progressive: true,
+				use: [mozjpeg()] // Example plugin usage
+			},
+			optimize: {
+				files: [
+					{
+						expand: true,
+						src: ['assets/images/layout/**.jpg', 'assets/images/pictures/**/*.jpg'],
+						cwd: 'build/',
+						dest: 'optimized_assets/'
+					}
+				]
 			}
 		},
 		imageSizeExport: {
@@ -334,7 +385,7 @@ module.exports = function(grunt) {
 				options: {
 					patterns: [
 						{
-							match: /\{{BUILD}}/g,
+							match: /{{BUILD}}/g,
 							replacement: '<%= pkg.version %>'
 						}
 					]
@@ -350,14 +401,15 @@ module.exports = function(grunt) {
 			}
 		},
 		responsive_images: {
+			/* eslint-disable-line camelcase */
 			options: {
 				concurrency: 2,
-				customIn: ['-interlace', 'line'], // produce progressive images
-				quality: 75,
 				rename: false
 			},
-			background: {
+			resize: {
 				options: {
+					// density: 72,
+					quality: 100,
 					sizes: [
 						{
 							suffix: '--320',
@@ -400,62 +452,26 @@ module.exports = function(grunt) {
 				files: [
 					{
 						expand: true,
-						src: ['assets/images/layout/**.jpg', 'assets/images/pictures/*.jpg'],
+						src: ['assets/images/layout/**.jpg', 'assets/images/pictures/**/*.jpg'],
 						cwd: 'src/',
-						dest: 'dist/'
-					}
-				]
-			},
-			pictures: {
-				options: {
-					sizes: [
-						{
-							suffix: '--320',
-							width: 320
-						},
-						{
-							suffix: '--640',
-							width: 640
-						},
-						{
-							suffix: '--768',
-							width: 768
-						},
-						{
-							suffix: '--1024',
-							width: 1024
-						},
-						{
-							suffix: '--1366',
-							width: 1366
-						},
-						{
-							suffix: '--1600',
-							width: 1600
-						},
-						{
-							suffix: '--1920',
-							width: 1920
-						},
-						{
-							suffix: '--2560',
-							width: 2560
-						},
-						{
-							suffix: '',
-							width: 3840
-						}
-					]
-				},
-				files: [
-					{
-						expand: true,
-						src: ['assets/images/pictures/*/*.jpg'],
-						cwd: 'src/',
-						dest: 'dist/'
+						dest: 'build/'
 					}
 				]
 			}
+			// optimize: {
+			// 	options: {
+			// 		customIn: ['-interlace', 'line'], // produce progressive images
+			// 		quality: 80
+			// 	},
+			// 	files: [
+			// 		{
+			// 			expand: true,
+			// 			src: ['assets/images/layout/**.jpg', 'assets/images/pictures/**/*.jpg'],
+			// 			cwd: 'build/',
+			// 			dest: 'optimized_assets/'
+			// 		}
+			// 	]
+			// }
 		},
 		sass: {
 			options: {
@@ -582,30 +598,21 @@ module.exports = function(grunt) {
 	/**
 	 * Optimize assets
 	 */
-	grunt.registerTask('optimize-assets', ['responsive_images', 'cwebp']);
-
-	/**
-	 * Debug Build without image processing
-	 */
-	grunt.registerTask('debug-quick', [
-		'copy:build',
-		'imageSizeExport',
-		'replace',
-		'svgstore',
-		'htmlmin:debug',
-		'terser:debug',
-		'sass:debug',
-		'postcss:debug',
-		'copy:debug'
+	grunt.registerTask('optimize-assets', [
+		'clean:build',
+		'clean:optimized_assets',
+		'responsive_images',
+		'imagemin',
+		'cwebp'
 	]);
 
 	/**
 	 * Debug Build
 	 */
 	grunt.registerTask('debug', [
-		'clean',
+		'clean:build',
+		'clean:dist',
 		'copy:build',
-		'optimize-assets',
 		'imageSizeExport',
 		'replace',
 		'svgstore',
@@ -620,9 +627,9 @@ module.exports = function(grunt) {
 	 * Release Build
 	 */
 	grunt.registerTask('release', [
-		'clean',
+		'clean:build',
+		'clean:dist',
 		'copy:build',
-		'optimize-assets',
 		'imageSizeExport',
 		'replace',
 		'svgstore',
