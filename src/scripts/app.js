@@ -21,9 +21,7 @@
 					link.addEventListener('click', onCategoryClicked);
 				}
 			});
-		} catch (e) {
-			console.warn(e);
-		}
+		} catch (e) {}
 	}
 
 	/**
@@ -38,9 +36,7 @@
 				// was able or not to get WebP representation
 				return elem.toDataURL('image/webp').indexOf('data:image/webp') === 0;
 			}
-		} catch (e) {
-			console.warn(e);
-		}
+		} catch (e) {}
 
 		return false; // very old browser like IE 8, canvas not supported
 	}
@@ -64,9 +60,7 @@
 
 			carousel.addEventListener('click', onCarouselClicked);
 			carousel.classList.remove('hidden');
-		} catch (e) {
-			console.warn(e);
-		}
+		} catch (e) {}
 	}
 
 	/**
@@ -77,9 +71,7 @@
 		try {
 			this.classList.add('hidden');
 			this.removeListener('click');
-		} catch (e) {
-			console.warn(e);
-		}
+		} catch (e) {}
 	}
 
 	// Execute
