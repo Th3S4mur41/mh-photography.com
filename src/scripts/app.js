@@ -12,14 +12,18 @@
 	 * @returns {void}
 	 */
 	function registerEvents() {
-		categories.forEach(function(category) {
-			const cat = document.getElementById(category);
-			const link = cat.children[0];
+		try {
+			categories.forEach(function(category) {
+				const cat = document.getElementById(category);
+				const link = cat.children[0];
 
-			if (link) {
-				link.addEventListener('click', onCategoryClicked);
-			}
-		});
+				if (link) {
+					link.addEventListener('click', onCategoryClicked);
+				}
+			});
+		} catch (e) {
+			console.warn(e);
+		}
 	}
 
 	/**
@@ -27,11 +31,15 @@
 	 * @returns {boolean} Whether or not WebP format is supported
 	 */
 	function supportsWebP() {
-		const elem = document.createElement('canvas');
+		try {
+			const elem = document.createElement('canvas');
 
-		if (elem.getContext && elem.getContext('2d')) {
-			// was able or not to get WebP representation
-			return elem.toDataURL('image/webp').indexOf('data:image/webp') == 0;
+			if (elem.getContext && elem.getContext('2d')) {
+				// was able or not to get WebP representation
+				return elem.toDataURL('image/webp').indexOf('data:image/webp') === 0;
+			}
+		} catch (e) {
+			console.warn(e);
 		}
 
 		return false; // very old browser like IE 8, canvas not supported
@@ -42,9 +50,8 @@
 	 * @returns {void}
 	 */
 	function init() {
-		registerEvents();
-
 		document.body.classList.add(supportsWebP() ? 'webp' : 'no-webp');
+		registerEvents();
 	}
 
 	/**
@@ -52,10 +59,14 @@
 	 * @returns {void}
 	 */
 	function onCategoryClicked() {
-		const carousel = this.nextSibling;
+		try {
+			const carousel = this.nextSibling;
 
-		carousel.addEventListener('click', onCarouselClicked);
-		carousel.classList.remove('hidden');
+			carousel.addEventListener('click', onCarouselClicked);
+			carousel.classList.remove('hidden');
+		} catch (e) {
+			console.warn(e);
+		}
 	}
 
 	/**
@@ -63,8 +74,12 @@
 	 * @returns {void}
 	 */
 	function onCarouselClicked() {
-		this.classList.add('hidden');
-		this.removeListener('click');
+		try {
+			this.classList.add('hidden');
+			this.removeListener('click');
+		} catch (e) {
+			console.warn(e);
+		}
 	}
 
 	// Execute
