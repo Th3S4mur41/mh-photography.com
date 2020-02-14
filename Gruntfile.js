@@ -535,8 +535,8 @@ module.exports = function(grunt) {
 		terser: {
 			options: {
 				compress: true,
-				mangle: true
-				// wrap    : true
+				ecma: 2015
+				// mangle: true
 			},
 			debug: {
 				options: {
