@@ -8,6 +8,7 @@ module.exports = function(grunt) {
 	// *****************************************************************************************************************
 	const sass = require('node-sass');
 	const mozjpeg = require('imagemin-mozjpeg');
+	const postcssPresetEnv = require('postcss-preset-env');
 
 	// *****************************************************************************************************************
 	// Load NPM Plugins
@@ -285,7 +286,8 @@ module.exports = function(grunt) {
 					require('autoprefixer')({
 						flexbox: 'no-2009',
 						grid: true
-					})
+					}),
+					postcssPresetEnv()
 				]
 			},
 			debug: {

@@ -27,7 +27,7 @@
     "jasmine": true,
     "atmosphere": true
   },
-  "extends": ["eslint:recommended", "prettier"],
+  "extends": ["eslint:recommended", "prettier", "plugin:compat/recommended"],
   "rules": {
     "strict": ["error", "safe"],
 
