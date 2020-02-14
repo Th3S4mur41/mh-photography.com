@@ -1,20 +1,20 @@
-# Introduction 
-TODO: Give a short introduction of your project. Let this section explain the objectives or the motivation behind this project. 
+# mh-photography.com
 
-# Getting Started
-TODO: Guide users through getting your code up and running on their own system. In this section you can talk about:
-1.	Installation process
-2.	Software dependencies
-3.	Latest releases
-4.	API references
+[![GitHub version](https://badge.fury.io/gh/Th3S4mur41%2Fmh-photography.svg)](https://badge.fury.io/gh/Th3S4mur41%2Fmh-photography)
+[![devDependency Status](https://david-dm.org/webcompat/Th3S4mur41/mh-photography.svg)](https://david-dm.org/Th3S4mur41/mh-photography.com/)
 
-# Build and Test
-TODO: Describe and show how to build your code and run the tests. 
+[![Built with Grunt](https://gruntjs.com/cdn/builtwith.svg)](http://gruntjs.com/)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/5648d120-4ab3-4895-9208-3e34fea3c7f0/deploy-status)](https://app.netlify.com/sites/mh-photography/deploys)
 
-# Contribute
-TODO: Explain how other users and developers can contribute to make your code better. 
+This repository hosts the code which powers the https://mh-photography.com website.
 
-If you want to learn more about creating good readme files then refer the following [guidelines](https://www.visualstudio.com/en-us/docs/git/create-a-readme). You can also seek inspiration from the below readme files:
-- [ASP.NET Core](https://github.com/aspnet/Home)
-- [Visual Studio Code](https://github.com/Microsoft/vscode)
-- [Chakra Core](https://github.com/Microsoft/ChakraCore)
+## Changelog
+
+## Contributing
+
+Th3S4mur41.me
+
+### Licence
+
+The source code is owned by Th3S4mur41.me
+All assets are owned by Manuel Hamel Photography
