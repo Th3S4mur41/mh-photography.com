@@ -86,7 +86,7 @@ module.exports = function(grunt) {
 					{
 						expand: true,
 						flatten: true,
-						src: ['src/favicon.ico'],
+						src: ['src/favicon.ico', 'src/assets/icons/mh-photography.svg'],
 						dest: 'dist/',
 						filter: 'isFile'
 					},
@@ -142,7 +142,13 @@ module.exports = function(grunt) {
 					{
 						expand: true,
 						flatten: true,
-						src: ['src/favicon.ico', 'src/robots.txt', 'src/sitemap.xml', 'src/manifest.webmanifest'],
+						src: [
+							'src/favicon.ico',
+							'src/assets/icons/mh-photography.svg',
+							'src/robots.txt',
+							'src/sitemap.xml',
+							'src/manifest.webmanifest'
+						],
 						dest: 'dist/',
 						filter: 'isFile'
 					},
