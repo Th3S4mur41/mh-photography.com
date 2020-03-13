@@ -27,7 +27,7 @@
     "jasmine": true,
     "atmosphere": true
   },
-  "extends": "eslint:recommended",
+  "extends": ["eslint:recommended", "prettier", "plugin:compat/recommended"],
   "rules": {
     "strict": ["error", "safe"],
 
@@ -51,7 +51,7 @@
     "no-eval": "off",
     "no-floating-decimal": "error",
     "no-loop-func": "error",
-    "no-multi-spaces": ["error", { exceptions: { "VariableDeclarator": true } }],
+    "no-multi-spaces": ["error", { "exceptions": { "VariableDeclarator": true } }],
     "no-multi-str": "error",
     "no-param-reassign": "warn",
     "no-script-url": "off",
@@ -63,7 +63,7 @@
     "no-void": "error",
     "require-await": "error",
     "vars-on-top": "error",
-    "wrap-iife": "error",
+    "wrap-iife": ["error", "inside"],
     "yoda": "error",
 
     /* variables */
@@ -86,7 +86,7 @@
     "eol-last": "error",
     "func-call-spacing": ["error", "never"],
     "indent": ["error", "tab", {"SwitchCase": 1, "VariableDeclarator":{"var": 2, "let": 2, "const": 3}}],
-    "key-spacing": ["error", {"beforeColon": false, "afterColon": true, "align": "colon"}], 
+    "key-spacing": ["error", {"beforeColon": false, "afterColon": true}],
     "keyword-spacing": ["error", {}],
     "linebreak-style": ["error", "unix"],
     "max-lines": ["warn", {"max": 500, "skipBlankLines": true, "skipComments": true}],
@@ -103,14 +103,14 @@
     "no-plusplus": "off",
     "no-trailing-spaces": "error",
     "no-whitespace-before-property": "error",
-    "one-var": ["error", "always"],
+    "one-var": ["error", "never"],
     "one-var-declaration-per-line": ["error", "always"],
-    "quotes": ["error", "single"],
+    "quotes": ["error", "single", { "avoidEscape": true, "allowTemplateLiterals": true  }],
     "require-jsdoc": ["warn", {"require": {"FunctionDeclaration": true, "MethodDefinition": true, "ClassDeclaration": true}}],
     "semi": ["error","always"],
     "semi-spacing": ["error", {"before": false, "after": true}],
     "space-before-blocks": ["error", "always"],
-    "space-before-function-paren": ["error", "always"],
+    "space-before-function-paren": ["error", "never"],
     "space-in-parens": ["error", "never"],
     "space-infix-ops": "error",
     "space-unary-ops": ["error", {"words": false, "nonwords": false}],

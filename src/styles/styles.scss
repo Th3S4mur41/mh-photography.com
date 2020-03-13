@@ -1,78 +1,84 @@
 /**
  * © 2018 Manuel Hamel Photography
  */
-@import url('https://fonts.googleapis.com/css?family=Titillium+Web:400,300italic,200');
-@import "variables";
-@import "mixins";
-@import "about";
-@import "contact";
-@import "header";
-@import "portfolio";
-@import "icons";
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web:400,300italic,200&display=swap');
+@import 'colors';
+@import 'assets';
+@import 'layout';
 
 /** ********************************************************************************************************************
  * Globals
  */
 
+:root {
+	font-size: 10px;
+
+	// Initial scrollbar design to avoid jumpy rendering
+	scrollbar-color: var(--secondary-color) var(--acrylic-color);
+	scrollbar-width: thin;
+
+	&::-webkit-scrollbar {
+		width: 0.6rem;
+	}
+	&::-webkit-scrollbar-track {
+		background: var(--acrylic-color);
+	}
+	&::-webkit-scrollbar-thumb {
+		background: var(--secondary-color);
+		border-radius: 0.3rem;
+	}
+
+	// Hide outline from browser that don't support focus
+	:focus:not(:focus-visible) {
+		outline: none;
+	}
+}
+
 html,
 body {
 	margin: 0;
 	font-family: 'Titillium Web', sans-serif;
-	font-size: 20px;
+	font-size: 1.6rem;
 	font-weight: 400;
-	color: $primary-color;
-	background-color: $background-color;
-	min-height: 100vh;
-	scroll-behavior: smooth;
+	color: var(--primary-color);
+	background-color: var(--bg-color);
+	height: 100%; // Use % (not vh) to properly handle dynamic viewport size on mobile
+	overflow-x: hidden;
+	text-shadow: 0.1rem 0.1rem 0.2rem var(--text-shadow-color);
 
 	& * {
-		outline-color: $theme-color;
-	}
-	& a:focus {
-		outline-style: solid;
-		outline-width: 0;
-	}
-}
+		outline-color: var(--theme-color);
+		box-sizing: border-box;
 
-h2 {
-	font-size: 40px;
-	font-weight: 400;
-	letter-spacing: 0.5em;
-	text-transform: uppercase;
-
-	@media (max-width: 400px) {
-		font-size: 36px;
+		&:focus {
+			outline-style: solid;
+		}
 	}
 }
 
-nav > a {
-	text-decoration: none;
-	font-size: 14px;
-	letter-spacing: 0.35em;
-	text-transform: uppercase;
+h1,
+h2,
+h3,
+h4,
+h5 {
+	margin: 0;
+}
 
-	&:hover {
-		font-weight: 600;
+a {
+	color: var(--theme-color);
+	text-shadow: none;
+
+	&:hover,
+	&:focus {
+		color: var(--primary-color);
 	}
-}
+	&.inverted-colors {
+		color: var(--primary-color);
 
-nav > a,
-nav > a:hover,
-nav > a:visited {
-	color: #2e2d33;
-	text-shadow: 1px 1px 4px $background-color;
-}
-
-.socialmedia {
-	display: flex;
-	flex-flow: row nowrap;
-	justify-content: center;
-	align-items: center;
-
-	> a {
-		flex: 0 0 auto;
-		margin: 10px;
-		font-size: 32px;
+		&:hover,
+		&:focus {
+			color: var(--theme-color);
+		}
 	}
 }
 
@@ -89,75 +95,46 @@ nav > a:visited {
 }
 
 /** ********************************************************************************************************************
- * Layout
+ * Style
  */
+.acrylic {
+	background: var(--acrylic-fallback-color);
 
-body {
-	display: flex;
-	flex-flow: column nowrap;
-	align-items: stretch;
-	min-width: 320px;
-	//TODO: Add scroll snap point to headers and content pages
-	//scroll-snap-type: proximity;
-	///* older spec implementation */
-	//scroll-snap-destination: 0% 100%;
-	//scroll-snap-points-x: repeat(100%);
+	@supports (backdrop-filter: blur(30px) saturate(125%)) {
+		// Fluent acrylic effect: see https://medium.com/microsoft-design/diy-a-web-version-the-fluent-design-systems-acrylic-material-fe2eac2a40bb
+		backdrop-filter: blur(30px) saturate(125%);
+		background: var(--acrylic-color);
+	}
 }
 
-body > article {
-	//scroll-snap-align: start;
-	// TODO: center the content on the page, following solution adds space before header
-	//min-height: 200vh; // 100vh for the header and 100vh for the content
-	//display: flex;
-	//flex-direction: column;
-	//justify-content: space-around;
-	display: grid;
-	grid-template-columns: 1rem 1fr 1rem;
-	grid-template-rows: repeat(2, auto);
+.scrollable {
+	scroll-behavior: smooth;
+	// Scrollbar style
+	scrollbar-color: var(--secondary-color) var(--acrylic-color);
+	scrollbar-width: thin;
+
+	&::-webkit-scrollbar {
+		width: 0.6rem;
+	}
+	&::-webkit-scrollbar:hover {
+		width: 1rem;
+	}
+	&::-webkit-scrollbar-track {
+		background: var(--acrylic-color);
+	}
+	&::-webkit-scrollbar-thumb {
+		background: var(--secondary-color);
+		border-radius: 0.3rem;
+	}
+	&::-webkit-scrollbar-thumb:hover {
+		background: var(--primary-color);
+		border-radius: 0.5rem;
+	}
 }
 
-article > header {
-	grid-column: 1 / span 3;
-	grid-row: 1;
-	height: 100vh;
-	display: flex;
-	flex-flow: column nowrap;
-	justify-content: center;
-	align-items: stretch;
-
-	/* Create the parallax scrolling effect */
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	background-position: center;
+.background-image {
+	background: var(--bg-image) no-repeat center;
+	background-color: var(--blend-color);
 	background-size: cover;
-
-	// mobile devices don't support background-attachment: fixed properly
-	@media not all and (any-hover: none) {
-		background-attachment: scroll;
-	}
-
-	> h2 {
-		margin: 0;
-		text-align: center;
-		color: $background-color;
-		text-shadow: 1px 1px 5px $primary-color;
-	}
-}
-
-article > section {
-	grid-column: 1 / span 3;
-	grid-row: 2;
-
-	& > p {
-		text-align: justify;
-		line-height: 1.5;
-		margin: 1em auto;
-		max-width: 35em;
-	}
-}
-
-footer#footer {
-	min-width: 100%;
-	flex: 0 0 auto;
-	margin-bottom: 2rem;
+	background-blend-mode: overlay;
 }
