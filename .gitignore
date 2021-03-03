@@ -31,9 +31,11 @@ src/scripts/.baseDir.ts
 # Optional eslint cache
 .eslintcache
 
-# WebStorm
+# IDEs
+*.code-workspace
 .idea/
 !.idea/codeStyles/
+.history/
 
 # Compiled output
 build/
