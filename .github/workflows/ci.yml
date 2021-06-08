@@ -1,0 +1,25 @@
+name: CI
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container: node:lts
+
+    steps:
+      - uses: actions/checkout@v2
+      - run: npm ci --no-optional --no-audit --prefer-offline --progress=false
+      - run: npm run build --if-present
+
+  lint:
+    runs-on: ubuntu-latest
+    container: node:lts
+    steps:
+      - uses: actions/checkout@v2
+      - run: npm ci --no-optional --no-audit --prefer-offline --progress=false
+      - run: npm run lint
