@@ -2,12 +2,13 @@
 
 'use strict';
 
-module.exports = function(grunt) {
+module.exports = function (grunt) {
 	// *****************************************************************************************************************
 	// Variables
 	// *****************************************************************************************************************
 	const sass = require('node-sass');
 	const mozjpeg = require('imagemin-mozjpeg');
+	const autoprefixer = require('autoprefixer');
 	const postcssPresetEnv = require('postcss-preset-env');
 
 	// *****************************************************************************************************************
@@ -288,13 +289,7 @@ module.exports = function(grunt) {
 		},
 		postcss: {
 			options: {
-				processors: [
-					require('autoprefixer')({
-						flexbox: 'no-2009',
-						grid: true
-					}),
-					postcssPresetEnv()
-				]
+				processors: [autoprefixer(), postcssPresetEnv()]
 			},
 			debug: {
 				options: {

@@ -3,7 +3,7 @@
  * Copyright © 2020 Mouch.net
  */
 
-(function() {
+(function () {
 	'use strict';
 	const categories = ['category-1', 'category-2', 'category-3', 'category-4', 'category-5', 'category-6'];
 
@@ -13,7 +13,7 @@
 	 */
 	function registerEvents() {
 		try {
-			categories.forEach(function(category) {
+			categories.forEach(function (category) {
 				const cat = document.getElementById(category);
 				const link = cat.children[0];
 

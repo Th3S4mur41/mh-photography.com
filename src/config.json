@@ -1,7 +1,5 @@
 {
-	"image_formats": [
-		"jpeg"
-	],
+	"image_formats": ["jpeg"],
 	"image_gallery": [
 		{
 			"name": "36",
