@@ -57,6 +57,7 @@
 	"scripts": {
 		"build:debug": "grunt debug",
 		"build": "grunt release",
+		"start": "npx http-server dist -a localhost",
 		"test": "grunt check-code",
 		"lint": "npm-run-all lint:* --parallel",
 		"lint:js": "eslint src/**/*.js",
