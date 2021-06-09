@@ -2,7 +2,7 @@
  * Copyright © 2020 Mouch.net
  */
 
-(function() {
+(function () {
 	'use strict';
 
 	// let picturesList = document.createElement('ul');
@@ -28,5 +28,4 @@
 	// return {
 	// 	// openAlbum: openAlbum
 	// };
-
 })();
