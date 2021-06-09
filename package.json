@@ -45,11 +45,6 @@
 		"lint-staged": "^11.0.0",
 		"pretty-quick": "^3.1.0"
 	},
-	"husky": {
-		"hooks": {
-			"pre-commit": "pretty-quick --staged lint-staged"
-		}
-	},
 	"lint-staged": {
 		"**/*.js": "eslint",
 		"**/*.{css, less, sass, scss}": "stylelint"
@@ -62,6 +57,7 @@
 		"lint": "npm-run-all lint:* --parallel",
 		"lint:js": "eslint src/**/*.js",
 		"lint:css": "stylelint \"src/**/*.{css, less, sass, scss}\" --aei",
-		"lint:style": "prettier --check --ignore-unknown ."
+		"lint:style": "prettier --check --ignore-unknown .",
+		"prepare": "husky install"
 	}
 }
