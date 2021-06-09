@@ -18,7 +18,11 @@ jobs:
       - uses: actions/upload-artifact@v2
         with:
           name: mh-photography
-          path: dist
+          path: |
+            dist/
+            !dist/assets/images/
+            !dist/assets/videos/
+          retention-days: 7
 
   lint:
     runs-on: ubuntu-latest
