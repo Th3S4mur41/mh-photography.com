@@ -8,11 +8,10 @@
 		"url": "https://github.com/Th3S4mur41/mh-photography.git"
 	},
 	"homepage": "https://mh-photography.com",
-	"dependencies": {},
 	"devDependencies": {
 		"@commitlint/cli": "^12.1.4",
 		"@commitlint/config-conventional": "^12.1.4",
-		"autoprefixer": "^10.2.6",
+		"autoprefixer": "^9.8.6",
 		"eslint": "^7.28.0",
 		"eslint-config-prettier": "^8.3.0",
 		"eslint-plugin-compat": "^3.9.0",
@@ -34,15 +33,15 @@
 		"grunt-svgstore": "^2.0.0",
 		"grunt-terser": "^2.0.0",
 		"gruntify-eslint": "^5.0.0",
-		"husky": "^6.0.0",
 		"hint": "^6.1.4",
+		"husky": "^6.0.0",
 		"imagemin-mozjpeg": "^9.0.0",
 		"lint-staged": "^11.0.0",
-		"node-sass": "^6.0.0",
 		"npm-run-all": "^4.1.5",
 		"postcss-preset-env": "^6.7.0",
 		"prettier": "^2.3.1",
 		"pretty-quick": "^3.1.0",
+		"sass": "^1.35.1",
 		"stylelint": "^13.13.1"
 	},
 	"lint-staged": {

@@ -6,7 +6,7 @@ module.exports = function (grunt) {
 	// *****************************************************************************************************************
 	// Variables
 	// *****************************************************************************************************************
-	const sass = require('node-sass');
+	const sass = require('sass');
 	const mozjpeg = require('imagemin-mozjpeg');
 	const autoprefixer = require('autoprefixer');
 	const postcssPresetEnv = require('postcss-preset-env');
