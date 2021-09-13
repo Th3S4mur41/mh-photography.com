@@ -43,7 +43,6 @@ body {
 	font-weight: 400;
 	color: var(--primary-color);
 	background-color: var(--bg-color);
-	height: 100%; // Use % (not vh) to properly handle dynamic viewport size on mobile
 	overflow-x: hidden;
 	text-shadow: 0.1rem 0.1rem 0.2rem var(--text-shadow-color);
 
