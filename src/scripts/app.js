@@ -60,6 +60,7 @@
 
 			carousel.addEventListener('click', onCarouselClicked);
 			carousel.classList.remove('hidden');
+			carousel.focus();
 		} catch (e) {}
 	}
 
