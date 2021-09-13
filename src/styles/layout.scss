@@ -17,6 +17,8 @@ body {
 		scroll-snap-align: start;
 	}
 	article {
+		content-visibility: auto;
+		contain-intrinsic-size: 100vh;
 		min-height: 100vh;
 		outline: none;
 	}
@@ -115,6 +117,7 @@ body {
 			writing-mode: vertical-lr;
 			text-align: right;
 			font-size: 4vh;
+			font-weight: 600;
 			text-shadow: none;
 			padding-bottom: 2rem;
 			padding-left: 0.5rem;
@@ -256,6 +259,8 @@ body {
 	overflow-x: auto;
 	overflow-y: hidden;
 	scroll-snap-type: x mandatory;
+	content-visibility: auto;
+	contain-intrinsic-size: 100vh;
 
 	> picture {
 		> img {
@@ -265,6 +270,8 @@ body {
 			padding: 0 5vw;
 			object-fit: contain;
 			scroll-snap-align: center;
+			content-visibility: auto;
+			contain-intrinsic-size: 95vh;
 		}
 		&:first-child > img {
 			padding-left: 15vw;
@@ -275,5 +282,6 @@ body {
 	}
 	&.hidden {
 		display: none;
+		content-visibility: hidden;
 	}
 }
