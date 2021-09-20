@@ -45,7 +45,7 @@
 		"postcss-preset-env": "^6.7.0",
 		"prettier": "^2.4.0",
 		"pretty-quick": "^3.1.0",
-		"sass": "^1.39.2",
+		"sass": "^1.41.1",
 		"stylelint": "^13.13.1",
 		"terser": "^5.8.0"
 	},
