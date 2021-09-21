@@ -87,20 +87,6 @@ module.exports = function (grunt) {
 					{
 						expand: true,
 						flatten: true,
-						src: ['src/favicon.ico', 'src/assets/icons/mh-photography.svg'],
-						dest: 'dist/',
-						filter: 'isFile'
-					},
-					{
-						expand: true,
-						flatten: true,
-						src: ['src/manifest.webmanifest'],
-						dest: 'dist/',
-						filter: 'isFile'
-					},
-					{
-						expand: true,
-						flatten: true,
 						src: ['src/configconfig.json'],
 						dest: 'dist/',
 						filter: 'isFile'
@@ -135,6 +121,14 @@ module.exports = function (grunt) {
 						src: ['scripts/*'],
 						dest: 'dist/src/',
 						filter: 'isFile'
+					},
+					{
+						expand: true,
+						flatten: false,
+						cwd: 'public/',
+						src: ['**/*'],
+						dest: 'dist/',
+						filter: 'isFile'
 					}
 				]
 			},
@@ -143,13 +137,7 @@ module.exports = function (grunt) {
 					{
 						expand: true,
 						flatten: true,
-						src: [
-							'src/favicon.ico',
-							'src/assets/icons/mh-photography.svg',
-							'src/robots.txt',
-							'src/sitemap.xml',
-							'src/manifest.webmanifest'
-						],
+						src: ['src/robots.txt'],
 						dest: 'dist/',
 						filter: 'isFile'
 					},
@@ -165,6 +153,14 @@ module.exports = function (grunt) {
 						expand: true,
 						flatten: false,
 						cwd: 'optimized_assets/',
+						src: ['**/*'],
+						dest: 'dist/',
+						filter: 'isFile'
+					},
+					{
+						expand: true,
+						flatten: false,
+						cwd: 'public/',
 						src: ['**/*'],
 						dest: 'dist/',
 						filter: 'isFile'
