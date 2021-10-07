@@ -1,9 +1,9 @@
 /*
+	Content-Security-Policy: default-src 'self' cloudfront.net *.cloudfront.net;
 	Referrer-Policy: no-referrer-when-downgrade
 	X-Content-Type-Options: nosniff
-
-/*.html
-	Content-Security-Policy: default-src 'self'
+	X-Frame-Options: DENY
+  X-XSS-Protection: 1; mode=block
 
 /*.js
 	Cache-Control: public, immutable, max-age=31536000
