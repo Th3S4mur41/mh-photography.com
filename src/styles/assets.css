@@ -163,7 +163,7 @@ body.no-webp {
 	}
 }
 
-// If browser supports webp format
+/* If browser supports webp format */
 body.webp {
 	--intro-bg: url('assets/images/layout/intro.webp');
 	--contact-bg: url('assets/images/layout/contact.webp');

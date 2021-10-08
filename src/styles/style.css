@@ -2,10 +2,9 @@
  * © 2018 Manuel Hamel Photography
  */
 @import url('https://fonts.googleapis.com/css?family=Titillium+Web:300,400,400italic,600&display=swap');
-
-@import 'colors';
-@import 'assets';
-@import 'layout';
+@import 'colors.css';
+@import 'assets.css';
+@import 'layout.css';
 
 /** ********************************************************************************************************************
  * Globals
@@ -14,7 +13,7 @@
 :root {
 	font-size: 10px;
 
-	// Initial scrollbar design to avoid jumpy rendering
+	/* Initial scrollbar design to avoid jumpy rendering */
 	scrollbar-color: var(--secondary-color) var(--acrylic-color);
 	scrollbar-width: thin;
 
@@ -29,8 +28,8 @@
 		border-radius: 0.3rem;
 	}
 
-	// Hide outline from browser that don't support focus
-	:focus:not(:focus-visible) {
+	/* Hide outline from browser that don't support focus */
+	&:focus:not(:focus-visible) {
 		outline: none;
 	}
 }
@@ -101,7 +100,7 @@ a {
 	background: var(--acrylic-fallback-color);
 
 	@supports (backdrop-filter: blur(30px) saturate(125%)) {
-		// Fluent acrylic effect: see https://medium.com/microsoft-design/diy-a-web-version-the-fluent-design-systems-acrylic-material-fe2eac2a40bb
+		/* Fluent acrylic effect: see https://medium.com/microsoft-design/diy-a-web-version-the-fluent-design-systems-acrylic-material-fe2eac2a40bb */
 		backdrop-filter: blur(30px) saturate(125%);
 		background: var(--acrylic-color);
 	}
@@ -109,7 +108,8 @@ a {
 
 .scrollable {
 	scroll-behavior: smooth;
-	// Scrollbar style
+
+	/* Scrollbar style */
 	scrollbar-color: var(--secondary-color) var(--acrylic-color);
 	scrollbar-width: thin;
 

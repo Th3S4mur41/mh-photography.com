@@ -1,6 +1,7 @@
 :root {
 	color-scheme: dark light;
 
+	/* Variables */
 	--bg-color: hsl(0, 0%, 0%);
 	--primary-color: hsl(0, 0%, 97%);
 	--secondary-color: hsla(0, 0%, 75%, 0.8);
