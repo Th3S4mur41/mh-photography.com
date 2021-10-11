@@ -180,7 +180,7 @@ module.exports = function (grunt) {
 						expand: true,
 						src: ['**/*.jpg'],
 						cwd: 'build/',
-						dest: 'optimized_assets/'
+						dest: 'public/'
 					}
 				]
 			}
@@ -232,54 +232,55 @@ module.exports = function (grunt) {
 				files: [
 					{
 						expand: true,
-						src: ['assets/images/layout/**.jpg', 'assets/images/pictures/**/*.jpg'],
+						src: ['images/layout/**.jpg', 'images/pictures/**/*.jpg'],
 						cwd: 'build/',
-						dest: 'optimized_assets/'
+						dest: 'public/'
 					}
 				]
 			}
 		},
 		imageSizeExport: {
+			cwd: 'src',
 			'category-1': {
 				options: {
 					path: 'src/assets/images/pictures/category-1/*.jpg',
 					template: 'src/templates/pictures.hbs',
-					output: 'build/pictures-1.html'
+					output: 'build/pictures-1.hbs'
 				}
 			},
 			'category-2': {
 				options: {
 					path: 'src/assets/images/pictures/category-2/*.jpg',
 					template: 'src/templates/pictures.hbs',
-					output: 'build/pictures-2.html'
+					output: 'build/pictures-2.hbs'
 				}
 			},
 			'category-3': {
 				options: {
 					path: 'src/assets/images/pictures/category-3/*.jpg',
 					template: 'src/templates/pictures.hbs',
-					output: 'build/pictures-3.html'
+					output: 'build/pictures-3.hbs'
 				}
 			},
 			'category-4': {
 				options: {
 					path: 'src/assets/images/pictures/category-4/*.jpg',
 					template: 'src/templates/pictures.hbs',
-					output: 'build/pictures-4.html'
+					output: 'build/pictures-4.hbs'
 				}
 			},
 			'category-5': {
 				options: {
 					path: 'src/assets/images/pictures/category-5/*.jpg',
 					template: 'src/templates/pictures.hbs',
-					output: 'build/pictures-5.html'
+					output: 'build/pictures-5.hbs'
 				}
 			},
 			'category-6': {
 				options: {
 					path: 'src/assets/images/pictures/category-6/*.jpg',
 					template: 'src/templates/pictures.hbs',
-					output: 'build/pictures-6.html'
+					output: 'build/pictures-6.hbs'
 				}
 			}
 		},
@@ -362,8 +363,8 @@ module.exports = function (grunt) {
 				options: {
 					patterns: [
 						{
-							match: /src\/assets\//g,
-							replacement: 'assets/'
+							match: /src\/assets\/images\//g,
+							replacement: 'images/'
 						},
 						{
 							match: /(.*)\.jpg--(.*)/g,
@@ -375,7 +376,7 @@ module.exports = function (grunt) {
 					{
 						expand: true,
 						flatten: false,
-						src: ['build/**/*.html'],
+						src: ['build/**/*.hbs'],
 						dest: '.'
 					}
 				]
@@ -451,8 +452,8 @@ module.exports = function (grunt) {
 				files: [
 					{
 						expand: true,
-						src: ['assets/images/layout/**.jpg', 'assets/images/pictures/**/*.jpg'],
-						cwd: 'src/',
+						src: ['images/layout/**.jpg', 'images/pictures/**/*.jpg'],
+						cwd: 'src/assets/',
 						dest: 'build/'
 					}
 				]
@@ -638,4 +639,6 @@ module.exports = function (grunt) {
 		'postcss:release',
 		'copy:release'
 	]);
+
+	grunt.registerTask('img-template', ['clean:build', 'imageSizeExport', 'replace:path']);
 };

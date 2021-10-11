@@ -3,8 +3,6 @@
  */
 
 (function () {
-	'use strict';
-
 	// let picturesList = document.createElement('ul');
 	// let albumTemplate;
 	//
@@ -22,9 +20,7 @@
 	// }
 	//
 	// function openAlbum () {
-
 	// }
-
 	// return {
 	// 	// openAlbum: openAlbum
 	// };

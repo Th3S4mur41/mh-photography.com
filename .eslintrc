@@ -1,6 +1,7 @@
 {
+	"root": true,
 	"parserOptions": {
-		"ecmaVersion": 6,
+		"ecmaVersion": "latest",
 		"impliedStrict": true,
 		"parser": "babel-eslint",
 		"sourceType": "module"
@@ -10,26 +11,8 @@
 		"jquery": true,
 		"node": true
 	},
-	"globals": {
-		"angular": true,
-		"utils": true, // internal utils.js
-		"libphonenumber": true, // libphonenumber
-		"log4javascript": true, // log4javascript
-		"describe": false,
-		"it": false,
-		"expect": false,
-		"beforeEach": false,
-		"afterEach": false,
-		"module": false,
-		"inject": false,
-		"MessageEvent": true,
-		"ContactInformation": true,
-		"ActionBarItem": true,
-		"spyOn": true,
-		"jasmine": true,
-		"atmosphere": true
-	},
-	"extends": ["eslint:recommended", "prettier", "plugin:compat/recommended"],
+	"globals": {},
+	"extends": ["eslint:recommended", "plugin:compat/recommended"],
 	"rules": {
 		"strict": ["error", "safe"],
 
@@ -37,7 +20,6 @@
 		"no-cond-assign": ["error", "except-parens"], // recommended
 		// "no-debugger": "error", // recommended
 		"no-empty": ["error", { "allowEmptyCatch": true }], // recommended
-		"no-extra-parens": "warn",
 		"no-unsafe-negation": "error",
 		"valid-jsdoc": "error",
 
@@ -58,12 +40,12 @@
 		"no-param-reassign": "warn",
 		"no-script-url": "off",
 		"no-sequences": "error",
-		"no-unused-expressions": "error",
+		"no-unused-expressions": "warn",
 		"no-useless-call": "error",
 		"no-useless-escape": "error",
 		"no-useless-return": "error",
 		"no-void": "error",
-		"require-await": "error",
+		"require-await": "warn",
 		"vars-on-top": "error",
 		"wrap-iife": ["error", "inside"],
 		"yoda": "error",
@@ -87,7 +69,6 @@
 		"computed-property-spacing": ["error", "never"],
 		"eol-last": "error",
 		"func-call-spacing": ["error", "never"],
-		"indent": ["error", "tab", { "SwitchCase": 1, "VariableDeclarator": { "var": 2, "let": 2, "const": 3 } }],
 		"key-spacing": ["error", { "beforeColon": false, "afterColon": true }],
 		"keyword-spacing": ["error", {}],
 		"linebreak-style": ["error", "unix"],
@@ -95,12 +76,8 @@
 		"max-nested-callbacks": ["warn", 10],
 		"max-params": ["warn", 5],
 		"new-parens": "error",
-		"newline-after-var": ["error", "always"],
-		"newline-before-return": "error",
-		"newline-per-chained-call": ["warn", { "ignoreChainWithDepth": 2 }],
 		"no-bitwise": "error",
 		"no-lonely-if": "error",
-		"no-mixed-spaces-and-tabs": "error",
 		"no-multiple-empty-lines": "error",
 		"no-plusplus": "off",
 		"no-trailing-spaces": "error",
@@ -109,12 +86,13 @@
 		"one-var-declaration-per-line": ["error", "always"],
 		"quotes": ["error", "single", { "avoidEscape": true, "allowTemplateLiterals": true }],
 		"require-jsdoc": [
-			"warn",
+			"error",
 			{ "require": { "FunctionDeclaration": true, "MethodDefinition": true, "ClassDeclaration": true } }
 		],
 		"semi": ["error", "always"],
 		"semi-spacing": ["error", { "before": false, "after": true }],
 		"space-before-blocks": ["error", "always"],
+		"space-before-function-paren": ["warn", { "anonymous": "always", "named": "never" }],
 		"space-in-parens": ["error", "never"],
 		"space-infix-ops": "error",
 		"space-unary-ops": ["error", { "words": false, "nonwords": false }],

@@ -1,12 +1,10 @@
 /**
- * @preserve
- * Copyright © 2020 Mouch.net
+ * Copyright © 2021 Mouch.net
  */
 
 import '../styles/style.css';
 
 (function () {
-	'use strict';
 	const categories = ['category-1', 'category-2', 'category-3', 'category-4', 'category-5', 'category-6'];
 
 	/**
@@ -17,11 +15,8 @@ import '../styles/style.css';
 		try {
 			categories.forEach(function (category) {
 				const cat = document.getElementById(category);
-				const link = cat?.children[0];
 
-				if (link) {
-					link.addEventListener('click', onCategoryClicked);
-				}
+				cat?.firstElementChild?.addEventListener('click', onCategoryClicked);
 			});
 		} catch (e) {}
 	}

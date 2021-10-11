@@ -15,7 +15,8 @@ module.exports = defineConfig({
 			context: {
 				BUILD: '<%= buildnumber %>',
 				YEAR: new Date().getFullYear()
-			}
+			},
+			partialDirectory: './build'
 		})
 	]
 });
