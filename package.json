@@ -37,7 +37,7 @@
 		"grunt-svgstore": "^2.0.0",
 		"grunt-terser": "^2.0.0",
 		"gruntify-eslint": "^5.0.0",
-		"hint": "^6.1.6",
+		"hint": "^6.1.7",
 		"husky": "^7.0.4",
 		"imagemin-mozjpeg": "^9.0.0",
 		"lint-staged": "^11.2.4",
