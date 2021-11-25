@@ -47,7 +47,7 @@
 		"pretty-quick": "^3.1.0",
 		"sass": "^1.43.4",
 		"stylelint": "^14.1.0",
-		"terser": "^5.9.0"
+		"terser": "^5.10.0"
 	},
 	"lint-staged": {
 		"**/*.js": "eslint",
