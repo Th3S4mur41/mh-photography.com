@@ -46,7 +46,7 @@
 		"prettier": "^2.5.1",
 		"pretty-quick": "^3.1.2",
 		"sass": "^1.45.0",
-		"stylelint": "^14.1.0",
+		"stylelint": "^14.2.0",
 		"terser": "^5.10.0"
 	},
 	"lint-staged": {
