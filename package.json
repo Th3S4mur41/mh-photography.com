@@ -13,7 +13,7 @@
 		"npm": ">=6.0.0 <7.0.0"
 	},
 	"devDependencies": {
-		"@commitlint/cli": "^16.0.0",
+		"@commitlint/cli": "^16.0.1",
 		"@commitlint/config-conventional": "^16.0.0",
 		"autoprefixer": "^9.8.8",
 		"eslint": "^8.6.0",
