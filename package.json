@@ -33,7 +33,7 @@
 		"grunt-replace": "^2.0.2",
 		"grunt-responsive-images": "^1.10.1",
 		"grunt-sass": "^3.1.0",
-		"grunt-stylelint": "^0.17.0",
+		"grunt-stylelint": "^0.18.0",
 		"grunt-svgstore": "^2.0.0",
 		"grunt-terser": "^2.0.0",
 		"gruntify-eslint": "^5.0.0",
