@@ -1,5 +1,5 @@
 /*
-	Content-Security-Policy: default-src 'self' cloudfront.net *.cloudfront.net;
+	Content-Security-Policy: default-src 'self' cloudfront.net *.cloudfront.net fonts.googleapis.com www.zaask.es;
 	Referrer-Policy: no-referrer-when-downgrade
 	X-Content-Type-Options: nosniff
 	X-Frame-Options: DENY
