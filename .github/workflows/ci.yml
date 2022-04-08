@@ -2,7 +2,7 @@ name: CI
 
 on:
   push:
-    branches: [master, next]
+    branches: [main, next]
   pull_request_target:
     # The branches below must be a subset of the branches above
     types: [opened, synchronize, reopened]
