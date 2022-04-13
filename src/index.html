@@ -1,248 +1,218 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="HandheldFriendly" content="false" />
-    <meta name="color-scheme" content="dark light" />
-    <link rel="manifest" href="manifest.webmanifest" />
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="HandheldFriendly" content="false" />
+		<meta name="color-scheme" content="dark light" />
+		<link rel="manifest" href="manifest.webmanifest" />
 
-    <title>Manuel Hamel Photography</title>
-    <!-- Preload-->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
+		<title>Manuel Hamel Photography</title>
+		<!-- Preload-->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" />
 
-    <!--Open Graph-->
-    <meta property="og:title" content="Manuel Hamel Photography" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://mh-photography.com" />
-    <meta
-      property="og:description"
-      content="Hello, I'm Manuel, photographer & traveler..."
-    />
-    <meta
-      property="og:image"
-      content="https://mh-photography.com/assets/images/layout/intro.jpg"
-    />
-    <!--Twitter Card-->
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="Manuel Hamel Photography" />
-    <meta
-      name="twitter:description"
-      content="Hello I'm Manuel, photographer & traveler..."
-    />
-    <meta name="twitter:url" content="https://mh-photography.com" />
-    <meta
-      name="twitter:image"
-      content="https://mh-photography.com/assets/images/layout/intro.jpg"
-    />
+		<!--Open Graph-->
+		<meta property="og:title" content="Manuel Hamel Photography" />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://mh-photography.com" />
+		<meta property="og:description" content="Hello, I'm Manuel, photographer & traveler..." />
+		<meta property="og:image" content="https://mh-photography.com/assets/images/layout/intro.jpg" />
+		<!--Twitter Card-->
+		<meta name="twitter:card" content="summary" />
+		<meta name="twitter:title" content="Manuel Hamel Photography" />
+		<meta name="twitter:description" content="Hello I'm Manuel, photographer & traveler..." />
+		<meta name="twitter:url" content="https://mh-photography.com" />
+		<meta name="twitter:image" content="https://mh-photography.com/assets/images/layout/intro.jpg" />
 
-    <link rel="shortcut icon" href="favicon.ico" />
-    <link rel="icon" type="image/svg+xml" href="mh-photography.svg" />
-    <link rel="icon" type="image/ico" href="favicon.ico" />
-    <link rel="apple-touch-icon" href="assets/icons/logo_small180.png" />
+		<link rel="shortcut icon" href="favicon.ico" />
+		<link rel="icon" type="image/svg+xml" href="mh-photography.svg" />
+		<link rel="icon" type="image/ico" href="favicon.ico" />
+		<link rel="apple-touch-icon" href="assets/icons/logo_small180.png" />
 
-    <meta name="format-detection" content="telephone=no" />
+		<meta name="format-detection" content="telephone=no" />
 
-    <meta name="author" content="Manuel Hamel" />
-    <meta
-      name="keywords"
-      content="photography, Manuel Hamel, photoshop, studio, photo, art, artistic, pictures, photographer"
-    />
-    <meta
-      name="description"
-      content="Hello, I'm Manuel, photographer & traveler..."
-    />
-    <meta name="copyright" content="© 2020 Manuel Hamel Photography" />
+		<meta name="author" content="Manuel Hamel" />
+		<meta
+			name="keywords"
+			content="photography, Manuel Hamel, photoshop, studio, photo, art, artistic, pictures, photographer"
+		/>
+		<meta name="description" content="Hello, I'm Manuel, photographer & traveler..." />
+		<meta name="copyright" content="© 2020 Manuel Hamel Photography" />
 
-    <meta name="geo.region" content="ES" />
-    <meta name="geo.placename" content="Barcelona" />
-    <meta name="geo.position" content="41.3814424;2.1568902" />
-    <meta name="ICBM" content="41.3814424, 2.1568902" />
+		<meta name="geo.region" content="ES" />
+		<meta name="geo.placename" content="Barcelona" />
+		<meta name="geo.position" content="41.3814424;2.1568902" />
+		<meta name="ICBM" content="41.3814424, 2.1568902" />
 
-    <link rel="stylesheet" href="styles.css?{{BUILD}}" />
-  </head>
-  <body class="vertical-paging scrollable">
-    <header class="screen-reader-text">
-      <h1>Manuel Hamel Photography</h1>
-    </header>
-    <main id="main">
-      <article tabindex="0" class="intro background-image">
-        <h2 class="intro-l1">Hello, I'm Manuel</h2>
-        <p class="intro-l2">Photographer & traveler</p>
-        <svg class="logo" width="250" height="65">
-          <use xlink:href="assets/icons/icons.svg#mh-photography"></use>
-        </svg>
-      </article>
-      <article tabindex="0" class="pictures">
-        <section id="category-1" class="category">
-          <a tabindex="0"><h3 class="background-image">Artistic Nudes</h3></a>
-          {{PICTURES-1}}
-        </section>
-        <section id="category-2" class="category">
-          <a tabindex="0"><h3 class="background-image">Portraits</h3></a>
-          {{PICTURES-2}}
-        </section>
-        <section id="category-3" class="category">
-          <a tabindex="0"><h3 class="background-image">Families & Kids</h3></a>
-          {{PICTURES-3}}
-        </section>
-        <section id="category-4" class="category">
-          <a tabindex="0"><h3 class="background-image">Lifestyle</h3></a>
-          {{PICTURES-4}}
-        </section>
-        <section id="category-5" class="category">
-          <a tabindex="0"><h3 class="background-image">Travel the World</h3></a>
-          {{PICTURES-5}}
-        </section>
-        <section id="category-6" class="category">
-          <a tabindex="0"><h3 class="background-image">Weddings</h3></a>
-          {{PICTURES-6}}
-        </section>
-      </article>
-      <article tabindex="0" class="video">
-        <video
-          width="1280"
-          height="720"
-          preload="metadata"
-          autoplay
-          loop
-          controls
-          muted
-        >
-          <source src="assets/videos/MHPhotography.webm" type="video/webm" />
-          <source src="assets/videos/MHPhotography.mp4" type="video/mp4" />
-          Your browser does not support videos.
-        </video>
-      </article>
-      <article tabindex="0" class="about">
-        <section class="text">
-          <p>
-            My name is Manuel Hamel, born and raised in a small region of
-            Belgium between Germany and the Netherlands. Growing up in this
-            environment has pushed me to always give my best to address people
-            in the language they feel most comfortable with. I’m fluent in
-            German, French, Spanish and English and have a solid basis in Dutch.
-          </p>
-          <p>
-            I have always been passionate about photography and traveling. I
-            never miss a chance to take my camera on a trip to immortalize great
-            moments and locations. In 2012 I studied photography. Just about a
-            year later, I received my diploma with the note “excellent”!
-          </p>
-          <p>
-            Since then, I’ve been working on a variety of projects, however both
-            my specialty and passion is People and Lifestyle photography in all
-            its aspects. The portfolio on this page includes several snapshots
-            of my work. From artistic to commercial pictures.
-          </p>
-          <p>I hope you enjoyed my work…</p>
-        </section>
-      </article>
-      <article tabindex="0" class="contact background-image">
-        <section class="vcard">
-          <div class="fn">Manuel Hamel</div>
-          <div class="adr">
-            <span class="street-address">Carrer de Montmany</span>
-            <br />
-            <span class="postal-code">08012</span>
-            <span class="locality">Barcelona</span>
-            <br />
-            <span class="country-name">España</span>
-          </div>
-          <div class="tel">+34 618 03 80 87</div>
-          <div class="tel">+32 470 63 15 09</div>
-          <a class="email" href="mailto:manuel@mh-photography.com"
-            >manuel@mh-photography.com</a
-          >
-          <br />
-          <a class="url" href="https://mh-photography.com"
-            >mh-photography.com</a
-          >
-        </section>
-        <a
-          class="zaask"
-          rel="external noopener noreferrer"
-          target="_blank"
-          href="https://www.zaask.es/usuario/manuel1464"
-          aria-label="Zaask Profesional"
-        >
-          <img
-            loading="lazy"
-            src="https://www.zaask.es/widget?user=263694&amp;widget=pro-since"
-            width="141"
-            height="141"
-            alt=""
-          />
-        </a>
-      </article>
-    </main>
-    <footer class="footer">
-      <a class="logo" title="Home" aria-label="Back to top" href="#main">
-        <svg width="250" height="65">
-          <use xlink:href="assets/icons/icons.svg#mh-photography"></use>
-        </svg>
-      </a>
-      <section class="copyright">© {{YEAR}} Manuel Hamel Photography</section>
-      <section class="social">
-        <a
-          target="_blank"
-          title="Manuel Hamel Photography on Facebook"
-          aria-label="Manuel Hamel Photography on Facebook"
-          rel="external noopener"
-          href="https://www.facebook.com/ManuelHamelPhotography"
-        >
-          <svg>
-            <use xlink:href="assets/icons/icons.svg#facebook"></use>
-          </svg>
-        </a>
-        <a
-          target="_blank"
-          title="@manuel.image on Instgagram"
-          aria-label="@manuel.image on Instgagram"
-          rel="external noopener"
-          href="https://www.instagram.com/manuel.image"
-        >
-          <svg>
-            <use xlink:href="assets/icons/icons.svg#instagram"></use>
-          </svg>
-        </a>
-        <a
-          target="_blank"
-          title="Manuel Hamel Photography on Messenger"
-          aria-label="Manuel Hamel Photography on Messenger"
-          rel="external noopener"
-          href="https://m.me/ManuelHamelPhotography"
-        >
-          <svg>
-            <use xlink:href="assets/icons/icons.svg#facebook-messenger"></use>
-          </svg>
-        </a>
-        <a
-          target="_blank"
-          title="Contact Manuel on WhatsApp"
-          aria-label="Contact Manuel on WhatsApp"
-          rel="external noopener"
-          href="https://api.whatsapp.com/send?phone=+32470631509"
-        >
-          <svg>
-            <use xlink:href="assets/icons/icons.svg#whatsapp"></use>
-          </svg>
-        </a>
-        <a
-          target="_blank"
-          title="Find Manuel on Google Maps"
-          aria-label="Find Manuel on Google Maps"
-          rel="external noopener"
-          href="https://g.page/r/CQeEB11FTu1vEBA"
-        >
-          <svg>
-            <use xlink:href="assets/icons/icons.svg#location"></use>
-          </svg>
-        </a>
-      </section>
-    </footer>
+		<link rel="stylesheet" href="styles.css?{{BUILD}}" />
+	</head>
+	<body class="vertical-paging scrollable">
+		<header class="screen-reader-text">
+			<h1>Manuel Hamel Photography</h1>
+		</header>
+		<main id="main">
+			<article tabindex="0" class="intro background-image">
+				<h2 class="intro-l1">Hello, I'm Manuel</h2>
+				<p class="intro-l2">Photographer & traveler</p>
+				<svg class="logo" width="250" height="65">
+					<use xlink:href="assets/icons/icons.svg#mh-photography"></use>
+				</svg>
+			</article>
+			<article tabindex="0" class="pictures">
+				<section id="category-1" class="category">
+					<a tabindex="0"><h3 class="background-image">Artistic Nudes</h3></a>
+					{{PICTURES-1}}
+				</section>
+				<section id="category-2" class="category">
+					<a tabindex="0"><h3 class="background-image">Portraits</h3></a>
+					{{PICTURES-2}}
+				</section>
+				<section id="category-3" class="category">
+					<a tabindex="0"><h3 class="background-image">Families & Kids</h3></a>
+					{{PICTURES-3}}
+				</section>
+				<section id="category-4" class="category">
+					<a tabindex="0"><h3 class="background-image">Lifestyle</h3></a>
+					{{PICTURES-4}}
+				</section>
+				<section id="category-5" class="category">
+					<a tabindex="0"><h3 class="background-image">Travel the World</h3></a>
+					{{PICTURES-5}}
+				</section>
+				<section id="category-6" class="category">
+					<a tabindex="0"><h3 class="background-image">Weddings</h3></a>
+					{{PICTURES-6}}
+				</section>
+			</article>
+			<article tabindex="0" class="video">
+				<video width="1280" height="720" preload="metadata" autoplay loop controls muted>
+					<source src="assets/videos/MHPhotography.webm" type="video/webm" />
+					<source src="assets/videos/MHPhotography.mp4" type="video/mp4" />
+					Your browser does not support videos.
+				</video>
+			</article>
+			<article tabindex="0" class="about">
+				<section class="text">
+					<p>
+						My name is Manuel Hamel, born and raised in a small region of Belgium between Germany and the Netherlands.
+						Growing up in this environment has pushed me to always give my best to address people in the language they
+						feel most comfortable with. I’m fluent in German, French, Spanish and English and have a solid basis in
+						Dutch.
+					</p>
+					<p>
+						I have always been passionate about photography and traveling. I never miss a chance to take my camera on a
+						trip to immortalize great moments and locations. In 2012 I studied photography. Just about a year later, I
+						received my diploma with the note “excellent”!
+					</p>
+					<p>
+						Since then, I’ve been working on a variety of projects, however both my specialty and passion is People and
+						Lifestyle photography in all its aspects. The portfolio on this page includes several snapshots of my work.
+						From artistic to commercial pictures.
+					</p>
+					<p>I hope you enjoyed my work…</p>
+				</section>
+			</article>
+			<article tabindex="0" class="contact background-image">
+				<section class="vcard">
+					<div class="fn">Manuel Hamel</div>
+					<div class="adr">
+						<span class="street-address">Carrer de Montmany</span>
+						<br />
+						<span class="postal-code">08012</span>
+						<span class="locality">Barcelona</span>
+						<br />
+						<span class="country-name">España</span>
+					</div>
+					<div class="tel">+34 618 03 80 87</div>
+					<div class="tel">+32 470 63 15 09</div>
+					<a class="email" href="mailto:manuel@mh-photography.com">manuel@mh-photography.com</a>
+					<br />
+					<a class="url" href="https://mh-photography.com">mh-photography.com</a>
+				</section>
+				<a
+					class="zaask"
+					rel="external noopener noreferrer"
+					target="_blank"
+					href="https://www.zaask.es/usuario/manuel1464"
+					aria-label="Zaask Profesional"
+				>
+					<img
+						loading="lazy"
+						src="https://www.zaask.es/widget?user=263694&amp;widget=pro-since"
+						width="141"
+						height="141"
+						alt=""
+					/>
+				</a>
+			</article>
+		</main>
+		<footer class="footer">
+			<a class="logo" title="Home" aria-label="Back to top" href="#main">
+				<svg width="250" height="65">
+					<use xlink:href="assets/icons/icons.svg#mh-photography"></use>
+				</svg>
+			</a>
+			<section class="copyright">© {{YEAR}} Manuel Hamel Photography</section>
+			<section class="social">
+				<a
+					target="_blank"
+					title="Manuel Hamel Photography on Facebook"
+					aria-label="Manuel Hamel Photography on Facebook"
+					rel="external noopener"
+					href="https://www.facebook.com/ManuelHamelPhotography"
+				>
+					<svg>
+						<use xlink:href="assets/icons/icons.svg#facebook"></use>
+					</svg>
+				</a>
+				<a
+					target="_blank"
+					title="@manuel.image on Instgagram"
+					aria-label="@manuel.image on Instgagram"
+					rel="external noopener"
+					href="https://www.instagram.com/manuel.image"
+				>
+					<svg>
+						<use xlink:href="assets/icons/icons.svg#instagram"></use>
+					</svg>
+				</a>
+				<a
+					target="_blank"
+					title="Manuel Hamel Photography on Messenger"
+					aria-label="Manuel Hamel Photography on Messenger"
+					rel="external noopener"
+					href="https://m.me/ManuelHamelPhotography"
+				>
+					<svg>
+						<use xlink:href="assets/icons/icons.svg#facebook-messenger"></use>
+					</svg>
+				</a>
+				<a
+					target="_blank"
+					title="Contact Manuel on WhatsApp"
+					aria-label="Contact Manuel on WhatsApp"
+					rel="external noopener"
+					href="https://api.whatsapp.com/send?phone=+32470631509"
+				>
+					<svg>
+						<use xlink:href="assets/icons/icons.svg#whatsapp"></use>
+					</svg>
+				</a>
+				<a
+					target="_blank"
+					title="Find Manuel on Google Maps"
+					aria-label="Find Manuel on Google Maps"
+					rel="external noopener"
+					href="https://g.page/r/CQeEB11FTu1vEBA"
+				>
+					<svg>
+						<use xlink:href="assets/icons/icons.svg#location"></use>
+					</svg>
+				</a>
+			</section>
+		</footer>
 
-    <script src="app.js?{{BUILD}}"></script>
-  </body>
+		<script src="app.js?{{BUILD}}"></script>
+	</body>
 </html>
