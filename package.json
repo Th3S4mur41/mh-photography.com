@@ -9,8 +9,8 @@
 	},
 	"homepage": "https://mh-photography.com",
 	"engines": {
-		"node": ">=14.0.0 <15.0.0",
-		"npm": ">=6.0.0 <7.0.0"
+		"node": ">=16.0.0",
+		"npm": ">=8.0.0"
 	},
 	"devDependencies": {
 		"@commitlint/cli": "^16.2.3",
