@@ -15,7 +15,7 @@
 	"devDependencies": {
 		"@commitlint/cli": "^16.2.3",
 		"@commitlint/config-conventional": "^16.2.1",
-		"autoprefixer": "^9.8.8",
+		"autoprefixer": "^10.4.8",
 		"eslint": "^8.14.0",
 		"eslint-config-prettier": "^8.5.0",
 		"eslint-plugin-compat": "^4.0.2",
