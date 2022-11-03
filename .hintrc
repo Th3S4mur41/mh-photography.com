@@ -1,5 +1,28 @@
 {
-    "extends": [
-        "web-recommended"
-    ]
+	"connector": {
+		"name": "puppeteer",
+		"options": {
+			"headless": true,
+			"puppeteerOptions": {
+				"args": ["--no-sandbox", "--disable-gpu"]
+			}
+		}
+	},
+	"extends": ["accessibility", "web-recommended"],
+	"formatters": ["codeframe", "summary", "html"],
+	"hints": {
+		"axe/color": [
+			"error",
+			{
+				"color-contrast": "error",
+				"color-contrast-enhanced": "off"
+			}
+		],
+		"compat-api/html": [
+			"error",
+			{
+				"ignore": ["meta[name=theme-color]"]
+			}
+		]
+	}
 }
