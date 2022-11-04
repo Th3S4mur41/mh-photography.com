@@ -8,4 +8,7 @@
 	--spacing-m: 1em;
 	--spacing-l: 2em;
 	--spacing-xl: 4em;
+
+	/* Transitions */
+	--transition-color: color 0.3s ease;
 }

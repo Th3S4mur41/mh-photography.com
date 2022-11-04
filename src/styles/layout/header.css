@@ -15,7 +15,7 @@
 		grid-area: title;
 
 		& > svg {
-			max-inline-size: min(80vw, 50rem);
+			inline-size: min(80vw, 50rem);
 		}
 	}
 	& > .subtitle {

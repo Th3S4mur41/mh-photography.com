@@ -10,10 +10,10 @@
    * Dark mode (default)
    */
 	--color-bg: hsl(0 0% 0%);
-	--color-bg-secondary: hsl(0 0% 15%);
+	--color-bg-secondary: hsl(0 0% 10%);
 	--color-onbg: hsl(0 0% 95%);
 	--color-onbg-subtle: hsl(0 0% 60%);
-	--color-onbg-secondary: hsl(0 0% 95%);
+	--color-onbg-secondary: hsl(0 0% 85%);
 	--color-overlay: hsl(0 0% 0% / 0.3);
 	--color-overlay-fallback: hsl(0 0% 0% / 0.9);
 	--color-shadow: hsl(0 0% 100% / 0.3);
@@ -30,10 +30,10 @@
    */
 	@media (prefers-color-scheme: light) {
 		--color-bg: hsl(0 0% 100%);
-		--color-bg-secondary: hsl(0 0% 75%);
+		--color-bg-secondary: hsl(0 0% 90%);
 		--color-onbg: hsl(0 0% 5%);
 		--color-onbg-subtle: hsl(0 0% 15%);
-		--color-onbg-secondary: hsl(0 0% 5%);
+		--color-onbg-secondary: hsl(0 0% 25%);
 		--color-overlay: hsl(0 0% 100% / 0.3);
 		--color-overlay-fallback: hsl(0 0% 100% / 0.9);
 		--color-shadow: hsl(0 0% 0% / 0.3);

@@ -1,0 +1,12 @@
+a {
+	transition: --transition-color;
+	color: var(--link-color);
+	text-underline-offset: 0.25em;
+
+	&:is(:hover, :focus) {
+		color: var(--color-accent);
+	}
+	&:visited {
+		color: var(--link-color);
+	}
+}
