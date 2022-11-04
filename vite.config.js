@@ -9,6 +9,9 @@ module.exports = defineConfig({
 	build: {
 		outDir: '../dist'
 	},
+	preview: {
+		port: 8080
+	},
 	plugins: [
 		handlebars({
 			context: {

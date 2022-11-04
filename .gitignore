@@ -42,3 +42,4 @@ build/
 dist/
 reports/
 .tscache/
+hint-report/

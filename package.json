@@ -24,6 +24,7 @@
 		"@babel/preset-env": "^7.19.4",
 		"@commitlint/cli": "^17.2.0",
 		"@commitlint/config-conventional": "^17.2.0",
+		"@hint/formatter-codeframe": "^3.1.33",
 		"@semantic-release/changelog": "^6.0.1",
 		"@semantic-release/git": "^10.0.1",
 		"@squoosh/cli": "^0.7.2",
@@ -55,7 +56,8 @@
 		"stylelint-use-logical-spec": "^4.1.0",
 		"typescript": "^4.8.4",
 		"vite": "^3.2.2",
-		"vite-plugin-handlebars": "^1.6.0"
+		"vite-plugin-handlebars": "^1.6.0",
+		"wait-on": "^6.0.1"
 	},
 	"optionalDependencies": {
 		"lint-staged": "^13.0.3",
@@ -74,10 +76,12 @@
 		"lint:css:fix": "stylelint \"src/**/*.{css,less,sass,scss}\" --aei --fix",
 		"lint:style": "prettier --check --ignore-unknown .",
 		"lint:style:fix": "prettier --write --ignore-unknown .",
-		"test": "echo No test specified",
+		"hint": "wait-on -t 300000 http://localhost:8080/ && hint http://localhost:8080/",
+		"test": "concurrently 'npm:test:*'",
+		"test:hint": "concurrently \"npm:start:prod\" \"npm:hint\" --kill-others  --s first",
 		"release": "semantic-release",
 		"prepare": "husky install",
 		"git:pre-commit": "pretty-quick --staged && lint-staged",
-		"git:pre-push": "npm run test"
+		"git:pre-push": "npm run build && npm run test"
 	}
 }
