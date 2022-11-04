@@ -22,20 +22,19 @@ nav {
 				currentcolor 75%,
 				transparent 125%
 			);
-
-			&:is(:hover, :focus) {
-				color: var(--color-accent);
-				border-image-source: linear-gradient(
-					to right,
-					transparent -25%,
-					var(--color-accent) 25%,
-					var(--color-accent) 75%,
-					transparent 125%
-				);
-				border-image-slice: 1;
-			}
+		}
+		&:is(:hover, :focus) {
+			color: var(--color-accent);
+			border-image-source: linear-gradient(
+				to right,
+				transparent -25%,
+				var(--color-accent) 25%,
+				var(--color-accent) 75%,
+				transparent 125%
+			);
 			border-image-slice: 1;
 		}
+		border-image-slice: 1;
 	}
 }
 

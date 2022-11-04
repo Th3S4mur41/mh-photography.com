@@ -1,0 +1,26 @@
+/**
+ * styles/layout/header.css
+ */
+
+#header {
+	display: grid;
+	grid-template:
+		'image' 1fr
+		'title'
+		'subtitle';
+	justify-items: center;
+	min-block-size: 100dvb;
+
+	& > h1 {
+		grid-area: title;
+
+		& > svg {
+			max-inline-size: min(80vw, 50rem);
+		}
+	}
+	& > .subtitle {
+		grid-area: subtitle;
+		margin-block-end: var(--spacing-m);
+		color: var(--color-onbg-subtle);
+	}
+}

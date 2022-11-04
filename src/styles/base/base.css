@@ -8,15 +8,15 @@ body {
 	/* Handle the notch on the iPhone */
 	padding-block: env(safe-area-inset-top) env(safe-area-inset-bottom);
 	padding-inline: env(safe-area-inset-left) env(safe-area-inset-right);
-	background-color: var(--primary-background-color);
-	color: var(--primary-color);
+	background-color: var(--color-bg: );
+	color: var(--color-onbg);
 	font-family: var(--font-family);
 	font-size: var(--font-size-m);
 
 	/* Additional smoothing fixes for MacOS */
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	accent-color: var(--theme-color);
+	accent-color: var(--color-accent);
 }
 
 /**
@@ -24,11 +24,11 @@ body {
  */
 
 .overlay {
-	background: var(--overlay-fallback-color);
+	background: var(--color-overlay-fallback);
 
 	@supports (backdrop-filter: blur(30px) saturate(125%)) {
 		/* Fluent acrylic effect: see https://medium.com/microsoft-design/diy-a-web-version-the-fluent-design-systems-acrylic-material-fe2eac2a40bb */
 		backdrop-filter: blur(30px) saturate(125%);
-		background: var(--overlay-color);
+		background: var(--color-overlay);
 	}
 }
