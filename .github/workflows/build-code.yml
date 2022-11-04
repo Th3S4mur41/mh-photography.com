@@ -1,0 +1,43 @@
+# This is the workflow to lint the source code
+name: Build
+
+# Controls when the action will run.
+on:
+  # Allows you to call this workflow from other workflows
+  workflow_call:
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: '🛠️ Build'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: '☁️ Checkout repository'
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+
+      - name: '⚙️ Use Node.js'
+        uses: actions/setup-node@v3
+        with:
+          check-latest: true
+          cache: 'npm'
+
+      - name: '⛓️ Install dependencies'
+        env:
+          HUSKY: 0
+        run: npm ci --no-optional --no-audit --prefer-offline --progress=false
+
+      - name: '🛠️ Build'
+        run: npm run build --if-present
+
+      - name: '📎 Upload build output'
+        uses: actions/upload-artifact@v3
+        with:
+          name: build
+          path: |
+            dist/
+          retention-days: 1

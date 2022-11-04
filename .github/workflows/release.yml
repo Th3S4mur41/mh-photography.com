@@ -1,32 +1,67 @@
-name: Release
+# This is the workflow to trigger a release
+#
+name: Semantic release
 
 on:
+  # Allows you to call this workflow from other workflows
+  workflow_call:
+    secrets:
+      NPM_TOKEN:
+        required: false
+      GH_TOKEN:
+        required: false
+
+  # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
+
+permissions:
+  contents: write
+  issues: write
+  pull-requests: write
 
 jobs:
   release:
+    name: '🏷️ Release'
     runs-on: ubuntu-latest
-    container: node:lts-buster
 
-    permissions:
-      contents: write
-      packages: write
+    environment:
+      name: production
+      url: https://github.com/${{ github.repository }}/releases/tag/v${{ steps.release.outputs.version }}
+
+    outputs:
+      version: ${{ steps.release.outputs.version }}
 
     steps:
-      - uses: actions/checkout@v2
+      - name: '☁️ Checkout repository'
+        uses: actions/checkout@v3
         with:
-          fetch-depth: 0 # get Git history for the changelog
+          fetch-depth: 0
+          persist-credentials: false
 
-      - name: Setup Git
-        run: |
-          git config user.name "${GITHUB_ACTOR}"
-          git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
+      - name: '⚙️ Use Node.js'
+        uses: actions/setup-node@v3
+        with:
+          check-latest: true
+          cache: 'npm'
 
-      - name: Install dependencies
+      - name: '⛓️ Install dependencies'
+        env:
+          HUSKY: 0
         run: npm ci --no-optional --no-audit --prefer-offline --progress=false
 
-      - name: Run release
+      - name: '📎 Download build output'
+        uses: actions/download-artifact@v3
+        continue-on-error: true # There won't be an artifact in workflow without build job
+        with:
+          name: build
+
+      - name: '📦 Release'
+        id: release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: npm run release
+          GH_TOKEN: ${{ secrets.GH_TOKEN || secrets.GITHUB_TOKEN }} # Needed to push to GitHub
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }} # Needed to publish to NPM registry
+          HUSKY: 0 # disable pre-commit hooks
+        run: |
+          npm run release
+          echo "::set-output name=version::$(npm run env | grep npm_package_version | cut -d '=' -f 2)"

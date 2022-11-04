@@ -1,0 +1,42 @@
+# This is the workflow to lint the source code
+name: Test Code
+
+# Controls when the action will run.
+on:
+  # Allows you to call this workflow from other workflows
+  workflow_call:
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: '🛠️ Test Code'
+    runs-on: ubuntu-latest
+    container: mcr.microsoft.com/playwright # Provide browser instances for test runners
+
+    steps:
+      - name: '☁️ Checkout repository'
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+
+      - name: '⚙️ Use Node.js'
+        uses: actions/setup-node@v3
+        with:
+          check-latest: true
+          cache: 'npm'
+
+      - name: '⛓️ Install dependencies'
+        env:
+          HUSKY: 0
+        run: npm ci --no-optional --no-audit --prefer-offline --progress=false
+
+      - name: '📎 Download build output'
+        uses: actions/download-artifact@v3
+        continue-on-error: true # There won't be an artifact in workflow without build job
+        with:
+          name: build
+
+      - name: '🧫 Run tests'
+        run: npm run test --if-present

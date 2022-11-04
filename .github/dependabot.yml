@@ -5,9 +5,20 @@
 
 version: 2
 updates:
-  - package-ecosystem: 'npm' # See documentation for possible values
+  - package-ecosystem: 'npm'
     directory: '/' # Location of package manifests
     schedule:
-      interval: 'weekly'
+      interval: 'daily'
+      time: '00:00'
+      timezone: 'Europe/Berlin'
+    reviewers:
+      - 'Th3S4mur41'
+
+  - package-ecosystem: 'github-actions'
+    directory: '/'
+    schedule:
+      interval: 'daily'
+      time: '00:00'
+      timezone: 'Europe/Berlin'
     reviewers:
       - 'Th3S4mur41'
