@@ -1,5 +1,53 @@
 nav {
+	display: flex;
+	justify-content: center;
+
 	& > ul {
+		display: flex;
 		list-style: none;
+		gap: 2em;
+	}
+	& a {
+		padding-block: 0.5em;
+		transition: color 0.3s ease, border-image-slice 1s ease;
+		color: currentcolor;
+		text-decoration: none;
+		border-block-end: 1px solid transparent;
+
+		&.active {
+			border-image-source: linear-gradient(
+				to right,
+				transparent -25%,
+				currentcolor 25%,
+				currentcolor 75%,
+				transparent 125%
+			);
+
+			&:is(:hover, :focus) {
+				color: var(--color-accent);
+				border-image-source: linear-gradient(
+					to right,
+					transparent -25%,
+					var(--color-accent) 25%,
+					var(--color-accent) 75%,
+					transparent 125%
+				);
+				border-image-slice: 1;
+			}
+			border-image-slice: 1;
+		}
+	}
+}
+
+body > nav {
+	position: fixed;
+	inset-block-start: 0;
+	inline-size: 100%;
+	background: var(--color-overlay-fallback);
+
+	@supports (backdrop-filter: blur(30px) saturate(125%)) {
+		/* Fluent acrylic effect: see https://medium.com/microsoft-design/diy-a-web-version-the-fluent-design-systems-acrylic-material-fe2eac2a40bb */
+		backdrop-filter: blur(30px) saturate(125%);
+		background: var(--color-overlay);
 	}
 }

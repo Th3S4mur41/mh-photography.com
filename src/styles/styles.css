@@ -6,12 +6,14 @@
 
 /* Settings */
 
-/* @import url('settings/colors.css');
+@import url('settings/colors.css');
 @import url('settings/fonts.css');
-@import url('settings/settings.css'); */
+
+/* @import url('settings/settings.css'); */
 
 /* Base */
 @import url('~/cssremedy/css/remedy.css');
+@import url('base/base.css');
 
 /* Layouts */
 @import url('layout/navigation.css');

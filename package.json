@@ -83,5 +83,8 @@
 		"prepare": "husky install",
 		"git:pre-commit": "pretty-quick --staged && lint-staged",
 		"git:pre-push": "npm run build && npm run test"
+	},
+	"dependencies": {
+		"@fontsource/titillium-web": "^4.5.9"
 	}
 }

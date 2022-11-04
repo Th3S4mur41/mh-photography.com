@@ -1,0 +1,34 @@
+html {
+	@media (prefers-reduced-motion: no-preference) {
+		scroll-behavior: smooth;
+	}
+}
+
+body {
+	/* Handle the notch on the iPhone */
+	padding-block: env(safe-area-inset-top) env(safe-area-inset-bottom);
+	padding-inline: env(safe-area-inset-left) env(safe-area-inset-right);
+	background-color: var(--primary-background-color);
+	color: var(--primary-color);
+	font-family: var(--font-family);
+	font-size: var(--font-size-m);
+
+	/* Additional smoothing fixes for MacOS */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	accent-color: var(--theme-color);
+}
+
+/**
+ * Generic classes that don't fit in elements or components
+ */
+
+.overlay {
+	background: var(--overlay-fallback-color);
+
+	@supports (backdrop-filter: blur(30px) saturate(125%)) {
+		/* Fluent acrylic effect: see https://medium.com/microsoft-design/diy-a-web-version-the-fluent-design-systems-acrylic-material-fe2eac2a40bb */
+		backdrop-filter: blur(30px) saturate(125%);
+		background: var(--overlay-color);
+	}
+}

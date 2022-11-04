@@ -1,0 +1,39 @@
+:root {
+	color-scheme: dark light;
+
+	/**
+	 * Theme specific colors
+	 */
+	--color-accent: greenyellow;
+
+	/**
+   * Dark mode (default)
+   */
+	--color-bg: hsl(0 0% 0%);
+	--color-bg-secondary: hsl(0 0% 15%);
+	--color-onbg: hsl(0 0% 95%);
+	--color-onbg-secondary: hsl(0 0% 95%);
+	--color-overlay: hsl(0 0% 0% / 0.3);
+	--color-overlay-fallback: hsl(0 0% 0% / 0.9);
+	--color-shadow: hsl(0 0% 100% / 0.3);
+
+	/**
+   * Elements
+   */
+	--link-color: currentcolor;
+	--link-color--hover: currentcolor;
+	--link-color--active: currentcolor;
+
+	/**
+   * Light mode
+   */
+	@media (prefers-color-scheme: light) {
+		--color-bg: hsl(0 0% 100%);
+		--color-bg-secondary: hsl(0 0% 75%);
+		--color-onbg: hsl(0 0% 5%);
+		--color-onbg-secondary: hsl(0 0% 5%);
+		--color-overlay: hsl(0 0% 100% / 0.3);
+		--color-overlay-fallback: hsl(0 0% 100% / 0.9);
+		--color-shadow: hsl(0 0% 0% / 0.3);
+	}
+}
