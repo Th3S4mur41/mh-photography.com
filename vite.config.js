@@ -15,7 +15,8 @@ module.exports = defineConfig({
 	plugins: [
 		handlebars({
 			context: {
-				currentYear: new Date().getFullYear()
+				currentYear: new Date().getFullYear(),
+				version: `v${process.env.npm_package_version}`
 			},
 			partialDirectory: resolve(__dirname, 'src/partials')
 		})

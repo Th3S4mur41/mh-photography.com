@@ -32,14 +32,9 @@
 	</head>
 	<body>
 		<a href="#main" class="screen-reader-text" data-i18n="skip-link">Jump to main content</a>
-		<header id="header">{{> header }}</header>
-		<nav id="navigation">{{> navigation }}</nav>
-		<main id="main">
-			<section id="photos">{{> photos }}</section>
-			<section id="about">{{> about }}</section>
-			<section id="contact">{{> contact }}</section>
-		</main>
-		<footer id="footer">{{> navigation }}</footer>
+		{{> header }} {{> navigation }}
+		<main id="main">{{> photos }} {{> about }} {{> contact }}</main>
+		<footer id="footer">{{> footer}} {{> navigation }}</footer>
 		<script type="module" src="/index.js" async></script>
 	</body>
 </html>
