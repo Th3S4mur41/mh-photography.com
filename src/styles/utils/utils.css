@@ -1,0 +1,17 @@
+/**
+ * styles/utils.css
+ * Utility styles for the website.
+ */
+
+.screen-reader-text {
+	position: absolute;
+	block-size: 1px;
+	inline-size: 1px;
+	overflow: hidden;
+	clip: rect(1px, 1px, 1px, 1px);
+	white-space: nowrap;
+}
+
+.hidden {
+	display: none;
+}

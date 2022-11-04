@@ -18,21 +18,6 @@
 		<!-- TODO: Update description -->
 		<meta name="copyright" content="© 2020 Manuel Hamel Photography" />
 
-		<!--Open Graph-->
-		<meta property="og:title" content="Manuel Hamel Photography" />
-		<meta property="og:type" content="website" />
-		<meta property="og:url" content="https://mh-photography.com" />
-		<meta property="og:description" content="Hello, I'm Manuel, photographer & traveler..." />
-		<!-- TODO: Replace image -->
-		<!-- <meta property="og:image" content="https://mh-photography.com/assets/images/layout/intro.jpg" /> -->
-		<!--Twitter Card-->
-		<meta name="twitter:card" content="summary" />
-		<meta name="twitter:title" content="Manuel Hamel Photography" />
-		<meta name="twitter:description" content="Hello I'm Manuel, photographer & traveler..." />
-		<meta name="twitter:url" content="https://mh-photography.com" />
-		<!-- TODO: Replace image -->
-		<!-- <meta name="twitter:image" content="https://mh-photography.com/assets/images/layout/intro.jpg" /> -->
-
 		<!-- Icons -->
 		<!-- TODO: Replace image -->
 		<!-- <link rel="shortcut icon" href="favicon.ico" />
@@ -40,17 +25,21 @@
 		<link rel="icon" type="image/ico" href="favicon.ico" />
 		<link rel="apple-touch-icon" href="assets/icons/logo_small180.png" /> -->
 
-		<!-- Geolocation -->
-		<meta name="geo.region" content="ES" />
-		<meta name="geo.placename" content="Barcelona" />
-		<meta name="geo.position" content="41.3814424;2.1568902" />
-		<meta name="ICBM" content="41.3814424, 2.1568902" />
+		{{> head/geolocation}}
 
 		<!-- imports -->
-		<link rel="stylesheet" href="/styles/style.css" />
+		<link rel="stylesheet" href="/styles/styles.css" />
 	</head>
 	<body>
-		Manuel Hamel Photograhpy
-		<script type="module" src="/main.js"></script>
+		<a href="#main" class="screen-reader-text" data-i18n="skip-link">Jump to main content</a>
+		<header id="header">{{> header }}</header>
+		<nav id="navigation">{{> navigation }}</nav>
+		<main id="main">
+			<section id="photos">{{> photos }}</section>
+			<section id="about">{{> about }}</section>
+			<section id="contact">{{> contact }}</section>
+		</main>
+		<footer id="footer">{{> navigation }}</footer>
+		<script type="module" src="/index.js" async></script>
 	</body>
 </html>

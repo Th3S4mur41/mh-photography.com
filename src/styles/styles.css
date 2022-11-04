@@ -1,3 +1,23 @@
-:root {
-	color-scheme: dark light;
-}
+/**
+ * Global Styleguide CSS file
+ *
+ * This file should only contain imports
+ */
+
+/* Settings */
+
+/* @import url('settings/colors.css');
+@import url('settings/fonts.css');
+@import url('settings/settings.css'); */
+
+/* Base */
+@import url('~/cssremedy/css/remedy.css');
+
+/* Layouts */
+
+/* Elements */
+
+/* Components */
+
+/* Utils */
+@import url('utils/utils.css');
