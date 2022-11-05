@@ -16,10 +16,12 @@
 /* Layouts */
 @import url('layout/header.css');
 @import url('layout/navigation.css');
+@import url('layout/about.css');
 @import url('layout/footer.css');
 
 /* Elements */
 @import url('elements/a.css');
+@import url('elements/p.css');
 @import url('elements/svg.css');
 
 /* Components */

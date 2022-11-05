@@ -1,0 +1,4 @@
+p {
+	max-block-size: var(--max-line-length);
+	text-align: justify;
+}
