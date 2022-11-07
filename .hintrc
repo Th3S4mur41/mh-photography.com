@@ -21,7 +21,7 @@
 		"compat-api/html": [
 			"error",
 			{
-				"ignore": ["meta[name=theme-color]"]
+				"ignore": ["img[loading]", "meta[name=theme-color]"]
 			}
 		]
 	}
