@@ -19,7 +19,7 @@
 			object-fit: cover;
 		}
 		& > .subtitle {
-			margin-inline: var(--spacing-l);
+			padding-inline: var(--spacing-m);
 			font-size: var(--font-size-xl);
 			text-align: center;
 		}

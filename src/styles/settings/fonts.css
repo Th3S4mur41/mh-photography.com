@@ -5,7 +5,7 @@
 	--font-family-monospace: monospace;
 
 	/* stylelint-disable-next-line media-feature-name-no-unknown */
-	@media (prefers-redduced-data: no-preference) {
+	@media (prefers-reduced-data: no-preference) {
 		--font-family: 'Titillium Web', sans-serif; /* TODO: Add improved fallback */
 
 		/* --font-family-monospace: 'Cascadia Code', 'Cascadia Code-fallback', monospace; */
@@ -19,6 +19,7 @@
 	--font-size-header-xl: clamp(3.5rem, 12vw, 10rem);
 
 	/* font weight */
+	--font-weight-light: 300;
 	--font-weight-normal: 400;
 	--font-weight-semi-bold: 600;
 	--font-weight-bold: 700;
