@@ -1,0 +1,32 @@
+/**
+ * styles/layout/footer.css
+ */
+
+#contact {
+	display: grid;
+	grid-template: 'header' auto 'vcard' 1fr;
+	min-block-size: 100dvb;
+	gap: var(--spacing-l);
+
+	& > header {
+		display: flex;
+		grid-area: header;
+		flex-direction: column;
+		gap: var(--spacing-l);
+
+		& img {
+			max-block-size: 30dvb;
+			object-fit: cover;
+		}
+		& > .subtitle {
+			margin-inline: var(--spacing-l);
+			font-size: var(--font-size-xl);
+			text-align: center;
+		}
+	}
+	& > .vcard {
+		grid-area: vcard;
+		align-self: center;
+		margin-inline: var(--spacing-l);
+	}
+}

@@ -1,0 +1,27 @@
+.vcard {
+	display: grid;
+	grid-template:
+		'photo name'
+		'photo address'
+		'photo phone'
+		'photo email'
+		'photo url';
+	gap: var(--spacing-m) var(--spacing-l);
+
+	& > .photo {
+		grid-area: photo;
+		block-size: auto;
+		max-inline-size: 5em;
+		border: 2px solid currentcolor;
+		border-radius: 50%;
+		justify-self: end;
+	}
+	& > .fn {
+		grid-area: name;
+		font-size: var(--font-size-l);
+		font-weight: var(--font-weight-bold);
+	}
+	& > .adr {
+		grid-area: address;
+	}
+}

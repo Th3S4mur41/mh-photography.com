@@ -12,11 +12,13 @@
 /* Base */
 @import url('~/cssremedy/css/remedy.css');
 @import url('base/base.css');
+@import url('base/vcard.css');
 
 /* Layouts */
 @import url('layout/header.css');
 @import url('layout/navigation.css');
 @import url('layout/about.css');
+@import url('layout/contact.css');
 @import url('layout/footer.css');
 
 /* Elements */
