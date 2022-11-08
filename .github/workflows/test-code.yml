@@ -40,6 +40,7 @@ jobs:
         continue-on-error: true # There won't be an artifact in workflow without build job
         with:
           name: build
+          path: dist
 
       - name: '🧫 Run tests'
         run: npm run test --if-present
