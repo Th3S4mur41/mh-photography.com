@@ -41,7 +41,7 @@
 		"eslint-plugin-compat": "^4.0.2",
 		"hint": "^7.1.2",
 		"html-loader": "^4.2.0",
-		"husky": "^8.0.1",
+		"husky": "^8.0.2",
 		"postcss": "^8.4.18",
 		"postcss-loader": "^7.0.1",
 		"postcss-nesting": "^10.2.0",
