@@ -5,14 +5,20 @@
 #header {
 	display: grid;
 	grid-template:
-		'image' 1fr
-		'title'
-		'subtitle';
-	justify-items: center;
-	min-block-size: 100dvb;
+		[image-start] '.' 1fr
+		'title' auto [image-end]
+		'subtitle' auto;
+	justify-items: stretch;
+	align-items: end;
+	block-size: 100svb;
 
 	& > h1 {
+		display: flex;
 		grid-area: title;
+		justify-content: center;
+		margin: 0;
+		padding-block: var(--spacing-m);
+		background: linear-gradient(to top, var(--color-bg) 50%, transparent);
 
 		& > svg {
 			inline-size: min(80vw, 50rem);
@@ -22,5 +28,17 @@
 		grid-area: subtitle;
 		margin-block-end: var(--spacing-m);
 		color: var(--color-onbg-subtle);
+		text-align: center;
+	}
+	& > .hero {
+		z-index: -1;
+		grid-area: image / 1;
+		align-self: stretch;
+
+		& > img {
+			block-size: 100%;
+			inline-size: 100%;
+			object-fit: cover;
+		}
 	}
 }
