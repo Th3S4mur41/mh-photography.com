@@ -6,7 +6,7 @@
 	display: flex;
 	flex-wrap: wrap;
 	align-content: center;
-	min-block-size: 100dvb;
+	min-block-size: 100lvb;
 	padding-block: var(--spacing-l);
 	padding-inline: var(--spacing-m);
 	gap: var(--spacing-m);
@@ -16,7 +16,7 @@
 		flex-direction: column;
 		flex-grow: 1;
 		inline-size: 30%;
-		min-inline-size: min(300px, 100dvb);
+		min-inline-size: min(300px, 100lvb);
 		text-align: center;
 		text-decoration: none;
 

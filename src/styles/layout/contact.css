@@ -5,7 +5,7 @@
 #contact {
 	display: grid;
 	grid-template: 'header' auto 'vcard' 1fr;
-	min-block-size: 100dvb;
+	min-block-size: 100lvb;
 	gap: var(--spacing-l);
 
 	& > header {
@@ -15,7 +15,7 @@
 		gap: var(--spacing-l);
 
 		& img {
-			max-block-size: 30dvb;
+			max-block-size: 30lvb;
 			object-fit: cover;
 		}
 		& > .subtitle {
