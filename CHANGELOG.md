@@ -1,3 +1,10 @@
+# [1.0.0-alpha.2](https://github.com/Th3S4mur41/mh-photography.com/compare/v1.0.0-alpha.1...v1.0.0-alpha.2) (2022-11-09)
+
+
+### Bug Fixes
+
+* **footer:** social icons ([257d570](https://github.com/Th3S4mur41/mh-photography.com/commit/257d5703e058e50c61b937643ca39d95afb7a77f))
+
 # 1.0.0-alpha.1 (2022-11-08)
 
 
