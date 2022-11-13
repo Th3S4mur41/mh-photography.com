@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="HandheldFriendly" content="false" />
+		<meta name="color-scheme" content="dark light" />
+		<link rel="manifest" href="manifest.webmanifest" />
+
+		<title>{{context.title}} | Manuel Hamel Photography</title>
+		<meta name="author" content="Manuel Hamel" />
+		<meta
+			name="keywords"
+			content="photography, Manuel Hamel, photoshop, studio, photo, art, artistic, pictures, photographer"
+		/>
+		<!-- TODO: Update descriptkeywordsion -->
+		<meta name="description" content="Hello, I'm Manuel, photographer & traveler..." />
+		<!-- TODO: Update description -->
+		<meta name="copyright" content="© 2020 Manuel Hamel Photography" />
+
+		<!-- Icons -->
+		<!-- TODO: Replace image -->
+		<!-- <link rel="shortcut icon" href="favicon.ico" />
+		<link rel="icon" type="image/svg+xml" href="mh-photography.svg" />
+		<link rel="icon" type="image/ico" href="favicon.ico" />
+		<link rel="apple-touch-icon" href="assets/icons/logo_small180.png" /> -->
+
+		{{> head/geolocation}}
+
+		<!-- imports -->
+		<link rel="stylesheet" href="/styles/styles.css" />
+	</head>
+	<body>
+		<a href="#main" class="screen-reader-text" data-i18n="skip-link">Jump to main content</a>
+		{{> navigation }}
+		<main id="main" class="album">{{> album context}}</main>
+		<footer id="footer">{{> footer}} {{> navigation }}</footer>
+	</body>
+</html>

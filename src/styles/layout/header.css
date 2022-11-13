@@ -10,6 +10,7 @@
 		'subtitle' auto;
 	justify-items: stretch;
 	align-items: end;
+	block-size: 100vh; /* fallback */
 	block-size: 100svb;
 
 	& > h1 {

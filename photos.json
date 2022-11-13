@@ -1,0 +1,758 @@
+{
+	"business": {
+		"path": "../assets/img/albums/business",
+		"images": {
+			"CR2.jpg": { "path": "../assets/img/albums/business/CR2.jpg", "width": 5120, "height": 3413 },
+			"DJI_0087.jpg": { "path": "../assets/img/albums/business/DJI_0087.jpg", "width": 3252, "height": 1950 },
+			"Gent2.jpg": { "path": "../assets/img/albums/business/Gent2.jpg", "width": 3597, "height": 5395 },
+			"HMnS-1April012.jpg": {
+				"path": "../assets/img/albums/business/HMnS-1April012.jpg",
+				"width": 6189,
+				"height": 2743
+			},
+			"HMnS-1April089.jpg": {
+				"path": "../assets/img/albums/business/HMnS-1April089.jpg",
+				"width": 6240,
+				"height": 4160
+			},
+			"HMnS-3April014.jpg": {
+				"path": "../assets/img/albums/business/HMnS-3April014.jpg",
+				"width": 5631,
+				"height": 3754
+			},
+			"IMG_1102.jpg": { "path": "../assets/img/albums/business/IMG_1102.jpg", "width": 5529, "height": 3686 },
+			"IMG_1141.jpg": { "path": "../assets/img/albums/business/IMG_1141.jpg", "width": 5291, "height": 3527 },
+			"IMG_1833.jpg": { "path": "../assets/img/albums/business/IMG_1833.jpg", "width": 4594, "height": 3063 },
+			"IMG_1840.jpg": { "path": "../assets/img/albums/business/IMG_1840.jpg", "width": 4443, "height": 2962 },
+			"IMG_3089.jpg": { "path": "../assets/img/albums/business/IMG_3089.jpg", "width": 4830, "height": 3646 },
+			"IMG_3116.jpg": { "path": "../assets/img/albums/business/IMG_3116.jpg", "width": 5616, "height": 3744 },
+			"IMG_3841.jpg": { "path": "../assets/img/albums/business/IMG_3841.jpg", "width": 5486, "height": 3657 },
+			"IMG_3853.jpg": { "path": "../assets/img/albums/business/IMG_3853.jpg", "width": 5534, "height": 3689 },
+			"IMG_4068.jpg": { "path": "../assets/img/albums/business/IMG_4068.jpg", "width": 5756, "height": 3836 },
+			"IMG_8092.jpg": { "path": "../assets/img/albums/business/IMG_8092.jpg", "width": 5383, "height": 3588 },
+			"IMG_8798.jpg": { "path": "../assets/img/albums/business/IMG_8798.jpg", "width": 5203, "height": 2704 },
+			"IMG_9655.jpg": { "path": "../assets/img/albums/business/IMG_9655.jpg", "width": 5199, "height": 3466 },
+			"IMG_9666.jpg": { "path": "../assets/img/albums/business/IMG_9666.jpg", "width": 6240, "height": 4160 },
+			"IMG_9674.jpg": { "path": "../assets/img/albums/business/IMG_9674.jpg", "width": 3924, "height": 5886 },
+			"Pictures5.jpg": { "path": "../assets/img/albums/business/Pictures5.jpg", "width": 3000, "height": 1502 },
+			"Pictures6.jpg": { "path": "../assets/img/albums/business/Pictures6.jpg", "width": 5120, "height": 3620 }
+		}
+	},
+	"families-and-kids": {
+		"path": "../assets/img/albums/families-and-kids",
+		"images": {
+			"046.jpg": { "path": "../assets/img/albums/families-and-kids/046.jpg", "width": 5701, "height": 3829 },
+			"047.jpg": { "path": "../assets/img/albums/families-and-kids/047.jpg", "width": 5616, "height": 3744 },
+			"050.jpg": { "path": "../assets/img/albums/families-and-kids/050.jpg", "width": 1280, "height": 847 },
+			"054.jpg": { "path": "../assets/img/albums/families-and-kids/054.jpg", "width": 5616, "height": 3744 },
+			"055.jpg": { "path": "../assets/img/albums/families-and-kids/055.jpg", "width": 6240, "height": 4160 },
+			"060.jpg": { "path": "../assets/img/albums/families-and-kids/060.jpg", "width": 3744, "height": 5616 },
+			"IMG_0182.jpg": { "path": "../assets/img/albums/families-and-kids/IMG_0182.jpg", "width": 5249, "height": 3499 },
+			"IMG_1101.jpg": { "path": "../assets/img/albums/families-and-kids/IMG_1101.jpg", "width": 5691, "height": 3794 },
+			"IMG_3359.jpg": { "path": "../assets/img/albums/families-and-kids/IMG_3359.jpg", "width": 5590, "height": 3727 },
+			"IMG_5422-2.jpg": {
+				"path": "../assets/img/albums/families-and-kids/IMG_5422-2.jpg",
+				"width": 5616,
+				"height": 3744
+			},
+			"IMG_5639-2.jpg": {
+				"path": "../assets/img/albums/families-and-kids/IMG_5639-2.jpg",
+				"width": 5616,
+				"height": 3744
+			},
+			"IMG_6706.jpg": { "path": "../assets/img/albums/families-and-kids/IMG_6706.jpg", "width": 4680, "height": 3120 },
+			"IMG_7834.jpg": { "path": "../assets/img/albums/families-and-kids/IMG_7834.jpg", "width": 4109, "height": 2739 },
+			"IMG_8005.jpg": { "path": "../assets/img/albums/families-and-kids/IMG_8005.jpg", "width": 4294, "height": 2569 },
+			"IMG_8169.jpg": { "path": "../assets/img/albums/families-and-kids/IMG_8169.jpg", "width": 4068, "height": 2712 },
+			"IMG_8555.jpg": { "path": "../assets/img/albums/families-and-kids/IMG_8555.jpg", "width": 4625, "height": 2839 },
+			"IMG_8603.jpg": { "path": "../assets/img/albums/families-and-kids/IMG_8603.jpg", "width": 4680, "height": 3120 },
+			"IMG_9418.jpg": { "path": "../assets/img/albums/families-and-kids/IMG_9418.jpg", "width": 4680, "height": 2657 },
+			"IMG_9944.jpg": { "path": "../assets/img/albums/families-and-kids/IMG_9944.jpg", "width": 5700, "height": 3800 }
+		}
+	},
+	"people-and-lifestyle": {
+		"path": "../assets/img/albums/people-and-lifestyle",
+		"images": {
+			"003.jpg": { "path": "../assets/img/albums/people-and-lifestyle/003.jpg", "width": 2048, "height": 1365 },
+			"004.jpg": { "path": "../assets/img/albums/people-and-lifestyle/004.jpg", "width": 5616, "height": 3744 },
+			"010.jpg": { "path": "../assets/img/albums/people-and-lifestyle/010.jpg", "width": 1965, "height": 1310 },
+			"012.jpg": { "path": "../assets/img/albums/people-and-lifestyle/012.jpg", "width": 4680, "height": 3120 },
+			"073.jpg": { "path": "../assets/img/albums/people-and-lifestyle/073.jpg", "width": 3593, "height": 5391 },
+			"074.jpg": { "path": "../assets/img/albums/people-and-lifestyle/074.jpg", "width": 3744, "height": 5616 },
+			"079.jpg": { "path": "../assets/img/albums/people-and-lifestyle/079.jpg", "width": 3744, "height": 5616 },
+			"088.jpg": { "path": "../assets/img/albums/people-and-lifestyle/088.jpg", "width": 3600, "height": 5486 },
+			"093.jpg": { "path": "../assets/img/albums/people-and-lifestyle/093.jpg", "width": 6009, "height": 4006 },
+			"097.jpg": { "path": "../assets/img/albums/people-and-lifestyle/097.jpg", "width": 5616, "height": 3744 },
+			"100.jpg": { "path": "../assets/img/albums/people-and-lifestyle/100.jpg", "width": 3813, "height": 5685 },
+			"101.jpg": { "path": "../assets/img/albums/people-and-lifestyle/101.jpg", "width": 5441, "height": 3627 },
+			"105.jpg": { "path": "../assets/img/albums/people-and-lifestyle/105.jpg", "width": 1315, "height": 1632 },
+			"116153988_3172660796155066_8506457083238070139_n.jpeg": {
+				"path": "../assets/img/albums/people-and-lifestyle/116153988_3172660796155066_8506457083238070139_n.jpeg",
+				"width": 2048,
+				"height": 1250
+			},
+			"12068478_876934735727695_8230515193361860674_o.jpeg": {
+				"path": "../assets/img/albums/people-and-lifestyle/12068478_876934735727695_8230515193361860674_o.jpeg",
+				"width": 2048,
+				"height": 1366
+			},
+			"12778939_947755631978938_6782568608213731006_o.jpeg": {
+				"path": "../assets/img/albums/people-and-lifestyle/12778939_947755631978938_6782568608213731006_o.jpeg",
+				"width": 2032,
+				"height": 1078
+			},
+			"14310353_1081626298591870_521546171039646376_o.jpeg": {
+				"path": "../assets/img/albums/people-and-lifestyle/14310353_1081626298591870_521546171039646376_o.jpeg",
+				"width": 2048,
+				"height": 1365
+			},
+			"16-2.jpg": { "path": "../assets/img/albums/people-and-lifestyle/16-2.jpg", "width": 3744, "height": 5616 },
+			"89914048_2818866751534474_4537578956190121984_n.jpeg": {
+				"path": "../assets/img/albums/people-and-lifestyle/89914048_2818866751534474_4537578956190121984_n.jpeg",
+				"width": 2048,
+				"height": 1365
+			},
+			"90260913_2818867144867768_1227091909021794304_n.jpeg": {
+				"path": "../assets/img/albums/people-and-lifestyle/90260913_2818867144867768_1227091909021794304_n.jpeg",
+				"width": 2048,
+				"height": 1104
+			},
+			"90516169_2818867094867773_8707326708308508672_n.jpeg": {
+				"path": "../assets/img/albums/people-and-lifestyle/90516169_2818867094867773_8707326708308508672_n.jpeg",
+				"width": 1365,
+				"height": 2048
+			},
+			"IMG_0195.jpg": {
+				"path": "../assets/img/albums/people-and-lifestyle/IMG_0195.jpg",
+				"width": 6055,
+				"height": 4037
+			},
+			"IMG_0751-2.jpg": {
+				"path": "../assets/img/albums/people-and-lifestyle/IMG_0751-2.jpg",
+				"width": 6240,
+				"height": 4160
+			},
+			"IMG_0839-2.jpg": {
+				"path": "../assets/img/albums/people-and-lifestyle/IMG_0839-2.jpg",
+				"width": 3859,
+				"height": 5788
+			},
+			"IMG_1857.jpg": {
+				"path": "../assets/img/albums/people-and-lifestyle/IMG_1857.jpg",
+				"width": 3707,
+				"height": 5560
+			},
+			"IMG_3966.jpg": {
+				"path": "../assets/img/albums/people-and-lifestyle/IMG_3966.jpg",
+				"width": 3744,
+				"height": 5616
+			},
+			"IMG_4024.jpg": {
+				"path": "../assets/img/albums/people-and-lifestyle/IMG_4024.jpg",
+				"width": 3744,
+				"height": 5616
+			},
+			"IMG_5846-2.jpg": {
+				"path": "../assets/img/albums/people-and-lifestyle/IMG_5846-2.jpg",
+				"width": 5472,
+				"height": 3649
+			},
+			"IMG_6576.jpg": {
+				"path": "../assets/img/albums/people-and-lifestyle/IMG_6576.jpg",
+				"width": 4495,
+				"height": 2684
+			},
+			"IMG_6688.jpg": {
+				"path": "../assets/img/albums/people-and-lifestyle/IMG_6688.jpg",
+				"width": 2814,
+				"height": 4221
+			},
+			"IMG_6735.jpg": {
+				"path": "../assets/img/albums/people-and-lifestyle/IMG_6735.jpg",
+				"width": 5579,
+				"height": 4160
+			},
+			"IMG_6885.jpg": {
+				"path": "../assets/img/albums/people-and-lifestyle/IMG_6885.jpg",
+				"width": 3515,
+				"height": 5273
+			},
+			"IMG_7011-2.jpg": {
+				"path": "../assets/img/albums/people-and-lifestyle/IMG_7011-2.jpg",
+				"width": 3685,
+				"height": 5528
+			},
+			"IMG_7087.jpg": {
+				"path": "../assets/img/albums/people-and-lifestyle/IMG_7087.jpg",
+				"width": 3381,
+				"height": 5071
+			},
+			"IMG_7299.jpg": {
+				"path": "../assets/img/albums/people-and-lifestyle/IMG_7299.jpg",
+				"width": 5917,
+				"height": 3945
+			},
+			"IMG_7302.jpg": {
+				"path": "../assets/img/albums/people-and-lifestyle/IMG_7302.jpg",
+				"width": 5642,
+				"height": 3761
+			},
+			"IMG_7664.jpg": {
+				"path": "../assets/img/albums/people-and-lifestyle/IMG_7664.jpg",
+				"width": 4680,
+				"height": 3120
+			},
+			"IMG_7707.jpg": {
+				"path": "../assets/img/albums/people-and-lifestyle/IMG_7707.jpg",
+				"width": 5197,
+				"height": 2936
+			},
+			"IMG_7747.jpg": {
+				"path": "../assets/img/albums/people-and-lifestyle/IMG_7747.jpg",
+				"width": 2912,
+				"height": 4368
+			},
+			"IMG_7758.jpg": {
+				"path": "../assets/img/albums/people-and-lifestyle/IMG_7758.jpg",
+				"width": 5921,
+				"height": 3947
+			},
+			"IMG_7771.jpg": {
+				"path": "../assets/img/albums/people-and-lifestyle/IMG_7771.jpg",
+				"width": 4680,
+				"height": 3120
+			},
+			"IMG_7831.jpg": {
+				"path": "../assets/img/albums/people-and-lifestyle/IMG_7831.jpg",
+				"width": 6240,
+				"height": 4160
+			},
+			"IMG_7929.jpg": {
+				"path": "../assets/img/albums/people-and-lifestyle/IMG_7929.jpg",
+				"width": 6240,
+				"height": 4160
+			},
+			"IMG_7987.jpg": {
+				"path": "../assets/img/albums/people-and-lifestyle/IMG_7987.jpg",
+				"width": 4850,
+				"height": 3233
+			},
+			"IMG_7997.jpg": {
+				"path": "../assets/img/albums/people-and-lifestyle/IMG_7997.jpg",
+				"width": 6240,
+				"height": 4160
+			},
+			"IMG_8218.jpg": {
+				"path": "../assets/img/albums/people-and-lifestyle/IMG_8218.jpg",
+				"width": 5500,
+				"height": 3667
+			},
+			"IMG_8240.jpg": {
+				"path": "../assets/img/albums/people-and-lifestyle/IMG_8240.jpg",
+				"width": 6240,
+				"height": 4160
+			},
+			"IMG_8279.jpg": {
+				"path": "../assets/img/albums/people-and-lifestyle/IMG_8279.jpg",
+				"width": 6240,
+				"height": 3918
+			},
+			"IMG_8421.jpg": {
+				"path": "../assets/img/albums/people-and-lifestyle/IMG_8421.jpg",
+				"width": 4074,
+				"height": 6111
+			},
+			"IMG_8467.jpg": {
+				"path": "../assets/img/albums/people-and-lifestyle/IMG_8467.jpg",
+				"width": 6240,
+				"height": 4160
+			},
+			"IMG_8519.jpg": {
+				"path": "../assets/img/albums/people-and-lifestyle/IMG_8519.jpg",
+				"width": 6170,
+				"height": 4113
+			},
+			"IMG_8574.jpg": {
+				"path": "../assets/img/albums/people-and-lifestyle/IMG_8574.jpg",
+				"width": 5292,
+				"height": 3528
+			},
+			"IMG_8590.jpg": {
+				"path": "../assets/img/albums/people-and-lifestyle/IMG_8590.jpg",
+				"width": 3744,
+				"height": 5616
+			},
+			"IMG_8674.jpg": {
+				"path": "../assets/img/albums/people-and-lifestyle/IMG_8674.jpg",
+				"width": 3524,
+				"height": 5287
+			},
+			"IMG_8780.jpg": {
+				"path": "../assets/img/albums/people-and-lifestyle/IMG_8780.jpg",
+				"width": 5872,
+				"height": 3915
+			},
+			"IMG_8863.jpg": {
+				"path": "../assets/img/albums/people-and-lifestyle/IMG_8863.jpg",
+				"width": 3973,
+				"height": 5959
+			},
+			"IMG_8876.jpg": {
+				"path": "../assets/img/albums/people-and-lifestyle/IMG_8876.jpg",
+				"width": 6018,
+				"height": 3415
+			},
+			"IMG_9001.jpg": {
+				"path": "../assets/img/albums/people-and-lifestyle/IMG_9001.jpg",
+				"width": 4160,
+				"height": 6240
+			},
+			"IMG_9251.jpg": {
+				"path": "../assets/img/albums/people-and-lifestyle/IMG_9251.jpg",
+				"width": 5238,
+				"height": 3492
+			},
+			"IMG_9290.jpg": {
+				"path": "../assets/img/albums/people-and-lifestyle/IMG_9290.jpg",
+				"width": 2803,
+				"height": 4205
+			},
+			"IMG_9761.jpg": {
+				"path": "../assets/img/albums/people-and-lifestyle/IMG_9761.jpg",
+				"width": 5432,
+				"height": 3621
+			},
+			"IMG_9831.jpg": {
+				"path": "../assets/img/albums/people-and-lifestyle/IMG_9831.jpg",
+				"width": 5816,
+				"height": 3710
+			},
+			"IMG_9850.jpg": {
+				"path": "../assets/img/albums/people-and-lifestyle/IMG_9850.jpg",
+				"width": 5616,
+				"height": 3744
+			},
+			"IMG_9892.jpg": {
+				"path": "../assets/img/albums/people-and-lifestyle/IMG_9892.jpg",
+				"width": 6240,
+				"height": 4160
+			},
+			"IMG_9893.jpg": {
+				"path": "../assets/img/albums/people-and-lifestyle/IMG_9893.jpg",
+				"width": 6240,
+				"height": 4160
+			}
+		}
+	},
+	"travel": {
+		"path": "../assets/img/albums/travel",
+		"images": {
+			"106-2.jpg": { "path": "../assets/img/albums/travel/106-2.jpg", "width": 5518, "height": 3532 },
+			"110-2.jpg": { "path": "../assets/img/albums/travel/110-2.jpg", "width": 5339, "height": 3543 },
+			"111-2.jpg": { "path": "../assets/img/albums/travel/111-2.jpg", "width": 5616, "height": 3399 },
+			"112-2.jpg": { "path": "../assets/img/albums/travel/112-2.jpg", "width": 5616, "height": 3452 },
+			"116-2.jpg": { "path": "../assets/img/albums/travel/116-2.jpg", "width": 2326, "height": 3559 },
+			"117.jpg": { "path": "../assets/img/albums/travel/117.jpg", "width": 5616, "height": 3439 },
+			"120-2.jpg": { "path": "../assets/img/albums/travel/120-2.jpg", "width": 5776, "height": 4003 },
+			"123.jpg": { "path": "../assets/img/albums/travel/123.jpg", "width": 5930, "height": 3432 },
+			"124-2.jpg": { "path": "../assets/img/albums/travel/124-2.jpg", "width": 5859, "height": 3714 },
+			"128-2.jpg": { "path": "../assets/img/albums/travel/128-2.jpg", "width": 5583, "height": 3167 },
+			"129-2 2.jpg": { "path": "../assets/img/albums/travel/129-2 2.jpg", "width": 6132, "height": 4015 },
+			"File 5.jpg": { "path": "../assets/img/albums/travel/File 5.jpg", "width": 3072, "height": 4608 },
+			"IMG_3182.jpg": { "path": "../assets/img/albums/travel/IMG_3182.jpg", "width": 5558, "height": 3170 },
+			"IMG_3223.jpg": { "path": "../assets/img/albums/travel/IMG_3223.jpg", "width": 5418, "height": 3277 },
+			"IMG_3247-2.jpg": { "path": "../assets/img/albums/travel/IMG_3247-2.jpg", "width": 5604, "height": 3736 },
+			"IMG_3409.jpg": { "path": "../assets/img/albums/travel/IMG_3409.jpg", "width": 2549, "height": 3744 },
+			"IMG_3430.jpg": { "path": "../assets/img/albums/travel/IMG_3430.jpg", "width": 5616, "height": 3287 },
+			"IMG_3471.jpg": { "path": "../assets/img/albums/travel/IMG_3471.jpg", "width": 4917, "height": 2826 },
+			"IMG_3626.jpg": { "path": "../assets/img/albums/travel/IMG_3626.jpg", "width": 5341, "height": 3232 },
+			"IMG_3696 2.jpg": { "path": "../assets/img/albums/travel/IMG_3696 2.jpg", "width": 5616, "height": 3744 },
+			"IMG_3807.jpg": { "path": "../assets/img/albums/travel/IMG_3807.jpg", "width": 6011, "height": 3249 },
+			"IMG_3843-2.jpg": { "path": "../assets/img/albums/travel/IMG_3843-2.jpg", "width": 4160, "height": 6240 },
+			"IMG_4084-2.jpg": { "path": "../assets/img/albums/travel/IMG_4084-2.jpg", "width": 3744, "height": 5616 },
+			"IMG_4424-2 copy.jpg": {
+				"path": "../assets/img/albums/travel/IMG_4424-2 copy.jpg",
+				"width": 4585,
+				"height": 3057
+			},
+			"IMG_6001-2 2.jpg": { "path": "../assets/img/albums/travel/IMG_6001-2 2.jpg", "width": 6050, "height": 4033 },
+			"IMG_6037-2.jpg": { "path": "../assets/img/albums/travel/IMG_6037-2.jpg", "width": 6238, "height": 4159 },
+			"IMG_6431.jpg": { "path": "../assets/img/albums/travel/IMG_6431.jpg", "width": 5708, "height": 3759 },
+			"IMG_6488-2.jpg": { "path": "../assets/img/albums/travel/IMG_6488-2.jpg", "width": 6147, "height": 3347 },
+			"IMG_6524-2.jpg": { "path": "../assets/img/albums/travel/IMG_6524-2.jpg", "width": 5606, "height": 2915 },
+			"IMG_6725.jpg": { "path": "../assets/img/albums/travel/IMG_6725.jpg", "width": 2733, "height": 4100 },
+			"IMG_6793.jpg": { "path": "../assets/img/albums/travel/IMG_6793.jpg", "width": 6195, "height": 4130 },
+			"IMG_7148-2 2.jpg": { "path": "../assets/img/albums/travel/IMG_7148-2 2.jpg", "width": 5810, "height": 3647 },
+			"IMG_9503.jpg": { "path": "../assets/img/albums/travel/IMG_9503.jpg", "width": 5616, "height": 3744 },
+			"IMG_9982_edited.jpg": {
+				"path": "../assets/img/albums/travel/IMG_9982_edited.jpg",
+				"width": 5527,
+				"height": 3257
+			}
+		}
+	},
+	"weddings": {
+		"path": "../assets/img/albums/weddings",
+		"images": {
+			"018.jpg": { "path": "../assets/img/albums/weddings/018.jpg", "width": 5733, "height": 3862 },
+			"024.jpg": { "path": "../assets/img/albums/weddings/024.jpg", "width": 6240, "height": 4160 },
+			"026.jpg": { "path": "../assets/img/albums/weddings/026.jpg", "width": 6164, "height": 4109 },
+			"040.jpg": { "path": "../assets/img/albums/weddings/040.jpg", "width": 3744, "height": 5616 },
+			"49180788_1965578083530016_442188027247198208_n.jpeg": {
+				"path": "../assets/img/albums/weddings/49180788_1965578083530016_442188027247198208_n.jpeg",
+				"width": 2340,
+				"height": 955
+			},
+			"71203493_2404194823001671_9009006748777840640_n.jpeg": {
+				"path": "../assets/img/albums/weddings/71203493_2404194823001671_9009006748777840640_n.jpeg",
+				"width": 2048,
+				"height": 1365
+			},
+			"71402343_2404092229678597_84474872771641344_n.jpeg": {
+				"path": "../assets/img/albums/weddings/71402343_2404092229678597_84474872771641344_n.jpeg",
+				"width": 1365,
+				"height": 2048
+			},
+			"71567988_2404092223011931_6018431023551873024_n.jpeg": {
+				"path": "../assets/img/albums/weddings/71567988_2404092223011931_6018431023551873024_n.jpeg",
+				"width": 2048,
+				"height": 1365
+			},
+			"C & S-095.jpg": { "path": "../assets/img/albums/weddings/C & S-095.jpg", "width": 6240, "height": 4160 },
+			"C & S-101.jpg": { "path": "../assets/img/albums/weddings/C & S-101.jpg", "width": 6240, "height": 4160 },
+			"C & S-183.jpg": { "path": "../assets/img/albums/weddings/C & S-183.jpg", "width": 4160, "height": 6240 },
+			"C & S-188.jpg": { "path": "../assets/img/albums/weddings/C & S-188.jpg", "width": 6082, "height": 3673 },
+			"C & S-203.jpg": { "path": "../assets/img/albums/weddings/C & S-203.jpg", "width": 6240, "height": 4160 },
+			"C & S-341.jpg": { "path": "../assets/img/albums/weddings/C & S-341.jpg", "width": 4680, "height": 3120 },
+			"Chris&Manuel (223).jpg": {
+				"path": "../assets/img/albums/weddings/Chris&Manuel (223).jpg",
+				"width": 4117,
+				"height": 1978
+			},
+			"Chris&Manuel (225).jpg": {
+				"path": "../assets/img/albums/weddings/Chris&Manuel (225).jpg",
+				"width": 5612,
+				"height": 3741
+			},
+			"Chris&Manuel (52).jpg": {
+				"path": "../assets/img/albums/weddings/Chris&Manuel (52).jpg",
+				"width": 4283,
+				"height": 6362
+			},
+			"Chris&Manuel (546).jpg": {
+				"path": "../assets/img/albums/weddings/Chris&Manuel (546).jpg",
+				"width": 5343,
+				"height": 3977
+			},
+			"D&C160.jpg": { "path": "../assets/img/albums/weddings/D&C160.jpg", "width": 6240, "height": 4160 },
+			"D&C181.jpg": { "path": "../assets/img/albums/weddings/D&C181.jpg", "width": 6198, "height": 4132 },
+			"D&C382.jpg": { "path": "../assets/img/albums/weddings/D&C382.jpg", "width": 6240, "height": 2676 },
+			"Ellen & Pierre-113.jpg": {
+				"path": "../assets/img/albums/weddings/Ellen & Pierre-113.jpg",
+				"width": 4680,
+				"height": 3120
+			},
+			"Ellen & Pierre-131.jpg": {
+				"path": "../assets/img/albums/weddings/Ellen & Pierre-131.jpg",
+				"width": 3996,
+				"height": 5994
+			},
+			"Ellen & Pierre-322.jpg": {
+				"path": "../assets/img/albums/weddings/Ellen & Pierre-322.jpg",
+				"width": 5596,
+				"height": 3544
+			},
+			"Ellen & Pierre-376.jpg": {
+				"path": "../assets/img/albums/weddings/Ellen & Pierre-376.jpg",
+				"width": 6240,
+				"height": 4160
+			},
+			"Ellen & Pierre-394.jpg": {
+				"path": "../assets/img/albums/weddings/Ellen & Pierre-394.jpg",
+				"width": 6240,
+				"height": 4160
+			},
+			"Ellen & Pierre-405.jpg": {
+				"path": "../assets/img/albums/weddings/Ellen & Pierre-405.jpg",
+				"width": 6240,
+				"height": 4160
+			},
+			"Ellen & Pierre-408.jpg": {
+				"path": "../assets/img/albums/weddings/Ellen & Pierre-408.jpg",
+				"width": 6161,
+				"height": 3314
+			},
+			"Ellen & Pierre-416.jpg": {
+				"path": "../assets/img/albums/weddings/Ellen & Pierre-416.jpg",
+				"width": 6240,
+				"height": 4160
+			},
+			"Ellen & Pierre-70.jpg": {
+				"path": "../assets/img/albums/weddings/Ellen & Pierre-70.jpg",
+				"width": 4680,
+				"height": 3120
+			},
+			"Ellen & Pierre-715.jpg": {
+				"path": "../assets/img/albums/weddings/Ellen & Pierre-715.jpg",
+				"width": 4108,
+				"height": 2739
+			},
+			"Ellen & Pierre-79.jpg": {
+				"path": "../assets/img/albums/weddings/Ellen & Pierre-79.jpg",
+				"width": 4051,
+				"height": 3120
+			},
+			"Ellen & Pierre-98.jpg": {
+				"path": "../assets/img/albums/weddings/Ellen & Pierre-98.jpg",
+				"width": 3989,
+				"height": 2659
+			},
+			"Francoise&Pierre135.jpg": {
+				"path": "../assets/img/albums/weddings/Francoise&Pierre135.jpg",
+				"width": 5670,
+				"height": 3780
+			},
+			"IMG_0587.jpg": { "path": "../assets/img/albums/weddings/IMG_0587.jpg", "width": 3191, "height": 4787 },
+			"IMG_0801.jpg": { "path": "../assets/img/albums/weddings/IMG_0801.jpg", "width": 6240, "height": 4160 },
+			"IMG_0850.jpg": { "path": "../assets/img/albums/weddings/IMG_0850.jpg", "width": 4769, "height": 3179 },
+			"IMG_0997.jpg": { "path": "../assets/img/albums/weddings/IMG_0997.jpg", "width": 6240, "height": 4160 },
+			"IMG_1104.jpg": { "path": "../assets/img/albums/weddings/IMG_1104.jpg", "width": 4160, "height": 6240 },
+			"IMG_1154.jpg": { "path": "../assets/img/albums/weddings/IMG_1154.jpg", "width": 6240, "height": 4160 },
+			"IMG_1182.jpg": { "path": "../assets/img/albums/weddings/IMG_1182.jpg", "width": 5976, "height": 3984 },
+			"IMG_1255.jpg": { "path": "../assets/img/albums/weddings/IMG_1255.jpg", "width": 4019, "height": 6029 },
+			"IMG_3345.jpg": { "path": "../assets/img/albums/weddings/IMG_3345.jpg", "width": 6020, "height": 4013 },
+			"IMG_3513.jpg": { "path": "../assets/img/albums/weddings/IMG_3513.jpg", "width": 4160, "height": 6240 },
+			"IMG_3529.jpg": { "path": "../assets/img/albums/weddings/IMG_3529.jpg", "width": 6240, "height": 4160 },
+			"IMG_3532.jpg": { "path": "../assets/img/albums/weddings/IMG_3532.jpg", "width": 6240, "height": 4160 },
+			"IMG_3560.jpg": { "path": "../assets/img/albums/weddings/IMG_3560.jpg", "width": 6240, "height": 4160 },
+			"IMG_3631.jpg": { "path": "../assets/img/albums/weddings/IMG_3631.jpg", "width": 6088, "height": 4059 },
+			"IMG_3725.jpg": { "path": "../assets/img/albums/weddings/IMG_3725.jpg", "width": 5712, "height": 3808 },
+			"IMG_3729.jpg": { "path": "../assets/img/albums/weddings/IMG_3729.jpg", "width": 4108, "height": 6162 },
+			"IMG_3803.jpg": { "path": "../assets/img/albums/weddings/IMG_3803.jpg", "width": 3787, "height": 5681 },
+			"IMG_3869.jpg": { "path": "../assets/img/albums/weddings/IMG_3869.jpg", "width": 5675, "height": 3783 },
+			"IMG_3873.jpg": { "path": "../assets/img/albums/weddings/IMG_3873.jpg", "width": 6240, "height": 4160 },
+			"IMG_3899.jpg": { "path": "../assets/img/albums/weddings/IMG_3899.jpg", "width": 6240, "height": 4160 },
+			"IMG_3907.jpg": { "path": "../assets/img/albums/weddings/IMG_3907.jpg", "width": 6240, "height": 4160 },
+			"IMG_4026.jpg": { "path": "../assets/img/albums/weddings/IMG_4026.jpg", "width": 6240, "height": 4160 },
+			"IMG_4051.jpg": { "path": "../assets/img/albums/weddings/IMG_4051.jpg", "width": 6240, "height": 4160 },
+			"IMG_4054.jpg": { "path": "../assets/img/albums/weddings/IMG_4054.jpg", "width": 6240, "height": 4160 },
+			"IMG_4077.jpg": { "path": "../assets/img/albums/weddings/IMG_4077.jpg", "width": 6139, "height": 3230 },
+			"IMG_4080.jpg": { "path": "../assets/img/albums/weddings/IMG_4080.jpg", "width": 5282, "height": 3521 },
+			"IMG_4083.jpg": { "path": "../assets/img/albums/weddings/IMG_4083.jpg", "width": 6240, "height": 3160 },
+			"IMG_4264.jpg": { "path": "../assets/img/albums/weddings/IMG_4264.jpg", "width": 6240, "height": 4160 },
+			"IMG_4270.jpg": { "path": "../assets/img/albums/weddings/IMG_4270.jpg", "width": 6240, "height": 4160 },
+			"IMG_4349.jpg": { "path": "../assets/img/albums/weddings/IMG_4349.jpg", "width": 6240, "height": 4160 },
+			"IMG_4358.jpg": { "path": "../assets/img/albums/weddings/IMG_4358.jpg", "width": 6240, "height": 4160 },
+			"IMG_4366.jpg": { "path": "../assets/img/albums/weddings/IMG_4366.jpg", "width": 4061, "height": 6091 },
+			"IMG_4456.jpg": { "path": "../assets/img/albums/weddings/IMG_4456.jpg", "width": 6240, "height": 3581 },
+			"IMG_4521.jpg": { "path": "../assets/img/albums/weddings/IMG_4521.jpg", "width": 6123, "height": 4082 },
+			"IMG_4555.jpg": { "path": "../assets/img/albums/weddings/IMG_4555.jpg", "width": 6240, "height": 3545 },
+			"IMG_4592.jpg": { "path": "../assets/img/albums/weddings/IMG_4592.jpg", "width": 6240, "height": 4160 },
+			"IMG_4721.jpg": { "path": "../assets/img/albums/weddings/IMG_4721.jpg", "width": 6058, "height": 4039 },
+			"IMG_4728.jpg": { "path": "../assets/img/albums/weddings/IMG_4728.jpg", "width": 4680, "height": 3120 },
+			"IMG_5519.jpg": { "path": "../assets/img/albums/weddings/IMG_5519.jpg", "width": 4214, "height": 2417 },
+			"IMG_5523.jpg": { "path": "../assets/img/albums/weddings/IMG_5523.jpg", "width": 4933, "height": 3289 },
+			"IMG_5539.jpg": { "path": "../assets/img/albums/weddings/IMG_5539.jpg", "width": 3699, "height": 2405 },
+			"IMG_5592.jpg": { "path": "../assets/img/albums/weddings/IMG_5592.jpg", "width": 6240, "height": 4160 },
+			"IMG_5825.jpg": { "path": "../assets/img/albums/weddings/IMG_5825.jpg", "width": 6240, "height": 4160 },
+			"IMG_5837.jpg": { "path": "../assets/img/albums/weddings/IMG_5837.jpg", "width": 6240, "height": 4160 },
+			"IMG_6033.jpg": { "path": "../assets/img/albums/weddings/IMG_6033.jpg", "width": 4680, "height": 3120 },
+			"IMG_6824.jpg": { "path": "../assets/img/albums/weddings/IMG_6824.jpg", "width": 4213, "height": 2809 },
+			"IMG_6887.jpg": { "path": "../assets/img/albums/weddings/IMG_6887.jpg", "width": 4680, "height": 3120 },
+			"IMG_7610.jpg": { "path": "../assets/img/albums/weddings/IMG_7610.jpg", "width": 4160, "height": 6240 },
+			"IMG_7777.jpg": { "path": "../assets/img/albums/weddings/IMG_7777.jpg", "width": 6240, "height": 4160 },
+			"IMG_9019.jpg": { "path": "../assets/img/albums/weddings/IMG_9019.jpg", "width": 5501, "height": 3667 },
+			"IMG_9199.jpg": { "path": "../assets/img/albums/weddings/IMG_9199.jpg", "width": 5616, "height": 3744 },
+			"Manuela & Carsten-105.jpg": {
+				"path": "../assets/img/albums/weddings/Manuela & Carsten-105.jpg",
+				"width": 4680,
+				"height": 3120
+			},
+			"Manuela & Carsten-115.jpg": {
+				"path": "../assets/img/albums/weddings/Manuela & Carsten-115.jpg",
+				"width": 4680,
+				"height": 3120
+			},
+			"Manuela & Carsten-128.jpg": {
+				"path": "../assets/img/albums/weddings/Manuela & Carsten-128.jpg",
+				"width": 4680,
+				"height": 3120
+			},
+			"Manuela & Carsten-134.jpg": {
+				"path": "../assets/img/albums/weddings/Manuela & Carsten-134.jpg",
+				"width": 4680,
+				"height": 3120
+			},
+			"Manuela & Carsten-191.jpg": {
+				"path": "../assets/img/albums/weddings/Manuela & Carsten-191.jpg",
+				"width": 4680,
+				"height": 3120
+			},
+			"Manuela & Carsten-233.jpg": {
+				"path": "../assets/img/albums/weddings/Manuela & Carsten-233.jpg",
+				"width": 4680,
+				"height": 3120
+			},
+			"Manuela & Carsten-417.jpg": {
+				"path": "../assets/img/albums/weddings/Manuela & Carsten-417.jpg",
+				"width": 2859,
+				"height": 4288
+			},
+			"Mariella & Luca-091.jpg": {
+				"path": "../assets/img/albums/weddings/Mariella & Luca-091.jpg",
+				"width": 4680,
+				"height": 3120
+			},
+			"Mariella & Luca-104.jpg": {
+				"path": "../assets/img/albums/weddings/Mariella & Luca-104.jpg",
+				"width": 4680,
+				"height": 3120
+			},
+			"Mariella & Luca-185.jpg": {
+				"path": "../assets/img/albums/weddings/Mariella & Luca-185.jpg",
+				"width": 6240,
+				"height": 4160
+			},
+			"Mariella & Luca-189.jpg": {
+				"path": "../assets/img/albums/weddings/Mariella & Luca-189.jpg",
+				"width": 6240,
+				"height": 4160
+			},
+			"Mariella & Luca-193.jpg": {
+				"path": "../assets/img/albums/weddings/Mariella & Luca-193.jpg",
+				"width": 3357,
+				"height": 5036
+			},
+			"Mariella & Luca-218.jpg": {
+				"path": "../assets/img/albums/weddings/Mariella & Luca-218.jpg",
+				"width": 4160,
+				"height": 6240
+			},
+			"Mariella & Luca-314.jpg": {
+				"path": "../assets/img/albums/weddings/Mariella & Luca-314.jpg",
+				"width": 3418,
+				"height": 2279
+			},
+			"Mariella & Luca-471.jpg": {
+				"path": "../assets/img/albums/weddings/Mariella & Luca-471.jpg",
+				"width": 4680,
+				"height": 3120
+			},
+			"Mariella & Luca-541.jpg": {
+				"path": "../assets/img/albums/weddings/Mariella & Luca-541.jpg",
+				"width": 4680,
+				"height": 3120
+			},
+			"Michelle & Andy -075.jpg": {
+				"path": "../assets/img/albums/weddings/Michelle & Andy -075.jpg",
+				"width": 6240,
+				"height": 4160
+			},
+			"Michelle & Andy -095.jpg": {
+				"path": "../assets/img/albums/weddings/Michelle & Andy -095.jpg",
+				"width": 5363,
+				"height": 3575
+			},
+			"Michelle & Andy -305.jpg": {
+				"path": "../assets/img/albums/weddings/Michelle & Andy -305.jpg",
+				"width": 3831,
+				"height": 5747
+			},
+			"Michelle & Andy -320.jpg": {
+				"path": "../assets/img/albums/weddings/Michelle & Andy -320.jpg",
+				"width": 6240,
+				"height": 4160
+			},
+			"Michelle & Andy -332.jpg": {
+				"path": "../assets/img/albums/weddings/Michelle & Andy -332.jpg",
+				"width": 4160,
+				"height": 6240
+			},
+			"Michelle & Andy -380.jpg": {
+				"path": "../assets/img/albums/weddings/Michelle & Andy -380.jpg",
+				"width": 6240,
+				"height": 4160
+			},
+			"Michelle & Andy -403.jpg": {
+				"path": "../assets/img/albums/weddings/Michelle & Andy -403.jpg",
+				"width": 4160,
+				"height": 6240
+			},
+			"Michelle & Andy -67.jpg": {
+				"path": "../assets/img/albums/weddings/Michelle & Andy -67.jpg",
+				"width": 2407,
+				"height": 3610
+			},
+			"Tania & Jonas (147).jpg": {
+				"path": "../assets/img/albums/weddings/Tania & Jonas (147).jpg",
+				"width": 3769,
+				"height": 5653
+			},
+			"Tania & Jonas (171).jpg": {
+				"path": "../assets/img/albums/weddings/Tania & Jonas (171).jpg",
+				"width": 4160,
+				"height": 6240
+			},
+			"Tania & Jonas (375).jpg": {
+				"path": "../assets/img/albums/weddings/Tania & Jonas (375).jpg",
+				"width": 6240,
+				"height": 4160
+			},
+			"Tania & Jonas (380).jpg": {
+				"path": "../assets/img/albums/weddings/Tania & Jonas (380).jpg",
+				"width": 4160,
+				"height": 6240
+			},
+			"Tania & Jonas (383).jpg": {
+				"path": "../assets/img/albums/weddings/Tania & Jonas (383).jpg",
+				"width": 6240,
+				"height": 4160
+			},
+			"Tania & Jonas (386) copy.jpg": {
+				"path": "../assets/img/albums/weddings/Tania & Jonas (386) copy.jpg",
+				"width": 6240,
+				"height": 4160
+			},
+			"Tania & Jonas (403).jpg": {
+				"path": "../assets/img/albums/weddings/Tania & Jonas (403).jpg",
+				"width": 6142,
+				"height": 3348
+			},
+			"Tania & Jonas (413).jpg": {
+				"path": "../assets/img/albums/weddings/Tania & Jonas (413).jpg",
+				"width": 3817,
+				"height": 5726
+			},
+			"Tania & Jonas (417).jpg": {
+				"path": "../assets/img/albums/weddings/Tania & Jonas (417).jpg",
+				"width": 5601,
+				"height": 2946
+			},
+			"Tom & Katha-103.jpg": {
+				"path": "../assets/img/albums/weddings/Tom & Katha-103.jpg",
+				"width": 4680,
+				"height": 3120
+			},
+			"Tom & Katha-311.jpg": {
+				"path": "../assets/img/albums/weddings/Tom & Katha-311.jpg",
+				"width": 4670,
+				"height": 2633
+			},
+			"Tom & Katha-319.jpg": {
+				"path": "../assets/img/albums/weddings/Tom & Katha-319.jpg",
+				"width": 6240,
+				"height": 4160
+			},
+			"Tom & Katha-325.jpg": {
+				"path": "../assets/img/albums/weddings/Tom & Katha-325.jpg",
+				"width": 4160,
+				"height": 6240
+			},
+			"Tom & Katha-344.jpg": {
+				"path": "../assets/img/albums/weddings/Tom & Katha-344.jpg",
+				"width": 6240,
+				"height": 4160
+			}
+		}
+	}
+}

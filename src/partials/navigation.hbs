@@ -1,9 +1,9 @@
 <nav aria-label='Main Menu'>
 	<ul>
 		<li><a href='/'>Home</a></li>
-		<li><a href='#photos'>Photos</a></li>
+		<li><a href='{{context.navPath}}#photos'>Photos</a></li>
 		{{! <li><a href='#videos'>Videos</a></li> }}
-		<li><a href='#about'>About me</a></li>
-		<li><a href='#contact'>Contact</a></li>
+		<li><a href='{{context.navPath}}#about'>About me</a></li>
+		<li><a href='{{context.navPath}}#contact'>Contact</a></li>
 	</ul>
 </nav>

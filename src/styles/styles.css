@@ -21,6 +21,7 @@
 @import url('layout/about.css');
 @import url('layout/contact.css');
 @import url('layout/footer.css');
+@import url('layout/album.css');
 
 /* Elements */
 @import url('elements/a.css');
