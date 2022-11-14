@@ -4,7 +4,7 @@
 
 .album {
 	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(200px, 30vw));
+	grid-template-columns: repeat(auto-fit, minmax(100px, min(350px, 29vw)));
 	grid-template-rows: masonry;
 	justify-content: center;
 	padding-block: var(--spacing-xl);

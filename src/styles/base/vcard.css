@@ -8,13 +8,18 @@
 		'photo url';
 	gap: var(--spacing-m) var(--spacing-l);
 
-	& > .photo {
+	& > :is(picture, .photo) {
 		grid-area: photo;
 		block-size: auto;
 		max-inline-size: 5em;
+		justify-self: end;
+	}
+	& img.photo {
+		max-inline-size: 5em;
+		aspect-ratio: 1;
+		object-fit: cover;
 		border: 2px solid currentcolor;
 		border-radius: 50%;
-		justify-self: end;
 	}
 	& > .fn {
 		grid-area: name;

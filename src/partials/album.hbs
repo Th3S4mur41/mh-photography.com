@@ -1,4 +1,7 @@
 {{#each photos}}
 	<picture class='{{orientation}}'>
-		<img src='{{path}}' width='{{width}}' height='{{height}}' loading='lazy' alt='' />
+		<source srcset='{{path}}{{name}}-100.avif 450w, {{path}}{{name}}-400.avif' type='image/avif' />
+		<source srcset='{{path}}{{name}}-100.webp 450w, {{path}}{{name}}-400.webp' type='image/webp' />
+		<source srcset='{{path}}{{name}}-100.jpg 450w, {{path}}{{name}}-400.jpg' type='image/jpg' />
+		<img src='{{path}}{{name}}-100.jpg' width='{{width}}' height='{{height}}' loading='lazy' alt='' />
 	</picture>{{/each}}

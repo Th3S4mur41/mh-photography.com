@@ -48,10 +48,13 @@ export const photos = (input) => {
 		images.forEach((image) => {
 			const img = {};
 
-			img.name = image;
-			img.path = `/${photos[album].path}/${image}`;
+			const destImage = image.replace(/ /g, '-').replace(/&/g, 'and').toLowerCase();
+			img.name = destImage.substring(0, destImage.lastIndexOf('.'));
+			img.extension = destImage.substring(destImage.lastIndexOf('.'));
+			img.path = `/${photos[album].path}/`;
+			img.url = `/${photos[album].path}/${destImage}`;
 
-			const dimensions = sizeOf(path.join(__dirname, projectRoot, img.path));
+			const dimensions = sizeOf(path.join(__dirname, projectRoot, `/${photos[album].path}/${image}`));
 			img.width = dimensions.width;
 			img.height = dimensions.height;
 			img.orientation = dimensions.width > dimensions.height ? 'landscape' : 'portrait';
