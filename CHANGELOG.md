@@ -1,3 +1,10 @@
+# [1.0.0-alpha.3](https://github.com/Th3S4mur41/mh-photography.com/compare/v1.0.0-alpha.2...v1.0.0-alpha.3) (2022-11-09)
+
+
+### Bug Fixes
+
+* replace dvb to avoid scroll jumping ([4aa2159](https://github.com/Th3S4mur41/mh-photography.com/commit/4aa2159c52c723f4b1a8e07d7eee575bfdbf4abf))
+
 # [1.0.0-alpha.2](https://github.com/Th3S4mur41/mh-photography.com/compare/v1.0.0-alpha.1...v1.0.0-alpha.2) (2022-11-09)
 
 
