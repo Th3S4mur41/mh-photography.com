@@ -17,7 +17,7 @@ const pageData = {
 	'/albums/business/index.html': {
 		navPath: '/',
 		title: 'Business',
-		photos: albums['business'].images
+		photos: albums.business.images
 	},
 	'/albums/families-and-kids/index.html': {
 		navPath: '/',
@@ -32,12 +32,12 @@ const pageData = {
 	'/albums/travel/index.html': {
 		navPath: '/',
 		title: 'Travel',
-		photos: albums['travel'].images
+		photos: albums.travel.images
 	},
 	'/albums/weddings/index.html': {
 		navPath: '/',
 		title: 'Weddings',
-		photos: albums['weddings'].images
+		photos: albums.weddings.images
 	}
 };
 
@@ -50,7 +50,11 @@ module.exports = defineConfig({
 			input: {
 				main: resolve(root, 'index.html'),
 				albums: resolve(root, 'albums', 'index.html'),
-				business: resolve(root, 'albums/business', 'index.html')
+				business: resolve(root, 'albums/business', 'index.html'),
+				families: resolve(root, 'albums/families-and-kids', 'index.html'),
+				people: resolve(root, 'albums/people-and-lifestyle', 'index.html'),
+				travel: resolve(root, 'albums/travel', 'index.html'),
+				weddings: resolve(root, 'albums/weddings', 'index.html')
 			}
 		}
 	},
