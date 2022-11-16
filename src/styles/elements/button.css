@@ -1,0 +1,9 @@
+/**
+ * styles/elements/button.css
+ */
+
+button {
+	&:not(:disabled) {
+		cursor: pointer;
+	}
+}

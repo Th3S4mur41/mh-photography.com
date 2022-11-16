@@ -1,7 +1,46 @@
+<dialog id='photo-dialog'>
+	<picture>
+	</picture>
+	<button id='close-dialog' type='reset' title='Press Esc to close' aria-label='Close'><svg
+			xmlns='http://www.w3.org/2000/svg'
+			id='mdi-close'
+			viewBox='0 0 24 24'
+		><path
+				d='M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z'
+				fill='currentcolor'
+			></path></svg></button>
+	<button id='previous-photo' title='Previous photo' aria-label='Previous photo'><svg
+			width='24'
+			height='24'
+			fill='none'
+			viewBox='0 0 24 24'
+			xmlns='http://www.w3.org/2000/svg'
+		><path
+				d='M5.75 3a.75.75 0 0 0-.743.648L5 3.75v16.5a.75.75 0 0 0 1.493.102l.007-.102V3.75A.75.75 0 0 0 5.75 3Zm13.03.22a.75.75 0 0 0-.976-.073l-.084.073-8.25 8.25a.75.75 0 0 0-.073.976l.073.084 8.25 8.25a.75.75 0 0 0 1.133-.976l-.073-.084L11.06 12l7.72-7.72a.75.75 0 0 0 0-1.06Z'
+				fill='currentcolor'
+			></path></svg></button>
+	<button id='next-photo' title='Next photo' aria-label='Next photo'><svg
+			width='24'
+			height='24'
+			fill='none'
+			viewBox='0 0 24 24'
+			xmlns='http://www.w3.org/2000/svg'
+		><path
+				d='M18.25 3a.75.75 0 0 1 .743.648L19 3.75v16.5a.75.75 0 0 1-1.493.102l-.007-.102V3.75a.75.75 0 0 1 .75-.75Zm-13.03.22a.75.75 0 0 1 .976-.073l.084.073 8.25 8.25a.75.75 0 0 1 .073.976l-.073.084-8.25 8.25a.75.75 0 0 1-1.133-.976l.073-.084L12.94 12 5.22 4.28a.75.75 0 0 1 0-1.06Z'
+				fill='currentcolor'
+			></path></svg></button>
+</dialog>
+
 {{#each photos}}
-	<picture class='{{orientation}}'>
-		<source srcset='{{path}}{{name}}-100.avif 450w, {{path}}{{name}}-400.avif' type='image/avif' />
-		<source srcset='{{path}}{{name}}-100.webp 450w, {{path}}{{name}}-400.webp' type='image/webp' />
-		<source srcset='{{path}}{{name}}-100.jpg 450w, {{path}}{{name}}-400.jpg' type='image/jpg' />
-		<img src='{{path}}{{name}}-100.jpg' width='{{width}}' height='{{height}}' loading='lazy' alt='' />
-	</picture>{{/each}}
+	<a
+		class='{{orientation}}'
+		href='{{path}}{{name}}-1920.jpg'
+		onclick="document.getElementById('photoDialog')?.showModal();event.preventDefault();"
+	>
+		<picture>
+			<source srcset='{{path}}{{name}}-100.avif 450w, {{path}}{{name}}-400.avif' type='image/avif' />
+			<source srcset='{{path}}{{name}}-100.webp 450w, {{path}}{{name}}-400.webp' type='image/webp' />
+			<source srcset='{{path}}{{name}}-100.jpg 450w, {{path}}{{name}}-400.jpg' type='image/jpg' />
+			<img src='{{path}}{{name}}-100.jpg' width='{{width}}' height='{{height}}' loading='lazy' alt='' />
+		</picture></a>
+{{/each}}

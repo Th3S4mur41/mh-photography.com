@@ -39,3 +39,13 @@
 		--color-shadow: hsl(0 0% 0% / 0.3);
 	}
 }
+
+::backdrop {
+	--color-overlay: hsl(0 0% 0% / 0.7);
+	--color-overlay-fallback: hsl(0 0% 0% / 0.9);
+
+	@media (prefers-color-scheme: light) {
+		--color-overlay: hsl(0 0% 100% / 0.3);
+		--color-overlay-fallback: hsl(0 0% 100% / 0.9);
+	}
+}
