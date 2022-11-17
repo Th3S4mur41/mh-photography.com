@@ -4,7 +4,29 @@
 	/**
 	 * Theme specific colors
 	 */
-	--color-accent: greenyellow;
+	--color-accent: hsl(28 32% 88%);
+	--color-accent-50: hsl(40 27.3% 97.8%);
+	--color-accent-100: hsl(32.7 29.7% 92.7%);
+	--color-accent-200: hsl(31.8 19.1% 82.5%);
+	--color-accent-300: hsl(32 10.9% 73.1%);
+	--color-accent-400: hsl(34.3 8.8% 68.6%);
+	--color-accent-500: hsl(32.7 4.7% 53.9%);
+	--color-accent-600: hsl(33.3 4% 44.1%);
+	--color-accent-700: hsl(34.3 3.7% 36.7%);
+	--color-accent-800: hsl(40 4.1% 29%);
+	--color-accent-900: hsl(36 4.3% 22.9%);
+	--color-light: hsl(0 0% 100%);
+	--color-dark: hsl(0 0% 0%);
+	--color-grey-50: hsl(0 0% 98%);
+	--color-grey-100: hsl(0 0% 92.9%);
+	--color-grey-200: hsl(0 0% 83.1%);
+	--color-grey-300: hsl(0 0% 73.7%);
+	--color-grey-400: hsl(0 0% 69%);
+	--color-grey-500: hsl(0 0% 54.5%);
+	--color-grey-600: hsl(0 0% 44.7%);
+	--color-grey-700: hsl(0 0% 37.3%);
+	--color-grey-800: hsl(0 0% 29.4%);
+	--color-grey-900: hsl(0 0% 23.1%);
 
 	/**
    * Dark mode (default)

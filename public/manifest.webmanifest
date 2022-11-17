@@ -16,5 +16,5 @@
 	"start_url": "/",
 	"background_color": "black",
 	"display": "minimal-ui",
-	"theme_color": "black"
+	"theme_color": "hsl(28 32% 88%)"
 }
