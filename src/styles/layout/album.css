@@ -4,7 +4,7 @@
 
 .album {
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(100px, min(350px, 29vw)));
+	grid-template-columns: repeat(auto-fit, minmax(100px, min(350px, calc(33vw - 2 * var(--spacing-m)))));
 	grid-template-rows: masonry;
 	justify-content: center;
 	padding-block: var(--spacing-xl);
@@ -50,6 +50,7 @@
 		}
 	}
 	& img {
+		max-block-size: calc(100vh - 4em);
 		animation: appear 0.2s ease-out both;
 
 		@media (prefers-reduced-motion: no-preference) {

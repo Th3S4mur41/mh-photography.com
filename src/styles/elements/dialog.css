@@ -6,6 +6,7 @@ dialog {
 	padding: 0;
 	border: none;
 	background: transparent;
+	overscroll-behavior: contain;
 
 	&::backdrop {
 		background: var(--color-overlay-fallback);
@@ -16,4 +17,9 @@ dialog {
 			background: var(--color-overlay);
 		}
 	}
+}
+
+html:has(dialog[open]) {
+	/* remove the main scrollbar when dialog is open */
+	overflow: hidden;
 }
