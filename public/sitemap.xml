@@ -1,11 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <url>
-  <loc>https://mh-photography.com/</loc>
-  <lastmod>2022-11-02</lastmod>
-  <changefreq>monthly</changefreq>
+  <loc>https://alpha.mh-photography-com.pages.dev/</loc>
+  <lastmod>2022-11-17T20:34:33+00:00</lastmod>
   <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://alpha.mh-photography-com.pages.dev/albums/business/</loc>
+  <lastmod>2022-11-17T20:34:33+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://alpha.mh-photography-com.pages.dev/albums/families-and-kids/</loc>
+  <lastmod>2022-11-17T20:34:33+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://alpha.mh-photography-com.pages.dev/albums/travel/</loc>
+  <lastmod>2022-11-17T20:34:33+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://alpha.mh-photography-com.pages.dev/albums/weddings/</loc>
+  <lastmod>2022-11-17T20:34:33+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://alpha.mh-photography-com.pages.dev/albums/people-and-lifestyle/</loc>
+  <lastmod>2022-11-17T20:34:33+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 </urlset>

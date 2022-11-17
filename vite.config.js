@@ -6,12 +6,14 @@ import { resolve } from 'path';
 
 const root = resolve(__dirname, 'src');
 const albums = photos('assets/img/albums');
+const title = 'Manuel Hamel Photography';
 
 const pageData = {
 	'/index.html': {
 		navPath: ''
 	},
 	'/albums/index.html': {
+		title: 'Albums',
 		navPath: '/'
 	},
 	'/albums/business/index.html': {
@@ -70,7 +72,12 @@ module.exports = defineConfig({
 					context: pageData[pagePath]
 				};
 			},
-			partialDirectory: resolve(__dirname, 'src/partials')
+			partialDirectory: resolve(__dirname, 'src/partials'),
+			helpers: {
+				pageTitle: (value) => {
+					return value ? `${value} | ${title}` : title;
+				}
+			}
 		})
 	],
 	css: {},
