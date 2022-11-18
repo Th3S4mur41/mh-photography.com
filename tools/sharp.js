@@ -9,7 +9,7 @@ const sharp = require('sharp');
 const sizes = [100, 400, 1920];
 const formats = ['jpg', 'webp', 'avif'];
 const srcPath = path.join(__dirname, '../assets/img');
-const destPath = 'src/assets/img/';
+const destPath = 'public/assets/img/';
 
 /**
  * Get all files matching the pattern from a path
@@ -49,6 +49,14 @@ function* getFiles(dir) {
 			formats.forEach((format) => {
 				const out = `${output}-${size}.${format}`;
 				sharp(input)
+					.withMetadata({
+						exif: {
+							IFD0: {
+								XPAuthor: 'Manuel Hamel',
+								Copyright: 'Manuel Hamel Photography'
+							}
+						}
+					})
 					.resize({ width: size })
 					.toFormat(format)
 					.toFile(out)
