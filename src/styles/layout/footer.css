@@ -7,6 +7,7 @@
 	grid-template:
 		'social'
 		'navigation'
+		'logo'
 		'copyright'
 		'version';
 	align-items: center;
@@ -21,6 +22,10 @@
 
 	& > .copyright {
 		grid-area: copyright;
+	}
+	& > .logo {
+		grid-area: logo;
+		inline-size: 10rem;
 	}
 	& > .version {
 		grid-area: version;
@@ -40,12 +45,13 @@
 
 	@media (min-width: 800px) {
 		grid-template:
-			'social social .  navigation navigation'
-			'version . copyright . .';
-		justify-items: stretch;
+			'social . .  navigation navigation'
+			'logo copyright copyright copyright version';
+		justify-items: center;
+		align-items: end;
 
-		& .copyright {
-			justify-self: center;
+		& > nav {
+			justify-self: end;
 		}
 	}
 }
