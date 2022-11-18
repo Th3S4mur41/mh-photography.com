@@ -3,10 +3,10 @@ a {
 	color: var(--link-color);
 	text-underline-offset: 0.25em;
 
+	&:visited {
+		color: inherit;
+	}
 	&:is(:hover, :focus) {
 		color: var(--color-accent);
-	}
-	&:visited {
-		color: var(--link-color);
 	}
 }

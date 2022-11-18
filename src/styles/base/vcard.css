@@ -1,12 +1,13 @@
 .vcard {
 	display: grid;
 	grid-template:
-		'photo name'
-		'photo address'
-		'photo phone'
-		'photo email'
-		'photo url';
-	gap: var(--spacing-m) var(--spacing-l);
+		'photo . name name'
+		'photo . address-link address'
+		'photo . phone-1-link phone-1'
+		'photo . phone-2-link phone-2'
+		'photo . email-link email'
+		'photo . url-link url' / auto auto auto 1fr;
+	gap: var(--spacing-m) var(--spacing-m);
 
 	& > :is(picture, .photo) {
 		grid-area: photo;
@@ -28,5 +29,37 @@
 	}
 	& > .adr {
 		grid-area: address;
+	}
+	& > .phone-1 {
+		grid-area: phone-1;
+	}
+	& > .phone-2 {
+		grid-area: phone-2;
+	}
+	& > .email {
+		grid-area: email;
+	}
+	& > .url {
+		grid-area: url;
+	}
+	& > .address-link {
+		grid-area: address-link;
+		align-self: center;
+	}
+	& > .phone-1-link {
+		grid-area: phone-1-link;
+		align-self: center;
+	}
+	& > .phone-2-link {
+		grid-area: phone-2-link;
+		align-self: center;
+	}
+	& > .email-link {
+		grid-area: email-link;
+		align-self: center;
+	}
+	& > .url-link {
+		grid-area: url-link;
+		align-self: center;
 	}
 }
