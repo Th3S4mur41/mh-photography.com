@@ -1,5 +1,6 @@
 nav {
 	display: flex;
+	z-index: 10; /* MAke sure it's on top of everything else */
 	justify-content: center;
 
 	& > ul {

@@ -10,6 +10,7 @@
 		'copyright'
 		'version';
 	align-items: center;
+	margin-block-start: var(--spacing-xl);
 	padding-block: var(--spacing-l);
 	padding-inline: var(--spacing-m);
 	background-color: var(--color-bg-secondary);
