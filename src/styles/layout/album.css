@@ -20,10 +20,19 @@
 		}
 		& img {
 			object-fit: cover;
+			transition: all 0.5s ease;
 
 			@supports (not (grid-template-rows: masonry)) {
 				block-size: 100%;
 				inline-size: 100%;
+			}
+		}
+		&:is(:focus, :hover) {
+			& img {
+				@media (prefers-reduced-motion: no-preference) {
+					filter: saturate(0%) brightness(1.2) contrast(120%);
+					transform: scale(1.2);
+				}
 			}
 		}
 	}
