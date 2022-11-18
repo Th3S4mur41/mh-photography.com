@@ -1,3 +1,10 @@
+# [1.0.0-alpha.4](https://github.com/Th3S4mur41/mh-photography.com/compare/v1.0.0-alpha.3...v1.0.0-alpha.4) (2022-11-18)
+
+
+### Bug Fixes
+
+* make about section responsive ([7d35afd](https://github.com/Th3S4mur41/mh-photography.com/commit/7d35afd6424e86d5fdab3dfdbbaeaf2654f7b008))
+
 # [1.0.0-alpha.3](https://github.com/Th3S4mur41/mh-photography.com/compare/v1.0.0-alpha.2...v1.0.0-alpha.3) (2022-11-09)
 
 
