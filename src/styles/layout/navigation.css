@@ -48,6 +48,9 @@ body > nav {
 		);
 		border-image-slice: 1;
 	}
+	& a:focus-visible {
+		outline: none;
+	}
 
 	@supports (backdrop-filter: blur(30px) saturate(125%)) {
 		/* Fluent acrylic effect: see https://medium.com/microsoft-design/diy-a-web-version-the-fluent-design-systems-acrylic-material-fe2eac2a40bb */

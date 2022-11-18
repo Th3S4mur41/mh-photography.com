@@ -9,4 +9,7 @@ a {
 	&:is(:hover, :focus) {
 		color: var(--color-accent);
 	}
+	&:focus-visible {
+		outline-offset: 0.5em;
+	}
 }
