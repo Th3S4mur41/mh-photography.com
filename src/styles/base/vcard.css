@@ -1,7 +1,7 @@
 .vcard {
 	display: grid;
 	grid-template:
-		'photo . name name'
+		'photo . . name'
 		'photo . address-link address'
 		'photo . phone-1-link phone-1'
 		'photo . phone-2-link phone-2'

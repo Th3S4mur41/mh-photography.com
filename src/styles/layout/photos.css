@@ -7,7 +7,7 @@
 	flex-wrap: wrap;
 	align-content: center;
 	min-block-size: 100lvb;
-	padding-block: var(--spacing-l);
+	padding-block: var(--spacing-xl);
 	padding-inline: var(--spacing-m);
 	gap: var(--spacing-m);
 
@@ -22,7 +22,7 @@
 
 		& > h3 {
 			margin-block: var(--spacing-s);
-			font-weight: var(--font-weight-light);
+			font-size: var(--font-size-l);
 		}
 		& picture {
 			flex-grow: 1;

@@ -8,6 +8,7 @@
 	min-block-size: 100lvb;
 	gap: var(--spacing-l);
 	justify-items: center;
+	padding-block: var(--spacing-xl);
 
 	& > header {
 		display: flex;
@@ -21,7 +22,8 @@
 		}
 		& > .subtitle {
 			padding-inline: var(--spacing-m);
-			font-size: var(--font-size-xl);
+			font-size: var(--font-size-header-s);
+			font-weight: var(--font-weight-light);
 			text-align: center;
 		}
 	}

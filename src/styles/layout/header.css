@@ -29,6 +29,8 @@
 		grid-area: subtitle;
 		margin-block-end: var(--spacing-m);
 		color: var(--color-onbg-subtle);
+		font-size: var(--font-size-header-s);
+		font-weight: var(--font-weight-light);
 		text-align: center;
 	}
 	& > .hero {

@@ -16,6 +16,7 @@ body {
 	/* Additional smoothing fixes for MacOS */
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+	font-weight: var(--font-weight-normal);
 	accent-color: var(--color-accent);
 }
 
