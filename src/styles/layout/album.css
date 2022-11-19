@@ -27,10 +27,10 @@
 				inline-size: 100%;
 			}
 		}
-		&:is(:focus, :hover) {
+		&:is(:focus-visible, :hover) {
 			& img {
 				@media (prefers-reduced-motion: no-preference) {
-					filter: saturate(0%) brightness(1.2) contrast(120%);
+					filter: saturate(110%) brightness(1.1) contrast(120%);
 					transform: scale(1.2);
 				}
 			}
