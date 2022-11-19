@@ -111,6 +111,14 @@ const init = function () {
 		}
 	});
 
+	dialog.addEventListener('keydown', (event) => {
+		if (event.key === 'ArrowLeft' && previousBtn.href !== previousBtn.baseURI) {
+			previousBtn.click();
+		} else if (event.key === 'ArrowRight' && nextBtn.href !== nextBtn.baseURI) {
+			nextBtn.click();
+		}
+	});
+
 	const photos = album.getElementsByTagName('a');
 	Array.from(photos).forEach((element) => {
 		if (!element.id) {
