@@ -41,7 +41,7 @@
 #photo-dialog {
 	--buttons-size: 2rem;
 
-	& > button {
+	& > :is(a, button) {
 		display: flex;
 		position: fixed;
 		align-items: center;
@@ -82,7 +82,7 @@
 }
 
 :is(#previous-photo, #next-photo) {
-	display: none !important; /* TODO: add functionality */
+	/* display: none !important; TODO: add functionality */
 	inline-size: calc(var(--buttons-size) * 2);
 	opacity: 0.1;
 	inset-block: 0;
@@ -93,6 +93,12 @@
 			var(--color-overlay-fallback) calc(var(--buttons-size) * 0.9),
 			transparent var(--buttons-size)
 		);
+	}
+	&:focus-visible {
+		outline: none;
+	}
+	&[href=''] {
+		display: none;
 	}
 }
 
