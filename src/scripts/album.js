@@ -43,8 +43,8 @@ const setNavigation = function (currentUrl) {
 
 	const element = document.querySelector(`[href="${path}"`);
 
-	previousBtn.href = element?.previousElementSibling.href || '';
-	nextBtn.href = element?.nextElementSibling.href || '';
+	previousBtn.href = element?.previousElementSibling?.href || '';
+	nextBtn.href = element?.nextElementSibling?.href || '';
 };
 
 const closeDialog = function () {
