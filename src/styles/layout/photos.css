@@ -6,7 +6,8 @@
 	display: flex;
 	flex-wrap: wrap;
 	align-content: center;
-	min-block-size: 100lvb;
+	min-block-size: 100vh; /* fallback */
+	min-block-size: 100vb;
 	padding-block: var(--spacing-xl);
 	padding-inline: var(--spacing-m);
 	gap: var(--spacing-m);
