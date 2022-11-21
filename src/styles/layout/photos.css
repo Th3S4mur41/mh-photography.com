@@ -16,6 +16,8 @@
 		display: flex;
 		flex-direction: column;
 		flex-grow: 1;
+		max-block-size: 50vh; /* fallback */
+		max-block-size: 50vb;
 		inline-size: 30%;
 		min-inline-size: min(300px, 100lvb);
 		text-align: center;

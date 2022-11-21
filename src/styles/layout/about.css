@@ -22,15 +22,27 @@
 		grid-template-columns: var(--grid-template-columns);
 		grid-template-columns: subgrid;
 		gap: var(--spacing-m) var(--spacing-l);
+		container: inline-size;
 
-		&::before {
+		/* &::before {
 			content: '';
 			z-index: 1;
 			grid-area: picture;
-			background: linear-gradient(to top, var(--color-bg) 5%, transparent 10%, transparent 90%, var(--color-bg) 95%);
-		}
+			background: linear-gradient(to right, transparent 90%, var(--color-bg) 95%),
+				linear-gradient(to top, var(--color-bg) 5%, transparent 10%, transparent 90%, var(--color-bg) 95%);
+		} */
 		& picture {
 			grid-area: picture;
+			max-block-size: max(50vb, calc(0.35 * 100cqi));
+			background: linear-gradient(to top, var(--color-bg) 0%, transparent 3%, transparent 97%, var(--color-bg) 100%),
+				linear-gradient(to right, var(--color-onbg) 98%, var(--color-bg) 100%);
+
+			& > img {
+				max-block-size: 100%;
+				object-fit: cover;
+				box-shadow: inset 0 0 5% var(--color-shadow);
+				mix-blend-mode: multiply;
+			}
 		}
 		& .p1 {
 			grid-area: p1;
@@ -55,6 +67,7 @@
 
 		& > svg {
 			align-self: end;
+			max-block-size: 40vb;
 			inline-size: 100%;
 			max-inline-size: calc(var(--max-line-length) / 2);
 		}
