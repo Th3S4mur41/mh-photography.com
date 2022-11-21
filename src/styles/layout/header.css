@@ -22,7 +22,7 @@
 		background: linear-gradient(to top, var(--color-bg) 50%, transparent);
 
 		& > svg {
-			inline-size: min(80vw, 50rem);
+			inline-size: min(80vw, 40rem);
 		}
 	}
 	& > .subtitle {
