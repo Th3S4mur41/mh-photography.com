@@ -49,6 +49,11 @@
 	--link-color--active: currentcolor;
 
 	/**
+   * Filters
+   */
+	--lightness: 0.8;
+
+	/**
    * Light mode
    */
 	@media (prefers-color-scheme: light) {
@@ -61,6 +66,7 @@
 		--color-overlay: hsl(0 0% 100% / 0.7);
 		--color-overlay-fallback: hsl(0 0% 100% / 0.9);
 		--color-shadow: hsl(0 0% 0% / 0.3);
+		--lightness: 1.1;
 	}
 }
 

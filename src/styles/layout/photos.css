@@ -37,8 +37,9 @@
 		}
 		&:is(:focus-visible, :hover) {
 			& img {
+				filter: var(--img-hover);
+
 				@media (prefers-reduced-motion: no-preference) {
-					filter: saturate(110%) brightness(1.1) contrast(120%);
 					transform: scale(1.2);
 				}
 			}

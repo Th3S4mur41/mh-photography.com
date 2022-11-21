@@ -11,4 +11,7 @@
 
 	/* Transitions */
 	--transition-color: color 0.3s ease;
+
+	/* Filter */
+	--img-hover: opacity(0.9) brightness(var(--lightness)) contrast(110%);
 }
