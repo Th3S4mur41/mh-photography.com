@@ -14,4 +14,12 @@
 
 	/* Filter */
 	--img-hover: opacity(0.9) brightness(var(--lightness)) contrast(110%);
+	--mix-blend-mode: darken;
+
+	/**
+   * Light mode
+   */
+	@media (prefers-color-scheme: light) {
+		--mix-blend-mode: lighten;
+	}
 }
