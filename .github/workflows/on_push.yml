@@ -20,7 +20,7 @@ jobs:
 
   test-code:
     name: '▶️ actions'
-    needs: [lint-code]
+    needs: [lint-code, build-code]
     uses: ./.github/workflows/test-code.yml
 
   codeql:
