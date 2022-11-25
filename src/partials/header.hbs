@@ -16,10 +16,47 @@
 			></path></svg>
 	</h1>
 	<div class='subtitle'>Wedding, Lifestyle & People Photography</div>
-	<picture class='hero'>
-		<source srcset='/assets/img/hero/2-1920.avif' type='image/avif' />
-		<source srcset='/assets/img/hero/2-1920.webp' type='image/webp' />
-		<source srcset='/assets/img/hero/2-1920.jpg' type='image/jpg' />
-		<img src='/assets/img/hero/2-400.jpg' width='4585' height='3057' fetchpriority='high' alt='' />
-	</picture>
+	<input id='pause-hero-carousel' type='checkbox' name='carousel' title='play / pause' class='screen-reader-text' />
+	<label class='pause' for='pause-hero-carousel' title='play / pause' aria-label='play / pause'><svg
+			aria-hidden='true'
+			width='24'
+			height='24'
+			viewBox='0 0 24 24'
+			xmlns='http://www.w3.org/2000/svg'
+		><path
+				d='M5.746 3a1.75 1.75 0 0 0-1.75 1.75v14.5c0 .966.784 1.75 1.75 1.75h3.5a1.75 1.75 0 0 0 1.75-1.75V4.75A1.75 1.75 0 0 0 9.246 3h-3.5ZM14.746 3a1.75 1.75 0 0 0-1.75 1.75v14.5c0 .966.784 1.75 1.75 1.75h3.5a1.75 1.75 0 0 0 1.75-1.75V4.75A1.75 1.75 0 0 0 18.246 3h-3.5Z'
+			></path></svg></label>
+	<div class='carousel'>
+
+		<picture class='hero'>
+			<source srcset='/assets/img/hero/2-1920.avif' type='image/avif' />
+			<source srcset='/assets/img/hero/2-1920.webp' type='image/webp' />
+			<source srcset='/assets/img/hero/2-1920.jpg' type='image/jpg' />
+			<img src='/assets/img/hero/2-400.jpg' width='4585' height='3057' fetchpriority='high' alt='' />
+		</picture>
+		<picture class='hero'>
+			<source srcset='/assets/img/hero/1-1920.avif' type='image/avif' />
+			<source srcset='/assets/img/hero/1-1920.webp' type='image/webp' />
+			<source srcset='/assets/img/hero/1-1920.jpg' type='image/jpg' />
+			<img src='/assets/img/hero/1-400.jpg' width='4585' height='3057' fetchpriority='low' alt='' />
+		</picture>
+		<picture class='hero'>
+			<source srcset='/assets/img/hero/3-1920.avif' type='image/avif' />
+			<source srcset='/assets/img/hero/3-1920.webp' type='image/webp' />
+			<source srcset='/assets/img/hero/3-1920.jpg' type='image/jpg' />
+			<img src='/assets/img/hero/3-400.jpg' width='4585' height='3057' fetchpriority='low' alt='' />
+		</picture>
+		<picture class='hero'>
+			<source srcset='/assets/img/hero/4-1920.avif' type='image/avif' />
+			<source srcset='/assets/img/hero/4-1920.webp' type='image/webp' />
+			<source srcset='/assets/img/hero/4-1920.jpg' type='image/jpg' />
+			<img src='/assets/img/hero/4-400.jpg' width='4585' height='3057' fetchpriority='low' alt='' />
+		</picture>
+		<picture class='hero' aria-hidden='true'>
+			<source srcset='/assets/img/hero/2-1920.avif' type='image/avif' />
+			<source srcset='/assets/img/hero/2-1920.webp' type='image/webp' />
+			<source srcset='/assets/img/hero/2-1920.jpg' type='image/jpg' />
+			<img src='/assets/img/hero/2-400.jpg' width='4585' height='3057' fetchpriority='low' alt='' />
+		</picture>
+	</div>
 </header>
