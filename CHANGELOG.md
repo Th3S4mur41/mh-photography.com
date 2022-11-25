@@ -1,3 +1,10 @@
+# [1.0.0-alpha.6](https://github.com/Th3S4mur41/mh-photography.com/compare/v1.0.0-alpha.5...v1.0.0-alpha.6) (2022-11-25)
+
+
+### Features
+
+* add hero image carousel ([eb7d175](https://github.com/Th3S4mur41/mh-photography.com/commit/eb7d175e66395379d5a00679512d7f9dba101fb1))
+
 # [1.0.0-alpha.5](https://github.com/Th3S4mur41/mh-photography.com/compare/v1.0.0-alpha.4...v1.0.0-alpha.5) (2022-11-23)
 
 
