@@ -1,0 +1,56 @@
+# This is workflow runs on PR
+#
+name: Pull Request Target
+
+# Controls when the action will run.
+on:
+  # Trigger workflow for pull requests.
+  pull_request_target:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  lint-pr:
+    name: '▶️ actions'
+    uses: ./.github/workflows/lint-pr.yml
+
+  lint-code:
+    name: '▶️ actions'
+    needs: [lint-pr]
+    uses: ./.github/workflows/lint-code.yml
+
+  build-code:
+    name: '▶️ actions'
+    needs: [lint-code]
+    uses: ./.github/workflows/build-code.yml
+
+  test-code:
+    name: '▶️ actions'
+    needs: [lint-code, build-code]
+    uses: ./.github/workflows/test-code.yml
+
+  codeql:
+    name: '▶️ actions'
+    needs: [lint-code]
+    uses: ./.github/workflows/codeql.yml
+
+  sonarqube:
+    name: '▶️ actions'
+    needs: [lint-code]
+    uses: ./.github/workflows/sonarqube.yml
+    secrets:
+      SONAR_TOKEN: ${{ secrets.SONAR_TOKEN  }}
+
+  # visual-test:
+  #   name: '▶️ actions'
+  #   # execute after successful code validation to save unnecessary screenshots costs
+  #   needs: [lint-code, build-code, test-code, codeql, sonarqube]
+  #   if: github.event.pull_request.draft == false # do not run on draft PR
+  #   uses: ./.github/workflows/visual-test.yml
+  #   secrets:
+  #     PERCY_TOKEN: ${{ secrets.PERCY_TOKEN  }}
+
+  dependabot:
+    name: '▶️ actions'
+    uses: ./.github/workflows/dependabot.yml
+    secrets:
+      GH_TOKEN: ${{ secrets.GH_TOKEN  }}

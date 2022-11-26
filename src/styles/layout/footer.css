@@ -1,0 +1,57 @@
+/**
+ * styles/layout/footer.css
+ */
+
+#footer {
+	display: grid;
+	grid-template:
+		'social'
+		'navigation'
+		'logo'
+		'copyright'
+		'version';
+	align-items: center;
+	margin-block-start: var(--spacing-xl);
+	padding-block: var(--spacing-l);
+	padding-inline: var(--spacing-m);
+	background-color: var(--color-bg-secondary);
+	color: var(--color-onbg-secondary);
+	font-size: var(--font-size-s);
+	gap: var(--spacing-s) var(--spacing-m);
+	justify-items: center;
+
+	& > .copyright {
+		grid-area: copyright;
+	}
+	& > .logo {
+		grid-area: logo;
+		inline-size: 10rem;
+	}
+	& > .version {
+		grid-area: version;
+	}
+	& > .social {
+		display: flex;
+		grid-area: social;
+		gap: var(--spacing-m);
+
+		& svg {
+			inline-size: 2em;
+		}
+	}
+	& > nav {
+		grid-area: navigation;
+	}
+
+	@media (min-width: 800px) {
+		grid-template:
+			'social . .  navigation navigation'
+			'logo copyright copyright copyright version';
+		justify-items: center;
+		align-items: end;
+
+		& > nav {
+			justify-self: end;
+		}
+	}
+}

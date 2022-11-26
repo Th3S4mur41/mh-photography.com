@@ -1,0 +1,25 @@
+/**
+ * styles/elements/dialog.css
+ */
+
+dialog {
+	padding: 0;
+	border: none;
+	background: transparent;
+	overscroll-behavior: contain;
+
+	&::backdrop {
+		background: var(--color-overlay-fallback);
+
+		@supports (backdrop-filter: blur(30px) saturate(125%)) {
+			/* Fluent acrylic effect: see https://medium.com/microsoft-design/diy-a-web-version-the-fluent-design-systems-acrylic-material-fe2eac2a40bb */
+			backdrop-filter: blur(30px) saturate(125%);
+			background: var(--color-overlay);
+		}
+	}
+}
+
+html:has(dialog[open]) {
+	/* remove the main scrollbar when dialog is open */
+	overflow: hidden;
+}

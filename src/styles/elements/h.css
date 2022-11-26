@@ -1,0 +1,16 @@
+/**
+ * styles/elements/dialog.css
+ */
+
+h1 {
+	font-size: var(--font-size-header-xl);
+}
+
+h2 {
+	font-size: var(--font-size-header-l);
+}
+
+h3 {
+	font-size: var(--font-size-header-m);
+	font-weight: var(--font-weight-light);
+}

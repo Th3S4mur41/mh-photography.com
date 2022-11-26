@@ -1,0 +1,25 @@
+name: SonarQube
+
+on:
+  # Allows you to call this workflow from other workflows
+  workflow_call:
+    secrets:
+      SONAR_TOKEN:
+        required: true
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  sonarcloud:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0 # Shallow clones should be disabled for a better relevancy of analysiswith:
+          ref: ${{ github.event.pull_request.head.sha }}
+      - name: SonarCloud Scan
+        uses: SonarSource/sonarcloud-github-action@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Needed to get PR information, if any
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}

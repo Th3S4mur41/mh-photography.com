@@ -1,0 +1,113 @@
+/**
+ * styles/layout/header.css
+ */
+
+#header {
+	display: grid;
+	grid-template:
+		[image-start] '.' 1fr
+		'title' auto [image-end]
+		'subtitle' auto;
+	justify-items: stretch;
+	align-items: end;
+	block-size: 100vh; /* fallback */
+	block-size: 100svb;
+
+	& > h1 {
+		display: flex;
+		grid-area: title;
+		justify-content: center;
+		margin: 0;
+		padding-block: var(--spacing-m);
+		background: linear-gradient(to top, var(--color-bg) 50%, transparent);
+
+		& > svg {
+			inline-size: min(80vw, 40rem);
+		}
+	}
+	& > .subtitle {
+		grid-area: subtitle;
+		margin-block-end: var(--spacing-m);
+		color: var(--color-onbg-subtle);
+		font-size: var(--font-size-header-s);
+		font-weight: var(--font-weight-light);
+		text-align: center;
+	}
+	& > .carousel {
+		display: flex;
+		position: relative;
+		z-index: -1;
+		grid-area: image / 1;
+		align-self: stretch;
+		overflow: hidden;
+	}
+	& .pause {
+		position: absolute;
+		inset-inline-end: 0.5rem;
+		inset-block-start: 5rem;
+		z-index: 100;
+		cursor: pointer;
+
+		& > svg {
+			stroke: currentcolor;
+			fill: none;
+		}
+		&:hover {
+			color: var(--color-accent);
+		}
+	}
+	& .hero {
+		flex: 0 0 100%;
+		@media (prefers-reduced-motion: no-preference) {
+			animation: carousel 30s linear 5s infinite;
+		}
+
+		& > img {
+			block-size: 100%;
+			inline-size: 100%;
+			object-fit: cover;
+		}
+	}
+}
+
+#pause-hero-carousel:checked {
+	& ~ .pause {
+		& > svg {
+			stroke: none;
+			fill: currentcolor;
+		}
+	}
+	& ~ .carousel > .hero {
+		animation-play-state: paused;
+	}
+}
+
+@keyframes carousel {
+	0% {
+		transform: translateX(0);
+	}
+	20% {
+		transform: translateX(0);
+	}
+	25% {
+		transform: translateX(-100%);
+	}
+	45% {
+		transform: translateX(-100%);
+	}
+	50% {
+		transform: translateX(-200%);
+	}
+	70% {
+		transform: translateX(-200%);
+	}
+	75% {
+		transform: translateX(-300%);
+	}
+	95% {
+		transform: translateX(-300%);
+	}
+	100% {
+		transform: translateX(-400%);
+	}
+}

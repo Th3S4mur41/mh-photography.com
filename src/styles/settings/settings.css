@@ -1,0 +1,25 @@
+:root {
+	--border-radius: 0.4rem;
+	--max-line-length: 80ch;
+
+	/* Spacings */
+	--spacing-xs: 0.25em;
+	--spacing-s: 0.5em;
+	--spacing-m: 1em;
+	--spacing-l: 2em;
+	--spacing-xl: 4em;
+
+	/* Transitions */
+	--transition-color: color 0.3s ease;
+
+	/* Filter */
+	--img-hover: opacity(0.9) brightness(var(--lightness)) contrast(110%);
+	--mix-blend-mode: darken;
+
+	/**
+   * Light mode
+   */
+	@media (prefers-color-scheme: light) {
+		--mix-blend-mode: lighten;
+	}
+}

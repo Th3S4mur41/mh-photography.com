@@ -1,0 +1,16 @@
+# This is workflow runs on PR
+#
+name: Pull Request
+
+# Controls when the action will run.
+on:
+  # Trigger workflow for pull requests.
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  dependencies:
+    name: '▶️ actions'
+    uses: ./.github/workflows/dependencies.yml
+    secrets:
+      GH_TOKEN: ${{ secrets.GH_TOKEN  }}

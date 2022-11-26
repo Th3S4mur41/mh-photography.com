@@ -1,0 +1,112 @@
+/**
+ * styles/layout/album.css
+ */
+
+.album {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(100px, min(350px, calc(33vw - 2 * var(--spacing-m)))));
+	grid-template-rows: masonry;
+	justify-content: center;
+	padding-block: var(--spacing-xl);
+	padding-inline: var(--spacing-m);
+	gap: var(--spacing-s);
+
+	& > a {
+		overflow: hidden;
+		background-color: var(--color-bg-secondary);
+
+		&.portrait {
+			grid-row: span 2;
+		}
+		& img {
+			object-fit: cover;
+			transition: all 0.5s ease;
+
+			@supports (not (grid-template-rows: masonry)) {
+				block-size: 100%;
+				inline-size: 100%;
+			}
+		}
+		&:is(:focus-visible, :hover) {
+			& img {
+				filter: var(--img-hover);
+
+				@media (prefers-reduced-motion: no-preference) {
+					transform: scale(1.2);
+				}
+			}
+		}
+	}
+}
+
+#photo-dialog {
+	--buttons-size: 2rem;
+
+	& > :is(a, button) {
+		display: flex;
+		position: fixed;
+		align-items: center;
+		justify-content: center;
+		transition: background 0.3s ease, opacity 0.3s ease;
+		border: none;
+		background: none;
+
+		& svg {
+			block-size: auto;
+			inline-size: var(--buttons-size);
+		}
+		&:is(:hover, :focus) {
+			opacity: 1;
+		}
+	}
+	& img {
+		max-block-size: calc(100vh - 4em);
+		animation: appear 0.2s ease-out both;
+
+		@media (prefers-reduced-motion: no-preference) {
+			animation: fadein 0.2s ease-out both;
+		}
+	}
+}
+
+#close-dialog {
+	z-index: 1; /* On top of the next button */
+	border-radius: 50%;
+	opacity: 0.7;
+	inset-inline-end: var(--spacing-l);
+	inset-block-start: var(--spacing-m);
+	aspect-ratio: 1;
+
+	&:is(:hover, :focus) {
+		background: var(--color-overlay-fallback);
+	}
+}
+
+:is(#previous-photo, #next-photo) {
+	/* display: none !important; TODO: add functionality */
+	inline-size: calc(var(--buttons-size) * 2);
+	opacity: 0.1;
+	inset-block: 0;
+
+	&:is(:hover, :focus) {
+		background: radial-gradient(
+			circle at center,
+			var(--color-overlay-fallback) calc(var(--buttons-size) * 0.9),
+			transparent var(--buttons-size)
+		);
+	}
+	&:focus-visible {
+		outline: none;
+	}
+	&[href=''] {
+		display: none;
+	}
+}
+
+#previous-photo {
+	inset-inline-start: 0;
+}
+
+#next-photo {
+	inset-inline-end: 0;
+}

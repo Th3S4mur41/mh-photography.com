@@ -1,0 +1,41 @@
+name: Visual Test
+
+# Controls when the action will run.
+on:
+  # Allows you to call this workflow from other workflows
+  workflow_call:
+    secrets:
+      PERCY_TOKEN:
+        required: true
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  visual-test:
+    name: '🖼️ Visual Test'
+    runs-on: ubuntu-latest
+    container: mcr.microsoft.com/playwright
+
+    steps:
+      - name: '☁️ Checkout repository'
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+
+      - name: '⚙️ Use Node.js'
+        uses: actions/setup-node@v3
+        with:
+          check-latest: true
+          cache: 'npm'
+
+      - name: '⛓️ Install dependencies'
+        env:
+          HUSKY: 0
+        run: npm ci --no-optional --no-audit --prefer-offline --progress=false
+
+      - name: '🧫 Run tests'
+        continue-on-error: true # make sure CI doesn't fail if quota is reached
+        env:
+          PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
+        run: npm run visual-test

@@ -1,0 +1,29 @@
+@import url('~/@fontsource/titillium-web/latin.css');
+
+:root {
+	--font-family: sans-serif;
+	--font-family-monospace: monospace;
+
+	/* stylelint-disable-next-line media-feature-name-no-unknown */
+	@media (prefers-reduced-data: no-preference) {
+		--font-family: 'Titillium Web', sans-serif; /* TODO: Add improved fallback */
+
+		/* --font-family-monospace: 'Cascadia Code', 'Cascadia Code-fallback', monospace; */
+	}
+
+	/* font size */
+	--font-size-s: clamp(0.75rem, min(1.5vw, 1vh), 1rem);
+	--font-size-m: clamp(1rem, min(2vw, 1.5vh), 1.5rem);
+	--font-size-l: clamp(1.25rem, min(2.5vw, 2vh), 2rem);
+	--font-size-xl: clamp(1.5rem, min(3vw, 2vh), 2.5rem);
+	--font-size-header-s: clamp(1.25rem, min(2vw, 1.5vh), 1.5rem);
+	--font-size-header-m: clamp(1.5rem, min(2.5vw, 2vh), 2rem);
+	--font-size-header-l: clamp(2rem, 12vw, 2.5rem);
+	--font-size-header-xl: 2rem;
+
+	/* font weight */
+	--font-weight-light: 200;
+	--font-weight-normal: 400;
+	--font-weight-semi-bold: 600;
+	--font-weight-bold: 700;
+}

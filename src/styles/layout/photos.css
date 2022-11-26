@@ -1,0 +1,50 @@
+/**
+ * styles/layout/photos.css
+ */
+
+#photos {
+	display: flex;
+	flex-wrap: wrap;
+	align-content: center;
+	min-block-size: 100vh; /* fallback */
+	min-block-size: 100vb;
+	padding-block: var(--spacing-xl);
+	padding-inline: var(--spacing-m);
+	gap: var(--spacing-m);
+
+	& > a {
+		display: flex;
+		flex-direction: column;
+		flex-grow: 1;
+		max-block-size: 50vh; /* fallback */
+		max-block-size: 50vb;
+		inline-size: 30%;
+		min-inline-size: min(300px, 100lvb);
+		text-align: center;
+		text-decoration: none;
+
+		& > h3 {
+			margin-block: var(--spacing-s);
+			font-size: var(--font-size-l);
+		}
+		& picture {
+			flex-grow: 1;
+			overflow: hidden;
+		}
+		& img {
+			flex-grow: 1;
+			block-size: 100%;
+			object-fit: cover;
+			transition: all 0.5s ease;
+		}
+		&:is(:focus-visible, :hover) {
+			& img {
+				filter: var(--img-hover);
+
+				@media (prefers-reduced-motion: no-preference) {
+					transform: scale(1.2);
+				}
+			}
+		}
+	}
+}

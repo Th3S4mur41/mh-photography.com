@@ -1,0 +1,79 @@
+/**
+ * styles/layout/about.css
+ */
+
+#about {
+	--grid-template-columns: var(--spacing-m) 1fr 1fr 1fr var(--spacing-m);
+	display: grid;
+	grid-template: 'article article article article article' '. aside aside aside .' / var(--grid-template-columns);
+	min-block-size: 100vh; /* fallback */
+	min-block-size: 100vb;
+	padding-block: var(--spacing-l);
+	gap: var(--spacing-m) var(--spacing-l);
+
+	& > article {
+		display: grid;
+		grid-area: article;
+		grid-template-areas:
+			'picture picture picture picture picture'
+			'. p1 p1 p1 .'
+			'. p2 p2 p2 .'
+			'. p3 p3 p3 .';
+		grid-template-columns: var(--grid-template-columns);
+		grid-template-columns: subgrid;
+		gap: var(--spacing-m) var(--spacing-l);
+		container: inline-size;
+
+		/* &::before {
+			content: '';
+			z-index: 1;
+			grid-area: picture;
+			background: linear-gradient(to right, transparent 90%, var(--color-bg) 95%),
+				linear-gradient(to top, var(--color-bg) 5%, transparent 10%, transparent 90%, var(--color-bg) 95%);
+		} */
+		& picture {
+			grid-area: picture;
+			max-block-size: max(50vb, calc(0.35 * 100cqi));
+			background: linear-gradient(to top, var(--color-bg) 0%, transparent 3%, transparent 97%, var(--color-bg) 100%),
+				linear-gradient(to right, var(--color-onbg) 98%, var(--color-bg) 100%);
+
+			& > img {
+				max-block-size: 100%;
+				object-fit: cover;
+				box-shadow: inset 0 0 5% var(--color-shadow);
+				mix-blend-mode: var(--mix-blend-mode);
+			}
+		}
+		& .p1 {
+			grid-area: p1;
+		}
+		& .p2 {
+			grid-area: p2;
+		}
+		& .p3 {
+			grid-area: p3;
+		}
+
+		@media (min-width: 800px) {
+			grid-template-areas:
+				'picture picture picture picture picture'
+				'. p1 p2 p3 .';
+		}
+	}
+	& > aside {
+		display: grid;
+		grid-area: aside;
+		justify-items: center;
+
+		& > svg {
+			align-self: end;
+			max-block-size: 40vb;
+			inline-size: 100%;
+			max-inline-size: calc(var(--max-line-length) / 2);
+		}
+	}
+
+	@media (min-width: 1300px) {
+		grid-template: 'article aside .' / 4fr 1fr var(--spacing-m);
+	}
+}
