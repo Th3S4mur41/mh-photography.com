@@ -1,3 +1,13 @@
+# [2.0.0](https://github.com/Th3S4mur41/mh-photography.com/compare/v1.0.0...v2.0.0) (2022-11-28)
+
+
+* feat!: update sitemap to redesign ([ffd3545](https://github.com/Th3S4mur41/mh-photography.com/commit/ffd354593d8e3fb135a4db8fc155e7cbff2b3858))
+
+
+### BREAKING CHANGES
+
+* Publish new MH Photography design
+
 # 1.0.0 (2022-11-26)
 
 
