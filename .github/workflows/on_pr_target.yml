@@ -9,8 +9,13 @@ on:
     types: [opened, synchronize, reopened]
 
 jobs:
+  cancel-runs:
+    name: '▶️ actions'
+    uses: ./.github/workflows/cancel-workflow.yml
+
   lint-pr:
     name: '▶️ actions'
+    needs: [cancel-runs]
     uses: ./.github/workflows/lint-pr.yml
 
   lint-code:

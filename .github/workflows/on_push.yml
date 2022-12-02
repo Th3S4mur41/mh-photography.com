@@ -9,8 +9,13 @@ on:
     branches: [main, next, beta, alpha]
 
 jobs:
+  cancel-runs:
+    name: '▶️ actions'
+    uses: ./.github/workflows/cancel-workflow.yml
+
   lint-code:
     name: '▶️ actions'
+    needs: [cancel-runs]
     uses: ./.github/workflows/lint-code.yml
 
   build-code:
