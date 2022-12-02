@@ -18,7 +18,10 @@ jobs:
   build:
     name: '🚀 Publish'
     runs-on: ubuntu-latest
-    container: mcr.microsoft.com/playwright # Provide browser instances for test runners
+
+    permissions:
+      contents: read
+      deployments: write
 
     steps:
       - name: '☁️ Checkout repository'
