@@ -64,5 +64,5 @@ jobs:
 
     uses: ./.github/workflows/publish.yml
     secrets:
-      NPM_TOKEN: ${{ secrets.NPM_TOKEN  }}
-      GH_TOKEN: ${{ secrets.GH_TOKEN  }}
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN  }}
+      CLOUDFLARE_ID: ${{ secrets.CLOUDFLARE_ID  }}
