@@ -54,3 +54,15 @@ jobs:
     uses: ./.github/workflows/dependabot.yml
     secrets:
       GH_TOKEN: ${{ secrets.GH_TOKEN  }}
+
+  publish:
+    name: '▶️ actions'
+    needs: [lint-code, build-code, test-code, codeql, sonarqube]
+
+    # Publish only if not PR is not in Draft state and it was not opened by dependabot
+    if: github.event.pull_request.draft == false && github.actor != 'dependabot[bot]'
+
+    uses: ./.github/workflows/publish.yml
+    secrets:
+      NPM_TOKEN: ${{ secrets.NPM_TOKEN  }}
+      GH_TOKEN: ${{ secrets.GH_TOKEN  }}

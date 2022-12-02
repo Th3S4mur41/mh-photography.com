@@ -51,3 +51,11 @@ jobs:
     secrets:
       NPM_TOKEN: ${{ secrets.NPM_TOKEN  }}
       GH_TOKEN: ${{ secrets.GH_TOKEN  }}
+
+  publish:
+    name: '▶️ actions'
+    needs: [release]
+    uses: ./.github/workflows/publish.yml
+    secrets:
+      NPM_TOKEN: ${{ secrets.NPM_TOKEN  }}
+      GH_TOKEN: ${{ secrets.GH_TOKEN  }}
