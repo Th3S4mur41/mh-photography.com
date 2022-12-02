@@ -18,7 +18,10 @@ jobs:
   build:
     name: '🚀 Publish'
     runs-on: ubuntu-latest
-    container: mcr.microsoft.com/playwright # Provide browser instances for test runners
+
+    permissions:
+      contents: read
+      deployments: write
 
     steps:
       - name: '☁️ Checkout repository'
@@ -36,9 +39,6 @@ jobs:
         env:
           HUSKY: 0
         run: npm ci --no-optional --no-audit --prefer-offline --progress=false
-
-      - name: '⛓️ Install puppeteer' # Needed to provide a browser to webhint
-        run: npm i -D puppeteer
 
       # In this repository, building is much faster than the upload/download of the artifact
       - name: '🛠️ Build'
