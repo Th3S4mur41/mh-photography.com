@@ -35,12 +35,16 @@ jobs:
       - name: '⛓️ Install puppeteer' # Needed to provide a browser to webhint
         run: npm i -D puppeteer
 
-      - name: '📎 Download build output'
-        uses: actions/download-artifact@v3
-        continue-on-error: true # There won't be an artifact in workflow without build job
-        with:
-          name: build
-          path: dist
+      # In this repository, building is much faster than the upload/download of the artifact
+      - name: '🛠️ Build'
+        run: npm run build --if-present
+
+      # - name: '📎 Download build output'
+      #   uses: actions/download-artifact@v3
+      #   continue-on-error: true # There won't be an artifact in workflow without build job
+      #   with:
+      #     name: build
+      #     path: dist
 
       - name: '🧫 Run tests'
         run: npm run test --if-present

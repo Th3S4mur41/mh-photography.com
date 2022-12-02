@@ -49,11 +49,16 @@ jobs:
           HUSKY: 0
         run: npm ci --no-optional --no-audit --prefer-offline --progress=false
 
-      - name: '📎 Download build output'
-        uses: actions/download-artifact@v3
-        continue-on-error: true # There won't be an artifact in workflow without build job
-        with:
-          name: build
+      # In this repository, building is much faster than the upload/download of the artifact
+      - name: '🛠️ Build'
+        run: npm run build --if-present
+
+      # - name: '📎 Download build output'
+      #   uses: actions/download-artifact@v3
+      #   continue-on-error: true # There won't be an artifact in workflow without build job
+      #   with:
+      #     name: build
+      #     path: dist
 
       - name: '📦 Release'
         id: release

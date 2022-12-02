@@ -34,10 +34,10 @@ jobs:
       - name: '🛠️ Build'
         run: npm run build --if-present
 
-      - name: '📎 Upload build output'
-        uses: actions/upload-artifact@v3
-        with:
-          name: build
-          path: |
-            dist/
-          retention-days: 1
+      # - name: '📎 Upload build output'
+      #   uses: actions/upload-artifact@v3
+      #   with:
+      #     name: build
+      #     path: |
+      #       dist/
+      #     retention-days: 1
