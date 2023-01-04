@@ -31,7 +31,7 @@
 		"@typescript-eslint/eslint-plugin": "^5.48.0",
 		"@typescript-eslint/parser": "^5.48.0",
 		"autoprefixer": "^10.4.13",
-		"babel-loader": "^9.1.0",
+		"babel-loader": "^9.1.2",
 		"browserslist": "^4.21.4",
 		"concurrently": "^7.6.0",
 		"cssnano": "^5.1.14",
