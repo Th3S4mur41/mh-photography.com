@@ -50,7 +50,10 @@
 		justify-items: center;
 		align-items: end;
 
-		& > nav {
+		& > .logo {
+			margin-block-end: -2rem; /* Align the logo with the text */
+		}
+		& > :is(nav, .version) {
 			justify-self: end;
 		}
 	}
