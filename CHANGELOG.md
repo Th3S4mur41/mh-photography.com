@@ -1,3 +1,10 @@
+# [2.1.0](https://github.com/Th3S4mur41/mh-photography.com/compare/v2.0.0...v2.1.0) (2023-01-27)
+
+
+### Features
+
+* **footer:** add created by link ([#370](https://github.com/Th3S4mur41/mh-photography.com/issues/370)) ([d8c6ab6](https://github.com/Th3S4mur41/mh-photography.com/commit/d8c6ab64c3438c469d89d31e0bbf293f8cd3262f))
+
 # [2.0.0](https://github.com/Th3S4mur41/mh-photography.com/compare/v1.0.0...v2.0.0) (2022-11-28)
 
 
