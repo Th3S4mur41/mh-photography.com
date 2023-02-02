@@ -57,7 +57,7 @@
 		"stylelint-order": "^6.0.1",
 		"stylelint-use-logical-spec": "^4.1.0",
 		"typescript": "^4.9.5",
-		"vite": "^4.0.4",
+		"vite": "^4.1.1",
 		"vite-plugin-handlebars": "^1.6.0",
 		"wait-on": "^7.0.1"
 	},
