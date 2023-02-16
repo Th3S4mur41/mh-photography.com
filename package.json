@@ -45,7 +45,7 @@
 		"image-size": "^1.0.2",
 		"postcss": "^8.4.21",
 		"postcss-loader": "^7.0.2",
-		"postcss-nesting": "^11.1.0",
+		"postcss-nesting": "^11.2.0",
 		"postcss-preset-env": "^8.0.1",
 		"prettier": "^2.8.4",
 		"semantic-release": "^20.1.0",
