@@ -58,6 +58,7 @@
 	}
 	& .hero {
 		flex: 0 0 100%;
+
 		@media (prefers-reduced-motion: no-preference) {
 			animation: carousel 30s linear 5s infinite;
 		}

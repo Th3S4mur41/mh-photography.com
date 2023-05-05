@@ -1,3 +1,10 @@
+# [2.2.0](https://github.com/Th3S4mur41/mh-photography.com/compare/v2.1.0...v2.2.0) (2023-02-15)
+
+
+### Features
+
+* **pics:** add new pictures in lifestyle album ([8432e1b](https://github.com/Th3S4mur41/mh-photography.com/commit/8432e1b2761a7dc7157da019a455013cc7bf2e4c))
+
 # [2.1.0](https://github.com/Th3S4mur41/mh-photography.com/compare/v2.0.0...v2.1.0) (2023-01-27)
 
 
