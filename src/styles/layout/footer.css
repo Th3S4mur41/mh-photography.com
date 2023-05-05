@@ -43,7 +43,7 @@
 		grid-area: navigation;
 	}
 
-	@media (min-width: 800px) {
+	@media (width >= 800px) {
 		grid-template:
 			'social . .  navigation navigation'
 			'logo copyright copyright copyright version';

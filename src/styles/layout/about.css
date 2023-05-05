@@ -54,7 +54,7 @@
 			grid-area: p3;
 		}
 
-		@media (min-width: 800px) {
+		@media (width >= 800px) {
 			grid-template-areas:
 				'picture picture picture picture picture'
 				'. p1 p2 p3 .';
@@ -73,7 +73,7 @@
 		}
 	}
 
-	@media (min-width: 1300px) {
+	@media (width >= 1300px) {
 		grid-template: 'article aside .' / 4fr 1fr var(--spacing-m);
 	}
 }
