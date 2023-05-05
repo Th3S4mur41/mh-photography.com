@@ -51,7 +51,6 @@
 		"semantic-release": "^21.0.2",
 		"sharp": "^0.32.1",
 		"stylelint": "^15.6.1",
-		"stylelint-config-prettier": "^9.0.5",
 		"stylelint-config-property-sort-order-smacss": "^9.1.0",
 		"stylelint-config-standard": "^33.0.0",
 		"stylelint-order": "^6.0.3",
@@ -68,7 +67,7 @@
 	"scripts": {
 		"start": "vite",
 		"start:prod": "vite preview",
-		"build": "vite build",
+		"build": "vite build --emptyOutDir",
 		"build:watch": "tsc --watch",
 		"build:img": "node tools/sharp.js",
 		"lint": "concurrently 'npm:lint:*(!fix)'",
