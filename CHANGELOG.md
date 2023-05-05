@@ -1,3 +1,10 @@
+## [2.2.1](https://github.com/Th3S4mur41/mh-photography.com/compare/v2.2.0...v2.2.1) (2023-05-05)
+
+
+### Bug Fixes
+
+* add fallback for logical viewport unit ([#390](https://github.com/Th3S4mur41/mh-photography.com/issues/390)) ([00c3adb](https://github.com/Th3S4mur41/mh-photography.com/commit/00c3adbcaf2ee39aa77f00e420b7a5673ae16dac))
+
 # [2.2.0](https://github.com/Th3S4mur41/mh-photography.com/compare/v2.1.0...v2.2.0) (2023-02-15)
 
 
