@@ -33,6 +33,7 @@
 		} */
 		& picture {
 			grid-area: picture;
+			max-block-size: max(50vh, calc(0.35 * 100cqw)); /* browser fallback */
 			max-block-size: max(50vb, calc(0.35 * 100cqi));
 			background: linear-gradient(to top, var(--color-bg) 0%, transparent 3%, transparent 97%, var(--color-bg) 100%),
 				linear-gradient(to right, var(--color-onbg) 98%, var(--color-bg) 100%);
