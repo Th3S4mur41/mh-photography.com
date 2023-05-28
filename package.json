@@ -43,7 +43,7 @@
 		"html-loader": "^4.2.0",
 		"husky": "^8.0.3",
 		"image-size": "^1.0.2",
-		"postcss": "^8.4.23",
+		"postcss": "^8.4.24",
 		"postcss-loader": "^7.3.0",
 		"postcss-nesting": "^11.2.2",
 		"postcss-preset-env": "^8.4.1",
