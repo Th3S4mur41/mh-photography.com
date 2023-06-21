@@ -28,7 +28,7 @@
 		"@semantic-release/changelog": "^6.0.3",
 		"@semantic-release/git": "^10.0.1",
 		"@squoosh/cli": "^0.7.3",
-		"@typescript-eslint/eslint-plugin": "^5.59.11",
+		"@typescript-eslint/eslint-plugin": "^5.60.0",
 		"@typescript-eslint/parser": "^5.59.11",
 		"autoprefixer": "^10.4.14",
 		"babel-loader": "^9.1.2",
