@@ -87,6 +87,6 @@
 		"git:pre-push": "npm run build && npm run test"
 	},
 	"dependencies": {
-		"@fontsource/titillium-web": "^5.0.4"
+		"@fontsource/titillium-web": "^5.0.5"
 	}
 }
