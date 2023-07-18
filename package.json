@@ -1,5 +1,6 @@
 {
 	"name": "mh-photography.com",
+	"type": "module",
 	"version": "2.2.1",
 	"license": "LICENSE",
 	"private": true,
@@ -66,8 +67,10 @@
 	},
 	"scripts": {
 		"start": "vite",
+		"start:astro": "astro dev",
 		"start:prod": "vite preview",
 		"build": "vite build --emptyOutDir",
+		"build:astro": "astro build",
 		"build:watch": "tsc --watch",
 		"build:img": "node tools/sharp.js",
 		"lint": "concurrently 'npm:lint:*(!fix)'",
@@ -83,10 +86,12 @@
 		"test:hint": "concurrently \"npm:start:prod\" \"npm:hint\" --kill-others  --s first",
 		"release": "semantic-release",
 		"prepare": "husky install",
+		"preview": "astro preview",
 		"git:pre-commit": "pretty-quick --staged && lint-staged",
 		"git:pre-push": "npm run build && npm run test"
 	},
 	"dependencies": {
-		"@fontsource/titillium-web": "^5.0.5"
+		"@fontsource/titillium-web": "^5.0.5",
+		"astro": "^2.8.4"
 	}
 }
