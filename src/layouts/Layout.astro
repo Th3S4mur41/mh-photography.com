@@ -1,36 +1,87 @@
 ---
+import '../styles/styles.css';
+
 interface Props {
-	title: string;
+	title?: string;
 }
 
 const { title } = Astro.props;
+const mainTitle = 'Manuel Hamel Photography';
+const pageTitle = title ? `${title} | ${mainTitle}` : mainTitle;
 ---
 
-<!DOCTYPE html>
 <html lang="en">
 	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="HandheldFriendly" content="false" />
+		<meta name="color-scheme" content="dark light" />
+		<meta name="theme-color" content="#4d4a42" media="(prefers-color-scheme: dark)" />
+		<meta name="theme-color" content="#ded3c0" media="(prefers-color-scheme: light)" />
+		<meta name="msapplication-TileColor" content="#4d4a42" />
+		<link rel="manifest" href="/manifest.webmanifest" />
+
 		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
+		<title>{pageTitle}</title>
+		<meta name="author" content="Manuel Hamel" />
+		<meta
+			name="keywords"
+			content="photography, photographer, Manuel Hamel, weddings, people, lifestyle, travel, families, kids, business, studio, photo, portrait, art, artistic, pictures, photoshop, Barcelona"
+		/>
+		<!-- TODO: Update descriptkeywordsion -->
+		<meta
+			name="description"
+			content="Belgian photographer, based in Barcelona, who loves to capture moments and to travel!"
+		/>
+		<!-- TODO: Update description -->
+		<meta name="copyright" content="© 2020-{{currentYear}} Manuel Hamel Photography" />
+
+		<meta name="robots" content="index, follow" />
+
+		<!-- Performance -->
+		<link rel="dns-prefetch" href="//static.cloudflareinsights.com" />
+
+		<!-- Icons -->
+		<link rel="icon" type="image/svg+xml" href="/assets/icons/favicon.svg" />
+		<link rel="icon" type="image/png" href="/assets/icons/favicon.png" />
+		<link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png" />
+
+		<!--Open Graph-->
+		<meta property="og:title" content="Manuel Hamel Photography" />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://mh-photography.com" />
+		<meta
+			property="og:description"
+			content="Belgian photographer, based in Barcelona, who loves to capture moments and to travel!."
+		/>
+		<!-- TODO: Replace image -->
+		<meta property="og:image" content="https://mh-photography.com/assets/social.jpg" />
+		<meta property="og:image:width" content="1280" />
+		<meta property="og:image:height" content="640" />
+
+		<!--Twitter Card-->
+		<meta name="twitter:card" content="https://alpha.mh-photography-com.pages.dev/" />
+		<meta name="twitter:title" content="Manuel Hamel Photography" />
+		<meta property="twitter:domain" content="mh-photography.com" />
+		<meta property="twitter:url" content="https://mh-photography.com/" />
+		<meta
+			name="twitter:description"
+			content="Belgian photographer, based in Barcelona, who loves to capture moments and to travel!"
+		/>
+		<meta name="twitter:url" content="https://mh-photography.com" />
+		<!-- TODO: Replace image -->
+		<meta name="twitter:image" content="https://mh-photography.com/assets/social.jpg" />
+
+		<!-- Geolocation -->
+		<meta name="geo.region" content="ES" />
+		<meta name="geo.placename" content="Barcelona" />
+		<meta name="geo.position" content="41.3814424;2.1568902" />
+		<meta name="ICBM" content="41.3814424, 2.1568902" />
+
+		<!-- imports -->
+		<!-- <link rel="stylesheet" href="../styles../styles.css" async /> -->
 	</head>
 	<body>
 		<slot />
 	</body>
 </html>
-<style is:global>
-	:root {
-		--accent: 124, 58, 237;
-		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #da62c4 30%, white 60%);
-	}
-	html {
-		font-family: system-ui, sans-serif;
-		background-color: #f6f6f6;
-	}
-	code {
-		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New,
-			monospace;
-	}
-</style>

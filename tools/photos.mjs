@@ -2,10 +2,15 @@
  * tools/photos.js
  */
 
-const path = require('path');
-const fs = require('fs');
-const sizeOf = require('image-size');
+import { fileURLToPath } from 'url';
+import fs from 'fs';
+import path from 'path';
+import { sizeOf } from 'image-size';
+
 const projectRoot = '../';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 /**
  * getPhotos
