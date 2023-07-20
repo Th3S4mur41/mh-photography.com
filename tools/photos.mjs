@@ -5,12 +5,57 @@
 import { fileURLToPath } from 'url';
 import fs from 'fs';
 import path from 'path';
-import { sizeOf } from 'image-size';
+import sizeOf from 'image-size';
 
 const projectRoot = '../';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
+
+const getAlbums = (input) => {
+	const albumsPath = path.join(__dirname, projectRoot, input);
+
+	return fs
+		.readdirSync(albumsPath, { withFileTypes: true })
+		.filter((item) => {
+			return item.isDirectory();
+		})
+		.map((item) => {
+			return item.name;
+		});
+};
+
+const getImages = (input) => {
+	const albumPath = path.join(__dirname, projectRoot, input);
+
+	return fs
+		.readdirSync(albumPath, {
+			withFileTypes: true
+		})
+		.filter((item) => {
+			return item.isFile();
+		})
+		.map((item) => {
+			return item.name;
+		});
+};
+
+const getImageData = (album, image) => {
+	const img = {};
+
+	const destImage = image.replace(/ /g, '-').replace(/&/g, 'and').toLowerCase();
+	img.name = destImage.substring(0, destImage.lastIndexOf('.'));
+	img.extension = destImage.substring(destImage.lastIndexOf('.'));
+	img.path = `/${album}/`;
+	img.url = `/${album}/${destImage}`;
+
+	const dimensions = sizeOf(path.join(__dirname, projectRoot, `/${album}/${image}`));
+	img.width = dimensions.width;
+	img.height = dimensions.height;
+	img.orientation = dimensions.width > dimensions.height ? 'landscape' : 'portrait';
+
+	return img;
+};
 
 /**
  * getPhotos
@@ -19,19 +64,11 @@ const __dirname = path.dirname(__filename);
  */
 export const photos = (input) => {
 	input = input || 'assets/img/albums';
-	const albumsPath = path.join(__dirname, projectRoot, input);
 
 	const photos = {};
 
 	// Get a list of albums
-	const albums = fs
-		.readdirSync(albumsPath, { withFileTypes: true })
-		.filter((item) => {
-			return item.isDirectory();
-		})
-		.map((item) => {
-			return item.name;
-		});
+	const albums = getAlbums(input);
 
 	// Get a list of file in each album
 	albums.forEach((album) => {
@@ -39,32 +76,10 @@ export const photos = (input) => {
 		photos[album].path = `${input}/${album}`;
 		photos[album].images = [];
 
-		const images = fs
-			.readdirSync(path.join(__dirname, projectRoot, photos[album].path), {
-				withFileTypes: true
-			})
-			.filter((item) => {
-				return item.isFile();
-			})
-			.map((item) => {
-				return item.name;
-			});
+		const images = getImages(photos[album].path);
 
 		images.forEach((image) => {
-			const img = {};
-
-			const destImage = image.replace(/ /g, '-').replace(/&/g, 'and').toLowerCase();
-			img.name = destImage.substring(0, destImage.lastIndexOf('.'));
-			img.extension = destImage.substring(destImage.lastIndexOf('.'));
-			img.path = `/${photos[album].path}/`;
-			img.url = `/${photos[album].path}/${destImage}`;
-
-			const dimensions = sizeOf(path.join(__dirname, projectRoot, `/${photos[album].path}/${image}`));
-			img.width = dimensions.width;
-			img.height = dimensions.height;
-			img.orientation = dimensions.width > dimensions.height ? 'landscape' : 'portrait';
-
-			photos[album].images.push(img);
+			photos[album].images.push(getImageData(photos[album].path, image));
 		});
 	});
 

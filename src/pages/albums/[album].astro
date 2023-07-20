@@ -1,0 +1,27 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navigation from '../../components/Navigation.astro';
+import Album from '../../components/Album.astro';
+import Footer from '../../components/Footer.astro';
+
+export function getStaticPaths() {
+	return [
+		{ params: { album: 'business' } },
+		{ params: { album: 'families-and-kids' } },
+		{ params: { album: 'travel' } },
+		{ params: { album: 'weddings' } },
+		{ params: { album: 'people-and-lifestyle' } }
+	];
+}
+
+const { album } = Astro.params;
+---
+
+<Layout>
+	<Navigation path="/" />
+</Layout>
+
+<main id="main" class="album">
+	<Album album={album} />
+</main>
+<footer id="footer"><Footer /> <Navigation /></footer>
