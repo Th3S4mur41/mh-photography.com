@@ -1,3 +1,10 @@
+# [2.3.0-alpha.1](https://github.com/Th3S4mur41/mh-photography.com/compare/v2.2.1...v2.3.0-alpha.1) (2023-07-22)
+
+
+### Features
+
+* **photos:** highlight primary albums ([#627](https://github.com/Th3S4mur41/mh-photography.com/issues/627)) ([d1891f4](https://github.com/Th3S4mur41/mh-photography.com/commit/d1891f4750dbabadc95e67dc61a9cf9d04d2bea3))
+
 ## [2.2.1](https://github.com/Th3S4mur41/mh-photography.com/compare/v2.2.0...v2.2.1) (2023-05-05)
 
 

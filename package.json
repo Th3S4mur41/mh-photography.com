@@ -1,7 +1,7 @@
 {
 	"name": "mh-photography.com",
 	"type": "module",
-	"version": "2.2.1",
+	"version": "2.3.0-alpha.1",
 	"license": "LICENSE",
 	"private": true,
 	"description": "MH Photography",
