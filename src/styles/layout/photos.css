@@ -6,7 +6,6 @@
 	display: flex;
 	flex-wrap: wrap;
 	align-content: center;
-	min-block-size: 100vh; /* fallback */
 	min-block-size: 100vb;
 	padding-block: var(--spacing-xl);
 	padding-inline: var(--spacing-m);
@@ -16,8 +15,7 @@
 		display: grid;
 		grid-template: 'picture';
 		flex-grow: 1;
-		max-block-size: 50vh; /* fallback */
-		max-block-size: 50vb;
+		max-block-size: calc(50vb - var(--spacing-xl));
 		inline-size: 30%;
 		min-inline-size: min(300px, 100lvb);
 		text-align: center;

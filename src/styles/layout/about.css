@@ -6,7 +6,6 @@
 	--grid-template-columns: var(--spacing-m) 1fr 1fr 1fr var(--spacing-m);
 	display: grid;
 	grid-template: 'article article article article article' '. aside aside aside .' / var(--grid-template-columns);
-	min-block-size: 100vh; /* fallback */
 	min-block-size: 100vb;
 	padding-block: var(--spacing-l);
 	gap: var(--spacing-m) var(--spacing-l);
