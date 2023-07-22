@@ -78,7 +78,7 @@
 		"lint:css:fix": "stylelint \"src/**/*.{css,less,sass,scss}\" --aei --ignore-path .gitignore --fix",
 		"lint:style": "prettier --check --ignore-unknown .",
 		"lint:style:fix": "prettier --write --ignore-unknown .",
-		"hint": "wait-on -t 300000 http://localhost:8080/ && hint http://localhost:8080/",
+		"hint": "wait-on -t 300000 http://localhost:3000/ && hint http://localhost:3000/",
 		"test": "concurrently 'npm:test:*'",
 		"test:hint": "concurrently \"npm:start:prod\" \"npm:hint\" --kill-others  --s first",
 		"release": "semantic-release",
