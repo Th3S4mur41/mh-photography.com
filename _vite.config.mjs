@@ -1,7 +1,7 @@
 // vite.config.js
 import { defineConfig } from 'vite';
 import handlebars from 'vite-plugin-handlebars';
-import { photos } from './tools/photos.mjs';
+import { photos } from './src/utils/photos.mjs';
 import { resolve } from 'path';
 
 const root = resolve(__dirname, 'src');

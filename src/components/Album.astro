@@ -1,5 +1,5 @@
 ---
-import { photos } from '../../tools/photos.mjs';
+import { photos } from '../utils/photos.mjs';
 
 interface Props {
 	album: string;
@@ -8,7 +8,6 @@ interface Props {
 const { album } = Astro.props;
 const albums = photos('assets/img/albums');
 const pics = albums[album]?.images;
-console.log(album);
 ---
 
 <dialog id="photo-dialog">

@@ -56,7 +56,7 @@
 		}
 
 		@media (width >= 800px) {
-			grid-template-areas:
+			grid-template:
 				'picture picture picture picture picture'
 				'. p1 p2 p3 .';
 		}

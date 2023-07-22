@@ -7,7 +7,8 @@ import fs from 'fs';
 import path from 'path';
 import sizeOf from 'image-size';
 
-const projectRoot = '../';
+// in production, the script is run from the dist folder
+const projectRoot = import.meta.env.NODE_ENV === 'production' ? '../../../' : '../../';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -49,7 +50,9 @@ const getImageData = (album, image) => {
 	img.path = `/${album}/`;
 	img.url = `/${album}/${destImage}`;
 
-	const dimensions = sizeOf(path.join(__dirname, projectRoot, `/${album}/${image}`));
+	// image-size doesn't support avif yet: https://github.com/image-size/image-size/issues/125
+	// Use jpg instead of avif for for the dimensions
+	const dimensions = sizeOf(path.join(__dirname, projectRoot, `/${album}/${image.replace(/\.avif/, '.jpg')}`));
 	img.width = dimensions.width;
 	img.height = dimensions.height;
 	img.orientation = dimensions.width > dimensions.height ? 'landscape' : 'portrait';
@@ -84,11 +87,4 @@ export const photos = (input) => {
 	});
 
 	return photos;
-};
-
-export const writePhotosFile = (input, output) => {
-	fs.writeFile(output || 'photos.json', JSON.stringify(photos(input)), () => {
-		// Checking for errors
-		console.log('Done writing'); // Success
-	});
 };
