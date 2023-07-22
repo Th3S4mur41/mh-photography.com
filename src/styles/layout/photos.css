@@ -23,6 +23,9 @@
 		text-align: center;
 		text-decoration: none;
 
+		&.primary {
+			inline-size: calc(50% - var(--spacing-m));
+		}
 		& > h3 {
 			margin-block: var(--spacing-s);
 			font-size: var(--font-size-l);
