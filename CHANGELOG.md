@@ -1,3 +1,10 @@
+# [2.3.0-alpha.2](https://github.com/Th3S4mur41/mh-photography.com/compare/v2.3.0-alpha.1...v2.3.0-alpha.2) (2023-07-23)
+
+
+### Features
+
+* update font families ([#631](https://github.com/Th3S4mur41/mh-photography.com/issues/631)) ([6b777e8](https://github.com/Th3S4mur41/mh-photography.com/commit/6b777e8e056b00b718d3970528f626485f481911))
+
 # [2.3.0-alpha.1](https://github.com/Th3S4mur41/mh-photography.com/compare/v2.2.1...v2.3.0-alpha.1) (2023-07-22)
 
 
