@@ -6,7 +6,8 @@
 	display: grid;
 	grid-template:
 		[image-start] '.' 1fr
-		'title' auto [image-end]
+		'logo' auto [image-end]
+		'title' auto
 		'subtitle' auto;
 	justify-items: stretch;
 	align-items: end;
@@ -15,7 +16,7 @@
 
 	& > h1 {
 		display: flex;
-		grid-area: title;
+		grid-area: logo;
 		justify-content: center;
 		margin: 0;
 		padding-block: var(--spacing-m);
@@ -25,6 +26,16 @@
 			inline-size: min(80vw, 40rem);
 		}
 	}
+	& > .title {
+		grid-area: title;
+		margin-block-start: var(--spacing-m);
+		color: var(--color-onbg);
+		font-family: var(--font-family-header);
+		font-size: var(--font-size-header-xl);
+		font-weight: var(--font-weight-normal);
+		text-align: center;
+		text-wrap: balance;
+	}
 	& > .subtitle {
 		grid-area: subtitle;
 		margin-block-end: var(--spacing-m);
@@ -32,6 +43,7 @@
 		font-size: var(--font-size-header-s);
 		font-weight: var(--font-weight-light);
 		text-align: center;
+		text-wrap: balance;
 	}
 	& > .carousel {
 		display: flex;

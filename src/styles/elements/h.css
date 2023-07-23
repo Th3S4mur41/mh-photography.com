@@ -2,6 +2,11 @@
  * styles/elements/dialog.css
  */
 
+:is(h1, h2, h3, h4, h5, h6) {
+	font-family: var(--font-family-header);
+	font-weight: var(--font-weight-normal);
+}
+
 h1 {
 	font-size: var(--font-size-header-xl);
 }
@@ -12,5 +17,4 @@ h2 {
 
 h3 {
 	font-size: var(--font-size-header-m);
-	font-weight: var(--font-weight-light);
 }
