@@ -62,8 +62,7 @@
 		"wait-on": "^7.0.1"
 	},
 	"optionalDependencies": {
-		"lint-staged": "^13.2.3",
-		"pretty-quick": "^3.1.3"
+		"lint-staged": "^13.2.3"
 	},
 	"scripts": {
 		"start": "astro dev",
@@ -72,9 +71,9 @@
 		"build:img": "node src/utils/sharp.js",
 		"lint": "concurrently 'npm:lint:*(!fix)'",
 		"lint:fix": "concurrently -m 1 'npm:lint:*:fix'",
-		"lint:js": "eslint \"src/**/*.{js,mjs,ts}\" --no-error-on-unmatched-pattern --ignore-path .gitignore",
-		"lint:js:fix": "eslint \"src/**/*.{js,mjs,ts}\" --no-error-on-unmatched-pattern --ignore-path .gitignore --fix",
-		"lint:css": "stylelint \"src/**/*.{css, less, sass, scss}\" --aei --ignore-path .gitignore",
+		"lint:js": "eslint \"src/**/*.{js,mjs,cjs,ts}\" --no-error-on-unmatched-pattern --ignore-path .gitignore",
+		"lint:js:fix": "eslint \"src/**/*.{js,mjs,cjs,ts}\" --no-error-on-unmatched-pattern --ignore-path .gitignore --fix",
+		"lint:css": "stylelint \"src/**/*.{css,less,sass,scss}\" --aei --ignore-path .gitignore",
 		"lint:css:fix": "stylelint \"src/**/*.{css,less,sass,scss}\" --aei --ignore-path .gitignore --fix",
 		"lint:style": "prettier --check --ignore-unknown .",
 		"lint:style:fix": "prettier --write --ignore-unknown .",
@@ -83,7 +82,7 @@
 		"test:hint": "concurrently \"npm:start:prod\" \"npm:hint\" --kill-others  --s first",
 		"release": "semantic-release",
 		"prepare": "husky install",
-		"git:pre-commit": "pretty-quick --staged && lint-staged",
+		"git:pre-commit": "lint-staged",
 		"git:pre-push": "npm run build && npm run test"
 	},
 	"dependencies": {
