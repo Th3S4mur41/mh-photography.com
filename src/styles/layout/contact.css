@@ -32,4 +32,8 @@
 		align-self: center;
 		margin-inline: var(--spacing-l);
 	}
+	& .fn {
+		font-family: var(--font-family-header);
+		font-weight: var(--font-weight-normal);
+	}
 }
