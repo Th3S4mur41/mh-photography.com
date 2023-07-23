@@ -18,6 +18,7 @@ body {
 	-moz-osx-font-smoothing: grayscale;
 	font-weight: var(--font-weight-normal);
 	accent-color: var(--color-accent);
+	container: body / inline-size;
 }
 
 /**
