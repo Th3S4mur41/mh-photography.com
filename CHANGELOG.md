@@ -1,3 +1,10 @@
+# [2.3.0-alpha.4](https://github.com/Th3S4mur41/mh-photography.com/compare/v2.3.0-alpha.3...v2.3.0-alpha.4) (2023-07-29)
+
+
+### Features
+
+* add localization for header  and navigation ([#646](https://github.com/Th3S4mur41/mh-photography.com/issues/646)) ([5c2f41f](https://github.com/Th3S4mur41/mh-photography.com/commit/5c2f41fb08e310a64353012c4ebb148183ca3da4))
+
 # [2.3.0-alpha.3](https://github.com/Th3S4mur41/mh-photography.com/compare/v2.3.0-alpha.2...v2.3.0-alpha.3) (2023-07-24)
 
 
