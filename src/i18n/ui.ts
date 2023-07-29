@@ -17,6 +17,9 @@ export const ui = {
 		'header.subtitle': 'Hochzeitsfotografie - Events - Familien - Portraits - Editorials'
 	},
 	en: {
+		'meta.keywords':
+			'photography, photographer, Manuel Hamel, weddings, people, lifestyle, travel, families, kids, business, studio, photo, portrait, art, artistic, pictures, photoshop, Barcelona',
+		'meta.description': 'Belgian photographer, based in Barcelona, who loves to capture moments and to travel!',
 		'nav.home': 'Home',
 		'nav.about': 'About me',
 		'nav.photos': 'Gallery',
