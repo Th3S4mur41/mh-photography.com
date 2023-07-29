@@ -43,14 +43,16 @@
 		& > picture {
 			grid-area: picture;
 			flex-grow: 1;
+			max-block-size: 100%; /* Safari workaround to avoid image overflow */
 			overflow: hidden;
 		}
 		& img {
 			flex-grow: 1;
 			block-size: 100%;
+			max-block-size: 100%;
+			transition: all 0.5s ease;
 			object-fit: cover;
 			filter: var(--img-hover);
-			transition: all 0.5s ease;
 		}
 		&:is(:focus-visible, :hover) {
 			& > h3 {

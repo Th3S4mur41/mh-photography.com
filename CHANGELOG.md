@@ -1,3 +1,11 @@
+# [2.3.0-alpha.3](https://github.com/Th3S4mur41/mh-photography.com/compare/v2.3.0-alpha.2...v2.3.0-alpha.3) (2023-07-24)
+
+
+### Bug Fixes
+
+* **style:** photo overflow on safari ([82d0105](https://github.com/Th3S4mur41/mh-photography.com/commit/82d0105c671700a702f5fd030e0fdc95f98c2f78))
+* **style:** remove body container ([9102557](https://github.com/Th3S4mur41/mh-photography.com/commit/910255765313b6e03d7610ad17303eb1591fca2e))
+
 # [2.3.0-alpha.2](https://github.com/Th3S4mur41/mh-photography.com/compare/v2.3.0-alpha.1...v2.3.0-alpha.2) (2023-07-23)
 
 
