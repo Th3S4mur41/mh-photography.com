@@ -6,6 +6,19 @@ import Photos from '../components/Photos.astro';
 import About from '../components/About.astro';
 import Footer from '../components/Footer.astro';
 import Contact from '../components/Contact.astro';
+
+export function getStaticPaths () {
+ return [
+    {params: {path: 'de'}},
+    {params: {path: 'en'}},
+    {params: {path: 'es'}},
+    {params: {path: 'fr'}},
+    {params: {path: undefined}},
+  ];
+}
+
+const { path } = Astro.params;
+
 ---
 
 <Layout>
@@ -13,8 +26,8 @@ import Contact from '../components/Contact.astro';
 	<Navigation />
 </Layout>
 <main id="main">
-	<Photos />
 	<About />
+	<Photos />
 	<Contact />
 </main>
 <footer id="footer"><Footer /> <Navigation /></footer>

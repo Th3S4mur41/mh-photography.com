@@ -1,3 +1,7 @@
+---
+const currentYear = new Date().getFullYear();
+const version = import.meta.env.npm_package_version;
+---
 <div class="social">
 	<a
 		target="_blank"
@@ -97,12 +101,12 @@
 	<a
 		target="_blank"
 		rel="external noopener"
-		aria-label="Manuel Hamel Photography website version {{version}}"
-		href="https://github.com/Th3S4mur41/mh-photography.com/releases/tag/{{version}}">version</a
+		aria-label={`Manuel Hamel Photography website version ${version}`}
+		href={`https://github.com/Th3S4mur41/mh-photography.com/releases/tag/${version}`}>{version}</a
 	>
 	created by
 	<a target="_blank" rel="external noopener" aria-label="created by th3S4mur41.me" href="https://th3s4mur41.me"
 		>th3s4mur41.me</a
 	>
 </div>
-<div class="copyright">© 2020-current year Manuel Hamel Photography</div>
+<div class="copyright">© 2020-{currentYear} year Manuel Hamel Photography</div>
