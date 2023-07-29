@@ -1,3 +1,10 @@
+# [2.3.0-alpha.5](https://github.com/Th3S4mur41/mh-photography.com/compare/v2.3.0-alpha.4...v2.3.0-alpha.5) (2023-07-29)
+
+
+### Bug Fixes
+
+* copyright text ([66276cd](https://github.com/Th3S4mur41/mh-photography.com/commit/66276cd451cf264cb754e5c63427f783c40b3288))
+
 # [2.3.0-alpha.4](https://github.com/Th3S4mur41/mh-photography.com/compare/v2.3.0-alpha.3...v2.3.0-alpha.4) (2023-07-29)
 
 
