@@ -1,0 +1,15 @@
+#videos {
+	display: flex;
+	align-content: center;
+	padding-block: var(--spacing-xl);
+	padding-inline: var(--spacing-m);
+	gap: var(--spacing-m);
+	overflow-x: auto;
+	scroll-snap-type: x mandatory;
+
+	> .video {
+		flex-shrink: 0;
+		max-inline-size: 80vi;
+		scroll-snap-align: center;
+	}
+}
