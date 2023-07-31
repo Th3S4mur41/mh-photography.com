@@ -27,12 +27,12 @@
 		& > h3 {
 			z-index: 1;
 			grid-area: picture;
-			align-self: start;
+			align-self: end;
 			margin: unset;
 			padding-block-start: var(--spacing-xs);
 
 			/* background: var(--color-overlay); */
-			transform-origin: top;
+			transform-origin: bottom;
 			font-size: var(--font-size-header-l);
 			text-transform: uppercase;
 
