@@ -68,7 +68,7 @@
 		"start": "astro dev",
 		"start:prod": "astro preview",
 		"build": "astro build",
-		"build:img": "node src/utils/sharp.js",
+		"build:img": "node src/utils/sharp.cjs",
 		"lint": "concurrently 'npm:lint:*(!fix)'",
 		"lint:fix": "concurrently -m 1 'npm:lint:*:fix'",
 		"lint:js": "eslint \"src/**/*.{js,mjs,cjs,ts}\" --no-error-on-unmatched-pattern --ignore-path .gitignore",
