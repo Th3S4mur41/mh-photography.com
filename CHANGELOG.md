@@ -1,3 +1,10 @@
+# [2.3.0-alpha.6](https://github.com/Th3S4mur41/mh-photography.com/compare/v2.3.0-alpha.5...v2.3.0-alpha.6) (2023-07-31)
+
+
+### Features
+
+* update albums ([#652](https://github.com/Th3S4mur41/mh-photography.com/issues/652)) ([ee3c81e](https://github.com/Th3S4mur41/mh-photography.com/commit/ee3c81ea8614e077cda1ca7809f0de700c08cb56))
+
 # [2.3.0-alpha.5](https://github.com/Th3S4mur41/mh-photography.com/compare/v2.3.0-alpha.4...v2.3.0-alpha.5) (2023-07-29)
 
 
