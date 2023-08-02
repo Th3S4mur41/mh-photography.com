@@ -37,6 +37,7 @@
 	--color-onbg: hsl(0 0% 95%);
 	--color-onbg-subtle: hsl(0 0% 60%);
 	--color-onbg-secondary: hsl(0 0% 85%);
+	--color-onpicture: hsl(0 0% 95%);
 	--color-overlay: hsl(0 0% 0% / 0.3);
 	--color-overlay-fallback: hsl(0 0% 0% / 0.9);
 	--color-shadow: hsl(0 0% 100% / 0.3);
@@ -66,7 +67,8 @@
 		--color-overlay: hsl(0 0% 100% / 0.7);
 		--color-overlay-fallback: hsl(0 0% 100% / 0.9);
 		--color-shadow: hsl(0 0% 0% / 0.3);
-		--lightness: 1.1;
+
+		/* --lightness: 1.1; */
 	}
 }
 
