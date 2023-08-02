@@ -1,3 +1,10 @@
+# [2.3.0-alpha.7](https://github.com/Th3S4mur41/mh-photography.com/compare/v2.3.0-alpha.6...v2.3.0-alpha.7) (2023-08-02)
+
+
+### Bug Fixes
+
+* minor photo improvements ([bac4002](https://github.com/Th3S4mur41/mh-photography.com/commit/bac40024371274fa59e42f179f3b2408596465c8))
+
 # [2.3.0-alpha.6](https://github.com/Th3S4mur41/mh-photography.com/compare/v2.3.0-alpha.5...v2.3.0-alpha.6) (2023-07-31)
 
 
