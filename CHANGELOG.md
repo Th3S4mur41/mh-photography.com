@@ -1,3 +1,10 @@
+# [2.3.0-alpha.8](https://github.com/Th3S4mur41/mh-photography.com/compare/v2.3.0-alpha.7...v2.3.0-alpha.8) (2023-08-03)
+
+
+### Features
+
+* improve hero section ([#661](https://github.com/Th3S4mur41/mh-photography.com/issues/661)) ([7ada32c](https://github.com/Th3S4mur41/mh-photography.com/commit/7ada32c6fc3166f032488bea028c6e772e17307b))
+
 # [2.3.0-alpha.7](https://github.com/Th3S4mur41/mh-photography.com/compare/v2.3.0-alpha.6...v2.3.0-alpha.7) (2023-08-02)
 
 
