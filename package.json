@@ -86,8 +86,8 @@
 		"git:pre-push": "npm run build && npm run test"
 	},
 	"dependencies": {
-		"@fontsource/gfs-didot": "^5.0.5",
-		"@fontsource/titillium-web": "^5.0.5",
+		"@fontsource/gfs-didot": "^5.0.6",
+		"@fontsource/titillium-web": "^5.0.6",
 		"astro": "^2.9.7"
 	}
 }
