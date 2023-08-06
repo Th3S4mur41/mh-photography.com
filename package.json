@@ -87,7 +87,7 @@
 	},
 	"dependencies": {
 		"@fontsource/gfs-didot": "^5.0.7",
-		"@fontsource/titillium-web": "^5.0.7",
+		"@fontsource/titillium-web": "^5.0.8",
 		"astro": "^2.10.1"
 	}
 }
