@@ -1,0 +1,19 @@
+.lang-selector {
+	display: flex;
+	flex-direction: row;
+	gap: var(--spacing-m);
+	align-items: center;
+
+	& ul {
+		display: flex;
+		flex-direction: row;
+		margin: unset;
+		padding: unset;
+		list-style: none;
+		gap: var(--spacing-m);
+	}
+	a {
+		color: var(--color-onbg-secondary);
+		text-decoration: none;
+	}
+}
