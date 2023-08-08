@@ -23,6 +23,7 @@
 @import url('layout/contact.css');
 @import url('layout/footer.css');
 @import url('layout/album.css');
+@import url('layout/language-selector.css');
 
 /* Elements */
 @import url('elements/a.css');
