@@ -1,3 +1,10 @@
+# [2.3.0-alpha.9](https://github.com/Th3S4mur41/mh-photography.com/compare/v2.3.0-alpha.8...v2.3.0-alpha.9) (2023-08-08)
+
+
+### Features
+
+* add basic language selector ([#677](https://github.com/Th3S4mur41/mh-photography.com/issues/677)) ([a9dada3](https://github.com/Th3S4mur41/mh-photography.com/commit/a9dada379ff491221a21a0e0aadccca1d97c06a7))
+
 # [2.3.0-alpha.8](https://github.com/Th3S4mur41/mh-photography.com/compare/v2.3.0-alpha.7...v2.3.0-alpha.8) (2023-08-03)
 
 
