@@ -69,12 +69,20 @@
 		}
 	}
 	& .hero {
+		--display: 5s;
+		--delay: calc((var(--nth-child) - 1) * var(--display));
+		position: absolute;
 		flex: 0 0 100%;
+		inset-block: 0;
+		inset-inline-start: 0;
 
 		@media (prefers-reduced-motion: no-preference) {
-			animation: carousel 30s linear 5s infinite;
+			animation: carousel calc(var(--images) * var(--display)) ease var(--delay) infinite;
 		}
 
+		&:not(:first-child) {
+			opacity: 0;
+		}
 		& > img {
 			block-size: 100%;
 			inline-size: 100%;
@@ -97,30 +105,23 @@
 
 @keyframes carousel {
 	0% {
+		/* transform: translateX(100%);
+		opacity: 0; */
+	}
+	10% {
 		transform: translateX(0);
+		opacity: 1;
 	}
 	20% {
 		transform: translateX(0);
+		opacity: 1;
 	}
-	25% {
+	30% {
 		transform: translateX(-100%);
-	}
-	45% {
-		transform: translateX(-100%);
-	}
-	50% {
-		transform: translateX(-200%);
-	}
-	70% {
-		transform: translateX(-200%);
-	}
-	75% {
-		transform: translateX(-300%);
-	}
-	95% {
-		transform: translateX(-300%);
+		opacity: 0;
 	}
 	100% {
-		transform: translateX(-400%);
+		transform: translateX(-100%);
+		opacity: 0;
 	}
 }
