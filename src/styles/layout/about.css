@@ -16,7 +16,15 @@
 	}
 	& > picture {
 		grid-area: picture;
+		justify-self: center;
 		align-self: center;
+		inline-size: 90%;
+
+		& > img {
+			transform: rotate(-5deg);
+			border: white 0.75rem solid;
+			box-shadow: var(--color-shadow) -0.25rem 0.5rem 0.75rem;
+		}
 	}
 	& > p {
 		margin-block: 0;
