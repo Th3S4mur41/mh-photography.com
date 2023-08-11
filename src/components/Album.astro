@@ -36,7 +36,7 @@ const pics = albums[album]?.images;
 </dialog>
 
 {
-	pics.map((pic) => (
+	pics?.map((pic) => (
 		<a class={pic.orientation} href={`${pic.path}${pic.name}-1920.jpg`} aria-label={pic.name}>
 			<picture>
 				<source srcset={`${pic.path}${pic.name}-100.avif 450w, ${pic.path}${pic.name}-400.avif`} type="image/avif" />
