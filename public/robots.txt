@@ -1,2 +1,4 @@
 User-agent: *
 Disallow: /assets/img/
+
+Sitemap: https://mh-photography.com/sitemap-index.xml
