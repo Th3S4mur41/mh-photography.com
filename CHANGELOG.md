@@ -1,3 +1,10 @@
+# [2.3.0-alpha.11](https://github.com/Th3S4mur41/mh-photography.com/compare/v2.3.0-alpha.10...v2.3.0-alpha.11) (2023-08-11)
+
+
+### Features
+
+* add automatic sitemap generation ([#685](https://github.com/Th3S4mur41/mh-photography.com/issues/685)) ([44e6914](https://github.com/Th3S4mur41/mh-photography.com/commit/44e6914fd0c55be6e5d0347d48399e2121162970))
+
 # [2.3.0-alpha.10](https://github.com/Th3S4mur41/mh-photography.com/compare/v2.3.0-alpha.9...v2.3.0-alpha.10) (2023-08-11)
 
 
