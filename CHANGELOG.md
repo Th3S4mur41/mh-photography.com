@@ -1,3 +1,10 @@
+# [2.3.0-alpha.13](https://github.com/Th3S4mur41/mh-photography.com/compare/v2.3.0-alpha.12...v2.3.0-alpha.13) (2023-08-14)
+
+
+### Features
+
+* add video section ([#657](https://github.com/Th3S4mur41/mh-photography.com/issues/657)) ([fca4b14](https://github.com/Th3S4mur41/mh-photography.com/commit/fca4b144736f0f200aa79337486c5ff2360aaa7d))
+
 # [2.3.0-alpha.12](https://github.com/Th3S4mur41/mh-photography.com/compare/v2.3.0-alpha.11...v2.3.0-alpha.12) (2023-08-14)
 
 
