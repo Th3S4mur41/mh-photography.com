@@ -30,6 +30,7 @@
 	/* font size */
 	--font-size-s: clamp(0.75rem, min(1.5vw, 1vh), 1rem);
 	--font-size-m: clamp(1rem, min(2vw, 1.5vh), 1.5rem);
+	--font-size-ml: clamp(1rem, min(2vw, 2vh), 1.5rem);
 	--font-size-l: clamp(1.25rem, min(2.5vw, 2vh), 2rem);
 	--font-size-xl: clamp(1.5rem, min(3vw, 2vh), 2.5rem);
 	--font-size-header-s: clamp(1.25rem, min(2vw, 1.5vh), 1.5rem);

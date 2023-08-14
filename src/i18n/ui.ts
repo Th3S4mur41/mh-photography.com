@@ -89,7 +89,9 @@ book your photo session or event.`,
 		'photos.families': 'Families',
 		'photos.people': 'People',
 		'photos.travel': 'Travel',
-		'photos.weddings': 'Weddings'
+		'photos.weddings': 'Weddings',
+		'video.title': `Love in Motion: Wedding Videography Unveiled`,
+		'video.p1': `Explore the art of immortalizing cherished moments. My goal is to capture every emotion and detail, transforming your special day into a timeless cinematic masterpiece. I believe in more than just recording events – we craft cinematic stories that capture the essence of your love, dedicated to preserving the emotions, laughter, and tears that make your day truly unique, allowing you to relive the magic whenever you hit play.`
 	},
 	es: {
 		'nav.home': `Inicio`,

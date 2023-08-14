@@ -1,6 +1,6 @@
 :root {
 	--border-radius: 1.5rem;
-	--max-line-length: 80ch;
+	--max-line-length: 100ch;
 
 	/* Spacings */
 	--spacing-xs: 0.25em;
