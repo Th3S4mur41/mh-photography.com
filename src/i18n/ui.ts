@@ -6,6 +6,38 @@ export const languages = {
 };
 
 export const defaultLang = 'en';
+export const showDefaultLang = false;
+
+export const routes = {
+	de: {
+		albumsbusiness: 'alben/business',
+		albumsfamilies: 'alben/familien',
+		albumspeople: 'alben/menschen',
+		albumstravel: 'alben/reisen',
+		albumsweddings: 'alben/hochzeiten'
+	},
+	en: {
+		albumsbusiness: 'albums/business',
+		albumsfamilies: 'albums/families',
+		albumspeople: 'albums/people',
+		albumstravel: 'albums/travel',
+		albumsweddings: 'albums/weddings'
+	},
+	es: {
+		albumsbusiness: 'albums/negocios',
+		albumsfamilies: 'albums/familias',
+		albumspeople: 'albums/personas',
+		albumstravel: 'albums/viajes',
+		albumsweddings: 'albums/bodas'
+	},
+	fr: {
+		albumsbusiness: 'albums/business',
+		albumsfamilies: 'albums/familles',
+		albumspeople: 'albums/people',
+		albumstravel: 'albums/voyages',
+		albumsweddings: 'albums/mariages'
+	}
+} as const;
 
 export const ui = {
 	de: {
@@ -14,7 +46,13 @@ export const ui = {
 		'nav.weddings': `Hochzeiten`,
 		'nav.contact': `Kontakt`,
 		'header.title': `Hallo! Ich bin Manuel, Fotograf`,
-		'header.subtitle': `Hochzeitsfotografie - Events - Familien - Portraits - Editorials`
+		'header.subtitle': 'Hochzeitsfotografie - Events - Familien - Portraits - Editorials',
+		'photos.title': 'Fotos',
+		'photos.business': 'Business',
+		'photos.families': 'Familien',
+		'photos.people': 'Menschen',
+		'photos.travel': 'Reisen',
+		'photos.weddings': 'Hochzeiten'
 	},
 	en: {
 		'meta.keywords': `photography, photographer, Manuel Hamel, weddings, people, lifestyle, travel, families, kids, business, studio, photo, portrait, art, artistic, pictures, photoshop, Barcelona`,
@@ -46,6 +84,12 @@ book your photo session or event.`,
 		'about.p7': `I hope to meet you soon and have the opportunity to work with you.`,
 		'about.p8': `Are you looking for a photographer? I want to get to know you.`,
 		'about.contact': `I want you to be my photographer, Manu.`
+		'photos.title': 'Photos',
+		'photos.business': 'Business',
+		'photos.families': 'Families',
+		'photos.people': 'People',
+		'photos.travel': 'Travel',
+		'photos.weddings': 'Weddings'
 	},
 	es: {
 		'nav.home': `Inicio`,
@@ -54,7 +98,13 @@ book your photo session or event.`,
 		'nav.weddings': `Bodas`,
 		'nav.contact': `Contacto`,
 		'header.title': `Hola! Soy Manuel, fotógrafo en Barcelona`,
-		'header.subtitle': `Fotografía de bodas - eventos - familias - retratos - editoriales`
+		'header.subtitle': 'Fotografía de bodas - eventos - familias - retratos - editoriales',
+		'photos.title': 'Fotos',
+		'photos.business': 'Negocios',
+		'photos.families': 'Familias',
+		'photos.people': 'Personas',
+		'photos.travel': 'Viajes',
+		'photos.weddings': 'Bodas'
 	},
 	fr: {
 		'nav.home': `Accueil`,
@@ -62,6 +112,12 @@ book your photo session or event.`,
 		'nav.photos': `Photos`,
 		'nav.weddings': `Mariages`,
 		'header.title': `Bonjour! Je suis Manuel, photographe`,
-		'header.subtitle': `Photographie de mariage - événements - familles - portraits - éditoriaux`
+		'header.subtitle': 'Photographie de mariage - événements - familles - portraits - éditoriaux',
+		'photos.title': 'Photos',
+		'photos.business': 'Business',
+		'photos.families': 'Familles',
+		'photos.people': 'People',
+		'photos.travel': 'Voyages',
+		'photos.weddings': 'Mariages'
 	}
 } as const;

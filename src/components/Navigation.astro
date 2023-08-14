@@ -1,5 +1,5 @@
 ---
-import { getLangFromUrl, useTranslations } from '../i18n/utils';
+import { getLangFromUrl, useTranslations, useTranslatedPath } from '../i18n/utils';
 
 interface Props {
 	path?: string;
@@ -8,15 +8,16 @@ interface Props {
 const { path } = Astro.props;
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
+const translatePath = useTranslatedPath(lang);
 ---
 
 <nav aria-label="Main Menu">
 	<ul>
-		<li><a href="/">{t('nav.home')}</a></li>
+		<li><a href={translatePath('/#')}>{t('nav.home')}</a></li>
 		<li>
-			<a href={`${path || ''}#about`}>{t('nav.about')}</a>
+			<a href={translatePath('/#about')}>{t('nav.about')}</a>
 		</li>
-		<li><a href={`${path || ''}#photos`}>{t('nav.photos')}</a></li>
-		<li><a href={`${path || ''}#contact`}>{t('nav.contact')}</a></li>
+		<li><a href={translatePath('/#photos')}>{t('nav.photos')}</a></li>
+		<li><a href={translatePath('/#contact')}>{t('nav.contact')}</a></li>
 	</ul>
 </nav>

@@ -1,5 +1,9 @@
 ---
 import { languages } from '../i18n/ui';
+import { getLangFromUrl, getLangPath } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const path = getLangPath();
 ---
 
 <div class="lang-selector">
@@ -10,7 +14,7 @@ import { languages } from '../i18n/ui';
 <ul>
 	{Object.entries(languages).map(([lang, label]) => (
     <li>
-      <a href={`/${lang}/`} lang={lang}>{label}</a>
+      <a href={path(`${lang}`)} lang={lang}>{label}</a>
     </li>
   ))}
 	</ul>

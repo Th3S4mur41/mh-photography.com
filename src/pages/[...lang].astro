@@ -9,15 +9,15 @@ import Contact from '../components/Contact.astro';
 
 export function getStaticPaths () {
  return [
-    {params: {path: 'de'}},
-    {params: {path: 'en'}},
-    {params: {path: 'es'}},
-    {params: {path: 'fr'}},
-    {params: {path: undefined}},
+    {params: {lang: 'de'}},
+    {params: {lang: 'en'}},
+    {params: {lang: 'es'}},
+    {params: {lang: 'fr'}},
+    {params: {lang: undefined}},
   ];
 }
 
-const { path } = Astro.params;
+const { lang } = Astro.params;
 
 ---
 

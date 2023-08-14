@@ -1,7 +1,7 @@
 {
 	"name": "mh-photography.com",
 	"type": "module",
-	"version": "2.3.0-alpha.9",
+	"version": "2.3.0-alpha.11",
 	"license": "LICENSE",
 	"private": true,
 	"description": "MH Photography",
@@ -23,7 +23,7 @@
 	"devDependencies": {
 		"@babel/core": "^7.22.10",
 		"@babel/preset-env": "^7.22.10",
-		"@commitlint/cli": "^17.7.0",
+		"@commitlint/cli": "^17.7.1",
 		"@commitlint/config-conventional": "^17.7.0",
 		"@hint/formatter-codeframe": "^3.1.35",
 		"@semantic-release/changelog": "^6.0.3",
@@ -31,13 +31,13 @@
 		"@squoosh/cli": "^0.7.3",
 		"@typescript-eslint/eslint-plugin": "^6.3.0",
 		"@typescript-eslint/parser": "^6.3.0",
-		"autoprefixer": "^10.4.14",
+		"autoprefixer": "^10.4.15",
 		"babel-loader": "^9.1.3",
 		"browserslist": "^4.21.10",
 		"concurrently": "^8.2.0",
 		"cssnano": "^6.0.1",
 		"cssremedy": "^0.1.0-beta.2",
-		"eslint": "^8.46.0",
+		"eslint": "^8.47.0",
 		"eslint-config-prettier": "^9.0.0",
 		"eslint-plugin-compat": "^4.1.4",
 		"hint": "^7.1.10",
@@ -62,7 +62,7 @@
 		"wait-on": "^7.0.1"
 	},
 	"optionalDependencies": {
-		"lint-staged": "^13.2.3"
+		"lint-staged": "^14.0.0"
 	},
 	"scripts": {
 		"start": "astro dev",
@@ -86,8 +86,9 @@
 		"git:pre-push": "npm run build && npm run test"
 	},
 	"dependencies": {
+		"@astrojs/sitemap": "^2.0.1",
 		"@fontsource/gfs-didot": "^5.0.8",
 		"@fontsource/titillium-web": "^5.0.8",
-		"astro": "^2.10.4"
+		"astro": "^2.10.7"
 	}
 }
