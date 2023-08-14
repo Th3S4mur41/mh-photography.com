@@ -83,7 +83,7 @@ together.
 book your photo session or event.`,
 		'about.p7': `I hope to meet you soon and have the opportunity to work with you.`,
 		'about.p8': `Are you looking for a photographer? I want to get to know you.`,
-		'about.contact': `I want you to be my photographer, Manu.`
+		'about.contact': `I want you to be my photographer, Manu.`,
 		'photos.title': 'Photos',
 		'photos.business': 'Business',
 		'photos.families': 'Families',
