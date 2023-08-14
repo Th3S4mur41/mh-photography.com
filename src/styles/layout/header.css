@@ -57,7 +57,7 @@
 		position: absolute;
 		inset-inline-end: 0.5rem;
 		inset-block-start: 5rem;
-		z-index: 100;
+		z-index: 1;
 		cursor: pointer;
 
 		& > svg {
