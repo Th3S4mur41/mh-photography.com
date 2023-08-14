@@ -1,3 +1,10 @@
+# [2.3.0-alpha.15](https://github.com/Th3S4mur41/mh-photography.com/compare/v2.3.0-alpha.14...v2.3.0-alpha.15) (2023-08-14)
+
+
+### Bug Fixes
+
+* hero image on ultrawide screen ([8fcb93a](https://github.com/Th3S4mur41/mh-photography.com/commit/8fcb93a979e2934f9752a478b8037d100e1664df))
+
 # [2.3.0-alpha.14](https://github.com/Th3S4mur41/mh-photography.com/compare/v2.3.0-alpha.13...v2.3.0-alpha.14) (2023-08-14)
 
 
