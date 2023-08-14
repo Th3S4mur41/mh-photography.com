@@ -1,3 +1,10 @@
+# [2.3.0-alpha.12](https://github.com/Th3S4mur41/mh-photography.com/compare/v2.3.0-alpha.11...v2.3.0-alpha.12) (2023-08-14)
+
+
+### Features
+
+* add initial layout for new about section ([#678](https://github.com/Th3S4mur41/mh-photography.com/issues/678)) ([f4f2c73](https://github.com/Th3S4mur41/mh-photography.com/commit/f4f2c73212e134c203b07adde7ffef496b0c2367))
+
 # [2.3.0-alpha.11](https://github.com/Th3S4mur41/mh-photography.com/compare/v2.3.0-alpha.10...v2.3.0-alpha.11) (2023-08-11)
 
 
