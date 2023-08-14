@@ -1,3 +1,18 @@
+# [2.3.0-alpha.11](https://github.com/Th3S4mur41/mh-photography.com/compare/v2.3.0-alpha.10...v2.3.0-alpha.11) (2023-08-11)
+
+
+### Features
+
+* add automatic sitemap generation ([#685](https://github.com/Th3S4mur41/mh-photography.com/issues/685)) ([44e6914](https://github.com/Th3S4mur41/mh-photography.com/commit/44e6914fd0c55be6e5d0347d48399e2121162970))
+
+# [2.3.0-alpha.10](https://github.com/Th3S4mur41/mh-photography.com/compare/v2.3.0-alpha.9...v2.3.0-alpha.10) (2023-08-11)
+
+
+### Features
+
+* **albums:** add i18n to albums page ([657951c](https://github.com/Th3S4mur41/mh-photography.com/commit/657951cb85b2f23af912460674b9a6b218220a00))
+* hide default language in url ([79f5ef7](https://github.com/Th3S4mur41/mh-photography.com/commit/79f5ef71be920fc7d7e927f2499df6dac172e0b6))
+
 # [2.3.0-alpha.9](https://github.com/Th3S4mur41/mh-photography.com/compare/v2.3.0-alpha.8...v2.3.0-alpha.9) (2023-08-08)
 
 

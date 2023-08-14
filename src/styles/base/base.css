@@ -33,3 +33,11 @@ body {
 		background: var(--color-overlay);
 	}
 }
+
+.subtitle {
+	font-family: var(--font-family-header);
+	font-size: var(--font-size-header-m);
+	font-weight: var(--font-weight-light);
+	text-align: center;
+	text-wrap: balance;
+}

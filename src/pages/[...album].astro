@@ -1,0 +1,59 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navigation from '../components/Navigation.astro';
+import Album from '../components/Album.astro';
+import Footer from '../components/Footer.astro';
+
+import { getLangFromUrl, getRouteFromStaticPath, useTranslations, useTranslatedPath } from '../i18n/utils';
+
+export function getStaticPaths() {
+	return [
+		{ params: { album: 'albums/business' } },
+		{ params: { album: 'albums/families' } },
+		{ params: { album: 'albums/people' } },
+		{ params: { album: 'albums/travel' } },
+		{ params: { album: 'albums/weddings' } },
+		{ params: { album: 'de/albums/business' } },
+		{ params: { album: 'de/albums/familien' } },
+		{ params: { album: 'de/albums/menschen' } },
+		{ params: { album: 'de/albums/reisen' } },
+		{ params: { album: 'de/albums/hochzeiten' } },
+		{ params: { album: 'es/albums/negocios' } },
+		{ params: { album: 'es/albums/familias' } },
+		{ params: { album: 'es/albums/personas' } },
+		{ params: { album: 'es/albums/viajes' } },
+		{ params: { album: 'es/albums/bodas' } },		
+		{ params: { album: 'fr/albums/business' } },
+		{ params: { album: 'fr/albums/familles' } },
+		{ params: { album: 'fr/albums/people' } },
+		{ params: { album: 'fr/albums/voyages' } },
+		{ params: { album: 'fr/albums/mariages' } }
+	];
+}
+
+const albums = {
+		albumsbusiness: 'business',
+		albumsfamilies: 'families',
+		albumspeople: 'people',
+		albumstravel: 'travel',
+		albumsweddings: 'weddings'
+	};
+
+const { album } = Astro.params;
+const route = getRouteFromStaticPath(Astro.url, album);
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const albumName = albums[route];
+---
+
+
+<Layout title={t(`photos.${albumName}`)}>
+	<Navigation path="/" />
+</Layout>
+
+<main id="main" class="album">
+	<Album album={albumName} />
+</main>
+<footer id="footer"><Footer /> <Navigation /></footer>
+
+<script src="../scripts/album.js"></script>
