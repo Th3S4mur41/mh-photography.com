@@ -41,18 +41,32 @@ export const routes = {
 
 export const ui = {
 	de: {
+		'meta.keywords': `fotografie, fotograf, Manuel Hamel, hochzeiten, menschen, lifestyle, reisen, familien, kinder, business, studio, foto, portrait, kunst, künstlerisch, bilder, photoshop, Barcelona`,
+		'meta.description': `Belgischer Fotograf, ansässig in Barcelona, der es liebt, Momente festzuhalten und zu reisen!`,
 		'nav.about': `Über mich`,
 		'nav.photos': `Fotos`,
 		'nav.weddings': `Hochzeiten`,
 		'nav.contact': `Kontakt`,
 		'header.title': `Hallo! Ich bin Manuel, Fotograf`,
 		'header.subtitle': 'Hochzeitsfotografie - Events - Familien - Portraits - Editorials',
+		'about.title': `Ein bisschen über mich`,
+		'about.p1': `Ein leidenschaftlicher Fotograf und Videograf für Hochzeiten, Veranstaltungen, Familien, Porträts und Editorials.`,
+		'about.p2': `Jedes Foto bedeutet für mich viel mehr als einfach nur auf einen Knopf zu drücken und ein Bild aufzunehmen. Es ist die Kunst, Emotionen einzufangen, Geschichten unsterblich zu machen und authentische Verbindungen zu schaffen.`,
+		'about.p3': `Ich möchte, dass Sie sich vor der Kamera wohl fühlen und jeden Moment, den wir teilen, genießen. Denn ich werde nicht nur Ihr Fotograf sein, sondern wenn wir zusammenarbeiten, werde ich auch der Freund sein, der Ihre beste Seite zum Vorschein bringt. Dafür schaffen wir einen sicheren und vertrauensvollen Raum, in dem Sie nicht nur Spaß haben und vor der Kamera Sie selbst sein können, sondern ich werde Sie auch dabei unterstützen, eine entspannte und druckfreie Atmosphäre zu schaffen.`,
+		'about.p4': `Sie müssen kein professionelles Model sein, um auf Ihren Fotos großartig auszusehen; ich werde hinter der Linse stehen, um das Beste in Ihnen hervorzuheben. Ich glaube, dass Vertrauen und Empathie der Schlüssel sind, um natürliche und authentische Fotografien zu erreichen.`,
+		'about.p5': `Deshalb ist jede Fotosession einzigartig, genauso wie Sie und die Menschen, die Sie begleiten. Ich liebe es, jeden Kunden kennenzulernen, ihre Geschichten zu hören und die Essenz dessen einzufangen, wer sie sind. Ich werde nicht nur auf die wichtigsten Aufnahmen achten, sondern auch auf die kleinen Details und Gesten, die diesen Moment einzigartig machen. Ich weiß, wie wertvoll Erinnerungen sind und welche Kraft Fotos haben, um Emotionen zu wecken und uns in die Vergangenheit zu versetzen. Deshalb stecke ich mein ganzes Herz und Talent in jedes Bild, das ich aufnehme. Wenn Sie einen Fotografen suchen, der echte und authentische Momente einfängt, lade ich Sie ein, mein Portfolio zu erkunden und meinen Stil zu entdecken.`,
+		'about.p6': `Ich freue mich darauf, ein Teil Ihrer Geschichte zu sein und gemeinsam erstaunliche Fotos zu kreieren. Zögern Sie nicht, mich zu kontaktieren, um Ihre Ideen zu besprechen, Ihre Fragen zu beantworten oder Ihre Fotosession oder Veranstaltung zu buchen.`,
+		'about.p7': `Ich hoffe, Sie bald kennenzulernen und die Gelegenheit zu haben, mit Ihnen zusammenzuarbeiten.`,
+		'about.p8': `Suchen Sie einen Fotografen? Dann möchte ich Sie kennenlernen.`,
+		'about.contact': `Ich möchte, dass du mein Fotograf bist, Manu.`,
 		'photos.title': 'Fotos',
 		'photos.business': 'Business',
 		'photos.families': 'Familien',
 		'photos.people': 'Menschen',
 		'photos.travel': 'Reisen',
-		'photos.weddings': 'Hochzeiten'
+		'photos.weddings': 'Hochzeiten',
+		'video.title': `Love in Motion: Hochzeitsvideografie enthüllt`,
+		'video.p1': `Erkunde die Kunst, geliebte Momente unsterblich zu machen. Mein Ziel ist es, jede Emotion und jedes Detail einzufangen und deinen besonderen Tag in ein zeitloses filmisches Meisterwerk zu verwandeln. Ich glaube an mehr als nur das Aufzeichnen von Ereignissen - wir gestalten filmische Geschichten, die die Essenz deiner Liebe einfangen, und widmen uns der Bewahrung der Emotionen, des Lachens und der Tränen, die deinen Tag wirklich einzigartig machen. So kannst du die Magie immer wieder erleben, wenn du auf Play drückst.`
 	},
 	en: {
 		'meta.keywords': `photography, photographer, Manuel Hamel, weddings, people, lifestyle, travel, families, kids, business, studio, photo, portrait, art, artistic, pictures, photoshop, Barcelona`,
@@ -70,17 +84,8 @@ export const ui = {
 		'about.p2': `Each photograph is much more to me than just pressing a button and capturing an image. It is an art that allows me to capture emotions, immortalize stories, and create authentic connections.`,
 		'about.p3': `I want you to feel comfortable in front of the camera and enjoy every moment we share. Because not only will I be your photographer, but when we work together, I will also be the friend who brings out your best side. For that, we will create a safe and trusting space in which you not only have fun and be yourself in front of the camera, but I will also guide you to a relaxed and pressure-free atmosphere.`,
 		'about.p4': `You don't need to be a professional model to look amazing in your photos; I will be behind the lens to highlight the best in you. I believe that trust and empathy are key to achieving natural and authentic photographs. That's why each photo session is unique, just like you and the people who accompany you. I love getting to know each client, listening to their stories, and capturing the essence of who they are.`,
-		'about.p5': `I will not only be attentive to the most important shots but also to those small 
-details and gestures that make that moment unique.
- I know how valuable memories are and the power that photographs have to 
-evoke emotions and transport us in time. That's why I put all my heart and 
-talent into every image I take.
- If you are looking for a photographer who captures real and authentic moments, 
-I invite you to explore my portfolio and discover my style.`,
-		'about.p6': `I am looking forward to being a part of your story and creating amazing photos 
-together.
- Don't hesitate to contact me to discuss your ideas, answer your questions, or 
-book your photo session or event.`,
+		'about.p5': `I will not only be attentive to the most important shots but also to those small details and gestures that make that moment unique. I know how valuable memories are and the power that photographs have to evoke emotions and transport us in time. That's why I put all my heart and talent into every image I take. If you are looking for a photographer who captures real and authentic moments, I invite you to explore my portfolio and discover my style.`,
+		'about.p6': `I am looking forward to being a part of your story and creating amazing photos together. Don't hesitate to contact me to discuss your ideas, answer your questions, or book your photo session or event.`,
 		'about.p7': `I hope to meet you soon and have the opportunity to work with you.`,
 		'about.p8': `Are you looking for a photographer? I want to get to know you.`,
 		'about.contact': `I want you to be my photographer, Manu.`,
