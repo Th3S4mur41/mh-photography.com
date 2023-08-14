@@ -1,3 +1,10 @@
+# [2.3.0-alpha.14](https://github.com/Th3S4mur41/mh-photography.com/compare/v2.3.0-alpha.13...v2.3.0-alpha.14) (2023-08-14)
+
+
+### Features
+
+* add localization ([#690](https://github.com/Th3S4mur41/mh-photography.com/issues/690)) ([32575d8](https://github.com/Th3S4mur41/mh-photography.com/commit/32575d8a9cefd286aa1dfee23f4e63da247efa8b))
+
 # [2.3.0-alpha.13](https://github.com/Th3S4mur41/mh-photography.com/compare/v2.3.0-alpha.12...v2.3.0-alpha.13) (2023-08-14)
 
 
