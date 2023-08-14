@@ -34,6 +34,8 @@
    */
 	--color-bg: hsl(0 0% 0%);
 	--color-bg-secondary: hsl(0 0% 10%);
+	--color-bg-secondary--hover: hsl(0 0% 20%);
+	--color-bg-secondary--active: hsl(0 0% 15%);
 	--color-onbg: hsl(0 0% 95%);
 	--color-onbg-subtle: hsl(0 0% 60%);
 	--color-onbg-secondary: hsl(0 0% 85%);
@@ -61,6 +63,8 @@
 		--color-accent: var(--color-accent-700);
 		--color-bg: hsl(0 0% 100%);
 		--color-bg-secondary: hsl(0 0% 90%);
+		--color-bg-secondary--hover: hsl(0 0% 80%);
+		--color-bg-secondary--active: hsl(0 0% 85%);
 		--color-onbg: hsl(0 0% 5%);
 		--color-onbg-subtle: hsl(0 0% 15%);
 		--color-onbg-secondary: hsl(0 0% 25%);
