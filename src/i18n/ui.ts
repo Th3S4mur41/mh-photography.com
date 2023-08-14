@@ -128,17 +128,31 @@ export const ui = {
 		'video.p1': `Explora el arte de inmortalizar momentos queridos. Mi objetivo es capturar cada emoción y detalle, transformando tu día especial en una obra maestra cinematográfica atemporal. Creo en más que simplemente grabar eventos: creamos historias cinematográficas que capturan la esencia de tu amor, dedicados a preservar las emociones, risas y lágrimas que hacen que tu día sea verdaderamente único, permitiéndote revivir la magia cada vez que le das al play.`
 	},
 	fr: {
+		'meta.keywords': `photographie, photographe, Manuel Hamel, mariages, personnes, style de vie, voyages, familles, enfants, affaires, studio, photo, portrait, art, artistique, photos, photoshop, Barcelone`,
+		'meta.description': `Photographe belge, basé à Barcelone, qui aime capturer des moments et voyager!`,
 		'nav.home': `Accueil`,
 		'nav.about': `À propos`,
 		'nav.photos': `Photos`,
 		'nav.weddings': `Mariages`,
 		'header.title': `Bonjour! Je suis Manuel, photographe`,
 		'header.subtitle': 'Photographie de mariage - événements - familles - portraits - éditoriaux',
+		'about.title': `Quelques mots à mon sujet`,
+		'about.p1': `Un photographe et vidéaste passionné de mariages, d'événements, de familles, de portraits et d'éditoriaux.`,
+		'about.p2': `Chaque photographie est bien plus pour moi que simplement appuyer sur un bouton et capturer une image. C'est un art qui me permet de saisir des émotions, d'immortaliser des histoires et de créer des connexions authentiques.`,
+		'about.p3': `Je veux que vous vous sentiez à l'aise devant la caméra et que vous profitiez de chaque moment que nous partageons. Parce que je ne serai pas seulement votre photographe, mais lorsque nous travaillerons ensemble, je serai également l'ami qui fera ressortir votre meilleur côté. Pour cela, nous créerons un espace sûr et de confiance où vous vous amuserez et serez vous-même face à la caméra, et je vous guiderai pour que l'ambiance soit détendue et sans pression.`,
+		'about.p4': `Vous n'avez pas besoin d'être un modèle professionnel pour être magnifique sur vos photos ; je serai derrière l'objectif pour mettre en valeur le meilleur de vous. Je pense que la confiance et l'empathie sont essentielles pour obtenir des photographies naturelles et authentiques.`,
+		'about.p5': `C'est pourquoi chaque séance photo est unique, tout comme vous et les personnes qui vous accompagnent. J'adore rencontrer chaque client, écouter leurs histoires et capturer l'essence de ce qu'ils sont. Je serai attentif non seulement aux prises de vue les plus importantes, mais aussi à ces petits détails et gestes qui rendent ce moment unique. Je sais combien les souvenirs sont précieux et le pouvoir que les photographies ont d'éveiller des émotions et de nous transporter dans le temps. C'est pourquoi je mets tout mon cœur et mon talent dans chaque image que je prends.`,
+		'about.p6': `Si vous cherchez un photographe qui capture des moments réels et authentiques, je vous invite à explorer mon portfolio et à découvrir mon style.`,
+		'about.p7': `Je suis impatient de faire partie de votre histoire et de créer ensemble d'incroyables photos. N'hésitez pas à me contacter pour discuter de vos idées, répondre à vos questions ou réserver votre séance photo ou votre événement. J'espère vous rencontrer bientôt et avoir l'opportunité de travailler avec vous.`,
+		'about.p8': `Vous recherchez un photographe? Je veux faire votre connaissance.`,
+		'about.contact': `Je veux que tu sois mon photographe, Manu.`,
 		'photos.title': 'Photos',
 		'photos.business': 'Business',
 		'photos.families': 'Familles',
 		'photos.people': 'People',
 		'photos.travel': 'Voyages',
-		'photos.weddings': 'Mariages'
+		'photos.weddings': 'Mariages',
+		'video.title': `Love in Motion: Révélation de la Vidéographie de Mariage`,
+		'video.p1': `Explorez l'art d'immortaliser les moments chéris. Mon but est de capturer chaque émotion et détail, transformant votre journée spéciale en un chef-d'œuvre cinématographique intemporel. Je crois en plus que simplement enregistrer des événements - nous créons des histoires cinématographiques qui capturent l'essence de votre amour, dédiées à préserver les émotions, les rires et les larmes qui rendent votre journée vraiment unique, vous permettant de revivre la magie à chaque fois que vous appuyez sur play.`
 	}
 } as const;
