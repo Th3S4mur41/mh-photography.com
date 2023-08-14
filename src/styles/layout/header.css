@@ -73,8 +73,7 @@
 		--delay: calc((var(--nth-child) - 1) * var(--display));
 		position: absolute;
 		flex: 0 0 100%;
-		inset-block: 0;
-		inset-inline-start: 0;
+		inset: 0;
 
 		@media (prefers-reduced-motion: no-preference) {
 			animation: carousel calc(var(--images) * var(--display)) ease var(--delay) infinite;
@@ -87,6 +86,7 @@
 			block-size: 100%;
 			inline-size: 100%;
 			object-fit: cover;
+			object-position: top;
 		}
 	}
 }
