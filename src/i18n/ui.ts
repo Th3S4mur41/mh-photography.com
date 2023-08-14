@@ -27,7 +27,7 @@ export const ui = {
 		'nav.contact': `Contact`,
 		'header.title': `Hi! I'm Manuel, photographer in Barcelona`,
 		'header.subtitle': `Wedding photography - event - families - portraits - publications`,
-		'about.title': `Hello! I am Manuel.`,
+		'about.title': `A little something about me`,
 		'about.p1': `A passionate wedding, event, family, portrait, and editorial photographer and videographer.`,
 		'about.p2': `Each photograph is much more to me than just pressing a button and capturing an image. It is an art that allows me to capture emotions, immortalize stories, and create authentic connections.`,
 		'about.p3': `I want you to feel comfortable in front of the camera and enjoy every moment we share. Because not only will I be your photographer, but when we work together, I will also be the friend who brings out your best side. For that, we will create a safe and trusting space in which you not only have fun and be yourself in front of the camera, but I will also guide you to a relaxed and pressure-free atmosphere.`,
