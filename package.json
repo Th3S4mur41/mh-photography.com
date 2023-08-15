@@ -86,7 +86,7 @@
 		"git:pre-push": "npm run build && npm run test"
 	},
 	"dependencies": {
-		"@astrojs/sitemap": "^2.0.1",
+		"@astrojs/sitemap": "^2.0.2",
 		"@fontsource/gfs-didot": "^5.0.8",
 		"@fontsource/titillium-web": "^5.0.8",
 		"astro": "^2.10.9"
