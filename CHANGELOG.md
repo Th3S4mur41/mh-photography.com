@@ -1,3 +1,15 @@
+# [2.3.0-alpha.16](https://github.com/Th3S4mur41/mh-photography.com/compare/v2.3.0-alpha.15...v2.3.0-alpha.16) (2023-08-16)
+
+
+### Bug Fixes
+
+* typo in meta keywords ([435a53b](https://github.com/Th3S4mur41/mh-photography.com/commit/435a53b5598b93ad0c308496e71a5b326dbc55c8))
+
+
+### Features
+
+* update SEO description to match title and subtitle ([fb8a058](https://github.com/Th3S4mur41/mh-photography.com/commit/fb8a05895b54a75d32b5b9c2892ffce6c74039c2))
+
 # [2.3.0-alpha.15](https://github.com/Th3S4mur41/mh-photography.com/compare/v2.3.0-alpha.14...v2.3.0-alpha.15) (2023-08-14)
 
 
