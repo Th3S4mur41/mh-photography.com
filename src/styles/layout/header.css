@@ -113,11 +113,11 @@
 		transform: translateX(0);
 		opacity: 1;
 	}
-	20% {
+	25% {
 		transform: translateX(0);
 		opacity: 1;
 	}
-	30% {
+	35% {
 		transform: translateX(-100%);
 		opacity: 0;
 	}
