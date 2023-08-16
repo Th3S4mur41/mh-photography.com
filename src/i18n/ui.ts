@@ -42,7 +42,6 @@ export const routes = {
 export const ui = {
 	de: {
 		'meta.keywords': `fotografie, fotograf, Manuel Hamel, hochzeiten, menschen, lifestyle, reisen, familien, kinder, business, studio, foto, portrait, kunst, künstlerisch, bilder, photoshop, Barcelona`,
-		'meta.description': `Belgischer Fotograf, ansässig in Barcelona, der es liebt, Momente festzuhalten und zu reisen!`,
 		'nav.menu': `Menü`,
 		'nav.about': `Über mich`,
 		'nav.photos': `Fotos`,
@@ -71,7 +70,6 @@ export const ui = {
 	},
 	en: {
 		'meta.keywords': `photography, photographer, Manuel Hamel, weddings, people, lifestyle, travel, families, kids, business, studio, photo, portrait, art, artistic, pictures, photoshop, Barcelona`,
-		'meta.description': `Belgian photographer, based in Barcelona, who loves to capture moments and to travel!`,
 		'nav.menu': `Menu`,
 		'nav.home': `Home`,
 		'nav.about': `About me`,
@@ -102,8 +100,7 @@ export const ui = {
 		'video.p1': `Explore the art of immortalizing cherished moments. My goal is to capture every emotion and detail, transforming your special day into a timeless cinematic masterpiece. I believe in more than just recording events – we craft cinematic stories that capture the essence of your love, dedicated to preserving the emotions, laughter, and tears that make your day truly unique, allowing you to relive the magic whenever you hit play.`
 	},
 	es: {
-		'meta.keywors': `fotografía, fotógrafo, Manuel Hamel, bodas, personas, estilo de vida, viajes, familias, niños, negocios, estudio, foto, retrato, arte, artístico, fotos, photoshop, Barcelona`,
-		'meta.description': `Fotógrafo belga, con sede en Barcelona, que ama capturar momentos y viajar!`,
+		'meta.keywords': `fotografía, fotógrafo, Manuel Hamel, bodas, personas, estilo de vida, viajes, familias, niños, negocios, estudio, foto, retrato, arte, artístico, fotos, photoshop, Barcelona`,
 		'nav.menu': `Menú`,
 		'nav.home': `Inicio`,
 		'nav.about': `Sobre mí`,
@@ -133,7 +130,6 @@ export const ui = {
 	},
 	fr: {
 		'meta.keywords': `photographie, photographe, Manuel Hamel, mariages, personnes, style de vie, voyages, familles, enfants, affaires, studio, photo, portrait, art, artistique, photos, photoshop, Barcelone`,
-		'meta.description': `Photographe belge, basé à Barcelone, qui aime capturer des moments et voyager!`,
 		'nav.menu': `Menu`,
 		'nav.home': `Accueil`,
 		'nav.about': `À propos`,

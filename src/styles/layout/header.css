@@ -19,8 +19,9 @@
 		grid-area: logo;
 		justify-content: center;
 		margin: 0;
-		padding-block: var(--spacing-m);
-		background: linear-gradient(to top, var(--color-bg) 50%, transparent);
+		padding-block: var(--spacing-xs) var(--spacing-s);
+		background: var(--color-bg-onpicture);
+		color: var(--color-onpicture);
 
 		& > svg {
 			inline-size: min(80vw, 40rem);
@@ -112,11 +113,11 @@
 		transform: translateX(0);
 		opacity: 1;
 	}
-	20% {
+	25% {
 		transform: translateX(0);
 		opacity: 1;
 	}
-	30% {
+	35% {
 		transform: translateX(-100%);
 		opacity: 0;
 	}
