@@ -1,8 +1,12 @@
-button.hamburger {
+a.hamburger {
 	padding-block: 0.5rem;
 	border-color: transparent;
 	background-color: transparent;
 	font-size: inherit;
+
+	&:is(:hover, :focus) {
+		border: unset;
+	}
 }
 
 nav {
@@ -10,7 +14,7 @@ nav {
 	z-index: 10; /* MAke sure it's on top of everything else */
 	justify-content: center;
 
-	& > button.hamburger {
+	& > .hamburger {
 		display: none;
 	}
 	& > ul {
@@ -82,7 +86,7 @@ body > nav {
 		pointer-events: none;
 		inset: 0;
 
-		& > button.hamburger {
+		& > a.hamburger {
 			display: block;
 			background: var(--color-overlay-fallback);
 			pointer-events: all;
