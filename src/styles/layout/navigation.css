@@ -9,6 +9,19 @@ a.hamburger {
 	}
 }
 
+.dismiss {
+	display: flex;
+	position: fixed;
+	inset-inline: 0;
+	inset-block-end: 2vb;
+	z-index: 10;
+	justify-content: center;
+	padding: 0.5rem;
+	transform: translateY(-100vb);
+	transform-origin: top;
+	transition: transform 0.3s ease-in-out;
+}
+
 nav {
 	display: flex;
 	z-index: 10; /* MAke sure it's on top of everything else */
@@ -99,21 +112,32 @@ body > nav {
 		}
 		& > ul {
 			flex-direction: column;
-			align-items: center;
+			align-items: stretch;
 			justify-content: start;
 			padding: 1rem;
 			transform: scaleY(0);
 			transform-origin: top;
 			transition: transform 0.3s ease-in-out;
+
+			& a {
+				display: block;
+				border: unset;
+				text-align: center;
+			}
 		}
 		&:focus-within {
-			pointer-events: all;
-
 			& > a.hamburger {
 				pointer-events: none;
 			}
 			& > ul {
 				transform: scaleY(1);
+
+				& a {
+					pointer-events: all;
+				}
+			}
+			& + .dismiss {
+				transform: translateY(0) scaleY(1);
 			}
 		}
 	}
