@@ -1,5 +1,5 @@
 a.hamburger {
-	padding-block: 0.5rem;
+	padding: 0.5rem;
 	border-color: transparent;
 	background-color: transparent;
 	font-size: inherit;
@@ -106,9 +106,15 @@ body > nav {
 			transform-origin: top;
 			transition: transform 0.3s ease-in-out;
 		}
-		&:focus-within > ul {
-			transform: scaleY(1);
+		&:focus-within {
 			pointer-events: all;
+
+			& > a.hamburger {
+				pointer-events: none;
+			}
+			& > ul {
+				transform: scaleY(1);
+			}
 		}
 	}
 }
