@@ -1,3 +1,10 @@
+# [2.3.0-alpha.17](https://github.com/Th3S4mur41/mh-photography.com/compare/v2.3.0-alpha.16...v2.3.0-alpha.17) (2023-08-18)
+
+
+### Bug Fixes
+
+* update hero image to high quality ([e8c8727](https://github.com/Th3S4mur41/mh-photography.com/commit/e8c87275e3b92e4c9367979b6e83f884940aeea9))
+
 # [2.3.0-alpha.16](https://github.com/Th3S4mur41/mh-photography.com/compare/v2.3.0-alpha.15...v2.3.0-alpha.16) (2023-08-16)
 
 
