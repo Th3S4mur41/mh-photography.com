@@ -42,6 +42,7 @@ export const routes = {
 export const ui = {
 	de: {
 		'meta.keywords': `fotografie, fotograf, Manuel Hamel, hochzeiten, menschen, lifestyle, reisen, familien, kinder, business, studio, foto, portrait, kunst, künstlerisch, bilder, photoshop, Barcelona`,
+		'nav.menu': `Menü`,
 		'nav.about': `Über mich`,
 		'nav.photos': `Fotos`,
 		'nav.weddings': `Hochzeiten`,
@@ -69,12 +70,14 @@ export const ui = {
 	},
 	en: {
 		'meta.keywords': `photography, photographer, Manuel Hamel, weddings, people, lifestyle, travel, families, kids, business, studio, photo, portrait, art, artistic, pictures, photoshop, Barcelona`,
+		'nav.menu': `Menu`,
 		'nav.home': `Home`,
 		'nav.about': `About me`,
 		'nav.photos': `Photos`,
 		'nav.weddings': `Weddings`,
 		'nav.videos': `Videos`,
 		'nav.contact': `Contact`,
+		'nav.dismiss': `Dismiss`,
 		'header.title': `Hi! I'm Manuel, photographer in Barcelona`,
 		'header.subtitle': `Wedding photography - event - families - portraits - publications`,
 		'about.title': `A little something about me`,
@@ -98,6 +101,7 @@ export const ui = {
 	},
 	es: {
 		'meta.keywords': `fotografía, fotógrafo, Manuel Hamel, bodas, personas, estilo de vida, viajes, familias, niños, negocios, estudio, foto, retrato, arte, artístico, fotos, photoshop, Barcelona`,
+		'nav.menu': `Menú`,
 		'nav.home': `Inicio`,
 		'nav.about': `Sobre mí`,
 		'nav.photos': `Fotos`,
@@ -126,6 +130,7 @@ export const ui = {
 	},
 	fr: {
 		'meta.keywords': `photographie, photographe, Manuel Hamel, mariages, personnes, style de vie, voyages, familles, enfants, affaires, studio, photo, portrait, art, artistique, photos, photoshop, Barcelone`,
+		'nav.menu': `Menu`,
 		'nav.home': `Accueil`,
 		'nav.about': `À propos`,
 		'nav.photos': `Photos`,

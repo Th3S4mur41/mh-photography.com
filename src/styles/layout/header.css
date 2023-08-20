@@ -56,9 +56,9 @@
 	}
 	& .pause {
 		position: absolute;
-		inset-inline-end: 0.5rem;
-		inset-block-start: 5rem;
-		z-index: 100;
+		inset-inline-end: max(1vi, 1rem);
+		inset-block-start: calc(var(--font-size-m) * 1.3 + 2rem + var(--spacing-l));
+		z-index: 1;
 		cursor: pointer;
 
 		& > svg {

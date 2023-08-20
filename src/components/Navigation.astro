@@ -10,15 +10,24 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 const translatePath = useTranslatedPath(lang);
 ---
-
+<!--  tabindex="0" is required for the menu to work on iOS -->
 <nav aria-label="Main Menu">
+	<a class="hamburger" aria-hidden="true" tabindex="0"><svg width="24" height="24" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>{t('nav.menu')}</title><path d="M3 17h18a1 1 0 0 1 .117 1.993L21 19H3a1 1 0 0 1-.117-1.993L3 17h18H3Zm0-6 18-.002a1 1 0 0 1 .117 1.993l-.117.007L3 13a1 1 0 0 1-.117-1.993L3 11l18-.002L3 11Zm0-6h18a1 1 0 0 1 .117 1.993L21 7H3a1 1 0 0 1-.117-1.993L3 5h18H3Z" fill="currentcolor"/></svg></a>
 	<ul>
-		<li><a href={translatePath('/#')}>{t('nav.home')}</a></li>
+		<li><a href={translatePath('/#home')} tabindex="0">{t('nav.home')}</a></li>
 		<li>
-			<a href={translatePath('/#about')}>{t('nav.about')}</a>
+			<a href={translatePath('/#about')} tabindex="0">{t('nav.about')}</a>
 		</li>
-		<li><a href={translatePath('/#photos')}>{t('nav.photos')}</a></li>
-		<li><a href={translatePath('/#videos')}>{t('nav.videos')}</a></li>
-		<li><a href={translatePath('/#contact')}>{t('nav.contact')}</a></li>
+		<li><a href={translatePath('/#photos')} tabindex="0">{t('nav.photos')}</a></li>
+		<li><a href={translatePath('/#videos')} tabindex="0">{t('nav.videos')}</a></li>
+		<li><a href={translatePath('/#contact')} tabindex="0">{t('nav.contact')}</a></li>
 	</ul>
 </nav>
+<!-- While most browser simply close the menu by clicking anywhere but on a link, iOS requires a dedicated close button -->
+<a class="dismiss" aria-hidden="true" tabindex="0"><svg width="24" height="24" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+	<path
+		d="m4.21 4.387.083-.094a1 1 0 0 1 1.32-.083l.094.083L12 10.585l6.293-6.292a1 1 0 1 1 1.414 1.414L13.415 12l6.292 6.293a1 1 0 0 1 .083 1.32l-.083.094a1 1 0 0 1-1.32.083l-.094-.083L12 13.415l-6.293 6.292a1 1 0 0 1-1.414-1.414L10.585 12 4.293 5.707a1 1 0 0 1-.083-1.32l.083-.094-.083.094Z"
+		fill="currentcolor" />
+</svg>
+</a>
+	
