@@ -1,3 +1,10 @@
+# [2.3.0-alpha.18](https://github.com/Th3S4mur41/mh-photography.com/compare/v2.3.0-alpha.17...v2.3.0-alpha.18) (2023-08-20)
+
+
+### Features
+
+* add mobile navigation ([#691](https://github.com/Th3S4mur41/mh-photography.com/issues/691)) ([ba4e535](https://github.com/Th3S4mur41/mh-photography.com/commit/ba4e535d345c0b6f40ec70dc9ed07c0ea10bec56))
+
 # [2.3.0-alpha.17](https://github.com/Th3S4mur41/mh-photography.com/compare/v2.3.0-alpha.16...v2.3.0-alpha.17) (2023-08-18)
 
 
