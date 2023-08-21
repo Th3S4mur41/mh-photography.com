@@ -35,12 +35,13 @@ const pageTitle = title ? `${title} | ${mainTitle}` : mainTitle;
 		<!-- TODO: Update descriptkeywordsion -->
 		<meta
 			name="description"
-			content={t('meta.description')}
+			content={`${t('header.title')} | ${t('header.subtitle')}`}
 		/>
 		<!-- TODO: Update description -->
 		<meta name="copyright" content={`© 2020-${currentYear} Manuel Hamel Photography`} />
 
 		<meta name="robots" content="index, follow" />
+		<link rel="sitemap" href="/sitemap-index.xml" />
 
 		<!-- Performance -->
 		<link rel="dns-prefetch" href="//static.cloudflareinsights.com" />
@@ -56,7 +57,7 @@ const pageTitle = title ? `${title} | ${mainTitle}` : mainTitle;
 		<meta property="og:url" content="https://mh-photography.com" />
 		<meta
 			property="og:description"
-			content={t('meta.description')}
+			content={`${t('header.title')} | ${t('header.subtitle')}`}
 		/>
 		<!-- TODO: Replace image -->
 		<meta property="og:image" content="https://mh-photography.com/assets/social.jpg" />
@@ -70,7 +71,7 @@ const pageTitle = title ? `${title} | ${mainTitle}` : mainTitle;
 		<meta property="twitter:url" content="https://mh-photography.com/" />
 		<meta
 			name="twitter:description"
-			content={t('meta.description')}
+			content={`${t('header.title')} | ${t('header.subtitle')}`}
 		/>
 		<meta name="twitter:url" content="https://mh-photography.com" />
 		<!-- TODO: Replace image -->
@@ -82,7 +83,7 @@ const pageTitle = title ? `${title} | ${mainTitle}` : mainTitle;
 		<meta name="geo.position" content="41.3814424;2.1568902" />
 		<meta name="ICBM" content="41.3814424, 2.1568902" />
 	</head>
-	<body>
+	<body id="home">
 		<slot />
 	</body>
 </html>

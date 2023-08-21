@@ -7,3 +7,20 @@ button {
 		cursor: pointer;
 	}
 }
+
+.button {
+	padding-block: var(--spacing-s);
+	padding-inline: var(--spacing-l);
+	transition: all 0.3s ease;
+	border-radius: var(--border-radius);
+	background-color: var(--color-bg-secondary);
+	text-align: center;
+	text-decoration: none;
+
+	&:hover {
+		background-color: var(--color-bg-secondary--hover);
+	}
+	&:active {
+		background-color: var(--color-bg-secondary--active);
+	}
+}

@@ -1,3 +1,86 @@
+# [2.3.0-alpha.18](https://github.com/Th3S4mur41/mh-photography.com/compare/v2.3.0-alpha.17...v2.3.0-alpha.18) (2023-08-20)
+
+
+### Features
+
+* add mobile navigation ([#691](https://github.com/Th3S4mur41/mh-photography.com/issues/691)) ([ba4e535](https://github.com/Th3S4mur41/mh-photography.com/commit/ba4e535d345c0b6f40ec70dc9ed07c0ea10bec56))
+
+# [2.3.0-alpha.17](https://github.com/Th3S4mur41/mh-photography.com/compare/v2.3.0-alpha.16...v2.3.0-alpha.17) (2023-08-18)
+
+
+### Bug Fixes
+
+* update hero image to high quality ([e8c8727](https://github.com/Th3S4mur41/mh-photography.com/commit/e8c87275e3b92e4c9367979b6e83f884940aeea9))
+
+# [2.3.0-alpha.16](https://github.com/Th3S4mur41/mh-photography.com/compare/v2.3.0-alpha.15...v2.3.0-alpha.16) (2023-08-16)
+
+
+### Bug Fixes
+
+* typo in meta keywords ([435a53b](https://github.com/Th3S4mur41/mh-photography.com/commit/435a53b5598b93ad0c308496e71a5b326dbc55c8))
+
+
+### Features
+
+* update SEO description to match title and subtitle ([fb8a058](https://github.com/Th3S4mur41/mh-photography.com/commit/fb8a05895b54a75d32b5b9c2892ffce6c74039c2))
+
+# [2.3.0-alpha.15](https://github.com/Th3S4mur41/mh-photography.com/compare/v2.3.0-alpha.14...v2.3.0-alpha.15) (2023-08-14)
+
+
+### Bug Fixes
+
+* hero image on ultrawide screen ([8fcb93a](https://github.com/Th3S4mur41/mh-photography.com/commit/8fcb93a979e2934f9752a478b8037d100e1664df))
+
+# [2.3.0-alpha.14](https://github.com/Th3S4mur41/mh-photography.com/compare/v2.3.0-alpha.13...v2.3.0-alpha.14) (2023-08-14)
+
+
+### Features
+
+* add localization ([#690](https://github.com/Th3S4mur41/mh-photography.com/issues/690)) ([32575d8](https://github.com/Th3S4mur41/mh-photography.com/commit/32575d8a9cefd286aa1dfee23f4e63da247efa8b))
+
+# [2.3.0-alpha.13](https://github.com/Th3S4mur41/mh-photography.com/compare/v2.3.0-alpha.12...v2.3.0-alpha.13) (2023-08-14)
+
+
+### Features
+
+* add video section ([#657](https://github.com/Th3S4mur41/mh-photography.com/issues/657)) ([fca4b14](https://github.com/Th3S4mur41/mh-photography.com/commit/fca4b144736f0f200aa79337486c5ff2360aaa7d))
+
+# [2.3.0-alpha.12](https://github.com/Th3S4mur41/mh-photography.com/compare/v2.3.0-alpha.11...v2.3.0-alpha.12) (2023-08-14)
+
+
+### Features
+
+* add initial layout for new about section ([#678](https://github.com/Th3S4mur41/mh-photography.com/issues/678)) ([f4f2c73](https://github.com/Th3S4mur41/mh-photography.com/commit/f4f2c73212e134c203b07adde7ffef496b0c2367))
+
+# [2.3.0-alpha.11](https://github.com/Th3S4mur41/mh-photography.com/compare/v2.3.0-alpha.10...v2.3.0-alpha.11) (2023-08-11)
+
+
+### Features
+
+* add automatic sitemap generation ([#685](https://github.com/Th3S4mur41/mh-photography.com/issues/685)) ([44e6914](https://github.com/Th3S4mur41/mh-photography.com/commit/44e6914fd0c55be6e5d0347d48399e2121162970))
+
+# [2.3.0-alpha.10](https://github.com/Th3S4mur41/mh-photography.com/compare/v2.3.0-alpha.9...v2.3.0-alpha.10) (2023-08-11)
+
+
+### Features
+
+* **albums:** add i18n to albums page ([657951c](https://github.com/Th3S4mur41/mh-photography.com/commit/657951cb85b2f23af912460674b9a6b218220a00))
+* hide default language in url ([79f5ef7](https://github.com/Th3S4mur41/mh-photography.com/commit/79f5ef71be920fc7d7e927f2499df6dac172e0b6))
+
+# [2.3.0-alpha.9](https://github.com/Th3S4mur41/mh-photography.com/compare/v2.3.0-alpha.8...v2.3.0-alpha.9) (2023-08-08)
+
+
+### Features
+
+* add basic language selector ([#677](https://github.com/Th3S4mur41/mh-photography.com/issues/677)) ([a9dada3](https://github.com/Th3S4mur41/mh-photography.com/commit/a9dada379ff491221a21a0e0aadccca1d97c06a7))
+
+# [2.3.0-alpha.8](https://github.com/Th3S4mur41/mh-photography.com/compare/v2.3.0-alpha.7...v2.3.0-alpha.8) (2023-08-03)
+
+
+### Features
+
+* improve hero section ([#661](https://github.com/Th3S4mur41/mh-photography.com/issues/661)) ([7ada32c](https://github.com/Th3S4mur41/mh-photography.com/commit/7ada32c6fc3166f032488bea028c6e772e17307b))
+
 # [2.3.0-alpha.7](https://github.com/Th3S4mur41/mh-photography.com/compare/v2.3.0-alpha.6...v2.3.0-alpha.7) (2023-08-02)
 
 

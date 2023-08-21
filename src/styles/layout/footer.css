@@ -9,7 +9,8 @@
 		'navigation'
 		'logo'
 		'copyright'
-		'version';
+		'version'
+		'lang';
 	align-items: center;
 	margin-block-start: var(--spacing-xl);
 	padding-block: var(--spacing-l);
@@ -42,19 +43,28 @@
 	& > nav {
 		grid-area: navigation;
 	}
+	& > .lang-selector {
+		grid-area: lang;
+		margin-block-start: var(--spacing-m);
+	}
 
 	@media (width >= 800px) {
 		grid-template:
-			'social . .  navigation navigation'
-			'logo copyright copyright copyright version';
+			'social logo logo logo navigation'
+			'lang logo logo logo .'
+			'lang copyright copyright copyright version';
 		justify-items: center;
 		align-items: end;
 
 		& > .logo {
+			inline-size: 20em;
 			margin-block-end: -2rem; /* Align the logo with the text */
 		}
 		& > :is(nav, .version) {
 			justify-self: end;
+		}
+		& > :is(.social, .lang-selector) {
+			justify-self: start;
 		}
 	}
 }
