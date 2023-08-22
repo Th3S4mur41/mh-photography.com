@@ -16,11 +16,13 @@
 }
 
 #weddings {
-	display: flex;
-	flex-direction: column;
+	display: grid;
+	grid-template: 'picture picture picture' '. header .' '. main .' '. footer .' / minmax(var(--spacing-m), 1fr) auto minmax(
+			var(--spacing-m),
+			1fr
+		);
 	align-items: center;
 	padding-block: var(--spacing-xl);
-	padding-inline: var(--spacing-m);
 	gap: var(--spacing-s);
 
 	& > h2 {
@@ -33,6 +35,7 @@
 	}
 	& > footer {
 		display: flex;
+		grid-area: footer;
 		flex-wrap: wrap;
 		justify-content: space-evenly;
 		inline-size: 100%;
@@ -47,5 +50,28 @@
 	& p {
 		text-align: justify;
 		text-wrap: pretty;
+	}
+	& > picture {
+		grid-area: picture;
+
+		& > img {
+			inline-size: 100%;
+		}
+	}
+
+	@media (width >= 1100px) {
+		display: grid;
+		grid-template: 'header header' 'main picture' 'footer footer';
+		padding-inline: var(--spacing-l);
+		gap: var(--spacing-xl);
+
+		& > p {
+			grid-column: 2;
+		}
+		& img {
+			transform: rotate(5deg);
+			border: white 0.75rem solid;
+			box-shadow: var(--color-shadow) 0.25rem 0.5rem 0.75rem;
+		}
 	}
 }
