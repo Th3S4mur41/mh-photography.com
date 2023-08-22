@@ -34,9 +34,10 @@
 	& > footer {
 		display: flex;
 		flex-wrap: wrap;
-		gap: var(--spacing-m) var(--spacing-s);
-		align-self: stretch;
-		justify-content: space-around;
+		justify-content: space-evenly;
+		inline-size: 100%;
+		max-inline-size: var(--max-line-length);
+		gap: var(--spacing-m) var(--spacing-xl);
 
 		& > .button {
 			min-inline-size: 18rem;
