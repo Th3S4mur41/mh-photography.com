@@ -1,9 +1,27 @@
+.button {
+	display: inline-block;
+	padding-block: var(--spacing-xs);
+	padding-inline: var(--spacing-m);
+	border-radius: var(--border-radius);
+	background-color: var(--color-bg-secondary);
+	text-decoration: none;
+	cursor: pointer;
+}
+
+[lang]:not([lang='es']) {
+	.lang-es {
+		/* Display only when language is spanish */
+		display: none;
+	}
+}
+
 #weddings {
-	display: grid;
-	grid-template: 'header header header header' 'main packs packs packs' 'main pack1 pack2 pack3' 'main video video video' 'main button button button' 'footer footer footer footer' / 2fr 1fr 1fr 1fr;
-	gap: var(--spacing-s);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 	padding-block: var(--spacing-xl);
 	padding-inline: var(--spacing-m);
+	gap: var(--spacing-s);
 
 	& > h2 {
 		grid-area: header;
@@ -13,78 +31,20 @@
 	& > .main {
 		grid-area: main;
 	}
-	& > .packs {
-		display: block;
-		grid-area: packs;
-		text-align: center;
-		text-wrap: balance;
-	}
-	& > .pack1 {
-		grid-area: pack1;
-	}
-	& > .pack2 {
-		grid-area: pack2;
-	}
-	& > .pack3 {
-		grid-area: pack3;
-	}
-	& > .video {
-		grid-area: video;
-	}
-	& > a {
-		grid-area: button;
-
-		&:first-of-type {
-			justify-self: start;
-		}
-		&:last-of-type {
-			justify-self: end;
-		}
-	}
 	& > footer {
-		grid-area: footer;
+		display: flex;
+		flex-wrap: wrap;
+		gap: var(--spacing-m) var(--spacing-s);
+		align-self: stretch;
+		justify-content: space-around;
 
-		& > strong {
-			display: block;
-
-			& + strong {
-				margin-block-start: var(--spacing-s);
-			}
+		& > .button {
+			min-inline-size: 18rem;
+			white-space: nowrap;
 		}
-	}
-	& > :is(div, section, footer) {
-		padding: var(--spacing-s);
-	}
-	& .card {
-		padding-block: var(--spacing-s);
-		padding-inline: var(--spacing-m);
-		background-color: var(--color-bg-secondary);
-		text-align: center;
-	}
-	& ul {
-		padding-inline-start: 0;
-		list-style: none;
-	}
-	& li.main {
-		margin-block-end: var(--spacing-s);
-	}
-	& li.add:has(+ li.add) {
-		margin-block-start: var(--spacing-s);
-	}
-	& ol {
-		list-style: upper-latin;
 	}
 	& p {
-		text-align: inherit;
+		text-align: justify;
+		text-wrap: pretty;
 	}
-}
-
-.button {
-	display: inline-block;
-	padding-block: var(--spacing-xs);
-	padding-inline: var(--spacing-m);
-	border-radius: var(--border-radius);
-	background-color: var(--color-bg-secondary);
-	text-decoration: none;
-	cursor: pointer;
 }
