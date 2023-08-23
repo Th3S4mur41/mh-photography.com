@@ -6,40 +6,62 @@
 	display: flex;
 	flex-wrap: wrap;
 	align-content: center;
-	min-block-size: 100vh; /* fallback */
 	min-block-size: 100vb;
 	padding-block: var(--spacing-xl);
 	padding-inline: var(--spacing-m);
 	gap: var(--spacing-m);
 
 	& > a {
-		display: flex;
-		flex-direction: column;
+		display: grid;
+		grid-template: 'picture';
 		flex-grow: 1;
-		max-block-size: 50vh; /* fallback */
-		max-block-size: 50vb;
+		max-block-size: calc(50vb - var(--spacing-xl));
 		inline-size: 30%;
 		min-inline-size: min(300px, 100lvb);
 		text-align: center;
 		text-decoration: none;
 
-		& > h3 {
-			margin-block: var(--spacing-s);
-			font-size: var(--font-size-l);
+		&.primary {
+			inline-size: calc(50% - var(--spacing-m));
 		}
-		& picture {
+		& > h3 {
+			z-index: 1;
+			grid-area: picture;
+			align-self: end;
+			margin: unset;
+			padding-block-start: var(--spacing-xs);
+
+			/* background: var(--color-overlay); */
+			transform-origin: bottom;
+			color: var(--color-onpicture);
+			font-size: var(--font-size-header-l);
+			text-transform: uppercase;
+
+			@media (prefers-reduced-motion: no-preference) {
+				transition: all 0.5s ease;
+			}
+		}
+		& > picture {
+			grid-area: picture;
 			flex-grow: 1;
+			max-block-size: 100%; /* Safari workaround to avoid image overflow */
 			overflow: hidden;
 		}
 		& img {
 			flex-grow: 1;
 			block-size: 100%;
-			object-fit: cover;
+			max-block-size: 100%;
 			transition: all 0.5s ease;
+			object-fit: cover;
+			object-position: top;
+			filter: var(--img-hover);
 		}
 		&:is(:focus-visible, :hover) {
+			& > h3 {
+				transform: scaleY(0);
+			}
 			& img {
-				filter: var(--img-hover);
+				filter: unset;
 
 				@media (prefers-reduced-motion: no-preference) {
 					transform: scale(1.2);

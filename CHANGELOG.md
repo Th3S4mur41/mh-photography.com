@@ -1,3 +1,143 @@
+# [2.3.0-alpha.19](https://github.com/Th3S4mur41/mh-photography.com/compare/v2.3.0-alpha.18...v2.3.0-alpha.19) (2023-08-23)
+
+
+### Features
+
+* add initial layout for weddings section ([#658](https://github.com/Th3S4mur41/mh-photography.com/issues/658)) ([976c045](https://github.com/Th3S4mur41/mh-photography.com/commit/976c04568a1ef219ff40677f2655cb7e2585da69))
+
+# [2.3.0-alpha.18](https://github.com/Th3S4mur41/mh-photography.com/compare/v2.3.0-alpha.17...v2.3.0-alpha.18) (2023-08-20)
+
+
+### Features
+
+* add mobile navigation ([#691](https://github.com/Th3S4mur41/mh-photography.com/issues/691)) ([ba4e535](https://github.com/Th3S4mur41/mh-photography.com/commit/ba4e535d345c0b6f40ec70dc9ed07c0ea10bec56))
+
+# [2.3.0-alpha.17](https://github.com/Th3S4mur41/mh-photography.com/compare/v2.3.0-alpha.16...v2.3.0-alpha.17) (2023-08-18)
+
+
+### Bug Fixes
+
+* update hero image to high quality ([e8c8727](https://github.com/Th3S4mur41/mh-photography.com/commit/e8c87275e3b92e4c9367979b6e83f884940aeea9))
+
+# [2.3.0-alpha.16](https://github.com/Th3S4mur41/mh-photography.com/compare/v2.3.0-alpha.15...v2.3.0-alpha.16) (2023-08-16)
+
+
+### Bug Fixes
+
+* typo in meta keywords ([435a53b](https://github.com/Th3S4mur41/mh-photography.com/commit/435a53b5598b93ad0c308496e71a5b326dbc55c8))
+
+
+### Features
+
+* update SEO description to match title and subtitle ([fb8a058](https://github.com/Th3S4mur41/mh-photography.com/commit/fb8a05895b54a75d32b5b9c2892ffce6c74039c2))
+
+# [2.3.0-alpha.15](https://github.com/Th3S4mur41/mh-photography.com/compare/v2.3.0-alpha.14...v2.3.0-alpha.15) (2023-08-14)
+
+
+### Bug Fixes
+
+* hero image on ultrawide screen ([8fcb93a](https://github.com/Th3S4mur41/mh-photography.com/commit/8fcb93a979e2934f9752a478b8037d100e1664df))
+
+# [2.3.0-alpha.14](https://github.com/Th3S4mur41/mh-photography.com/compare/v2.3.0-alpha.13...v2.3.0-alpha.14) (2023-08-14)
+
+
+### Features
+
+* add localization ([#690](https://github.com/Th3S4mur41/mh-photography.com/issues/690)) ([32575d8](https://github.com/Th3S4mur41/mh-photography.com/commit/32575d8a9cefd286aa1dfee23f4e63da247efa8b))
+
+# [2.3.0-alpha.13](https://github.com/Th3S4mur41/mh-photography.com/compare/v2.3.0-alpha.12...v2.3.0-alpha.13) (2023-08-14)
+
+
+### Features
+
+* add video section ([#657](https://github.com/Th3S4mur41/mh-photography.com/issues/657)) ([fca4b14](https://github.com/Th3S4mur41/mh-photography.com/commit/fca4b144736f0f200aa79337486c5ff2360aaa7d))
+
+# [2.3.0-alpha.12](https://github.com/Th3S4mur41/mh-photography.com/compare/v2.3.0-alpha.11...v2.3.0-alpha.12) (2023-08-14)
+
+
+### Features
+
+* add initial layout for new about section ([#678](https://github.com/Th3S4mur41/mh-photography.com/issues/678)) ([f4f2c73](https://github.com/Th3S4mur41/mh-photography.com/commit/f4f2c73212e134c203b07adde7ffef496b0c2367))
+
+# [2.3.0-alpha.11](https://github.com/Th3S4mur41/mh-photography.com/compare/v2.3.0-alpha.10...v2.3.0-alpha.11) (2023-08-11)
+
+
+### Features
+
+* add automatic sitemap generation ([#685](https://github.com/Th3S4mur41/mh-photography.com/issues/685)) ([44e6914](https://github.com/Th3S4mur41/mh-photography.com/commit/44e6914fd0c55be6e5d0347d48399e2121162970))
+
+# [2.3.0-alpha.10](https://github.com/Th3S4mur41/mh-photography.com/compare/v2.3.0-alpha.9...v2.3.0-alpha.10) (2023-08-11)
+
+
+### Features
+
+* **albums:** add i18n to albums page ([657951c](https://github.com/Th3S4mur41/mh-photography.com/commit/657951cb85b2f23af912460674b9a6b218220a00))
+* hide default language in url ([79f5ef7](https://github.com/Th3S4mur41/mh-photography.com/commit/79f5ef71be920fc7d7e927f2499df6dac172e0b6))
+
+# [2.3.0-alpha.9](https://github.com/Th3S4mur41/mh-photography.com/compare/v2.3.0-alpha.8...v2.3.0-alpha.9) (2023-08-08)
+
+
+### Features
+
+* add basic language selector ([#677](https://github.com/Th3S4mur41/mh-photography.com/issues/677)) ([a9dada3](https://github.com/Th3S4mur41/mh-photography.com/commit/a9dada379ff491221a21a0e0aadccca1d97c06a7))
+
+# [2.3.0-alpha.8](https://github.com/Th3S4mur41/mh-photography.com/compare/v2.3.0-alpha.7...v2.3.0-alpha.8) (2023-08-03)
+
+
+### Features
+
+* improve hero section ([#661](https://github.com/Th3S4mur41/mh-photography.com/issues/661)) ([7ada32c](https://github.com/Th3S4mur41/mh-photography.com/commit/7ada32c6fc3166f032488bea028c6e772e17307b))
+
+# [2.3.0-alpha.7](https://github.com/Th3S4mur41/mh-photography.com/compare/v2.3.0-alpha.6...v2.3.0-alpha.7) (2023-08-02)
+
+
+### Bug Fixes
+
+* minor photo improvements ([bac4002](https://github.com/Th3S4mur41/mh-photography.com/commit/bac40024371274fa59e42f179f3b2408596465c8))
+
+# [2.3.0-alpha.6](https://github.com/Th3S4mur41/mh-photography.com/compare/v2.3.0-alpha.5...v2.3.0-alpha.6) (2023-07-31)
+
+
+### Features
+
+* update albums ([#652](https://github.com/Th3S4mur41/mh-photography.com/issues/652)) ([ee3c81e](https://github.com/Th3S4mur41/mh-photography.com/commit/ee3c81ea8614e077cda1ca7809f0de700c08cb56))
+
+# [2.3.0-alpha.5](https://github.com/Th3S4mur41/mh-photography.com/compare/v2.3.0-alpha.4...v2.3.0-alpha.5) (2023-07-29)
+
+
+### Bug Fixes
+
+* copyright text ([66276cd](https://github.com/Th3S4mur41/mh-photography.com/commit/66276cd451cf264cb754e5c63427f783c40b3288))
+
+# [2.3.0-alpha.4](https://github.com/Th3S4mur41/mh-photography.com/compare/v2.3.0-alpha.3...v2.3.0-alpha.4) (2023-07-29)
+
+
+### Features
+
+* add localization for header  and navigation ([#646](https://github.com/Th3S4mur41/mh-photography.com/issues/646)) ([5c2f41f](https://github.com/Th3S4mur41/mh-photography.com/commit/5c2f41fb08e310a64353012c4ebb148183ca3da4))
+
+# [2.3.0-alpha.3](https://github.com/Th3S4mur41/mh-photography.com/compare/v2.3.0-alpha.2...v2.3.0-alpha.3) (2023-07-24)
+
+
+### Bug Fixes
+
+* **style:** photo overflow on safari ([82d0105](https://github.com/Th3S4mur41/mh-photography.com/commit/82d0105c671700a702f5fd030e0fdc95f98c2f78))
+* **style:** remove body container ([9102557](https://github.com/Th3S4mur41/mh-photography.com/commit/910255765313b6e03d7610ad17303eb1591fca2e))
+
+# [2.3.0-alpha.2](https://github.com/Th3S4mur41/mh-photography.com/compare/v2.3.0-alpha.1...v2.3.0-alpha.2) (2023-07-23)
+
+
+### Features
+
+* update font families ([#631](https://github.com/Th3S4mur41/mh-photography.com/issues/631)) ([6b777e8](https://github.com/Th3S4mur41/mh-photography.com/commit/6b777e8e056b00b718d3970528f626485f481911))
+
+# [2.3.0-alpha.1](https://github.com/Th3S4mur41/mh-photography.com/compare/v2.2.1...v2.3.0-alpha.1) (2023-07-22)
+
+
+### Features
+
+* **photos:** highlight primary albums ([#627](https://github.com/Th3S4mur41/mh-photography.com/issues/627)) ([d1891f4](https://github.com/Th3S4mur41/mh-photography.com/commit/d1891f4750dbabadc95e67dc61a9cf9d04d2bea3))
+
 ## [2.2.1](https://github.com/Th3S4mur41/mh-photography.com/compare/v2.2.0...v2.2.1) (2023-05-05)
 
 

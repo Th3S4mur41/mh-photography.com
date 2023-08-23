@@ -6,7 +6,8 @@
 	display: grid;
 	grid-template:
 		[image-start] '.' 1fr
-		'title' auto [image-end]
+		'logo' auto [image-end]
+		'title' auto
 		'subtitle' auto;
 	justify-items: stretch;
 	align-items: end;
@@ -15,15 +16,26 @@
 
 	& > h1 {
 		display: flex;
-		grid-area: title;
+		grid-area: logo;
 		justify-content: center;
 		margin: 0;
-		padding-block: var(--spacing-m);
-		background: linear-gradient(to top, var(--color-bg) 50%, transparent);
+		padding-block: var(--spacing-xs) var(--spacing-s);
+		background: var(--color-bg-onpicture);
+		color: var(--color-onpicture);
 
 		& > svg {
 			inline-size: min(80vw, 40rem);
 		}
+	}
+	& > .title {
+		grid-area: title;
+		margin-block-start: var(--spacing-m);
+		color: var(--color-onbg);
+		font-family: var(--font-family-header);
+		font-size: var(--font-size-header-xl);
+		font-weight: var(--font-weight-normal);
+		text-align: center;
+		text-wrap: balance;
 	}
 	& > .subtitle {
 		grid-area: subtitle;
@@ -32,6 +44,7 @@
 		font-size: var(--font-size-header-s);
 		font-weight: var(--font-weight-light);
 		text-align: center;
+		text-wrap: balance;
 	}
 	& > .carousel {
 		display: flex;
@@ -43,9 +56,9 @@
 	}
 	& .pause {
 		position: absolute;
-		inset-inline-end: 0.5rem;
-		inset-block-start: 5rem;
-		z-index: 100;
+		inset-inline-end: max(1vi, 1rem);
+		inset-block-start: calc(var(--font-size-m) * 1.3 + 2rem + var(--spacing-l));
+		z-index: 1;
 		cursor: pointer;
 
 		& > svg {
@@ -57,16 +70,24 @@
 		}
 	}
 	& .hero {
+		--display: 5s;
+		--delay: calc((var(--nth-child) - 1) * var(--display));
+		position: absolute;
 		flex: 0 0 100%;
+		inset: 0;
 
 		@media (prefers-reduced-motion: no-preference) {
-			animation: carousel 30s linear 5s infinite;
+			animation: carousel calc(var(--images) * var(--display)) ease var(--delay) infinite;
 		}
 
+		&:not(:first-child) {
+			opacity: 0;
+		}
 		& > img {
 			block-size: 100%;
 			inline-size: 100%;
 			object-fit: cover;
+			object-position: top;
 		}
 	}
 }
@@ -85,30 +106,23 @@
 
 @keyframes carousel {
 	0% {
-		transform: translateX(0);
+		/* transform: translateX(100%);
+		opacity: 0; */
 	}
-	20% {
+	10% {
 		transform: translateX(0);
+		opacity: 1;
 	}
 	25% {
+		transform: translateX(0);
+		opacity: 1;
+	}
+	35% {
 		transform: translateX(-100%);
-	}
-	45% {
-		transform: translateX(-100%);
-	}
-	50% {
-		transform: translateX(-200%);
-	}
-	70% {
-		transform: translateX(-200%);
-	}
-	75% {
-		transform: translateX(-300%);
-	}
-	95% {
-		transform: translateX(-300%);
+		opacity: 0;
 	}
 	100% {
-		transform: translateX(-400%);
+		transform: translateX(-100%);
+		opacity: 0;
 	}
 }

@@ -1,0 +1,99 @@
+---
+import { getLangFromUrl, getRouteFromUrl, useTranslations, useTranslatedPath } from '../i18n/utils';
+
+interface Props {
+	path?: string;
+}
+
+const { path } = Astro.props;
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const translatePath = useTranslatedPath(lang);
+const route = getRouteFromUrl(Astro.url);
+---
+
+
+<section id="photos">
+	<h2 class="screen-reader-text">{t('photos.title')}</h2>
+	<a href={translatePath(`/${route ? route : 'albums/weddings'}`, lang)} class="primary">
+		<h3>{t('photos.weddings')}</h3>
+		<picture>
+			<source
+				srcset="/assets/img/albums/weddings-400.avif 450w, /assets/img/albums/weddings-1920.avif"
+				type="image/avif"
+			/>
+			<source
+				srcset="/assets/img/albums/weddings-400.webp 450w, /assets/img/albums/weddings-1920.webp"
+				type="image/webp"
+			/>
+			<source
+				srcset="/assets/img/albums/weddings-400.jpg 450w, /assets/img/albums/weddings-1920.jpg"
+				type="image/jpg"
+			/>
+			<img src="/assets/img/albums/weddings-400.jpg" width="6240" height="4160" loading="lazy" alt="" />
+		</picture>
+	</a>
+	<a href={translatePath(`/${route ? route : 'albums/people'}`, lang)} class="primary">
+		<h3>{t('photos.people')}</h3>
+		<picture>
+			<source
+				srcset="/assets/img/albums/people-and-lifestyle-400.avif 450w, /assets/img/albums/people-and-lifestyle-1920.avif"
+				type="image/avif"
+			/>
+			<source
+				srcset="/assets/img/albums/people-and-lifestyle-400.webp 450w, /assets/img/albums/people-and-lifestyle-1920.webp"
+				type="image/webp"
+			/>
+			<source
+				srcset="/assets/img/albums/people-and-lifestyle-400.jpg 450w, /assets/img/albums/people-and-lifestyle-1920.jpg"
+				type="image/jpg"
+			/>
+			<img src="/assets/img/albums/people-and-lifestyle-400.jpg" width="4850" height="3233" loading="lazy" alt="" />
+		</picture>
+	</a>
+	<a href={translatePath(`/${route ? route : 'albums/families'}`, lang)}>
+		<h3>{t('photos.families')}</h3>
+		<picture>
+			<source
+				srcset="/assets/img/albums/families-and-kids-400.avif 450w, /assets/img/albums/families-and-kids-1920.avif"
+				type="image/avif"
+			/>
+			<source
+				srcset="/assets/img/albums/families-and-kids-400.webp 450w, /assets/img/albums/families-and-kids-1920.webp"
+				type="image/webp"
+			/>
+			<source
+				srcset="/assets/img/albums/families-and-kids-400.jpg 450w, /assets/img/albums/families-and-kids-1920.jpg"
+				type="image/jpg"
+			/>
+			<img src="/assets/img/albums/families-and-kids-400.jpg" width="5249" height="3499" loading="lazy" alt="" />
+		</picture>
+	</a>
+	<a href={translatePath(`/${route ? route : 'albums/business'}`, lang)}>
+		<h3>{t('photos.business')}</h3>
+		<picture>
+			<source
+				srcset="/assets/img/albums/business-400.avif 450w, /assets/img/albums/business-1920.avif"
+				type="image/avif"
+			/>
+			<source
+				srcset="/assets/img/albums/business-400.webp 450w, /assets/img/albums/business-1920.webp"
+				type="image/webp"
+			/>
+			<source
+				srcset="/assets/img/albums/business-400.jpg 450w, /assets/img/albums/business-1920.jpg"
+				type="image/jpg"
+			/>
+			<img src="/assets/img/albums/business-400.jpg" width="5534" height="3689" loading="lazy" alt="" />
+		</picture>
+	</a>
+	<a href={translatePath(`/${route ? route : 'albums/travel'}`, lang)}>
+		<h3>{t('photos.travel')}</h3>
+		<picture>
+			<source srcset="/assets/img/albums/travel-400.avif 450w, /assets/img/albums/travel-1920.avif" type="image/avif" />
+			<source srcset="/assets/img/albums/travel-400.webp 450w, /assets/img/albums/travel-1920.webp" type="image/webp" />
+			<source srcset="/assets/img/albums/travel-400.jpg 450w, /assets/img/albums/about-1920.jpg" type="image/jpg" />
+			<img src="/assets/img/albums/travel-400.jpg" width="5810" height="3647" loading="lazy" alt="" />
+		</picture>
+	</a>
+</section>

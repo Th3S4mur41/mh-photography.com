@@ -1,0 +1,77 @@
+.button {
+	display: inline-block;
+	padding-block: var(--spacing-xs);
+	padding-inline: var(--spacing-m);
+	border-radius: var(--border-radius);
+	background-color: var(--color-bg-secondary);
+	text-decoration: none;
+	cursor: pointer;
+}
+
+[lang]:not([lang='es']) {
+	.lang-es {
+		/* Display only when language is spanish */
+		display: none;
+	}
+}
+
+#weddings {
+	display: grid;
+	grid-template: 'picture picture picture' '. header .' '. main .' '. footer .' / minmax(var(--spacing-m), 1fr) auto minmax(
+			var(--spacing-m),
+			1fr
+		);
+	align-items: center;
+	padding-block: var(--spacing-xl);
+	gap: var(--spacing-s);
+
+	& > h2 {
+		grid-area: header;
+		text-align: center;
+		text-wrap: balance;
+	}
+	& > .main {
+		grid-area: main;
+	}
+	& > footer {
+		display: flex;
+		grid-area: footer;
+		flex-wrap: wrap;
+		justify-content: space-evenly;
+		inline-size: 100%;
+		max-inline-size: var(--max-line-length);
+		gap: var(--spacing-m) var(--spacing-xl);
+
+		& > .button {
+			min-inline-size: 18rem;
+			white-space: nowrap;
+		}
+	}
+	& p {
+		text-align: justify;
+		text-wrap: pretty;
+	}
+	& > picture {
+		grid-area: picture;
+
+		& > img {
+			inline-size: 100%;
+		}
+	}
+
+	@media (width >= 1100px) {
+		display: grid;
+		grid-template: 'header header' 'main picture' 'footer footer';
+		padding-inline: var(--spacing-l);
+		gap: var(--spacing-xl);
+
+		& > p {
+			grid-column: 2;
+		}
+		& img {
+			transform: rotate(5deg);
+			border: white 0.75rem solid;
+			box-shadow: var(--color-shadow) 0.25rem 0.5rem 0.75rem;
+		}
+	}
+}

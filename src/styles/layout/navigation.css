@@ -1,8 +1,35 @@
+a.hamburger {
+	padding: 0.5rem;
+	border-color: transparent;
+	background-color: transparent;
+	font-size: inherit;
+
+	&:is(:hover, :focus) {
+		border: unset;
+	}
+}
+
+.dismiss {
+	display: flex;
+	position: fixed;
+	inset-inline: 0;
+	inset-block-end: 2vb;
+	z-index: 10;
+	justify-content: center;
+	padding: 0.5rem;
+	transform: translateY(-100vb);
+	transform-origin: top;
+	transition: transform 0.3s ease-in-out;
+}
+
 nav {
 	display: flex;
 	z-index: 10; /* MAke sure it's on top of everything else */
 	justify-content: center;
 
+	& > .hamburger {
+		display: none;
+	}
 	& > ul {
 		display: flex;
 		padding: unset;
@@ -14,6 +41,7 @@ nav {
 		transition: var(--transition-color);
 		color: currentcolor;
 		text-decoration: none;
+		white-space: nowrap;
 		border-block-end: 1px solid transparent;
 
 		&:is(:hover, :focus) {
@@ -26,8 +54,20 @@ body > nav {
 	position: fixed;
 	inset-block-start: 0;
 	inline-size: 100%;
-	background: var(--color-overlay-fallback);
 
+	& > ul {
+		flex-grow: 1;
+		justify-content: center;
+		margin: unset;
+		padding-block: 1em;
+		background: var(--color-overlay-fallback);
+
+		@supports (backdrop-filter: blur(30px) saturate(125%)) {
+			/* Fluent acrylic effect: see https://medium.com/microsoft-design/diy-a-web-version-the-fluent-design-systems-acrylic-material-fe2eac2a40bb */
+			backdrop-filter: blur(30px) saturate(125%);
+			background: var(--color-overlay);
+		}
+	}
 	& a.active {
 		border-image-source: linear-gradient(
 			to right,
@@ -52,9 +92,53 @@ body > nav {
 		outline: none;
 	}
 
-	@supports (backdrop-filter: blur(30px) saturate(125%)) {
-		/* Fluent acrylic effect: see https://medium.com/microsoft-design/diy-a-web-version-the-fluent-design-systems-acrylic-material-fe2eac2a40bb */
-		backdrop-filter: blur(30px) saturate(125%);
-		background: var(--color-overlay);
+	@media (width < 800px) {
+		flex-direction: column;
+		justify-content: start;
+		font-size: var(--font-size-l);
+		pointer-events: none;
+		inset: 0;
+
+		& > a.hamburger {
+			display: block;
+			background: var(--color-overlay-fallback);
+			pointer-events: all;
+
+			@supports (backdrop-filter: blur(30px) saturate(125%)) {
+				/* Fluent acrylic effect: see https://medium.com/microsoft-design/diy-a-web-version-the-fluent-design-systems-acrylic-material-fe2eac2a40bb */
+				backdrop-filter: blur(30px) saturate(125%);
+				background: var(--color-overlay);
+			}
+		}
+		& > ul {
+			flex-direction: column;
+			align-items: stretch;
+			justify-content: start;
+			padding: 1rem;
+			transform: scaleY(0);
+			transform-origin: top;
+			transition: transform 0.3s ease-in-out;
+
+			& a {
+				display: block;
+				border: unset;
+				text-align: center;
+			}
+		}
+		&:focus-within {
+			& > a.hamburger {
+				pointer-events: none;
+			}
+			& > ul {
+				transform: scaleY(1);
+
+				& a {
+					pointer-events: all;
+				}
+			}
+			& + .dismiss {
+				transform: translateY(0) scaleY(1);
+			}
+		}
 	}
 }
