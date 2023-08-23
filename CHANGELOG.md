@@ -1,3 +1,10 @@
+# [2.3.0](https://github.com/Th3S4mur41/mh-photography.com/compare/v2.2.1...v2.3.0) (2023-08-23)
+
+
+### Features
+
+* release v3 ([#702](https://github.com/Th3S4mur41/mh-photography.com/issues/702)) ([2ed74df](https://github.com/Th3S4mur41/mh-photography.com/commit/2ed74df1a72c5192296af130086d6e219a6cf246)), closes [#628](https://github.com/Th3S4mur41/mh-photography.com/issues/628)
+
 # [2.3.0-alpha.19](https://github.com/Th3S4mur41/mh-photography.com/compare/v2.3.0-alpha.18...v2.3.0-alpha.19) (2023-08-23)
 
 
