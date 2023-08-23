@@ -1,3 +1,10 @@
+# [2.3.0-alpha.19](https://github.com/Th3S4mur41/mh-photography.com/compare/v2.3.0-alpha.18...v2.3.0-alpha.19) (2023-08-23)
+
+
+### Features
+
+* add initial layout for weddings section ([#658](https://github.com/Th3S4mur41/mh-photography.com/issues/658)) ([976c045](https://github.com/Th3S4mur41/mh-photography.com/commit/976c04568a1ef219ff40677f2655cb7e2585da69))
+
 # [2.3.0-alpha.18](https://github.com/Th3S4mur41/mh-photography.com/compare/v2.3.0-alpha.17...v2.3.0-alpha.18) (2023-08-20)
 
 
