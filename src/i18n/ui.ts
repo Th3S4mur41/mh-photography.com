@@ -66,7 +66,17 @@ export const ui = {
 		'photos.travel': 'Reisen',
 		'photos.weddings': 'Hochzeiten',
 		'video.title': `Love in Motion: Hochzeitsvideografie enthüllt`,
-		'video.p1': `Erkunde die Kunst, geliebte Momente unsterblich zu machen. Mein Ziel ist es, jede Emotion und jedes Detail einzufangen und deinen besonderen Tag in ein zeitloses filmisches Meisterwerk zu verwandeln. Ich glaube an mehr als nur das Aufzeichnen von Ereignissen - wir gestalten filmische Geschichten, die die Essenz deiner Liebe einfangen, und widmen uns der Bewahrung der Emotionen, des Lachens und der Tränen, die deinen Tag wirklich einzigartig machen. So kannst du die Magie immer wieder erleben, wenn du auf Play drückst.`
+		'video.p1': `Erkunde die Kunst, geliebte Momente unsterblich zu machen. Mein Ziel ist es, jede Emotion und jedes Detail einzufangen und deinen besonderen Tag in ein zeitloses filmisches Meisterwerk zu verwandeln. Ich glaube an mehr als nur das Aufzeichnen von Ereignissen - wir gestalten filmische Geschichten, die die Essenz deiner Liebe einfangen, und widmen uns der Bewahrung der Emotionen, des Lachens und der Tränen, die deinen Tag wirklich einzigartig machen. So kannst du die Magie immer wieder erleben, wenn du auf Play drückst.`,
+		'weddings.title': `Suchst du einen Fotografen für deinen großen Tag? Dann bist du hier genau richtig.`,
+		'weddings.p1': `Ich weiß, dass deine Hochzeit ein einzigartiger und unvergesslicher Tag ist, und ich möchte jeden Moment, jede Emotion und jedes Detail mit meiner Kamera einfangen. Ich bin Manuel und hatte das Privileg, viele verschiedene Hochzeiten in ganz Europa zu verewigen.`,
+		'weddings.p2': `Lass mich dir etwas über meine Arbeitsweise erzählen, damit du mich besser kennenlernen kannst. Ich passe mich deinem Stil und deinen Vorlieben an. Es ist dein Tag, und wir möchten die Liebe, die Magie und die Essenz in jedem Bild festhalten. Ich werde diskret auf die wichtigsten und spontansten Momente während deiner Feierlichkeit achten.`,
+		'weddings.p3': `In den Fotos, die du erhalten wirst, werden liebevolle Blicke, zärtliche Küsse und aufrichtiges Lachen zu sehen sein. Ich versichere dir, dass ich dich in diesen Momenten begleiten und sie mit meinem künstlerischen und authentischen Stil einfangen werde, der meine Aufnahmen charakterisiert. Meine Arbeit beschränkt sich nicht nur darauf, tausende Fotos zu schießen; es geht darum, dir und deinen Gästen an diesem Tag ein angenehmes und unterhaltsames Erlebnis zu bieten und dir zu helfen, diese Geschichte für ein ganzes Leben zu erzählen.`,
+		'weddings.p4': `Ich weiß, wie es sich anfühlt, vor der Kamera zu stehen, daher bemühe ich mich, eine persönliche Verbindung zu dir und deinen Lieben aufzubauen. Mein Ziel ist es, dass du dich entspannst und deinen Tag in vollen Zügen genießt, während ich dafür sorge, die schönsten Erinnerungen zu schaffen.`,
+		'weddings.p5': `Indem du mich als deinen Fotografen wählst, entscheidest du dich für jemanden, der engagiert ist und ein geschultes Auge für Details hat. Mein Ziel ist es, deine Erwartungen zu übertreffen und dir einen visuellen Schatz zu überreichen, der für immer bestehen bleibt.`,
+		'weddings.p6': `Ich freue mich darauf, dich kennenzulernen und dir dabei zu helfen, diesen Teil deiner Liebesgeschichte zu bewahren. Ich lade dich ein, einen Blick auf mein Portfolio zu werfen und meinen Stil zu entdecken.`,
+		'weddings.albums': `Ich möchte deine Arbeit sehen`,
+		'weddings.packages': `Pakete für deinen großen Tag`,
+		'weddings.contact': `Datum für meine Hochzeit reservieren`
 	},
 	en: {
 		'meta.keywords': `photography, photographer, Manuel Hamel, weddings, people, lifestyle, travel, families, kids, business, studio, photo, portrait, art, artistic, pictures, photoshop, Barcelona`,
@@ -97,7 +107,17 @@ export const ui = {
 		'photos.travel': 'Travel',
 		'photos.weddings': 'Weddings',
 		'video.title': `Love in Motion: Wedding Videography Unveiled`,
-		'video.p1': `Explore the art of immortalizing cherished moments. My goal is to capture every emotion and detail, transforming your special day into a timeless cinematic masterpiece. I believe in more than just recording events – we craft cinematic stories that capture the essence of your love, dedicated to preserving the emotions, laughter, and tears that make your day truly unique, allowing you to relive the magic whenever you hit play.`
+		'video.p1': `Explore the art of immortalizing cherished moments. My goal is to capture every emotion and detail, transforming your special day into a timeless cinematic masterpiece. I believe in more than just recording events – we craft cinematic stories that capture the essence of your love, dedicated to preserving the emotions, laughter, and tears that make your day truly unique, allowing you to relive the magic whenever you hit play.`,
+		'weddings.title': `Are you looking for a photographer for your big day? Then you are in the right place.`,
+		'weddings.p1': `I know that your wedding is a unique and unforgettable day, and I want to capture every moment, every emotion, and every detail with my camera. I am Manuel, and I have had the privilege of immortalising a lot of weddings all around Europe.`,
+		'weddings.p2': `Let me tell you about my way of working so you can get to know me better. I adapt to your style and preferences. It's your day, and we want to capture the love, magic, and essence of it all. I will be discreetly attentive to the most important and spontaneous moments during your celebration.`,
+		'weddings.p3': `In the photos you will receive, you will see everything from loving glances, tender kisses, to the most sincere laughter. I assure you that I will accompany you in those moments and capture them with the artistic and authentic style that characterises my shots. My work goes beyond just taking thousands of photos; it's about creating a pleasant and enjoyable experience for you and your guests on that day and helping you tell that story for a lifetime.`,
+		'weddings.p4': `I know what it feels like to be in front of the camera, which is why I strive to build a personal connection with you and your loved ones. My goal is to make you relax and fully enjoy your day while I take care of creating the most beautiful memories.`,
+		'weddings.p5': `By choosing me as your photographer, you are choosing someone committed and with a trained eye for details. My objective is to exceed your expectations and deliver a visual treasure that will last forever.`,
+		'weddings.p6': `I am excited to meet you and help you preserve this part of your love story. I invite you to take a look at my portfolio and discover my style.`,
+		'weddings.albums': `I want to see your work`,
+		'weddings.packages': `Packages for your big day`,
+		'weddings.contact': `Book the date for my wedding`
 	},
 	es: {
 		'meta.keywords': `fotografía, fotógrafo, Manuel Hamel, bodas, personas, estilo de vida, viajes, familias, niños, negocios, estudio, foto, retrato, arte, artístico, fotos, photoshop, Barcelona`,
@@ -126,7 +146,17 @@ export const ui = {
 		'photos.travel': 'Viajes',
 		'photos.weddings': 'Bodas',
 		'video.title': `Love in Motion: Desvelando la Videografía de Bodas`,
-		'video.p1': `Explora el arte de inmortalizar momentos queridos. Mi objetivo es capturar cada emoción y detalle, transformando tu día especial en una obra maestra cinematográfica atemporal. Creo en más que simplemente grabar eventos: creamos historias cinematográficas que capturan la esencia de tu amor, dedicados a preservar las emociones, risas y lágrimas que hacen que tu día sea verdaderamente único, permitiéndote revivir la magia cada vez que le das al play.`
+		'video.p1': `Explora el arte de inmortalizar momentos queridos. Mi objetivo es capturar cada emoción y detalle, transformando tu día especial en una obra maestra cinematográfica atemporal. Creo en más que simplemente grabar eventos: creamos historias cinematográficas que capturan la esencia de tu amor, dedicados a preservar las emociones, risas y lágrimas que hacen que tu día sea verdaderamente único, permitiéndote revivir la magia cada vez que le das al play.`,
+		'weddings.title': `¿Buscas fotógrafo para tu gran día? Entonces estás en el lugar correcto.`,
+		'weddings.p1': `Sé que tu boda es un día único e irrepetible, y quiero capturar cada momento, cada emoción y cada detalle con mi cámara. Soy Manuel, y he tenido la dicha de inmortalizar muchas de 35 bodas al rededor de Europa.`,
+		'weddings.p2': `Te cuento sobre mi forma de trabajar para que me conozcas mejor. Me adapto a tu estilo y a tus preferencias. Es tu día y queremos capturar el amor, la magia y toda su esencia. Estaré de forma muy sutil atento a los momentos más importantes y a esos más espontáneos durante tu celebración.`,
+		'weddings.p3': `En las fotos que recibirás, verás desde las miradas de amor, los besos y abrazos cariñosos, hasta las risas más sinceras. Te aseguro que te acompañaré en esos instantes y además los capturaré con el estilo artístico y auténtico que caracterizan mis tomas. Mi trabajo no se limita a disparar miles de fotos, sino a crear una experiencia agradable y divertida para ti y tus invitados ese día y ayudarte a contar esa historia de por vida.`,
+		'weddings.p4': `Sé lo que se siente estar frente a la cámara, por eso me esfuerzo por construir una conexión personal contigo y con los tuyos. Mi meta es que te relajes y disfrutes al máximo de tu día, mientras yo me ocupo de ocasionar los recuerdos más bonitos.`,
+		'weddings.p5': `Al elegirme como tu fotógrafo, eliges a alguien comprometido y con un ojo entrenado para los detalles. Mi objetivo es superar tus expectativas y entregarte un tesoro visual que dure para siempre.`,
+		'weddings.p6': `Estoy emocionado de conocerte y ayudarte a resguardar esta parte de tu historia de amor. Te invito a ver mi portafolio y descubrir mi estilo.`,
+		'weddings.albums': `Quiero ver tu trabajo`,
+		'weddings.packages': `Paquetes para tu gran día`,
+		'weddings.contact': `Reserva la fecha de mi boda`
 	},
 	fr: {
 		'meta.keywords': `photographie, photographe, Manuel Hamel, mariages, personnes, style de vie, voyages, familles, enfants, affaires, studio, photo, portrait, art, artistique, photos, photoshop, Barcelone`,
@@ -154,6 +184,16 @@ export const ui = {
 		'photos.travel': 'Voyages',
 		'photos.weddings': 'Mariages',
 		'video.title': `Love in Motion: Révélation de la Vidéographie de Mariage`,
-		'video.p1': `Explorez l'art d'immortaliser les moments chéris. Mon but est de capturer chaque émotion et détail, transformant votre journée spéciale en un chef-d'œuvre cinématographique intemporel. Je crois en plus que simplement enregistrer des événements - nous créons des histoires cinématographiques qui capturent l'essence de votre amour, dédiées à préserver les émotions, les rires et les larmes qui rendent votre journée vraiment unique, vous permettant de revivre la magie à chaque fois que vous appuyez sur play.`
+		'video.p1': `Explorez l'art d'immortaliser les moments chéris. Mon but est de capturer chaque émotion et détail, transformant votre journée spéciale en un chef-d'œuvre cinématographique intemporel. Je crois en plus que simplement enregistrer des événements - nous créons des histoires cinématographiques qui capturent l'essence de votre amour, dédiées à préserver les émotions, les rires et les larmes qui rendent votre journée vraiment unique, vous permettant de revivre la magie à chaque fois que vous appuyez sur play.`,
+		'weddings.title': `Vous cherchez un photographe pour votre grand jour ? Alors vous êtes au bon endroit.`,
+		'weddings.p1': `Je sais que votre mariage est un jour unique et irrépétable, et je veux capturer chaque moment, chaque émotion et chaque détail. Je suis Manuel, et j'ai eu la chance d'immortaliser un grand nombre de mariages dans toute l'Europe.`,
+		'weddings.p2': `Permettez-moi de vous parler de ma manière de travailler pour que vous puissiez mieux me connaître. Je m'adapte à votre style et à vos préférences. C'est votre jour, et nous voulons capturer l'amour, la magie et toute son essence. Je serai discrètement attentif aux moments les plus importants et spontanés pendant votre célébration.`,
+		'weddings.p3': `Dans les photos que vous recevrez, vous verrez des regards amoureux, des baisers tendres et les rires les plus sincères. Je vous assure que je vous accompagnerai dans ces moments et les capturerai avec le style artistique et authentique qui caractérise mes prises de vue. Mon travail ne se limite pas à prendre des milliers de photos, il s'agit de créer une expérience agréable et plaisante pour vous et vos invités ce jour-là et de vous aider à raconter cette histoire pour toute une vie.`,
+		'weddings.p4': `Je sais ce que cela fait d'être devant l'appareil photo, c'est pourquoi je m'efforce de construire une connexion personnelle avec vous et vos proches. Mon objectif est de vous détendre et de profiter pleinement de votre journée pendant que je m'occupe de créer les plus beaux souvenirs.`,
+		'weddings.p5': `En me choisissant comme votre photographe, vous choisissez quelqu'un d'engagé et ayant l'œil exercé pour les détails. Mon objectif est de dépasser vos attentes et de vous offrir un trésor visuel qui durera toujours.`,
+		'weddings.p6': `Je suis impatient de vous rencontrer et de vous aider à préserver cette partie de votre histoire d'amour. Je vous invite à jeter un œil à mon portfolio et à découvrir mon style.`,
+		'weddings.albums': `Je veux voir votre travail`,
+		'weddings.packages': `Forfaits pour votre grand jour`,
+		'weddings.contact': `Réserver la date de mon mariage`
 	}
 } as const;

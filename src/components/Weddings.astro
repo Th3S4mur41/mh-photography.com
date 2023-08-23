@@ -1,0 +1,112 @@
+---
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+
+interface Props {
+	path?: string;
+}
+
+const { path } = Astro.props;
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<section id="weddings">
+	<h2>{t('weddings.title')}</h2>
+	<picture>
+			<source media="(width >= 1100px)" srcset="/assets/img/weddings_portrait-400.avif 450w, /assets/img/weddings_portrait-1920.avif" type="image/avif" />
+			<source media="(width >= 1100px)" srcset="/assets/img/weddings_portrait-400.webp 450w, /assets/img/weddings_portrait-1920.webp" type="image/webp" />
+			<source media="(width >= 1100px)" srcset="/assets/img/weddings_portrait-400.jpg 450w, /assets/img/weddings_portrait-1920.jpg" type="image/jpg" />
+			<source srcset="/assets/img/weddings_landscape-400.avif 450w /assets/img/weddings_landscape-1920.avif" type="image/avif" />
+			<source srcset="/assets/img/weddings_landscape-400.webp 450w, /assets/img/weddings_landscape-1920.webp" type="image/webp" />
+			<source srcset="/assets/img/weddings_landscape-400.jpg 450w, /assets/img/weddings_landscape-1920.jpg" type="image/jpg" />
+			<img
+				src="/assets/img/weddings_landscape-400.jpg"
+				width="400"
+				height="250"
+				loading="lazy"
+				alt="A man and a woman kissing looking each other in the eyes and hugging on their wedding day"
+			/>
+		</picture>
+ <div class="main">
+<p>{t('weddings.p1')}</p>
+<p>{t('weddings.p2')}</p>
+<p>{t('weddings.p3')}</p>
+<p>{t('weddings.p4')}</p>
+<p>{t('weddings.p5')}</p>
+<p>{t('weddings.p6')}</p>
+ 
+</div>
+<!-- <p class="packs">These are my packages, choose the one that best fits your wedding:</p>
+ <section class="card pack1">
+	<h3>Essentials</h3>
+	<ul>
+		<li class="main">Up to 6 hours of coverage</li>
+		<li>Getting ready</li>
+		<li>Ceremony</li>
+		<li>Reception</li>
+		<li>Group photos</li>
+		<li>Couple's session</li>
+		<li>Decoration & Atmosphere</li>
+	</ul>
+ </section>
+ <section class="card pack2">
+	<h3>Full Day</h3>
+	<ul>
+		<li class="main">Up to 12 hours of coverage</li>
+		<li>Getting ready</li>
+		<li>Ceremony</li>
+		<li>Reception</li>
+		<li>Group photos</li>
+		<li>Couple's session</li>
+		<li>Decoration & Atmosphere</li>
+		<li>Meal</li>
+		<li>Party</li>
+	</ul>
+ </section>
+ <section class="card pack3">
+	<h3>Premium</h3>
+	<ul>
+		<li class="main">Up to 14 hours of coverage</li>
+		<li>Getting ready</li>
+		<li>Ceremony</li>
+		<li>Reception</li>
+		<li>Group photos</li>
+		<li>Couple's session</li>
+		<li>Decoration & Atmosphere</li>
+		<li>Meal</li>
+		<li>Party</li>
+		<li class="add">+ 2 hours of pre or post-wedding session</li>
+		<li class="add">+ Printed album</li>
+	</ul>
+ </section>
+ <section class="card video">
+	<h3>Do you want to add Videos?</h3>
+ <p>Valid for any package you choose, you can add video footage.</p>
+	<p>Videos are captured with both the camera and the drone in 4K resolution. You 
+will receive:
+<ol>
+	<li>
+A short reel format video for Instagram
+ (1 to 2 minutes)
+	</li>
+	<li> A short trailer 
+(3 to 5 minutes)</li>
+<li>A movie format video that includes both footage and the best photos
+ (10 to 15 minutes)</li>
+</ol>
+</p> 
+ </section> -->
+ <footer>
+ <a class="button" href="https://bodas.mh-photography.com/portfolio/">{t('weddings.albums')}</a>
+ <a class="button lang-es" href="https://bodas.mh-photography.com/pack-de-bodas/">{t('weddings.packages')}</a>
+ <a class="button" href="mailto:manuel@mh-photography.com">{t('weddings.contact')}</a>
+ </footer>
+<!-- <footer class="card">
+ <strong>All packages include</strong>
+ Photo review and editing - Delivery in an elegant wooden box with prints and a 
+USB memory
+ <strong>Everything can be customized</strong>
+ If you didn't find exactly what you are looking for, contact us, and we will make 
+a tailored proposal for you.
+</footer> -->
+</section>
