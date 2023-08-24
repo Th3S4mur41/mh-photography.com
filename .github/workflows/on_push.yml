@@ -8,24 +8,24 @@ on:
   push:
     branches: [main, next, beta, alpha]
 
-jobs:
-  cancel-runs:
-    name: '▶️ actions'
-    uses: ./.github/workflows/cancel-workflow.yml
+concurrency:
+  group: ${{ github.ref || github.run_id }}
+  cancel-in-progress: true
 
+jobs:
   lint-code:
     name: '▶️ actions'
-    needs: [cancel-runs]
     uses: ./.github/workflows/lint-code.yml
 
-  build-code:
-    name: '▶️ actions'
-    needs: [lint-code]
-    uses: ./.github/workflows/build-code.yml
+    # Test is currently covered by test-code
+  # build-code:
+  #   name: '▶️ actions'
+  #   needs: [lint-code]
+  #   uses: ./.github/workflows/build-code.yml
 
   test-code:
     name: '▶️ actions'
-    needs: [lint-code, build-code]
+    needs: [lint-code]
     uses: ./.github/workflows/test-code.yml
 
   codeql:
@@ -51,7 +51,7 @@ jobs:
 
   release:
     name: '▶️ actions'
-    needs: [lint-code, build-code, test-code, codeql, sonarqube]
+    needs: [test-code, codeql, sonarqube]
     uses: ./.github/workflows/release.yml
     secrets:
       NPM_TOKEN: ${{ secrets.NPM_TOKEN  }}
