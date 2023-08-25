@@ -1,3 +1,10 @@
+## [2.3.1](https://github.com/Th3S4mur41/mh-photography.com/compare/v2.3.0...v2.3.1) (2023-08-24)
+
+
+### Bug Fixes
+
+* minor typo ([1522d84](https://github.com/Th3S4mur41/mh-photography.com/commit/1522d84f15a85650acafc08023a742ae6bb38815))
+
 # [2.3.0](https://github.com/Th3S4mur41/mh-photography.com/compare/v2.2.1...v2.3.0) (2023-08-23)
 
 
