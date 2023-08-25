@@ -1,3 +1,10 @@
+# [2.4.0](https://github.com/Th3S4mur41/mh-photography.com/compare/v2.3.1...v2.4.0) (2023-08-25)
+
+
+### Features
+
+* update about image ([#707](https://github.com/Th3S4mur41/mh-photography.com/issues/707)) ([a915c42](https://github.com/Th3S4mur41/mh-photography.com/commit/a915c42f3e0b6695087eb7d2385dc351f7b98d88))
+
 ## [2.3.1](https://github.com/Th3S4mur41/mh-photography.com/compare/v2.3.0...v2.3.1) (2023-08-24)
 
 
