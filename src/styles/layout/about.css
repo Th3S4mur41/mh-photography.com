@@ -19,6 +19,7 @@
 		justify-self: center;
 		align-self: center;
 		inline-size: 90%;
+		max-inline-size: 50vi;
 
 		& > img {
 			transform: rotate(-5deg);
