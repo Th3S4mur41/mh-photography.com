@@ -1,3 +1,10 @@
+## [2.4.1](https://github.com/Th3S4mur41/mh-photography.com/compare/v2.4.0...v2.4.1) (2023-08-26)
+
+
+### Bug Fixes
+
+* update srcset width to match image ([#708](https://github.com/Th3S4mur41/mh-photography.com/issues/708)) ([30285da](https://github.com/Th3S4mur41/mh-photography.com/commit/30285dab33e7f6d1891d2bcedbbed43ad1e3d56c))
+
 # [2.4.0](https://github.com/Th3S4mur41/mh-photography.com/compare/v2.3.1...v2.4.0) (2023-08-25)
 
 
