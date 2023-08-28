@@ -41,7 +41,7 @@ export const routes = {
 
 export const ui = {
 	de: {
-		'meta.keywords': `fotografie, fotograf, Manuel Hamel, hochzeiten, menschen, lifestyle, reisen, familien, kinder, business, studio, foto, portrait, kunst, künstlerisch, bilder, photoshop, Barcelona`,
+		'meta.keywords': `manuel hamel, manuel hamel fotografie, fotograf, professioneller fotograf, fotograf in Barcelona, Barcelona, hochzeitsfotograf, hochzeitsfotograf in Barcelona, professioneller hochzeitsfotograf, hochzeitsfotografie, hochzeitsfotografie pakete, luxus hochzeitsfotografie, hochwertige hochzeitsfotografie, menschenfotograf, menschenfotograf in Barcelona, menschenfotografie, familienfotograf, familienfotograf in Barcelona, familienfotografie, kinderfotograf, kinderfotografie, babyfotografie, neugeborenenfotografie, eventfotograf, eventfotograf, businessfotograf, studiofotografie, künstlerische fotografie, lifestyle fotografie, videografie, porträts, veröffentlichungen,`,
 		'nav.menu': `Menü`,
 		'nav.about': `Über mich`,
 		'nav.photos': `Fotos`,
@@ -79,7 +79,7 @@ export const ui = {
 		'weddings.contact': `Datum für meine Hochzeit reservieren`
 	},
 	en: {
-		'meta.keywords': `photography, photographer, Manuel Hamel, weddings, people, lifestyle, travel, families, kids, business, studio, photo, portrait, art, artistic, pictures, photoshop, Barcelona`,
+		'meta.keywords': `manuel hamel, manuel hamel photography, photography, photographer, professional photographer, photographer in Barcelona, Barcelona, wedding photographer, wedding photographer in Barcelona, professional wedding photographer, wedding photography, wedding photography packages, luxury wedding photography, high end wedding photography, people photographer, people photographer in Barcelona, people photography, family photographer, family photographer in Barcelona, family photography, kids photographer, kids photography, baby photography, newborn photography, events photographer, events photographer, business photographer, studio photography, artistic photography, lifestyle photography, videography, portraits, publications, `,
 		'nav.menu': `Menu`,
 		'nav.home': `Home`,
 		'nav.about': `About me`,
@@ -120,7 +120,7 @@ export const ui = {
 		'weddings.contact': `Book the date for my wedding`
 	},
 	es: {
-		'meta.keywords': `fotografía, fotógrafo, Manuel Hamel, bodas, personas, estilo de vida, viajes, familias, niños, negocios, estudio, foto, retrato, arte, artístico, fotos, photoshop, Barcelona`,
+		'meta.keywords': `manuel hamel, manuel hamel fotografía, fotógrafo, fotógrafo profesional, fotógrafo en Barcelona, Barcelona, fotógrafo de bodas, fotógrafo de bodas en Barcelona, fotógrafo profesional de bodas, fotografía de bodas, paquetes fotográficos de boda, fotografía de bodas de lujo, fotografía de bodas de alta gama, fotógrafo de personas, fotógrafo de personas en Barcelona, fotografía de personas, fotógrafo de familia, fotógrafo de familia en Barcelona, fotografía de familia, fotógrafo de niños, fotografía de niños, fotografía de bebés, fotografía de recién nacidos, fotógrafo de eventos, fotógrafo de eventos, fotógrafo de empresas, fotografía de estudio, fotografía artística, fotografía de estilo de vida, videografía, video de boda, película de boda, retratos, retratos de modelos, agencia de modelos, publicaciones,`,
 		'nav.menu': `Menú`,
 		'nav.home': `Inicio`,
 		'nav.about': `Sobre mí`,
@@ -159,7 +159,7 @@ export const ui = {
 		'weddings.contact': `Reserva la fecha de mi boda`
 	},
 	fr: {
-		'meta.keywords': `photographie, photographe, Manuel Hamel, mariages, personnes, style de vie, voyages, familles, enfants, affaires, studio, photo, portrait, art, artistique, photos, photoshop, Barcelone`,
+		'meta.keywords': `manuel hamel, manuel hamel photographie, photographe, photographe professionnel, photographe à Barcelone, Barcelone, photographe de mariage, photographe de mariage à Barcelone, photographe de mariage professionnel, photographie de mariage, forfaits de photographie de mariage, photographie de mariage de luxe, photographie de mariage haut de gamme, photographe de personnes, photographe de personnes à Barcelone, photographie de personnes, photographe de famille, photographe de famille à Barcelone, photographie de famille, photographe d'enfants, photographie d'enfants, photographie de bébé, photographie de nouveau-né, photographe d'événements, photographe d'événements, photographe business, photographie de studio, photographie artistique, photographie lifestyle, vidéographie, portraits, publications, `,
 		'nav.menu': `Menu`,
 		'nav.home': `Accueil`,
 		'nav.about': `À propos`,
