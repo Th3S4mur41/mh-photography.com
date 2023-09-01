@@ -13,7 +13,7 @@
 		gap: var(--spacing-m);
 	}
 	a {
-		color: var(--color-onbg-secondary);
+		color: var(--color-text-secondary);
 		text-decoration: none;
 	}
 }

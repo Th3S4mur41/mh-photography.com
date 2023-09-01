@@ -30,7 +30,7 @@
 	& > .title {
 		grid-area: title;
 		margin-block-start: var(--spacing-m);
-		color: var(--color-onbg);
+		color: var(--color-text);
 		font-family: var(--font-family-header);
 		font-size: var(--font-size-header-xl);
 		font-weight: var(--font-weight-normal);
@@ -40,7 +40,7 @@
 	& > .subtitle {
 		grid-area: subtitle;
 		margin-block-end: var(--spacing-m);
-		color: var(--color-onbg-subtle);
+		color: var(--color-text-secondary);
 		font-size: var(--font-size-header-s);
 		font-weight: var(--font-weight-light);
 		text-align: center;

@@ -16,7 +16,7 @@
 	padding-block: var(--spacing-l);
 	padding-inline: var(--spacing-m);
 	background-color: var(--color-bg-secondary);
-	color: var(--color-onbg-secondary);
+	color: var(--color-text-secondary);
 	font-size: var(--font-size-s);
 	gap: var(--spacing-s) var(--spacing-m);
 	justify-items: center;
