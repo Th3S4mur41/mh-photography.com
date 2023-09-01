@@ -24,7 +24,7 @@
 		& > img {
 			transform: rotate(-5deg);
 			border: white 0.75rem solid;
-			box-shadow: var(--color-shadow) -0.25rem 0.5rem 0.75rem;
+			filter: drop-shadow(-0.25rem 0.5rem 0.75rem var(--color-shadow));
 		}
 	}
 	& > p {
