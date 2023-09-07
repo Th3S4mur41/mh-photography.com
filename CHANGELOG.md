@@ -1,3 +1,10 @@
+# [2.5.0](https://github.com/Th3S4mur41/mh-photography.com/compare/v2.4.1...v2.5.0) (2023-09-07)
+
+
+### Features
+
+* update light color palette ([#711](https://github.com/Th3S4mur41/mh-photography.com/issues/711)) ([ad19238](https://github.com/Th3S4mur41/mh-photography.com/commit/ad192387f8cc2aa2de60f49e71202c2f41199fe8))
+
 ## [2.4.1](https://github.com/Th3S4mur41/mh-photography.com/compare/v2.4.0...v2.4.1) (2023-08-26)
 
 
