@@ -43,4 +43,9 @@
 	--font-weight-normal: 400;
 	--font-weight-semi-bold: 600;
 	--font-weight-bold: 700;
+
+	@media (prefers-contrast: more) {
+		--font-weight-light: 400;
+		--font-weight-normal: 500;
+	}
 }
