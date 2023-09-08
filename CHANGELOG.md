@@ -1,3 +1,10 @@
+# [2.6.0](https://github.com/Th3S4mur41/mh-photography.com/compare/v2.5.0...v2.6.0) (2023-09-08)
+
+
+### Features
+
+* add album title to page ([f14d5b2](https://github.com/Th3S4mur41/mh-photography.com/commit/f14d5b2677d6c6b31bc52aaea2711fa15ba6af5c))
+
 # [2.5.0](https://github.com/Th3S4mur41/mh-photography.com/compare/v2.4.1...v2.5.0) (2023-09-07)
 
 
