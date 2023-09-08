@@ -1,5 +1,7 @@
 ---
 import { photos } from '../utils/photos.mjs';
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+import {ui} from '../i18n/ui';
 
 interface Props {
 	album: string;
@@ -8,6 +10,8 @@ interface Props {
 const { album } = Astro.props;
 const albums = photos('assets/img/albums');
 const pics = albums[album]?.images;
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <dialog id="photo-dialog">
@@ -35,6 +39,8 @@ const pics = albums[album]?.images;
 	>
 </dialog>
 
+<!-- <h1>{`${t('header.' + album)}`}</h1> -->
+<h1>{t(`photos.${album}`)}</h1>
 {
 	pics?.map((pic) => (
 		<a class={pic.orientation} href={`${pic.path}${pic.name}-1920.jpg`} aria-label={pic.name}>

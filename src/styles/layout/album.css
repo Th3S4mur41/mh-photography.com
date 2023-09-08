@@ -11,6 +11,10 @@
 	padding-inline: var(--spacing-m);
 	gap: var(--spacing-s);
 
+	& h1 {
+		grid-column: 1 / -1;
+		text-align: center;
+	}
 	& > a {
 		overflow: hidden;
 		background-color: var(--color-bg-secondary);
