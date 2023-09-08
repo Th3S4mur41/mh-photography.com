@@ -14,17 +14,29 @@
 		grid-area: title;
 		justify-self: center;
 	}
-	& > picture {
+	& > .image {
+		display: grid;
 		grid-area: picture;
-		justify-self: center;
 		align-self: center;
 		inline-size: 90%;
 		max-inline-size: 50vi;
+		transform: rotate(-5deg);
+		border: white 0.75rem solid;
+		background-color: white;
+		justify-self: center;
+		filter: drop-shadow(-0.25rem 0.5rem 0.75rem var(--color-shadow));
 
-		& > img {
-			transform: rotate(-5deg);
-			border: white 0.75rem solid;
-			filter: drop-shadow(-0.25rem 0.5rem 0.75rem var(--color-shadow));
+		/* & > :is(picture, blockquote) {
+			grid-row: 1;
+			grid-column: 1;
+		} */
+
+		& > blockquote {
+			z-index: 1;
+			align-self: end;
+			margin-block-start: 0.5rem;
+			margin-inline: 0.5ch;
+			text-wrap: balance;
 		}
 	}
 	& > p {

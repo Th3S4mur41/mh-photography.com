@@ -88,6 +88,7 @@
 	},
 	"dependencies": {
 		"@astrojs/sitemap": "^2.0.2",
+		"@fontsource/caveat": "^5.0.8",
 		"@fontsource/gfs-didot": "^5.0.8",
 		"@fontsource/titillium-web": "^5.0.8",
 		"astro": "^2.10.9"
