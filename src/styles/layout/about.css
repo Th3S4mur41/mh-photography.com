@@ -17,12 +17,11 @@
 	& > .image {
 		display: grid;
 		grid-area: picture;
+		grid-template-columns: min-content;
 		align-self: center;
-		inline-size: 90%;
-		max-inline-size: 50vi;
 		transform: rotate(-5deg);
-		border: white 0.75rem solid;
-		background-color: white;
+		border: var(--color-picture-border) 0.75rem solid;
+		background-color: var(--color-picture-border);
 		justify-self: center;
 		filter: drop-shadow(-0.25rem 0.5rem 0.75rem var(--color-shadow));
 
@@ -30,12 +29,19 @@
 			grid-row: 1;
 			grid-column: 1;
 		} */
-
+		& img {
+			max-block-size: 35svb;
+			inline-size: auto;
+			min-inline-size: 50vi;
+			object-fit: cover;
+			object-position: top;
+		}
 		& > blockquote {
 			z-index: 1;
 			align-self: end;
 			margin-block-start: 0.5rem;
 			margin-inline: 0.5ch;
+			color: var(--color-text-on-picture-border);
 			text-wrap: balance;
 		}
 	}
@@ -63,6 +69,10 @@
 		& > h2 {
 			margin-block: unset;
 		}
+		& > .image img {
+			min-inline-size: 25vi;
+			max-inline-size: unset;
+		}
 	}
 
 	@media (width >= 1100px) {
@@ -73,6 +83,10 @@
 			)
 			minmax(auto, var(--max-line-length));
 
+		& > .image img {
+			min-inline-size: 25vi;
+			max-inline-size: min(50vi, 90%);
+		}
 		& > p {
 			grid-column: 2;
 		}

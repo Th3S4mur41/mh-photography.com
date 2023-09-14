@@ -51,6 +51,8 @@
 	--color-overlay: oklch(0.95 0.01 46 / 0.7);
 	--color-overlay-fallback: oklch(0.95 0.01 46 / 0.9);
 	--color-shadow: oklch(0.15 0.01 46 / 0.3);
+	--color-picture-border: var(--color-white);
+	--color-text-on-picture-border: var(--color-black);
 
 	/**
    * Elements
