@@ -42,6 +42,7 @@
 			margin-block-start: 0.5rem;
 			margin-inline: 0.5ch;
 			color: var(--color-text-on-picture-border);
+			font-size: var(--font-size-ml);
 			text-wrap: balance;
 		}
 	}

@@ -22,7 +22,7 @@ body {
 
 blockquote {
 	margin: unset;
-	font-family: var(--font-family-handwriting);
+	font-family: var(--font-family-header);
 }
 
 cite {
