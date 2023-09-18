@@ -32,7 +32,7 @@
 		& img {
 			max-block-size: 35svb;
 			inline-size: auto;
-			min-inline-size: 50vi;
+			min-inline-size: 50vmin;
 			object-fit: cover;
 			object-position: top;
 		}
@@ -71,20 +71,28 @@
 			margin-block: unset;
 		}
 		& > .image img {
-			min-inline-size: 25vi;
+			min-inline-size: 25vmin;
 			max-inline-size: unset;
 		}
 	}
 
 	@media (width >= 1100px) {
 		grid-template:
-			'title title' 'picture p1' 'picture p2' 'picture p3' 'picture p4' 'picture p5' 'picture p6' 'picture 7' 'picture subtitle' '. button' / minmax(
-				400px,
+			'title title .' 'picture p1 .' 'picture p2 .' 'picture p3 .' 'picture p4 .' 'picture p5 .' 'picture p6 .' 'picture 7 .' 'picture subtitle .' '. button .' / minmax(
+				min-content,
 				1fr
 			)
-			minmax(auto, var(--max-line-length));
+			minmax(auto, var(--max-line-length)) 1fr;
 
+		/* padding-inline: var(--spacing-l); */
+
+		/* gap: var(--spacing-m) var(--spacing-l); */
+
+		& > .image {
+			margin-inline: var(--spacing-m);
+		}
 		& > .image img {
+			max-block-size: 45svb;
 			min-inline-size: 25vi;
 			max-inline-size: min(50vi, 90%);
 		}
