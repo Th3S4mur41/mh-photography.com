@@ -1,3 +1,10 @@
+# [2.7.0](https://github.com/Th3S4mur41/mh-photography.com/compare/v2.6.0...v2.7.0) (2023-09-19)
+
+
+### Features
+
+* add quote in about section ([#714](https://github.com/Th3S4mur41/mh-photography.com/issues/714)) ([fc83e4e](https://github.com/Th3S4mur41/mh-photography.com/commit/fc83e4e9e74a5c051b7b3dd3d56ba067f61ff0c4))
+
 # [2.6.0](https://github.com/Th3S4mur41/mh-photography.com/compare/v2.5.0...v2.6.0) (2023-09-08)
 
 
