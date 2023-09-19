@@ -20,6 +20,21 @@ body {
 	accent-color: var(--color-accent);
 }
 
+blockquote {
+	margin: unset;
+	font-family: var(--font-family-header);
+}
+
+cite {
+	display: block;
+	margin-block-start: 0.25em;
+	text-align: end;
+
+	&::before {
+		content: ' ~ ';
+	}
+}
+
 /**
  * Generic classes that don't fit in elements or components
  */
