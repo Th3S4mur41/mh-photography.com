@@ -1,3 +1,10 @@
+## [2.7.1](https://github.com/Th3S4mur41/mh-photography.com/compare/v2.7.0...v2.7.1) (2023-10-19)
+
+
+### Bug Fixes
+
+* **seo:** improve on multiple seo issues ([#716](https://github.com/Th3S4mur41/mh-photography.com/issues/716)) ([164cd61](https://github.com/Th3S4mur41/mh-photography.com/commit/164cd6197d3d28dea312c6a97ff5845b3120106e))
+
 # [2.7.0](https://github.com/Th3S4mur41/mh-photography.com/compare/v2.6.0...v2.7.0) (2023-09-19)
 
 
