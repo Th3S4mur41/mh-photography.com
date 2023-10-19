@@ -15,6 +15,9 @@ export default defineConfig({
 					es: 'es',
 					fr: 'fr'
 				}
+			},
+			filter: (url) => {
+				return !url.startsWith('https://mh-photography.com/en/');
 			}
 		})
 	]
