@@ -24,11 +24,11 @@ export const routes = {
 		albumsweddings: 'albums/weddings'
 	},
 	es: {
-		albumsbusiness: 'albums/negocios',
-		albumsfamilies: 'albums/familias',
-		albumspeople: 'albums/personas',
-		albumstravel: 'albums/viajes',
-		albumsweddings: 'albums/bodas'
+		albumsbusiness: 'albumes/negocios',
+		albumsfamilies: 'albumes/familias',
+		albumspeople: 'albumes/personas',
+		albumstravel: 'albumes/viajes',
+		albumsweddings: 'albumes/bodas'
 	},
 	fr: {
 		albumsbusiness: 'albums/business',
