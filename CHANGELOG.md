@@ -1,3 +1,10 @@
+## [2.7.2](https://github.com/Th3S4mur41/mh-photography.com/compare/v2.7.1...v2.7.2) (2023-10-20)
+
+
+### Bug Fixes
+
+* **seo:** add missing h1 ([2dd75dc](https://github.com/Th3S4mur41/mh-photography.com/commit/2dd75dc1ec340d57b076ce2b760b6d36cba900b7))
+
 ## [2.7.1](https://github.com/Th3S4mur41/mh-photography.com/compare/v2.7.0...v2.7.1) (2023-10-19)
 
 
