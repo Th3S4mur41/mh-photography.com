@@ -9,8 +9,7 @@
 		'logo' auto [image-end]
 		'title' auto
 		'subtitle' auto;
-	justify-items: stretch;
-	align-items: end;
+	place-items: end stretch;
 	block-size: 100vh; /* fallback */
 	block-size: 100svb;
 

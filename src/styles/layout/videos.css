@@ -16,8 +16,7 @@
 	& > .videos {
 		display: flex;
 		flex-wrap: wrap;
-		align-content: center;
-		justify-content: space-evenly;
+		place-content: center space-evenly;
 		margin-block-start: var(--spacing-l);
 		gap: var(--spacing-m);
 	}

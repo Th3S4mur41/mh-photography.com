@@ -18,11 +18,10 @@
 		display: grid;
 		grid-area: picture;
 		grid-template-columns: min-content;
-		align-self: center;
+		place-self: center center;
 		transform: rotate(-5deg);
 		border: var(--color-picture-border) 0.75rem solid;
 		background-color: var(--color-picture-border);
-		justify-self: center;
 		filter: drop-shadow(-0.25rem 0.5rem 0.75rem var(--color-shadow));
 
 		/* & > :is(picture, blockquote) {
@@ -58,8 +57,7 @@
 	}
 	& .button {
 		grid-area: button;
-		justify-self: center;
-		align-self: start;
+		place-self: start center;
 	}
 
 	@media (1100px > width >= 800px) {

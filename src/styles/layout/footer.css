@@ -11,7 +11,7 @@
 		'copyright'
 		'version'
 		'lang';
-	align-items: center;
+	place-items: center center;
 	margin-block-start: var(--spacing-xl);
 	padding-block: var(--spacing-l);
 	padding-inline: var(--spacing-m);
@@ -19,7 +19,6 @@
 	color: var(--color-text-secondary);
 	font-size: var(--font-size-s);
 	gap: var(--spacing-s) var(--spacing-m);
-	justify-items: center;
 
 	& > .copyright {
 		grid-area: copyright;
@@ -53,8 +52,7 @@
 			'social logo logo logo navigation'
 			'lang logo logo logo .'
 			'lang copyright copyright copyright version';
-		justify-items: center;
-		align-items: end;
+		place-items: end center;
 
 		& > .logo {
 			inline-size: 20em;
