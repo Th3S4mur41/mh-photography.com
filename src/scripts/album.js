@@ -16,7 +16,7 @@ const setPicture = function (url) {
 	webp.type = 'image/webp';
 
 	const jpg = document.createElement('source');
-	jpg.srcset = url.replace('.jpg', '.jpg');
+	jpg.srcset = url;
 	jpg.type = 'image/webp';
 
 	const img = document.createElement('img');

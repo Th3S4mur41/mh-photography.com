@@ -33,7 +33,7 @@ export function useTranslatedPath(lang: keyof typeof ui) {
 export function getRouteFromUrl(url: URL): string | undefined {
 	const pathname = new URL(url).pathname;
 	const parts = pathname?.split('/');
-	const path = parts.pop() || parts.pop();
+	const path = parts.pop() || parts.pop(); // NOSONAR
 
 	if (path === undefined) {
 		return undefined;
