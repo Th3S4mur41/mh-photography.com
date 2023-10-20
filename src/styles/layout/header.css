@@ -13,7 +13,7 @@
 	block-size: 100vh; /* fallback */
 	block-size: 100svb;
 
-	& > h1 {
+	& > .logo {
 		display: flex;
 		grid-area: logo;
 		justify-content: center;
