@@ -10,7 +10,7 @@ export function getLangFromUrl(url: URL) {
 
 export function getLangPath() {
 	return function path(lang: string) {
-		return !showDefaultLang && lang === defaultLang ? '/' : `/${lang}`;
+		return !showDefaultLang && lang === defaultLang ? '/' : `/${lang}/`;
 	};
 }
 
@@ -24,7 +24,9 @@ export function useTranslatedPath(lang: keyof typeof ui) {
 	return function translatePath(path: string, l: string = lang) {
 		const pathName = path.replaceAll('/', '');
 		const hasTranslation = defaultLang !== l && routes[l] !== undefined && routes[l][pathName] !== undefined;
-		const translatedPath = hasTranslation ? '/' + routes[l][pathName] : path;
+		let translatedPath = (hasTranslation ? '/' + routes[l][pathName] : path) + '/';
+
+		translatedPath = translatedPath.replace(/(#\w+)\/$/gm, '$1');
 
 		return !showDefaultLang && l === defaultLang ? translatedPath : `/${l}${translatedPath}`;
 	};
