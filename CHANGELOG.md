@@ -1,3 +1,10 @@
+## [2.7.3](https://github.com/Th3S4mur41/mh-photography.com/compare/v2.7.2...v2.7.3) (2023-10-25)
+
+
+### Bug Fixes
+
+* page has links to redirect ([377b374](https://github.com/Th3S4mur41/mh-photography.com/commit/377b374dd835907d17b490ff3752d3f319686f09))
+
 ## [2.7.2](https://github.com/Th3S4mur41/mh-photography.com/compare/v2.7.1...v2.7.2) (2023-10-20)
 
 
