@@ -1,5 +1,5 @@
 {
-	"**/*.{js,mjs,cjs,ts}": ["prettier --write --ignore-unknown", "eslint"],
-	"**/*.{css,less,sass,scss}": ["prettier --write --ignore-unknown", "stylelint"],
-	"**/.*!{js,mjs,cjs,ts,less,sass,scss}": "prettier --write --ignore-unknown"
+	"*.{js,mjs,cjs,ts}": ["prettier --write --ignore-unknown", "eslint"],
+	"*.{css,less,sass,scss}": ["prettier --write --ignore-unknown", "stylelint"],
+	"!(.*{js,mjs,cjs,ts,less,sass,scss})": "prettier --write --ignore-unknown"
 }

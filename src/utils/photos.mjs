@@ -8,7 +8,7 @@ import path from 'path';
 import sizeOf from 'image-size';
 
 // in production, the script is run from the dist folder
-const projectRoot = import.meta.env.NODE_ENV === 'production' ? '../../../' : '../../';
+const projectRoot = '../../';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);

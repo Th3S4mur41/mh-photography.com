@@ -74,7 +74,7 @@
 		"lint:css:fix": "stylelint \"src/**/*.{css,less,sass,scss}\" --aei --ignore-path .gitignore --fix",
 		"lint:style": "prettier --check --ignore-unknown .",
 		"lint:style:fix": "prettier --write --ignore-unknown .",
-		"hint": "wait-on -t 300000 http://localhost:3000/ && hint http://localhost:3000/",
+		"hint": "wait-on -t 300000 http://localhost:4321/ && hint http://localhost:4321/",
 		"test": "concurrently 'npm:test:*'",
 		"test:hint": "concurrently \"npm:start:prod\" \"npm:hint\" --kill-others  --s first",
 		"release": "semantic-release",
@@ -87,6 +87,6 @@
 		"@fontsource/caveat": "^5.0.17",
 		"@fontsource/gfs-didot": "^5.0.12",
 		"@fontsource/titillium-web": "^5.0.19",
-		"astro": "^2.10.15"
+		"astro": "^4.5.9"
 	}
 }

@@ -10,7 +10,7 @@
 @import url('settings/settings.css');
 
 /* Base */
-@import url('~/cssremedy/css/remedy.css');
+@import url('cssremedy/css/remedy.css');
 @import url('base/animations.css');
 @import url('base/base.css');
 @import url('base/vcard.css');

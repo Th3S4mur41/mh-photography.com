@@ -1,6 +1,6 @@
-@import url('~/@fontsource/titillium-web/latin.css');
-@import url('~/@fontsource/gfs-didot/index.css');
-@import url('~/@fontsource/caveat/index.css');
+@import url('@fontsource/titillium-web/latin.css');
+@import url('@fontsource/gfs-didot/index.css');
+@import url('@fontsource/caveat/index.css');
 
 @font-face {
 	font-family: 'Titillium Web-fallback';
