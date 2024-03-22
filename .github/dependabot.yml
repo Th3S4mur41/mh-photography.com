@@ -13,6 +13,11 @@ updates:
       timezone: 'Europe/Berlin'
     reviewers:
       - 'Th3S4mur41'
+    groups:
+      stylelint:
+        patterns:
+          - 'stylelint'
+          - 'stylelint-*'
 
   - package-ecosystem: 'github-actions'
     directory: '/'
