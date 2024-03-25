@@ -48,7 +48,7 @@ jobs:
       - name: '⛓️ Install dependencies'
         env:
           HUSKY: 0
-        run: npm ci --no-optional --no-audit --prefer-offline --progress=false
+        run: npm ci --no-audit --prefer-offline --progress=false
 
       # In this repository, building is much faster than the upload/download of the artifact
       - name: '🛠️ Build'
