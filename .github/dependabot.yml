@@ -29,6 +29,9 @@ updates:
         patterns:
           - 'stylelint'
           - 'stylelint-*'
+      typescript-eslint:
+        patterns:
+          - '@typescript-eslint/*'
 
   - package-ecosystem: 'github-actions'
     directory: '/'
