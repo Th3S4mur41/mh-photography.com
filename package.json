@@ -47,7 +47,7 @@
 		"postcss-nesting": "^12.0.1",
 		"postcss-preset-env": "^9.5.4",
 		"prettier": "^3.2.5",
-		"semantic-release": "^23.0.7",
+		"semantic-release": "^23.0.8",
 		"sharp": "^0.33.3",
 		"stylelint": "^16.3.1",
 		"stylelint-config-property-sort-order-smacss": "^10.0.0",
