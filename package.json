@@ -55,7 +55,7 @@
 		"stylelint-order": "^6.0.4",
 		"stylelint-use-logical-spec": "^5.0.1",
 		"typescript": "^5.4.5",
-		"vite": "^5.2.10",
+		"vite": "^5.2.11",
 		"wait-on": "^7.2.0"
 	},
 	"optionalDependencies": {
