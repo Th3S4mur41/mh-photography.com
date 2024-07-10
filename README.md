@@ -18,5 +18,5 @@ Th3S4mur41.me
 
 ### Licence
 
-The source code is owned by Th3S4mur41.me
+The source code is owned by @Th3S4mur41
 All assets are owned by Manuel Hamel Photography
