@@ -42,7 +42,7 @@
 		"hint": "^7.1.12",
 		"husky": "^9.1.4",
 		"image-size": "^1.1.1",
-		"postcss": "^8.4.40",
+		"postcss": "^8.4.41",
 		"postcss-loader": "^8.1.1",
 		"postcss-nesting": "^12.1.5",
 		"postcss-preset-env": "^9.6.0",
