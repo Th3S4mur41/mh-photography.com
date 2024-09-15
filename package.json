@@ -86,7 +86,7 @@
 		"@astrojs/sitemap": "^3.1.6",
 		"@fontsource/caveat": "^5.1.0",
 		"@fontsource/gfs-didot": "^5.1.0",
-		"@fontsource/titillium-web": "^5.0.22",
+		"@fontsource/titillium-web": "^5.1.0",
 		"astro": "^4.15.6"
 	}
 }
