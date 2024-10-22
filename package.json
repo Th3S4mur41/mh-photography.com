@@ -22,7 +22,7 @@
 	},
 	"devDependencies": {
 		"@babel/core": "^7.25.9",
-		"@babel/preset-env": "^7.25.8",
+		"@babel/preset-env": "^7.25.9",
 		"@commitlint/cli": "^19.5.0",
 		"@commitlint/config-conventional": "^19.5.0",
 		"@csstools/postcss-oklab-function": "^4.0.2",
