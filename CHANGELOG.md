@@ -1,3 +1,10 @@
+## [2.7.4](https://github.com/Th3S4mur41/mh-photography.com/compare/v2.7.3...v2.7.4) (2024-10-31)
+
+
+### Bug Fixes
+
+* update instagram linl ([4235783](https://github.com/Th3S4mur41/mh-photography.com/commit/4235783613b852b878773f5eb6f533cc6551d4f7))
+
 ## [2.7.3](https://github.com/Th3S4mur41/mh-photography.com/compare/v2.7.2...v2.7.3) (2023-10-25)
 
 
