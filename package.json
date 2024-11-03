@@ -25,7 +25,7 @@
 		"@babel/preset-env": "^7.26.0",
 		"@commitlint/cli": "^19.5.0",
 		"@commitlint/config-conventional": "^19.5.0",
-		"@csstools/postcss-oklab-function": "^4.0.2",
+		"@csstools/postcss-oklab-function": "^4.0.5",
 		"@hint/formatter-codeframe": "^3.1.36",
 		"@semantic-release/changelog": "^6.0.3",
 		"@semantic-release/git": "^10.0.1",
