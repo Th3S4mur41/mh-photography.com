@@ -123,3 +123,9 @@ lighthouse*
 # Generated files
 package-lock.json
 CHANGELOG.md
+
+# images 
+*.jpg
+*.png
+*.webp
+*.avif

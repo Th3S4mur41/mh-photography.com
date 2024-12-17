@@ -120,3 +120,6 @@ reports/
 coverage/
 hint-report/
 lighthouse*
+
+# external assets
+/portfolio
