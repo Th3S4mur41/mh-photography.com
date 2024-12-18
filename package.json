@@ -79,7 +79,7 @@
 		"test": "concurrently 'npm:test:*'",
 		"test:hint": "concurrently \"npm:start:prod\" \"npm:hint\" --kill-others  --s first",
 		"release": "semantic-release",
-		"prepare": "husky install",
+		"prepare": "husky",
 		"git:pre-commit": "lint-staged",
 		"git:pre-push": "npm run build && npm run test"
 	},
