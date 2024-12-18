@@ -1,3 +1,21 @@
+# [3.0.0](https://github.com/MH-Photo/website/compare/v2.7.4...v3.0.0) (2024-12-18)
+
+
+### Bug Fixes
+
+* prevent multiple favicon download ([2cbb1bf](https://github.com/MH-Photo/website/commit/2cbb1bfd4ff75f54ce4339031135645303e6098e))
+* update repository url ([d7acc4f](https://github.com/MH-Photo/website/commit/d7acc4fea693749cf2481af374a508d3721e4b96))
+
+
+### Features
+
+* optimize image handling ([2eedcaf](https://github.com/MH-Photo/website/commit/2eedcafbd464d06e68d5065316d2057754e258f8))
+
+
+### BREAKING CHANGES
+
+* original assets removed
+
 ## [2.7.5](https://github.com/MH-Photo/website/compare/v2.7.4...v2.7.5) (2024-12-18)
 
 
