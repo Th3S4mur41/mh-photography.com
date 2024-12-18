@@ -9,10 +9,17 @@ on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
+permissions:
+  contents: read
+
 jobs:
   lint-pr:
     name: '🕵️‍♂️ Lint Commit Message'
     runs-on: ubuntu-latest
+
+    permissions:
+      contents: read
+      pull-requests: write
 
     steps:
       - name: '☁️ Checkout repository'

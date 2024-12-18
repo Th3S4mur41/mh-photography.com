@@ -12,8 +12,15 @@ concurrency:
   group: PR_${{ github.head_ref || github.run_id }}
   cancel-in-progress: true
 
+permissions:
+  contents: read
+
 jobs:
   dependencies:
+    permissions:
+      pull-requests: write
+      contents: write
+
     name: '▶️ actions'
     uses: ./.github/workflows/dependencies.yml
     secrets:
