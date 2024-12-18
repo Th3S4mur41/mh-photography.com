@@ -11,19 +11,19 @@ const setPicture = (url) => {
 	avif.srcset = url.replace('.jpg', '.avif');
 	avif.type = 'image/avif';
 
-	const webp = document.createElement('source');
-	webp.srcset = url.replace('.jpg', '.webp');
-	webp.type = 'image/webp';
+	// const webp = document.createElement('source');
+	// webp.srcset = url.replace('.jpg', '.webp');
+	// webp.type = 'image/webp';
 
 	const jpg = document.createElement('source');
 	jpg.srcset = url;
-	jpg.type = 'image/webp';
+	jpg.type = 'image/jpg';
 
 	const img = document.createElement('img');
 	img.src = url;
 
 	picture.appendChild(avif);
-	picture.appendChild(webp);
+	// picture.appendChild(webp);
 	picture.appendChild(jpg);
 	picture.appendChild(img);
 };

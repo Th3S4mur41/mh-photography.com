@@ -1,3 +1,5 @@
+#! /usr/bin/env node
+
 import { mkdir, writeFile } from 'node:fs/promises';
 import { dirname, join, sep } from 'node:path';
 import url from 'node:url';

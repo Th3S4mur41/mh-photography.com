@@ -45,9 +45,9 @@ const getImageData = (album, image) => {
 	const img = {};
 
 	const destImage = image.replace(/ /g, '-').replace(/&/g, 'and').toLowerCase();
-	img.name = destImage.substring(0, destImage.lastIndexOf('.'));
+	img.name = destImage.substring(0, destImage.lastIndexOf('.')).replace('-1920', '');
 	img.extension = destImage.substring(destImage.lastIndexOf('.'));
-	img.path = `/${album}/`;
+	img.path = `/${album.replace('public/', '')}/`;
 	img.url = `/${album}/${destImage}`;
 
 	// image-size doesn't support avif yet: https://github.com/image-size/image-size/issues/125
@@ -67,7 +67,7 @@ const getImageData = (album, image) => {
  */
 export const photos = (input) => {
 	/* biome-ignore lint/style/noParameterAssign: Fix this when refactoring */
-	input = input || 'assets/img/albums';
+	input = 'public/assets/img/albums';
 
 	const photos = {};
 
@@ -83,8 +83,13 @@ export const photos = (input) => {
 
 		const images = getImages(photos[album].path);
 
+		// filter images to only keep onl the ones with path ending in -1920.jpg
+		const imageList = images.filter((image) => {
+			return image.match(/-1920\.jpg/);
+		});
+
 		/* biome-ignore lint/complexity/noForEach: Fix this when refactoring */
-		images.forEach((image) => {
+		imageList.forEach((image) => {
 			photos[album].images.push(getImageData(photos[album].path, image));
 		});
 	});
