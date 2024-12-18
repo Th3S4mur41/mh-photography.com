@@ -11,9 +11,10 @@
 		"personal-website",
 		"portfolio-website"
 	],
+	"issues": "https://github.com/MH-Photo/website/issues",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/Th3S4mur41/mh-photography.com.git"
+		"url": "https://github.com/MH-Photo/website.git"
 	},
 	"homepage": "https://mh-photography.com",
 	"engines": {
