@@ -44,6 +44,7 @@ nav {
 		white-space: nowrap;
 		border-block-end: 1px solid transparent;
 
+		/* biome-ignore lint/nursery/noDescendingSpecificity: Fix this when refactoring */
 		&:is(:hover, :focus) {
 			color: var(--color-accent);
 		}
@@ -110,6 +111,7 @@ body > nav {
 				background: var(--color-overlay);
 			}
 		}
+		/* biome-ignore lint/nursery/noDescendingSpecificity: Fix this when refactoring */
 		& > ul {
 			flex-direction: column;
 			align-items: stretch;

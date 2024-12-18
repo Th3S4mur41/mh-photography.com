@@ -1,8 +1,8 @@
-import { dirname, join, sep } from 'path';
-import { mkdir, writeFile } from 'fs/promises';
-import fetch from 'node-fetch';
+import { mkdir, writeFile } from 'node:fs/promises';
+import { dirname, join, sep } from 'node:path';
+import url from 'node:url';
 import minimist from 'minimist';
-import url from 'url';
+import fetch from 'node-fetch';
 
 /**
  * Fetches the contents of a shared OneDrive folder.
@@ -84,8 +84,8 @@ async function main() {
 	const args = minimist(process.argv.slice(2), {
 		alias: {
 			link: 'l',
-			output: 'o'
-		}
+			output: 'o',
+		},
 	});
 
 	const { link, output = './' } = args;

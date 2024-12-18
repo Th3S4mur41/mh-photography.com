@@ -124,6 +124,15 @@ lighthouse*
 package-lock.json
 CHANGELOG.md
 
+# File extensions ceovered by biome
+*.js
+*.cjs
+*.mjs
+*.ts
+*.mts
+*.json
+*.css
+
 # images 
 *.jpg
 *.png

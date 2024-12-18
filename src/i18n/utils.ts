@@ -24,7 +24,7 @@ export function useTranslatedPath(lang: keyof typeof ui) {
 	return function translatePath(path: string, l: string = lang) {
 		const pathName = path.replaceAll('/', '');
 		const hasTranslation = defaultLang !== l && routes[l] !== undefined && routes[l][pathName] !== undefined;
-		let translatedPath = (hasTranslation ? '/' + routes[l][pathName] : path) + '/';
+		let translatedPath = `${hasTranslation ? `/${routes[l][pathName]}` : path}/`;
 
 		translatedPath = translatedPath.replace(/(#\w+)\/$/gm, '$1');
 
@@ -71,6 +71,7 @@ export function getRouteFromStaticPath(url: URL, path: string): string | undefin
 	const currentLang = getLangFromUrl(url);
 
 	if (defaultLang !== currentLang) {
+		/* biome-ignore lint/style/noParameterAssign: Fix this when refactoring */
 		path = path.replace(`${currentLang}/`, '');
 	}
 

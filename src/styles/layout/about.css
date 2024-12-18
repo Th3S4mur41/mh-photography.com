@@ -4,7 +4,7 @@
 
 #about {
 	display: grid;
-	grid-template: 'picture' 'title' 'p1' 'p2' 'p3' 'p4' 'p5' 'p6' 'p7' 'subtitle' 'button';
+	grid-template: "picture" "title" "p1" "p2" "p3" "p4" "p5" "p6" "p7" "subtitle" "button";
 	min-block-size: 100vb;
 	padding-block: var(--spacing-xl) var(--spacing-l);
 	padding-inline: var(--spacing-m);
@@ -62,9 +62,10 @@
 
 	@media (1100px > width >= 800px) {
 		grid-auto-flow: column;
-		grid-template: 'title p3' 'picture p4' 'picture p5' 'p1 p6' 'p2 p7' 'subtitle subtitle' 'button button' / 1fr 1fr;
+		grid-template: "title p3" "picture p4" "picture p5" "p1 p6" "p2 p7" "subtitle subtitle" "button button" / 1fr 1fr;
 		grid-template-rows: masonry;
 
+		/* biome-ignore lint/nursery/noDescendingSpecificity: Fix this when refactoring */
 		& > h2 {
 			margin-block: unset;
 		}
@@ -76,7 +77,7 @@
 
 	@media (width >= 1100px) {
 		grid-template:
-			'title title .' 'picture p1 .' 'picture p2 .' 'picture p3 .' 'picture p4 .' 'picture p5 .' 'picture p6 .' 'picture 7 .' 'picture subtitle .' '. button .' / minmax(
+			"title title ." "picture p1 ." "picture p2 ." "picture p3 ." "picture p4 ." "picture p5 ." "picture p6 ." "picture 7 ." "picture subtitle ." ". button ." / minmax(
 				min-content,
 				1fr
 			)
@@ -86,6 +87,7 @@
 
 		/* gap: var(--spacing-m) var(--spacing-l); */
 
+		/* biome-ignore lint/nursery/noDescendingSpecificity: Fix this when refactoring */
 		& > .image {
 			margin-inline: var(--spacing-m);
 		}
@@ -94,6 +96,7 @@
 			min-inline-size: 25vi;
 			max-inline-size: min(50vi, 90%);
 		}
+		/* biome-ignore lint/nursery/noDescendingSpecificity: Fix this when refactoring */
 		& > p {
 			grid-column: 2;
 		}
