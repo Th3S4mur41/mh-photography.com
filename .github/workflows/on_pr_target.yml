@@ -12,8 +12,15 @@ concurrency:
   group: PRT_${{ github.head_ref || github.run_id }}
   cancel-in-progress: true
 
+permissions:
+  contents: read
+
 jobs:
   lint-pr:
+    permissions:
+      contents: read
+      pull-requests: write
+
     name: '▶️ actions'
     uses: ./.github/workflows/lint-pr.yml
 
@@ -33,6 +40,11 @@ jobs:
     uses: ./.github/workflows/test-code.yml
 
   codeql:
+    permissions:
+      actions: read
+      contents: read
+      security-events: write
+
     name: '▶️ actions'
     needs: [lint-pr, lint-code]
     uses: ./.github/workflows/codeql.yml
@@ -54,12 +66,20 @@ jobs:
   #     PERCY_TOKEN: ${{ secrets.PERCY_TOKEN  }}
 
   dependabot:
+    permissions:
+      pull-requests: write
+      contents: write
+
     name: '▶️ actions'
     uses: ./.github/workflows/dependabot.yml
     secrets:
       GH_TOKEN: ${{ secrets.GH_TOKEN  }}
 
   publish:
+    permissions:
+      contents: read
+      deployments: write
+
     name: '▶️ actions'
     needs: [test-code, codeql, sonarqube]
 

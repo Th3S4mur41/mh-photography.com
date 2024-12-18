@@ -12,6 +12,9 @@ concurrency:
   group: ${{ github.ref || github.run_id }}
   cancel-in-progress: true
 
+permissions:
+  contents: read
+
 jobs:
   lint-code:
     name: '▶️ actions'
@@ -29,6 +32,11 @@ jobs:
     uses: ./.github/workflows/test-code.yml
 
   codeql:
+    permissions:
+      actions: read
+      contents: read
+      security-events: write
+
     name: '▶️ actions'
     needs: [lint-code]
     uses: ./.github/workflows/codeql.yml
@@ -50,6 +58,11 @@ jobs:
   #     PERCY_TOKEN: ${{ secrets.PERCY_TOKEN  }}
 
   release:
+    permissions:
+      contents: write
+      issues: write
+      pull-requests: write
+
     name: '▶️ actions'
     needs: [test-code, codeql, sonarqube]
     uses: ./.github/workflows/release.yml
@@ -58,6 +71,10 @@ jobs:
       GH_TOKEN: ${{ secrets.GH_TOKEN  }}
 
   publish:
+    permissions:
+      contents: read
+      deployments: write
+
     name: '▶️ actions'
     needs: [release]
     uses: ./.github/workflows/publish.yml

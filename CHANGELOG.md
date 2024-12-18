@@ -1,3 +1,10 @@
+## [2.7.5](https://github.com/MH-Photo/website/compare/v2.7.4...v2.7.5) (2024-12-18)
+
+
+### Bug Fixes
+
+* update repository url ([d7acc4f](https://github.com/MH-Photo/website/commit/d7acc4fea693749cf2481af374a508d3721e4b96))
+
 ## [2.7.4](https://github.com/Th3S4mur41/mh-photography.com/compare/v2.7.3...v2.7.4) (2024-10-31)
 
 
