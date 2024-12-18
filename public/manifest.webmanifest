@@ -6,7 +6,7 @@
 			"src": "/assets/icons/favicon.svg",
 			"sizes": "any",
 			"type": "image/svg+xml",
-			"purpose": "maskable"
+			"purpose": "any"
 		},
 		{
 			"src": "/assets/icons/icon-72x72.png",
